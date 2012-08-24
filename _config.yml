@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
-subtitle: A blogging framework for hackers.
-author: Your Name
+url: http://mininet.github.com
+title: Mininet
+subtitle: Rapid Prototyping For Software-Defined Networks
+author: Mininet Team
 simple_search: http://google.com/search
 description:
 
