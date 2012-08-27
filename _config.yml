@@ -57,6 +57,10 @@ page_asides: [custom/asides/sidenav.html, asides/recent_posts.html]
 #   3rd Party Settings    #
 # ----------------------- #
 
+# CUSTOM
+# Show navigation bar on site, w/search bar, at top?
+navigation: false
+
 # Github repositories
 github_user:
 github_repo_count: 0
