@@ -51,7 +51,7 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/twitter.ht
 # and add an array with the asides you want to use.
 # blog_index_asides:
 # post_asides:
-# page_asides:
+page_asides: [custom/asides/sidenav.html, asides/recent_posts.html]
 
 # ----------------------- #
 #   3rd Party Settings    #
