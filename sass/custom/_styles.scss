@@ -6,12 +6,10 @@
     margin-bottom: 0.5em;
 }
 
-.frontpagediagram img {
+@mixin frontpagesharedstyle {
     display: inline-block;
     vertical-align: top;
     text-align: left;
-    /*width: 200px;
-    height: 130px;*/
     background: #ffffff no-repeat 0 -150px;
     padding: 2px;
     margin: 10px;
@@ -27,27 +25,18 @@
     -webkit-border-radius: 8px;
 }
 
+.frontpagediagram img {
+    @include frontpagesharedstyle;
+    /*width: 200px;
+    height: 130px;*/
+}
+
 .frontpagebutton {
-    display: inline-block;
-    vertical-align: top;
-    text-align: left;
+    @include frontpagesharedstyle;
     width: 200px;
     /* Commented out below - saw slight interface oddness w/horizontal
       resizing. */
     /*height: 130px;*/
-    background: #ffffff no-repeat 0 -150px;
-    padding: 2px;
-    margin: 10px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px;
-    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px;
-    -moz-box-shadow: rgba(0,0,0,0.15) 0 1px 4px;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    border: white 0.5em solid;
-    border-radius: 8px;
-    -moz-border-radius: 8px;
-    -webkit-border-radius: 8px;
 }
 
 /* Gap between button header and text seemed too small; reduced from 1.0em.*/
