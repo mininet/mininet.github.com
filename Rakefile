@@ -295,7 +295,7 @@ task :set_root_dir, :dir do |t, args|
 end
 
 desc "Set up _deploy folder and deploy branch for Github Pages deployment"
-task :setup_github_pages, :repo do |t, args|
+task :setup_github_pages_original, :repo do |t, args|
   if args.repo
     repo_url = args.repo
   else
@@ -347,6 +347,27 @@ task :setup_github_pages, :repo do |t, args|
       f.write rakefile
     end
   end
+  puts "\n---\n## Now you can deploy to #{url} with `rake deploy` ##"
+end
+
+desc "Set up _deploy folder and deploy branch for Github Pages deployment, after initial setup"
+# Most of this is just a trimmed-down version of the stuff above.
+task :setup_github_pages_additional, :repo do |t, args|
+  if args.repo
+    repo_url = args.repo
+  else
+    puts "Enter the read/write url for your repository"
+    puts "(For example, 'git@github.com:your_username/your_username.github.com)"
+    repo_url = get_stdin("Repository url: ")
+  end
+  user = repo_url.match(/:([^\/]+)/)[1]
+  branch = (repo_url.match(/\/[\w-]+.github.com/).nil?) ? 'gh-pages' : 'master'
+  project = (branch == 'gh-pages') ? repo_url.match(/\/([^\.]+)/)[1] : ''
+  url = "http://#{user}.github.com"
+  url += "/#{project}" unless project == ''
+  rm_rf deploy_dir
+  mkdir deploy_dir
+  system "git clone -b master #{repo_url} #{deploy_dir}"
   puts "\n---\n## Now you can deploy to #{url} with `rake deploy` ##"
 end
 
