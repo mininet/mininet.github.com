@@ -16,13 +16,13 @@ Run a complete network on a single machine (VM, cloud, or native) with a single 
 </div>
 
 <div class=frontpageparagraph>
-You can <a href="https://github.com/mininet/mininet/wiki/MininetSampleWorkflow#Interacting_with_a_Network">interact with</a>
+You can <a href="https://github.com/mininet/mininet/wiki/Sample-Workflow#Interacting_with_a_Network">interact with</a>
 your network using the Mininet
 <a href="/fixme">API</a> and <a href="/fixme">CLI</a>, 
-<a href="https://github.com/mininet/mininet/wiki/MininetSampleWorkflow#Customizing_a_Network">customize</a> it, 
-<a href="https://github.com/mininet/mininet/wiki/MininetSampleWorkflow#Sharing_a_Network">share</a> it with others, 
+<a href="https://github.com/mininet/mininet/wiki/Sample-Workflow#Customizing_a_Network">customize</a> it, 
+<a href="https://github.com/mininet/mininet/wiki/Sample-Workflow#Sharing_a_Network">share</a> it with others, 
 or
-<a href=""https://github.com/mininet/mininet/wiki/MininetSampleWorkflow#Running_on_Hardware">deploy</a>
+<a href=""https://github.com/mininet/mininet/wiki/Sample-Workflow#Running_on_Hardware">deploy</a>
  it on real hardware.  
 </div>
 
@@ -31,21 +31,21 @@ Actively developed and supported, Mininet is useful for interactive development,
 </div>
 
 <div class=frontpagebutton>
-<div class=buttontitle><h3><a href="https://github.com/mininet/mininet/wiki/MininetGettingStarted">Get Started</a></h3></div>
+<div class=buttontitle><h3><a href="https://github.com/mininet/mininet/wiki/Download">Get Started</a></h3></div>
 <div class=buttontext>
 <p>Watch the <a href="/fixme" title="Intro Video">intro video</a>, 
-do the <a href="https://github.com/mininet/mininet/wiki/MininetWalkthrough" title="Walkthrough">walkthrough</a> 
+do the <a href="https://github.com/mininet/mininet/wiki/Walkthrough" title="Walkthrough">walkthrough</a> 
 and run the <a href="http://www.openflow.org/wk/index.php/OpenFlow_Tutorial" title="Title">OpenFlow tutorial</a>.
 </p>
 </div>
 </div>
 
 <div class=frontpagebutton>
-<div class=buttontitle><h3><a href="https://github.com/mininet/mininet/wiki/MininetSupport">Support</a></h3></div>
+<div class=buttontitle><h3><a href="https://github.com/mininet/mininet/wiki/Support">Support</a></h3></div>
 <div class=buttontext>
 <p>
 Join the mailing list, <a href="https://mailman.stanford.edu/mailman/alt/members?list=mininet-discuss">mininet-discuss</a>, read the
-<a href="https://github.com/mininet/mininet/wiki/MininetFAQ">FAQ</a>, or read the <a href="/fixme">docs</a>.
+<a href="https://github.com/mininet/mininet/wiki/FAQ">FAQ</a>, or read the <a href="/fixme">docs</a>.
 </p>
 </div>
 </div>
