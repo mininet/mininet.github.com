@@ -26,7 +26,7 @@ rake generate
 
 # To add a new page:
 rake new_page[insert_name_here]
-# Then mod the generated markdown page (path will be printed) and run 'rack generate'.
+# Then mod the generated markdown page (path will be printed) and run 'rake generate'.
 
 # To add a new post:
 rake new_post[insert_name_here]
