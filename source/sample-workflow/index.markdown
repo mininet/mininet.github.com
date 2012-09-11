@@ -32,14 +32,18 @@ tells host `h2` to ping host `h3`'s IP address.
 
 Mininet's API allows you to create custom networks with a few lines of Python. For example, the following script
 
-    from mininet.net import Mininet
-    from mininet.topolib import TreeTopo
-    tree4 = TreeTopo(depth=2,fanout=2)
-    net = Mininet(topo=tree4)
-    net.start()
-    h1, h4  = net.hosts[0], net.hosts[3]
-    print h1.('ping -c1 %s' % h4.IP())
-    net.stop()
+{% codeblock lang:python %}
+
+from mininet.net import Mininet
+from mininet.topolib import TreeTopo
+tree4 = TreeTopo(depth=2,fanout=2)
+net = Mininet(topo=tree4)
+net.start()
+h1, h4  = net.hosts[0], net.hosts[3]
+print h1.('ping -c1 %s' % h4.IP())
+net.stop()
+
+{% endcodeblock %}
 
 creates a small network (4 hosts, 3 switches), and pings one host from another (in about 4 seconds with the current version.)
 
