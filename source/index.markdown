@@ -31,7 +31,7 @@ Actively developed and supported, Mininet is useful for interactive development,
 </div>
 
 <div class=frontpagebutton>
-<div class=buttontitle><h3><a href="https://github.com/mininet/mininet/wiki/Download">Get Started</a></h3></div>
+<div class=buttontitle><h3><a href="download">Get Started</a></h3></div>
 <div class=buttontext>
 <p>Watch the <a href="/fixme" title="Intro Video">intro video</a>, 
 do the <a href="https://github.com/mininet/mininet/wiki/Walkthrough" title="Walkthrough">walkthrough</a> 
