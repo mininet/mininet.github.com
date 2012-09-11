@@ -4,20 +4,20 @@ title: "Mininet Overview"
 date: 2012-09-10 19:06
 comments: true
 sharing: true
-header: true
 footer: true
 ---
 Mininet supports research, development, learning, prototyping, testing, debugging, and any other tasks that could benefit from having a complete experimental network on a laptop or other PC.
 
 Mininet:
-* provides a simple and inexpensive **network testbed** for developing OpenFlow applications
-* enables **multiple concurrent developers** to work independently on the same topology
-* supports **system-level regression tests**, which are repeatable and easily packaged
-* enables **complex topology testing**, without the need to wire up a physical network
-* includes a **CLI** that is topology-aware and OpenFlow-aware, for debugging or running network-wide tests
-* supports **arbitrary custom topologies**, and includes a basic set of **parametrized topologies**
-* is **usable out of the box** without programming
-* also provides a straightforward and extensible **Python API** for network creation and experimentation
+ * provides a simple and inexpensive **network testbed** for developing OpenFlow applications
+ * enables **multiple concurrent developers** to work independently on the same topology
+ * supports **system-level regression tests**, which are repeatable and easily packaged
+ * enables **complex topology testing**, without the need to wire up a physical network
+ * includes a **CLI** that is topology-aware and OpenFlow-aware, for debugging or running network-wide tests
+ * supports **arbitrary custom topologies**, and includes a basic set of **parametrized topologies**
+ * is **usable out of the box** without programming
+ * also provides a straightforward and extensible **Python API** for network creation and experimentation
+ 
 Mininet provides an easy way to get correct system _behavior_ and experiment with topologies.
 
 The code you develop and test on Mininet, for an OpenFlow controller, modified switch, or host, _can move to a real system with no changes_, for real-world testing, performance evaluation, and deployment.
