@@ -8,3 +8,17 @@
 //$heading-font-family: "Verdana", sans-serif;
 //$header-title-font-family: "Futura", sans-serif;
 //$header-subtitle-font-family: "Futura", sans-serif;
+
+// Loading fonts from Google sucks - use Microsoft's lousy fonts
+$sans: "Futurq", sans-serif;
+$serif: "Georgia", serif;
+$mono: "Courier", monospace;
+$heading-font-family: sans-serif;
+$header-title-font-family: serif;
+$header-subtitle-font-family: sans-serif;
+
+.mono { font-weight: bold; }
+
+// Was:
+// $serif: "PT Serif", Georgia, Times, "Times New Roman", serif !default;
+// .serif { font-family: $serif; font-size: medium; }
