@@ -9,14 +9,15 @@ footer: true
 Mininet supports research, development, learning, prototyping, testing, debugging, and any other tasks that could benefit from having a complete experimental network on a laptop or other PC.
 
 Mininet:
-   - provides a simple and inexpensive **network testbed** for developing OpenFlow applications
-   - enables **multiple concurrent developers** to work independently on the same topology
-   - supports **system-level regression tests**, which are repeatable and easily packaged
-   - enables **complex topology testing**, without the need to wire up a physical network
-   - includes a **CLI** that is topology-aware and OpenFlow-aware, for debugging or running network-wide tests
-   - supports **arbitrary custom topologies**, and includes a basic set of **parametrized topologies**
-   - is **usable out of the box** without programming
-   - also provides a straightforward and extensible **Python API** for network creation and experimentation
+
+* provides a simple and inexpensive **network testbed** for developing OpenFlow applications
+* enables **multiple concurrent developers** to work independently on the same topology
+* supports **system-level regression tests**, which are repeatable and easily packaged
+* enables **complex topology testing**, without the need to wire up a physical network
+* includes a **CLI** that is topology-aware and OpenFlow-aware, for debugging or running network-wide tests
+* supports **arbitrary custom topologies**, and includes a basic set of **parametrized topologies**
+* is **usable out of the box** without programming
+* also provides a straightforward and extensible **Python API** for network creation and experimentation
  
 Mininet provides an easy way to get correct system _behavior_ and experiment with topologies.
 
@@ -35,6 +36,7 @@ Why it's better
 ----------------
 
 Compared to full system virtualization based approaches, such as OpenFlowVMS or the Noxrepo.org VM environment, Mininet:
+
 * **boots faster**: seconds instead of minutes
 * **scales larger**: hundreds of hosts and switches vs. single digits
 * **provides more bandwidth**: typically 2Gbps total bandwidth on modest hardware
