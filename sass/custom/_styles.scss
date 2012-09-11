@@ -58,6 +58,15 @@
     margin-bottom: 0.5em;
 }
 
+
+// Changes to default styles
+
 body {
     font-size: medium;
+}
+
+// was 2.2em, 1.2em
+h1 {
+  font-size: 2em;
+  line-height: 1em;
 }
