@@ -15,7 +15,7 @@ VM installation is the easiest and most foolproof way of installing Mininet, so 
 
 Follow these steps for a VM install:
 
-1. Download the Mininet VM image from [https://github.com/downloads/mininet/mininet/mininet-vm-ubuntu11.10-052312.vmware.zip] . This will take some time. It's ~800MB-1GB, compressed.
+1. Download the [Mininet VM image](https://github.com/downloads/mininet/mininet/mininet-vm-ubuntu11.10-052312.vmware.zip) . This will take some time. It's ~800MB-1GB, compressed.
 
 1. Download and install a virtualization system. We recommend [VirtualBox](http://www.virtualbox.org/wiki/Downloads) (free, GPL) because it is **free** and works on OS X, Windows, and Linux (though it's slightly slower than VMware in our tests.) You can also use [Qemu](http://qemu.org) for any platform, [VMware Workstation](http://www.vmware.com/products/workstation/) for Windows or Linux, or [VMware Fusion](http://www.vmware.com/products/fusion) for Mac, [KVM](http://www.linux-kvm.org) (free, GPL) for Linux.
 

@@ -5,4 +5,4 @@ comments: true
 sharing: false
 footer: true
 ---
-Coming eventually. ;-)
+Coming in the future.
