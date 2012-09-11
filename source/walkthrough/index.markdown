@@ -3,7 +3,7 @@ layout: page
 title: "Mininet Walkthrough"
 date: 2012-09-10 19:06
 comments: false
-sharing: true
+sharing: false
 footer: true
 ---
 This walkthrough demonstrates most Mininet commands, plus its typical usage in concert with the Wireshark dissector.
@@ -183,7 +183,8 @@ Outside the CLI, other verbosity levels can be used, such as warning, which is u
 
 Custom topologies can be easily defined as well, using a simple Python API, and an example is provided in custom/topo-2sw-2host.py. This example connects two switches directly, with a single host off each switch:
 
-%CODE{ lang="python" }% """Custom topology example
+{% codeblock lang:python %}
+"""Custom topology example
 
 author: Brandon Heller (brandonh@stanford.edu)
 
@@ -195,14 +196,14 @@ Adding the 'topos' dict with a key/value pair to generate our newly defined topo
 
 from mininet.topo import Topo, Node
 
-class [MyTopo](MyTopo)( Topo ):
+class MyTopo( Topo ):
     "Simple topology example."
 
     def *__init__*( self, enable_all = True ):
         "Create custom topo."
 
         # Add default members to class.
-        super( [MyTopo](MyTopo), self ).__init__()
+        super( MyTopo, self ).__init__()
 
         # Set Node IDs for hosts and switches
         leftHost = 1
@@ -224,7 +225,8 @@ class [MyTopo](MyTopo)( Topo ):
         # Consider all switches and hosts 'on'
         self.enable_all()
 
-topos = { 'mytopo': ( lambda: [MyTopo](MyTopo)() ) } 
+topos = { 'mytopo': ( lambda: MyTopo() ) } 
+{% endcodeblock %}
 
 When a custom mininet file is provided, it can add new topologies, switch types, and tests to the command-line. For example:
 
@@ -413,7 +415,7 @@ To disable both halves of a virtual ethernet pair:
 
 	link s1 h2 down
 
-You should see an [OpenFlow](OpenFlow) Port Status Change notification get generated. To bring the link back up:
+You should see an OpenFlow Port Status Change notification get generated. To bring the link back up:
 
 	link s1 h2 up
 
