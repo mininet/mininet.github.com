@@ -2,8 +2,7 @@
 layout: page
 title: "Intro Video"
 comments: true
-sharing: true
-header: true
+sharing: false
 footer: true
 ---
 Coming eventually. ;-)

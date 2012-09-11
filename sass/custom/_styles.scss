@@ -54,7 +54,7 @@
 /* Really should be included, rather than copied from _typography.scss.
    Not sure how to do that properly. */
 $serif: "PT Serif", Georgia, Times, "Times New Roman", serif !default;
-.serif { font-family: $serif; }
+.serif { font-family: $serif; font-size: medium; }
 
 /* Customize sidebar - trying to get the right spacing & size here. */
 .sidebartext p {

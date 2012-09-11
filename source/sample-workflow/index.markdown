@@ -2,7 +2,7 @@
 layout: page
 title: "Mininet Sample Workflow"
 date: 2012-09-10 19:06
-comments: true
+comments: false
 sharing: true
 footer: true
 ---
@@ -13,7 +13,7 @@ Mininet enables you to quickly [create](#Creating_a_Network), [interact with](#I
 
 You can create a network with a single command. For example,
 
-    mn --switch ovsk --controller nox --topo tree,depth`2,fanout=8 --test pingall
+    mn --switch ovsk --controller nox --topo tree,depth=2,fanout=8 --test pingall
 
 starts a network with a tree topology of depth 2 and fanout 8 (i.e. 9 switches connecting 64 hosts), using Open vSwitch switches under the control of NOX (via its `pyswitch` module by default), and runs the `pingall` test to check connectivity between every pair of nodes.
 
