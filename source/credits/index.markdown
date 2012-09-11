@@ -1,14 +1,11 @@
 ---
 layout: page
-title: "Credits/History"
+title: "Mininet Credits/History"
 date: 2012-09-10 19:06
 comments: true
 sharing: true
 footer: true
 ---
-Mininet Credits/History
-=================
-
 Mininet is under active development, and we hope it will become a highly usable and flexible virtual network platform for research, experimentation, debugging, learning, and many other applications. Most importantly, it's an easy and fun way to experiment with OpenFlow!
 
 Mininet is currently being developed by: Bob Lantz, who [created](Presentations) the original system, built the virtual network infrastructure and CLI, and [demonstrated](http://www.openflowswitch.org/foswiki/pub/OpenFlow/Presentations/mininet-presentation-2009.pdf) the initial implementation to the OpenFlow Software Architecture and Implementation working group; Brandon Heller, who added many useful enhancements including regression tests, loglevels, Open vSwitch support, VM creation scripts, and Mininet creation from a separate topology description, as well as [documentation and tutorials](Documentation); and Nikhil Handigol and Vimal Jeyakumar, who are working on Mininet 2.0 features including CPU isolation and bandwidth limiting.

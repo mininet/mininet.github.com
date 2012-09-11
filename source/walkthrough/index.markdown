@@ -1,10 +1,9 @@
 ---
 layout: page
-title: "walkthrough"
+title: "Mininet Walkthrough"
 date: 2012-09-10 19:06
 comments: true
 sharing: true
-header: true
 footer: true
 ---
 This walkthrough demonstrates most Mininet commands, plus its typical usage in concert with the Wireshark dissector.

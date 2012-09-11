@@ -1,14 +1,11 @@
 ---
 layout: page
-title: "download"
+title: "Download and Get Started with Mininet"
 date: 2012-09-10 18:57
 comments: true
 sharing: true
 footer: true
 ---
-Get Started with Mininet!
--------------------------
-
 The easiest way to get started is to **download a pre-packaged Mininet/Ubuntu VM**. This VM includes Mininet itself, all OpenFlow binaries and tools pre-installed, and tweaks to the kernel configuration to support larger Mininet networks.
 
 
