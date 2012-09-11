@@ -27,7 +27,7 @@ The code you develop and test on Mininet, for an OpenFlow controller, modified s
 How it Works
 -------------
 
-Nearly every operating system virtualizes computing resources using a _process_ abstraction. Mininet uses _process-based virtualization_ to run many (we've successfully booted up to 4096) hosts and switches on a single OS kernel. Since version 2.2.26, Linux has supported _network namespaces_, a lightweight virtualization feature that provides individual processes with separate network interfaces, routing tables, and ARP tables. The full _Linux container architecture_ adds `chroot()` jails, process and user namespaces, and CPU  and memory limits to provide full OS-level virtualization, but Mininet does not require these additional features. Mininet can create kernel or user-space OpenFlow switches, controllers to control the switches, and hosts to communicate over the simulated network. Mininet connects switches and hosts using virtual ethernet (=veth=) pairs. While Mininet currently depends on the Linux kernel, in the future it may support other operating systems with process-based virtualization, such Solaris containers or !FreeBSD jails.
+Nearly every operating system virtualizes computing resources using a _process_ abstraction. Mininet uses _process-based virtualization_ to run many (we've successfully booted up to 4096) hosts and switches on a single OS kernel. Since version 2.2.26, Linux has supported _network namespaces_, a lightweight virtualization feature that provides individual processes with separate network interfaces, routing tables, and ARP tables. The full _Linux container architecture_ adds `chroot()` jails, process and user namespaces, and CPU  and memory limits to provide full OS-level virtualization, but Mininet does not require these additional features. Mininet can create kernel or user-space OpenFlow switches, controllers to control the switches, and hosts to communicate over the simulated network. Mininet connects switches and hosts using virtual ethernet (`veth`) pairs. While Mininet currently depends on the Linux kernel, in the future it may support other operating systems with process-based virtualization, such Solaris containers or !FreeBSD jails.
 
 Mininet's code is almost entirely Python, except for a short C utility.
 
@@ -40,7 +40,8 @@ Compared to full system virtualization based approaches, such as OpenFlowVMS or 
 * **Boots faster**: seconds instead of minutes
 * **Scales larger**: hundreds of hosts and switches vs. single digits
 * **Provides more bandwidth**: typically 2Gbps total bandwidth on modest hardware
-* **Installs easily**: a prepackaged VM is available that runs on VMware or !VirtualBox for [Mac/Win/Linux](Mac/Win/Linux) with OpenFlow v1.0 tools already installed.
+* **Installs easily**: a prepackaged VM is available that runs on VMware or VirtualBox for 
+    Mac/Win/Linux with OpenFlow v1.0 tools already installed.
 
 The down side is that Mininet cannot run non-Linux-compatible OpenFlow switches or applications; this has not been a major issue in practice.
 
