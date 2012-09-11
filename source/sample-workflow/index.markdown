@@ -1,7 +1,6 @@
 ---
 layout: page
 title: "Mininet Sample Workflow"
-date: 2012-09-10 19:06
 comments: false
 sharing: true
 footer: true

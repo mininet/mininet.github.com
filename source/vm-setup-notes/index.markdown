@@ -1,7 +1,6 @@
 ---
 layout: page
 title: "Mininet VM setup notes"
-date: 2012-09-10 23:13
 comments: false
 sharing: true
 footer: true

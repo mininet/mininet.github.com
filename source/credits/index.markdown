@@ -1,9 +1,8 @@
 ---
 layout: page
 title: "Mininet Credits/History"
-date: 2012-09-10 19:06
 comments: false
-sharing: true
+sharing: false
 footer: true
 ---
 Mininet is under active development, and we hope it will become a highly usable and flexible virtual network platform for research, experimentation, debugging, learning, and many other applications. Most importantly, it's an easy and fun way to experiment with OpenFlow!

@@ -1,7 +1,6 @@
 ---
 layout: page
 title: "Download/Get Started with Mininet"
-date: 2012-09-10 18:57
 comments: false
 sharing: false
 footer: true

@@ -1,7 +1,6 @@
 ---
 layout: page
 title: "Mininet Support"
-date: 2012-09-10 23:27
 comments: false
 sharing: false
 footer: true
