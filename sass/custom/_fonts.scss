@@ -10,12 +10,12 @@
 //$header-subtitle-font-family: "Futura", sans-serif;
 
 // Loading fonts from Google sucks - use Microsoft's lousy fonts
-$sans: "Futurq", sans-serif;
+$sans: "Verdana", sans-serif;
 $serif: "Georgia", serif;
 $mono: "Courier", monospace;
-$heading-font-family: sans-serif;
-$header-title-font-family: serif;
-$header-subtitle-font-family: sans-serif;
+$heading-font-family: $sans;
+$header-title-font-family: $sans;
+$header-subtitle-font-family: $sans;
 
 .mono { font-weight: bold; }
 

@@ -53,8 +53,9 @@
 
 /* Customize sidebar - trying to get the right spacing & size here. */
 .sidebartext p {
-    @extend .serif;
-    font-size: 140%;
+    font-family: $sans;
+    font-weight: bold;
+    font-size: medium;
     margin-bottom: 0.5em;
 }
 
@@ -63,6 +64,7 @@
 
 body {
     font-size: medium;
+    font-family: $sans;
 }
 
 // was 2.2em, 1.2em
