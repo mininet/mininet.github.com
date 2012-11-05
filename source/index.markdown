@@ -45,7 +45,8 @@ and run the <a href="http://www.openflow.org/wk/index.php/OpenFlow_Tutorial" tit
 <div class=buttontext>
 <p>
 Join the mailing list, <a href="https://mailman.stanford.edu/mailman/alt/members?list=mininet-discuss">mininet-discuss</a>, read the
-<a href="https://github.com/mininet/mininet/wiki/FAQ">FAQ</a>, or read the <a href="/fixme">docs</a>.
+<a href="https://github.com/mininet/mininet/wiki/FAQ">FAQ</a>, or read the 
+<a href="https://github.com/mininet/mininet/wiki/Documentation">documentation</a>.
 </p>
 </div>
 </div>
