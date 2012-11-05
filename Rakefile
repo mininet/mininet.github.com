@@ -53,6 +53,10 @@ task :generate do
   puts "## Generating Site with Jekyll"
   system "compass compile --css-dir #{source_dir}/stylesheets"
   system "jekyll"
+  # Install docs
+  puts "## Compiling and adding Mininet documentation"
+  system "make -C ~/mininet doc"
+  system "cp -r ~/mininet/doc/html #{public_dir}/api"
 end
 
 desc "Watch the site and regenerate when it changes"
