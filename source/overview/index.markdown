@@ -42,10 +42,10 @@ Compared to full system virtualization based approaches, such as OpenFlowVMS or 
 * **Installs easily**: a prepackaged VM is available that runs on VMware or VirtualBox for 
     Mac/Win/Linux with OpenFlow v1.0 tools already installed.
 
-The down side is that Mininet cannot run non-Linux-compatible OpenFlow switches or applications; this has not been a major issue in practice.
-
 
 Limitations
 ------------
 
-Mininet _does not (yet) provide performance fidelity_, since resources are time-multiplexed by the kernel, and since overall bandwidth is limited by CPU and memory constraints. We expect to provide improved isolation and performance fidelity in the future.
+Mininet-based networks cannot (currently) exceed the CPU or bandwidth available on a single server.
+
+Mininet cannot (currently) run non-Linux-compatible OpenFlow switches or applications; this has not been a major issue in practice.
