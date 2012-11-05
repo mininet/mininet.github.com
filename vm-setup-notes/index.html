@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Mininet VM setup notes - Mininet</title>
+  <meta name="author" content="Mininet Team">
+
+  
+  <meta name="description" content="Mininet VM Setup Notes The Mininet VM is meant to speed up Mininet installation, plus make it easy to run on non-Linux platforms. The VM works on &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mininet.github.com/vm-setup-notes/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Mininet" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner">
+
+</header>
+  <nav role="navigation">
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Mininet VM Setup Notes</h1>
+    
+  </header>
+  
+  <p>The Mininet VM is meant to speed up Mininet installation, plus make it easy to run on non-Linux platforms. The VM works on Windows, Mac, and Linux, through VMware, VirtualBox, QEMU and KVM.</p>
+
+<p>After downloading the VM, you&#8217;ll run a few steps to customize it for your setup. This won&#8217;t take long.</p>
+
+<!-- %TOC% -->
+
+
+<h2>VM Setup</h2>
+
+<h3>Download the Mininet VM</h3>
+
+<p>Download the Mininet VM at https://github.com/downloads/mininet/mininet/mininet-vm-ubuntu11.10-052312.vmware.zip</p>
+
+<p>The VM comes out to ~800MB compressed and ~2GB uncompressed. It includes a disk image in VMware&#8217;s <code>.vmdk</code> (virtual machine disk) format, which can be used by most virtualization systems.</p>
+
+<p>Download and install a virtualization program such as: <a href="http://www.vmware.com/products/workstation/">VMware Workstation</a> for Windows or Linux, <a href="http://www.vmware.com/products/fusion">VMware Fusion</a> for Mac, <a href="http://www.virtualbox.org/wiki/Downloads">VirtualBox</a> ( <strong>free!</strong>, GPL) for any platform, or <code>qemu</code> ( <strong>free!</strong>, GPL) for Linux. If you already have VMware, we find that it runs Mininet somewhat faster than VirtualBox. However, VirtualBox is free to download and distribute, which is a definite advantage!</p>
+
+<h3>Boot VM</h3>
+
+<p>Add the VM and start it up, in the virtualization program of your choice:</p>
+
+<p><strong>VirtualBox</strong>: Create a new VM using the <code>.vmdk</code> as the hard disk image, then start it up.</p>
+
+<p><strong>VMware</strong>: Just double-click the <code>.vmx</code> file.</p>
+
+<p>VMware may ask you to install VMware tools on the VM - if it asks, decline. Everything graphical in the tutorial is done via X forwarding through SSH (in fact, the VM doesn&#8217;t have a desktop manager installed), so the VMware tools are unnecessary unless you wish to install an X11/Gnome/etc. environment in your VM.</p>
+
+<p><strong>Qemu/KVM</strong>:</p>
+
+<pre><code>qemu-system-i386 -m 512 [MininetVM](MininetVM).vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22&lt;/verbatim&gt;
+</code></pre>
+
+<p>This will set up <code>ssh</code> forwarding from the VM to host port 8022.</p>
+
+<p><strong>Parallels</strong>: Use Parallels Transporter to convert the <code>.vmdk</code> file to an <code>.hdd</code> image that Parallels can use, and then create a new VM using that <code>.hdd</code> image as its virtual drive.</p>
+
+<h3>Login to VM</h3>
+
+<p>Log in to the VM, using the following params:
+* Username: <strong>openflow</strong>
+* Password: <strong>openflow</strong>
+The root account is not enabled for login; you can use sudo to run a command as superuser.</p>
+
+<h3>SSH into VM</h3>
+
+<p>First, find the VM&#8217;s IP address, which for VMware is probably in the range 192.168.x.y. In the VM console:</p>
+
+<pre><code>/sbin/ifconfig eth0
+</code></pre>
+
+<p>You may want to add the address to your host PC&#8217;s /etc/hosts file to be able to SSH in by name, if it&#8217;s Unix-like. For example, add a line like this for OS X:</p>
+
+<pre><code>192.168.x.y openflow
+</code></pre>
+
+<p>where 192.168.x.y is replaced by the VM&#8217;s IP address.</p>
+
+<p>SSH in to the host. Use -Y to enable trusted X forwarding, for use with Wireshark later - we assume the VM is running locally, and that the additional precautions of -X w/SSH are unnecessary.
+<verbatim>
+ssh -Y openflow@openflow</verbatim></p>
+
+<p>If you&#8217;re running the VM under QEMU/KVM with -net user and the <code>hostfwd</code> option as recommended above, the VM IP address is irrelevant. Instead you tell SSH to connect to port 8022 on the host:</p>
+
+<pre><code>ssh -Y -p 8022 openflow@localhost
+</code></pre>
+
+<h3>Install preferred editor</h3>
+
+<p>Install your preferred editor. For example, to install vim:</p>
+
+<pre><code>sudo apt-get -y install vim&lt;/verbatim&gt;
+</code></pre>
+
+<h2>Optional VM Customization</h2>
+
+<p>These commands are optional, and may be useful for your setup:</p>
+
+<h3>Setup SSH auto-login</h3>
+
+<p>These steps let you log in via SSH without needing to enter a password. If you use the console from your virtualization software natively, then this step isn&#8217;t needed.</p>
+
+<p>Check for <code>~/.ssh/id_rsa</code> or <code>~/.ssh/id_dsa</code>. If you can&#8217;t find either of these files, then you&#8217;ll want to generate an SSH key.</p>
+
+<p>On a unix-like system (OS X or Linux - you&#8217;ll need other instructions for Windows) - on the host, not the VM:</p>
+
+<pre><code>ssh-keygen -t rsa
+</code></pre>
+
+<p>To speed up future SSH connections, add your host&#8217;s public key to the new VM. Also on the host, not the VM:</p>
+
+<pre><code>scp ~/.ssh/id_rsa.pub openflow@openflow:~/&lt;/verbatim&gt;
+</code></pre>
+
+<p>Now, on the VM (SSH in first):</p>
+
+<pre><code>cd ~/ &amp;&amp; mkdir -p .ssh &amp;&amp; chmod 700 .ssh &amp;&amp; cd .ssh &amp;&amp; touch authorized_keys2 &amp;&amp; chmod 600 authorized_keys2 &amp;&amp; cat ../id_rsa.pub &gt;&gt; authorized_keys2 &amp;&amp; rm ../id_rsa.pub &amp;&amp; cd ..&lt;/verbatim&gt;
+</code></pre>
+
+<p>Now you should be able to log in without entering a password.</p>
+
+<h2>Mininet Walkthrough</h2>
+
+<p>(Highly recommended) Head over to the <a href="walkthrough">Walkthrough</a>, which shows common commands. It&#8217;ll be really useful, trust us.</p>
+
+  
+    <footer>
+      
+      
+        <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://mininet.github.com/vm-setup-notes/index.html" data-via="" data-counturl="http://mininet.github.com/vm-setup-notes/index.html" >Tweet</a>
+  
+  
+  
+</div>
+
+      
+    </footer>
+  
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  
+  <div class = "sidebartext"><p><a href="/">Mininet</a></p></div>
+  <div class = "sidebartext"><p><a href="/"></a>Intro Video</p></div>
+  <div class = "sidebartext"><p><a href="/download">Get Started</a></p></div>
+  <div class = "sidebartext"><p><a href="/sample-workflow">Sample Workflow</a><p></div>
+  <div class = "sidebartext"><p><a href="/walkthrough">Walkthrough</a><p></div>
+  <div class = "sidebartext"><p><a href="/overview">Overview</a><p></div>
+  <br>
+  
+  <div class = "sidebartext"><p><a href="/download">Download</a></p></div>
+  <div class = "sidebartext"><p><a href="https://github.com/mininet/mininet/wiki/Documentation">Documentation</a></p></div>
+  <div class = "sidebartext"><p><a href="https://github.com/mininet/mininet/wiki/FAQ">FAQ</a></p></div>
+  <div class = "sidebartext"><p><a href="/"></a>Apps</p></div>
+  <div class = "sidebartext"><p><a href="/"></a>Tutorials</p></div>
+  <div class = "sidebartext"><p><a href="https://github.com/mininet/mininet/wiki">Wiki</a></p></div>
+  <div class = "sidebartext"><p><a href="/fixme"></a>Papers</p></div>
+  <br>
+  
+  <div class = "sidebartext"><p><a href="/support">Support</a></p></div>
+  <div class = "sidebartext"><p><a href="/"></a>Contribute</p></div>
+  <div class = "sidebartext"><p><a href="/blog/archives">News Archives</a></p></div>
+  <div class = "sidebartext"><p><a href="/credits">About</a></p></div>
+</section>
+<section>
+  <h1>Recent News</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/08/23/website-updated/">Website Updated</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - Mininet Team -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
