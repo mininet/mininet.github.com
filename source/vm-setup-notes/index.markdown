@@ -4,6 +4,7 @@ title: "Mininet VM setup notes"
 comments: false
 sharing: true
 footer: true
+root:/
 ---
 The Mininet VM is meant to speed up Mininet installation, plus make it easy to run on non-Linux platforms. The VM works on Windows, Mac, and Linux, through VMware, VirtualBox, QEMU and KVM.
 
@@ -36,7 +37,7 @@ VMware may ask you to install VMware tools on the VM - if it asks, decline. Ever
 
 **Qemu/KVM**:
 
-    qemu-system-i386 -m 512 [MininetVM](MininetVM).vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22</verbatim>
+    qemu-system-i386 -m 512 MininetVM.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
 
 This will set up `ssh` forwarding from the VM to host port 8022.
 
@@ -64,8 +65,8 @@ You may want to add the address to your host PC's /etc/hosts file to be able to 
 where 192.168.x.y is replaced by the VM's IP address.
 
 SSH in to the host. Use -Y to enable trusted X forwarding, for use with Wireshark later - we assume the VM is running locally, and that the additional precautions of -X w/SSH are unnecessary.
-<verbatim>
-ssh -Y openflow@openflow</verbatim>
+
+    ssh -Y openflow@openflow
 
 If you're running the VM under QEMU/KVM with -net user and the `hostfwd` option as recommended above, the VM IP address is irrelevant. Instead you tell SSH to connect to port 8022 on the host:
 
@@ -75,7 +76,7 @@ If you're running the VM under QEMU/KVM with -net user and the `hostfwd` option 
 
 Install your preferred editor. For example, to install vim:
 
-    sudo apt-get -y install vim</verbatim>
+    sudo apt-get -y install vim
 
 
 Optional VM Customization
@@ -95,11 +96,11 @@ On a unix-like system (OS X or Linux - you'll need other instructions for Window
 
 To speed up future SSH connections, add your host's public key to the new VM. Also on the host, not the VM:
 
-    scp ~/.ssh/id_rsa.pub openflow@openflow:~/</verbatim>
+    scp ~/.ssh/id_rsa.pub openflow@openflow:~/
 
 Now, on the VM (SSH in first):
 
-    cd ~/ && mkdir -p .ssh && chmod 700 .ssh && cd .ssh && touch authorized_keys2 && chmod 600 authorized_keys2 && cat ../id_rsa.pub >> authorized_keys2 && rm ../id_rsa.pub && cd ..</verbatim>
+    cd ~/ && mkdir -p .ssh && chmod 700 .ssh && cd .ssh && touch authorized_keys2 && chmod 600 authorized_keys2 && cat ../id_rsa.pub >> authorized_keys2 && rm ../id_rsa.pub && cd ..
 
 Now you should be able to log in without entering a password.
 
