@@ -33,8 +33,12 @@ Actively developed and supported, Mininet is useful for interactive development,
 <div class=frontpagebutton>
 <div class=buttontitle><h3><a href="download">Get Started</a></h3></div>
 <div class=buttontext>
-<p>Watch the <a href="/fixme" title="Intro Video">intro video</a>, 
-do the <a href="walkthrough" title="Walkthrough">walkthrough</a> 
+<p>
+<!-- No video yet!
+Watch the intro video,
+-->
+<a href="download">Download</a> a Mininet VM,
+do the <a href="walkthrough" title="Walkthrough">walkthrough</a>
 and run the <a href="http://www.openflow.org/wk/index.php/OpenFlow_Tutorial" title="Title">OpenFlow tutorial</a>.
 </p>
 </div>
