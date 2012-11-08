@@ -4,6 +4,7 @@ title: "Mininet Walkthrough"
 comments: false
 sharing: false
 footer: true
+root: /
 ---
 This walkthrough demonstrates most Mininet commands, plus its typical usage in concert with the Wireshark dissector.
 
