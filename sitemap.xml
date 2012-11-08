@@ -18,10 +18,10 @@
     </url>
     <url>
         <loc>http://mininet.github.com/download/</loc>
-        <lastmod>2012-11-05T00:16:25-08:00</lastmod>
+        <lastmod>2012-11-07T17:34:47-08:00</lastmod>
     </url>
     <url>
-        <loc>http://mininet.github.com/download-old/</loc>
+        <loc>http://mininet.github.com/download/old.html</loc>
         <lastmod>2012-11-05T00:16:25-08:00</lastmod>
     </url>
     <url>
@@ -42,7 +42,7 @@
     </url>
     <url>
         <loc>http://mininet.github.com/support/</loc>
-        <lastmod>2012-11-05T00:16:25-08:00</lastmod>
+        <lastmod>2012-11-07T17:39:04-08:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/vm-setup-notes/</loc>
@@ -50,6 +50,6 @@
     </url>
     <url>
         <loc>http://mininet.github.com/walkthrough/</loc>
-        <lastmod>2012-11-05T00:16:25-08:00</lastmod>
+        <lastmod>2012-11-07T17:32:31-08:00</lastmod>
     </url>
 </urlset>
