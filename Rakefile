@@ -54,9 +54,8 @@ task :generate do
   system "compass compile --css-dir #{source_dir}/stylesheets"
   system "jekyll"
   # Install docs
-  puts "## Compiling and adding Mininet documentation"
-  system "make -C ~/mininet doc"
-  system "mkdir -p #{public_dir}"
+  puts "## Compiling and adding Mininet documentation (ignoring errors)"
+  system "make -C ~/mininet doc 1> /dev/null 2> /dev/null"
   system "cp -r ~/mininet/doc/html #{public_dir}/api"
 end
 
