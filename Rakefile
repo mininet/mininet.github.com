@@ -56,6 +56,7 @@ task :generate do
   # Install docs
   puts "## Compiling and adding Mininet documentation"
   system "make -C ~/mininet doc"
+  system "mkdir -p #{public_dir}"
   system "cp -r ~/mininet/doc/html #{public_dir}/api"
 end
 
