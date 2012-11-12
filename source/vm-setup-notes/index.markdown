@@ -4,7 +4,7 @@ title: "Mininet VM setup notes"
 comments: false
 sharing: true
 footer: true
-root:/
+root: /
 ---
 The Mininet VM is meant to speed up Mininet installation, plus make it easy to run on non-Linux platforms. The VM works on Windows, Mac, and Linux, through VMware, VirtualBox, QEMU and KVM.
 
