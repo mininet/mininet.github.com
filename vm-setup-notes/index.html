@@ -80,7 +80,7 @@ BL: removed since they make things SLOW
 
 <p><strong>Qemu/KVM</strong>:</p>
 
-<pre><code>qemu-system-i386 -m 512 [MininetVM](MininetVM).vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22&lt;/verbatim&gt;
+<pre><code>qemu-system-i386 -m 512 MininetVM.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
 </code></pre>
 
 <p>This will set up <code>ssh</code> forwarding from the VM to host port 8022.</p>
@@ -108,9 +108,10 @@ The root account is not enabled for login; you can use sudo to run a command as 
 
 <p>where 192.168.x.y is replaced by the VM&#8217;s IP address.</p>
 
-<p>SSH in to the host. Use -Y to enable trusted X forwarding, for use with Wireshark later - we assume the VM is running locally, and that the additional precautions of -X w/SSH are unnecessary.
-<verbatim>
-ssh -Y openflow@openflow</verbatim></p>
+<p>SSH in to the host. Use -Y to enable trusted X forwarding, for use with Wireshark later - we assume the VM is running locally, and that the additional precautions of -X w/SSH are unnecessary.</p>
+
+<pre><code>ssh -Y openflow@openflow
+</code></pre>
 
 <p>If you&#8217;re running the VM under QEMU/KVM with -net user and the <code>hostfwd</code> option as recommended above, the VM IP address is irrelevant. Instead you tell SSH to connect to port 8022 on the host:</p>
 
@@ -121,7 +122,7 @@ ssh -Y openflow@openflow</verbatim></p>
 
 <p>Install your preferred editor. For example, to install vim:</p>
 
-<pre><code>sudo apt-get -y install vim&lt;/verbatim&gt;
+<pre><code>sudo apt-get -y install vim
 </code></pre>
 
 <h2>Optional VM Customization</h2>
@@ -141,12 +142,12 @@ ssh -Y openflow@openflow</verbatim></p>
 
 <p>To speed up future SSH connections, add your host&#8217;s public key to the new VM. Also on the host, not the VM:</p>
 
-<pre><code>scp ~/.ssh/id_rsa.pub openflow@openflow:~/&lt;/verbatim&gt;
+<pre><code>scp ~/.ssh/id_rsa.pub openflow@openflow:~/
 </code></pre>
 
 <p>Now, on the VM (SSH in first):</p>
 
-<pre><code>cd ~/ &amp;&amp; mkdir -p .ssh &amp;&amp; chmod 700 .ssh &amp;&amp; cd .ssh &amp;&amp; touch authorized_keys2 &amp;&amp; chmod 600 authorized_keys2 &amp;&amp; cat ../id_rsa.pub &gt;&gt; authorized_keys2 &amp;&amp; rm ../id_rsa.pub &amp;&amp; cd ..&lt;/verbatim&gt;
+<pre><code>cd ~/ &amp;&amp; mkdir -p .ssh &amp;&amp; chmod 700 .ssh &amp;&amp; cd .ssh &amp;&amp; touch authorized_keys2 &amp;&amp; chmod 600 authorized_keys2 &amp;&amp; cat ../id_rsa.pub &gt;&gt; authorized_keys2 &amp;&amp; rm ../id_rsa.pub &amp;&amp; cd ..
 </code></pre>
 
 <p>Now you should be able to log in without entering a password.</p>
@@ -205,7 +206,7 @@ ssh -Y openflow@openflow</verbatim></p>
   <div class = "sidebartext"><p><a href="/"></a>Contribute</p></div>
   -->
   <div class = "sidebartext"><p><a href="/blog/archives">News Archives</a></p></div>
-  <div class = "sidebartext"><p><a href="/credits">About</a></p></div>
+  <div class = "sidebartext"><p><a href="/credits">Credits</a></p></div>
 </section>
 <section>
   <h1>Recent News</h1>
