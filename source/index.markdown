@@ -18,12 +18,12 @@ Run a complete network on a single machine (VM, cloud, or native) with a single 
 <div class=frontpageparagraph>
 You can <a href="sample-workflow#Interacting_with_a_Network">interact with</a>
 your network using the Mininet
-<a href="/fixme">API</a> and <a href="/fixme">CLI</a>, 
-<a href="sample-workflow#Customizing_a_Network">customize</a> it, 
-<a href="sample-workflow#Sharing_a_Network">share</a> it with others, 
+<a href="/fixme">API</a> and <a href="/fixme">CLI</a>,
+<a href="sample-workflow#Customizing_a_Network">customize</a> it,
+<a href="sample-workflow#Sharing_a_Network">share</a> it with others,
 or
 <a href="sample-workflow#Running_on_Hardware">deploy</a>
- it on real hardware.  
+ it on real hardware.
 </div>
 
 <div class=frontpageparagraph>
@@ -45,11 +45,11 @@ and run the <a href="http://www.openflow.org/wk/index.php/OpenFlow_Tutorial" tit
 </div>
 
 <div class=frontpagebutton>
-<div class=buttontitle><h3><a href="https://github.com/mininet/mininet/wiki/Support">Support</a></h3></div>
+<div class=buttontitle><h3><a href="support">Support</a></h3></div>
 <div class=buttontext>
 <p>
 Join the mailing list, <a href="https://mailman.stanford.edu/mailman/alt/members?list=mininet-discuss">mininet-discuss</a>, read the
-<a href="https://github.com/mininet/mininet/wiki/FAQ">FAQ</a>, or read the 
+<a href="https://github.com/mininet/mininet/wiki/FAQ">FAQ</a>, or read the
 <a href="https://github.com/mininet/mininet/wiki/Documentation">documentation</a>.
 </p>
 </div>
