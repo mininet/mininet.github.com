@@ -283,28 +283,6 @@ Another example switch type is Open vSwitch (OVS), which comes preinstalled on t
     sudo mn --switch ovsk --test iperf
 
 
-### NOX
-
-To run a regression test with NOX running pyswitch, the NOX_CORE_DIR env var must be set to the directory containing the NOX executable. This is set on the mininet VM by default.
-
-First verify that NOX runs:
-    cd $NOX_CORE_DIR
-    ./nox_core -v -i ptcp:
-
-Ctrl-C to kill NOX, then run a test with NOX pyswitch:
-
-    cd
-    sudo -E mn --controller nox_pysw --test pingpair
-
-There's a hesitation of a few seconds while NOX loads and the switch connects, but then it should complete the ping.
-
-Note that this time, `mn` was called via `sudo -E`, to keep the `NOX_CORE_DIR` environment variable.  If you're running nox remotely, using `--controller remote`, then the `-E` isn't necessary.  Alternately, you can change the first line of `/etc/sudoers`, via `sudo visudo`, to change the `env_reset` line to:
-
-	Defaults !env_reset
-
-... so that when running sudo the env var setup isn't changed.
-
-
 ### Mininet Benchmark
 
 To record the time to setup and teardown a topology, use test 'none':
@@ -434,3 +412,27 @@ This setup may be convenient if you already have a custom version of NOX w/dev t
 If you want to try this, fill in the host IP and/or listening port:
 
     sudo mn --controller=remote --ip=[controller IP] --port=[controller listening port]
+
+### NOX
+
+The Mininet default install (using `util/install.sh -a`) does not install NOX.  If you would like to install it, run `sudo ~/mininet/util/install.sh -x`.
+
+To run a regression test with NOX running the NOX app 'pyswitch', the NOX_CORE_DIR env var must be set to the directory containing the NOX executable.
+
+First verify that NOX runs:
+    cd $NOX_CORE_DIR
+    ./nox_core -v -i ptcp:
+
+Ctrl-C to kill NOX, then run a test with NOX pyswitch:
+
+    cd
+    sudo -E mn --controller nox_pysw --test pingpair
+
+There's a hesitation of a few seconds while NOX loads and the switch connects, but then it should complete the ping.
+
+Note that this time, `mn` was called via `sudo -E`, to keep the `NOX_CORE_DIR` environment variable.  If you're running nox remotely, using `--controller remote`, then the `-E` isn't necessary.  Alternately, you can change the first line of `/etc/sudoers`, via `sudo visudo`, to change the `env_reset` line to:
+
+	Defaults !env_reset
+
+... so that when running sudo the env var setup isn't changed.
+
