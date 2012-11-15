@@ -183,11 +183,11 @@ Outside the CLI, other verbosity levels can be used, such as warning, which is u
 
 Custom topologies can be easily defined as well, using a simple Python API, and an example is provided in custom/topo-2sw-2host.py. This example connects two switches directly, with a single host off each switch:
 
-{% include_code title lang:python custom/topo-2sw-2host.py %}
+{% include_code simple topology example lang:python custom/topo-2sw-2host.py %}
 
 When a custom mininet file is provided, it can add new topologies, switch types, and tests to the command-line. For example:
 
-    sudo mn --custom ~/mininet/custom/topo-2sw-2host.py --topo mytopo --test pingall</verbatim>
+    sudo mn --custom ~/mininet/custom/topo-2sw-2host.py --topo mytopo --test pingall
 
 
 ### ID = MAC
