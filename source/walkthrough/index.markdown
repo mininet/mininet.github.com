@@ -277,7 +277,7 @@ Note the much lower TCP iperf-reported bandwidth compared to that seen earlier w
 
 If you do the ping test shown earlier, you should notice a much higher delay, since now packets must endure additional kernel-to-user-space transitions. The ping time will be more variable, as the user-space process representing the host may be scheduled in and out by the OS.
 
-On the other hand, the user-space switch can be a great starting point for implementing new functionality, especially where software performance is not critical (such as when the user-space switch is controlling a hardware switch).
+On the other hand, the user-space switch can be a great starting point for implementing new functionality, especially where software performance is not critical.
 
 Another example switch type is Open vSwitch (OVS), which comes preinstalled on the Mininet VM. The iperf-reported TCP bandwidth should be similar to the OpenFlow kernel module, and possibly faster:
     sudo mn --switch ovsk --test iperf
