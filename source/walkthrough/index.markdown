@@ -312,13 +312,15 @@ To record the time to setup and teardown a topology, use test 'none':
 	sudo mn --test none
 
 
-### Everything in its own Namespace (currently broken - ignore)
+### Everything in its own Namespace (user switch only)
 
-By default, the hosts are put in their own namespace, while switches and the controller are in the root namespace. To put every node in its own namespace, pass the `--innamespace` option:
+By default, the hosts are put in their own namespace, while switches and the controller are in the root namespace. To put switches in their own namespace, pass the `--innamespace` option:
 
 	sudo mn --innamespace --switch user
 
 Instead of using loopback, the switches will talk to the controller through a separately bridged control connection. By itself, this option is not terribly useful, but it does provide an example of how to isolate different switches.
+
+Note that this option does not (as of 11/19/12) work with Open vSwitch.
 
 	exit
 
