@@ -31,7 +31,8 @@ permalink: /blog/:year/:month/:day/:title/
 source: source
 destination: public
 plugins: plugins
-code_dir: downloads/code
+# Assume that the mininet source is located at the same filesystem depth as this website repo.
+code_dir: ../../mininet
 category_dir: blog/categories
 markdown: rdiscount
 pygments: false # default python pygments have been replaced by pygments.rb

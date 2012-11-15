@@ -46,7 +46,7 @@ Start a minimal topology and enter the CLI:
 
     sudo mn
 
-The default topology is minimal, which includes one OpenFlow kernel switch connected to two hosts, plus the OpenFlow reference controller. Other ones are available; see the `--topo` section in the output of `mn -h`.
+The default topology is the `minimal` topology, which includes one OpenFlow kernel switch connected to two hosts, plus the OpenFlow reference controller. This topology could also be specified on the command line with `--topo=minimal`.  Other topologies are available, out-of-the-box; see the `--topo` section in the output of `mn -h`.
 
 All four entities (2 host processes, 1 switch process, 1 reference controller) are now running in the VM. The controller can be outside the VM, and instructions for that are at the bottom.
 
@@ -183,50 +183,7 @@ Outside the CLI, other verbosity levels can be used, such as warning, which is u
 
 Custom topologies can be easily defined as well, using a simple Python API, and an example is provided in custom/topo-2sw-2host.py. This example connects two switches directly, with a single host off each switch:
 
-{% codeblock lang:python %}
-"""Custom topology example
-
-author: Brandon Heller (brandonh@stanford.edu)
-
-Two directly connected switches plus a host for each switch:
-
-host --- switch --- switch --- host
-
-Adding the 'topos' dict with a key/value pair to generate our newly defined topology enables one to pass in '--topo=mytopo' from the command line. """
-
-from mininet.topo import Topo, Node
-
-class MyTopo( Topo ):
-    "Simple topology example."
-
-    def *__init__*( self, enable_all = True ):
-        "Create custom topo."
-
-        # Add default members to class.
-        super( MyTopo, self ).__init__()
-
-        # Set Node IDs for hosts and switches
-        leftHost = 1
-        leftSwitch = 2
-        rightSwitch = 3
-        rightHost = 4
-
-        # Add nodes
-        self.add_node( leftSwitch, Node( is_switch=True ) )
-        self.add_node( rightSwitch, Node( is_switch=True ) )
-        self.add_node( leftHost, Node( is_switch=False ) )
-        self.add_node( rightHost, Node( is_switch=False ) )
-
-        # Add edges
-        self.add_edge( leftHost, leftSwitch )
-        self.add_edge( leftSwitch, rightSwitch )
-        self.add_edge( rightSwitch, rightHost )
-
-        # Consider all switches and hosts 'on'
-        self.enable_all()
-
-topos = { 'mytopo': ( lambda: MyTopo() ) } 
-{% endcodeblock %}
+{% include_code title lang:python custom/topo-2sw-2host.py %}
 
 When a custom mininet file is provided, it can add new topologies, switch types, and tests to the command-line. For example:
 
