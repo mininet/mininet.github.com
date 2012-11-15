@@ -256,7 +256,7 @@ Now, in the xterm labeled "host: h1", run:
 Go back to `s1` and dump the flows:
     dpctl dump-flows tcp:127.0.0.1:6634
 
-You should see multiple flow entries now.
+You should see multiple flow entries now. Alternately (and generally more convenient), you could use the `dpctl` command built into the Mininet CLI without needing any xterms or manually specifying the IP and port of the switch.
 
 You can tell whether an xterm is in the root namespace by checking ifconfig; if all interfaces are shown (including eth0), it's in the root namespace. Additionally, its title should contain "(root)".
 
