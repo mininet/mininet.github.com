@@ -275,7 +275,7 @@ Other switch types can be used. For example, to run the user-space switch:
 
 Note the much lower TCP iperf-reported bandwidth compared to that seen earlier with the kernel switch.
 
-If you do the ping test shown earlier, you should notice a much higher delay ping delay, since now packets must endure additional kernel-to-user-space transitions. The ping time will be more variable, as the user-space process representing the host may be scheduled in and out by the OS.
+If you do the ping test shown earlier, you should notice a much higher delay, since now packets must endure additional kernel-to-user-space transitions. The ping time will be more variable, as the user-space process representing the host may be scheduled in and out by the OS.
 
 On the other hand, the user-space switch can be a great starting point for implementing new functionality, especially where software performance is not critical (such as when the user-space switch is controlling a hardware switch).
 
