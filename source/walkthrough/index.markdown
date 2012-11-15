@@ -366,7 +366,7 @@ You can also evaluate methods of variables:
 	py h1.IP()
 
 
-### Link [Up/Down](Up/Down)
+### Link Up/Down
 
 For fault tolerance testing, it can be helpful to bring links up and down.
 
