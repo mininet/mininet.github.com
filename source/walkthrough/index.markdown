@@ -389,7 +389,7 @@ To display an xterm for h1 and h2:
 Examples
 ---------
 
-The examples directory in the Mininet source tree includes examples of how to use Mininet's Python API, as well as potentially useful code that has not been integrated into the main code base.
+The [examples directory](https://github.com/mininet/mininet/tree/master/examples) in the Mininet source tree includes examples of how to use Mininet's Python API, as well as potentially useful code that has not been integrated into the main code base.
 
 
 ### SSH daemon per host
