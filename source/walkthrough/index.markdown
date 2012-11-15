@@ -249,9 +249,9 @@ In the xterm labeled "switch: s1 (root)", run:
 
 Nothing will print out; the switch has no flows added.  To use dpctl with other switches, start up mininet in verbose mode and look at the passive listening ports for the switches when they're created.
 
-Now, in the xterm labeled "host: h2", run:
+Now, in the xterm labeled "host: h1", run:
 
-    ping 10.0.0.3
+    ping 10.0.0.2
 
 Go back to `s1` and dump the flows:
     dpctl dump-flows tcp:127.0.0.1:6634
