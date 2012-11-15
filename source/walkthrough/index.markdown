@@ -194,7 +194,7 @@ When a custom mininet file is provided, it can add new topologies, switch types,
 
 By default, hosts and switches start with randomly assigned MAC addresses. This can make debugging tough, because every time the Mininet is created, the MACs change, so correlating control traffic with specific hosts is tough.
 
-The --mac option is super-useful, and sets the switch MAC and host MAC and IP addrs to small, unique, easy-to-read IDs.
+The `--mac` option is super-useful, and sets the switch MAC and host MAC and IP addrs to small, unique, easy-to-read IDs.
 
 Before:
 
@@ -229,7 +229,7 @@ After:
 
 For more complex debugging, you can start Mininet so that it spawns one or more xterms.
 
-To start an xterm for every host and switch, pass the -x option:
+To start an xterm for every host and switch, pass the `-x` option:
 
     sudo mn -x
 
@@ -314,7 +314,7 @@ To record the time to setup and teardown a topology, use test 'none':
 
 ### Everything in its own Namespace (currently broken - ignore)
 
-By default, the hosts are put in their own namespace, while switches and the controller are in the root namespace. To put every node in its own namespace, pass the --innamespace option:
+By default, the hosts are put in their own namespace, while switches and the controller are in the root namespace. To put every node in its own namespace, pass the `--innamespace` option:
 
 	sudo mn --innamespace --switch user
 
