@@ -208,7 +208,7 @@ Before:
               TX packets:6 errors:0 dropped:0 overruns:0 carrier:0
               collisions:0 txqueuelen:1000 
               RX bytes:392 (392.0 B)  TX bytes:392 (392.0 B)
-    mininet> exit</verbatim>
+    mininet> exit
 
 After:
 
@@ -222,7 +222,7 @@ After:
               TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
               collisions:0 txqueuelen:1000 
               RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
-    mininet> exit</verbatim>
+    mininet> exit
 
 
 ### XTerm Display
@@ -251,7 +251,7 @@ Nothing will print out; the switch has no flows added.  To use dpctl with other 
 
 Now, in the xterm labeled "host: h2", run:
 
-    ping 10.0.0.3</verbatim>
+    ping 10.0.0.3
 
 Go back to `s1` and dump the flows:
     dpctl dump-flows tcp:127.0.0.1:6634
@@ -271,7 +271,7 @@ The xterms should automatically close.
 
 Other switch types can be used. For example, to run the user-space switch:
 
-    sudo mn --switch user --test iperf</verbatim>
+    sudo mn --switch user --test iperf
 
 Note the much lower TCP iperf-reported bandwidth compared to that seen earlier with the kernel switch.
 
@@ -280,7 +280,7 @@ If you do the ping test shown earlier, you should notice a much higher delay pin
 On the other hand, the user-space switch can be a great starting point for implementing new functionality, especially where software performance is not critical (such as when the user-space switch is controlling a hardware switch).
 
 Another example switch type is Open vSwitch (OVS), which comes preinstalled on the Mininet VM. The iperf-reported TCP bandwidth should be similar to the OpenFlow kernel module, and possibly faster:
-    sudo mn --switch ovsk --test iperf</verbatim>
+    sudo mn --switch ovsk --test iperf
 
 
 ### NOX
