@@ -342,7 +342,7 @@ Display the options:
 
 ### Python Interpreter
 
-If the first phrase on the Mininiet command line is 'py', then that command is executed with Python. This might be useful for extending Mininet, as well as probing its inner workings. Each host, switch, and controller has an associated Node object.
+If the first phrase on the Mininiet command line is `py`, then that command is executed with Python. This might be useful for extending Mininet, as well as probing its inner workings. Each host, switch, and controller has an associated Node object.
 
 At the Mininet CLI, run:
 
