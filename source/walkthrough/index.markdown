@@ -104,7 +104,7 @@ Now, verify that you can ping from host 0 to host 1:
 
     h1 ping -c 1 h2
 
-If a string appears later in the command with a node name, that node name is replaced by its IP address; this happened for h3.
+If a string appears later in the command with a node name, that node name is replaced by its IP address; this happened for h2.
 
 You should see OpenFlow control traffic. The first host ARPs for the MAC address of the second, which causes a packet_in message to go to the controller. The controller then broadcasts a packet_out message to other ports on the switch (in this example, the only other data port). The second host sees the ARP request and sends a broadcast reply. This reply goes to the controller, which sends it to the first host and pushes down a flow entry.
 
