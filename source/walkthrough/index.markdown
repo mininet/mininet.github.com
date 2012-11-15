@@ -73,9 +73,9 @@ You should see the switch and two hosts listed.
 
 If the first string typed into the Mininet CLI is a host, switch or controller name, the command is executed on that node. Run a command on a host process:
 
-    h2 ifconfig -a
+    h1 ifconfig -a
 
-You should see the host's `h2-eth0` and loopback (`lo`) interfaces. Note that this interface (`h2-eth0`) is not seen by the primary Linux system when `ifconfig` is run, because it is specific to the network namespace of the host process.
+You should see the host's `h1-eth0` and loopback (`lo`) interfaces. Note that this interface (`h1-eth0`) is not seen by the primary Linux system when `ifconfig` is run, because it is specific to the network namespace of the host process.
 
 In contrast, the switch by default runs in the root network namespace, so running a command on the "switch" is the same as running it from a regular terminal:
 
@@ -83,13 +83,13 @@ In contrast, the switch by default runs in the root network namespace, so runnin
 
 This will show the switch interfaces, plus the VM's connection out (eth0).
 
-For other examples highlighting that the hosts have isolated network state, run `arp` and `route` on both `s1` and `h2`.
+For other examples highlighting that the hosts have isolated network state, run `arp` and `route` on both `s1` and `h1`.
 
 It would be possible to place every host, switch and controller in its own isolated network namespace, but there's no real advantage to doing so, unless you want to replicate a complex multiple-controller network. Mininet does support this; see the `--innamespace` option.
 
 Note that _only_ the network is virtualized; each host process sees the same set of processes and directories. For example, print the process list from a host process:
 
-    h2 ps -a
+    h1 ps -a
 
 This should be the exact same as that seen by the root network namespace:
 
@@ -102,7 +102,7 @@ It would be possible to use separate process spaces with Linux containers, but c
 
 Now, verify that you can ping from host 0 to host 1:
 
-    h2 ping -c 1 h3
+    h1 ping -c 1 h2
 
 If a string appears later in the command with a node name, that node name is replaced by its IP address; this happened for h3.
 
@@ -112,7 +112,7 @@ Now the first host knows the IP address of the second, and can send its ping via
 
 Repeat the last ping:
 
-    h2 ping -c 1 h3
+    h1 ping -c 1 h2
 
 You should see a much lower ping time for the second try (&lt;100us). A flow entry covering ICMP ping traffic was previously installed in the switch, so no control traffic was generated, and the packets immediately pass through the switch.
 
@@ -200,9 +200,9 @@ Before:
 
     mininet@mininet:~/mininet$ sudo mn
     ...
-    mininet> h2 ifconfig
+    mininet> h1 ifconfig
     h2-eth0  Link encap:Ethernet  HWaddr f6:9d:5a:7f:41:42  
-              inet addr:10.0.0.2  Bcast:10.255.255.255  Mask:255.0.0.0
+              inet addr:10.0.0.1  Bcast:10.255.255.255  Mask:255.0.0.0
               UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
               RX packets:6 errors:0 dropped:0 overruns:0 frame:0
               TX packets:6 errors:0 dropped:0 overruns:0 carrier:0
@@ -214,9 +214,9 @@ After:
 
     mininet@mininet:~/mininet$ sudo mn --mac
     ...
-    mininet> h2 ifconfig
-    h2-eth0  Link encap:Ethernet  HWaddr 00:00:00:00:00:02  
-              inet addr:10.0.0.2  Bcast:10.255.255.255  Mask:255.0.0.0
+    mininet> h1 ifconfig
+    h2-eth0  Link encap:Ethernet  HWaddr 00:00:00:00:00:01
+              inet addr:10.0.0.1  Bcast:10.255.255.255  Mask:255.0.0.0
               UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
               RX packets:0 errors:0 dropped:0 overruns:0 frame:0
               TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
@@ -356,12 +356,12 @@ Next, see the methods and properties available for a node, using the dir() funct
 
 You can read the on-line documentation for methods available on a node by using the help() function:
 
-	py help(h2)
+	py help(h1)
 (Press "q" to quit reading the documentation.)
 
 You can also evaluate methods of variables:
 
-	py h2.IP()
+	py h1.IP()
 
 
 ### Link [Up/Down](Up/Down)
@@ -370,18 +370,18 @@ For fault tolerance testing, it can be helpful to bring links up and down.
 
 To disable both halves of a virtual ethernet pair:
 
-	link s1 h2 down
+	link s1 h1 down
 
 You should see an OpenFlow Port Status Change notification get generated. To bring the link back up:
 
-	link s1 h2 up
+	link s1 h1 up
 
 
 ### XTerm Display
 
-To display an xterm for h2 and h3:
+To display an xterm for h1 and h2:
 
-	xterm h2 h3
+	xterm h1 h2
 
 
 Examples
@@ -398,8 +398,8 @@ One example that may be particularly useful runs an SSH daemon on every host:
 
 From another terminal, you can ssh into any host and run interactive commands:
 
-	ssh 10.0.0.2
-	ping 10.0.0.3 
+	ssh 10.0.0.1
+	ping 10.0.0.2 
 	# press ctrl-c
 	exit
 
