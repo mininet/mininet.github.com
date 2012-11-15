@@ -75,7 +75,7 @@ If the first string typed into the Mininet CLI is a host, switch or controller n
 
     h2 ifconfig -a
 
-You should see the host's `h2-eth0` and loopback (`lo`) interfaces. Note that this interface (`h2-eth0`) is not seen by the primary Linux system when `ifconfig` is run, because it is specific to the network namespace of the host process. Also note that because this interface is half of a virtual ethernet pair, the host cannot ping itself from the interface.
+You should see the host's `h2-eth0` and loopback (`lo`) interfaces. Note that this interface (`h2-eth0`) is not seen by the primary Linux system when `ifconfig` is run, because it is specific to the network namespace of the host process.
 
 In contrast, the switch by default runs in the root network namespace, so running a command on the "switch" is the same as running it from a regular terminal:
 
