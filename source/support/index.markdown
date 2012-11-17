@@ -4,6 +4,7 @@ title: "Mininet Support"
 comments: false
 sharing: false
 footer: true
+root: /
 ---
 Mininet is self-supported by the friendly Mininet community via the `mininet-discuss` mailing list and the [FAQ](https://github.com/mininet/mininet/wiki/FAQ). To sign up for the mailing list, go to <https://mailman.stanford.edu/mailman/listinfo/mininet-discuss>.
 
