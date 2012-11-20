@@ -19,9 +19,11 @@ VM Setup
 
 ### Download the Mininet VM
 
-Download the Mininet VM at https://github.com/downloads/mininet/mininet/mininet-vm-ubuntu11.10-052312.vmware.zip
+Download the Mininet VM from <https://github.com/mininet/mininet/downloads>
 
-The VM comes out to ~800MB compressed and ~2GB uncompressed. It includes a disk image in VMware's `.vmdk` (virtual machine disk) format, which can be used by most virtualization systems.
+
+The VM comes out to 1GB compressed and ~2GB uncompressed. It is an OVF (Open Virtualization Format) virtual machine image
+which can be imported by most virtual machine monitors.
 
 Download and install a virtualization program such as: [VMware Workstation](http://www.vmware.com/products/workstation/) for Windows or Linux, [VMware Fusion](http://www.vmware.com/products/fusion) for Mac, [VirtualBox](http://www.virtualbox.org/wiki/Downloads) ( **free!**, GPL) for any platform, or `qemu` ( **free!**, GPL) for Linux. If you already have VMware, we find that it runs Mininet somewhat faster than VirtualBox. However, VirtualBox is free to download and distribute, which is a definite advantage!
 
@@ -29,54 +31,53 @@ Download and install a virtualization program such as: [VMware Workstation](http
 
 Add the VM and start it up, in the virtualization program of your choice:
 
-**VirtualBox**: Create a new VM using the `.vmdk` as the hard disk image, then start it up.
+**VirtualBox**: Import the OVF file, select "settings," and add an additional *host-only network adapter* so that you can
+log in to the VM image. Start the VM.
 
-**VMware**: Just double-click the `.vmx` file.
+**VMware**: Import the OVF file, then start the VM.
 
 VMware may ask you to install VMware tools on the VM - if it asks, decline. Everything graphical in the tutorial is done via X forwarding through SSH (in fact, the VM doesn't have a desktop manager installed), so the VMware tools are unnecessary unless you wish to install an X11/Gnome/etc. environment in your VM.
 
 **Qemu/KVM**:
 
-    qemu-system-i386 -m 512 MininetVM.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
+Something like the following should work:
+
+    qemu-system-i386 -m 1024 mininet-vm-disk1.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
 
 This will set up `ssh` forwarding from the VM to host port 8022.
 
-**Parallels**: Use Parallels Transporter to convert the `.vmdk` file to an `.hdd` image that Parallels can use, and then create a new VM using that `.hdd` image as its virtual drive.
+**Parallels**: Use Parallels Transporter to convert the `.vmdk` file to an `.hdd` image that Parallels can use, and then create a new VM using that `.hdd` image as its virtual drive. Start the VM.
 
 
-### Login to VM
+### Log in to VM
 
-Log in to the VM, using the following params:
-* Username: **openflow**
-* Password: **openflow**
-The root account is not enabled for login; you can use sudo to run a command as superuser.
-
+Log in to the VM, using the following name and password:
+    mininet-vm login: mininet
+    Password: mininet
+(some older VM images may use `openflow`/`openflow` instead)
+The root account is not enabled for login; you can use `sudo` to run a command with root privileges.
 
 ### SSH into VM
 
 First, find the VM's IP address, which for VMware is probably in the range 192.168.x.y. In the VM console:
 
     /sbin/ifconfig eth0
+    
+Note: VirtualBox users who have set up a host-only network on `eth1` should use `ifconfig eth1` instead
 
 You may want to add the address to your host PC's /etc/hosts file to be able to SSH in by name, if it's Unix-like. For example, add a line like this for OS X:
 
-    192.168.x.y openflow
+    192.168.x.y mininet-vm
 
 where 192.168.x.y is replaced by the VM's IP address.
 
-SSH in to the host. Use -Y to enable trusted X forwarding, for use with Wireshark later - we assume the VM is running locally, and that the additional precautions of -X w/SSH are unnecessary.
+SSH in to the host. We assume the VM is running locally, and that the additional precautions of `ssh -X` are unnecessary. `ssh -Y` also has no authentication timeout by default.
 
-    ssh -Y openflow@openflow
+    ssh -Y mininet@mininet-vm
 
 If you're running the VM under QEMU/KVM with -net user and the `hostfwd` option as recommended above, the VM IP address is irrelevant. Instead you tell SSH to connect to port 8022 on the host:
 
-    ssh -Y -p 8022 openflow@localhost
-
-### Install preferred editor
-
-Install your preferred editor. For example, to install vim:
-
-    sudo apt-get -y install vim
+    ssh -Y -p 8022 mininet@localhost
 
 
 Optional VM Customization
@@ -84,9 +85,9 @@ Optional VM Customization
 
 These commands are optional, and may be useful for your setup:
 
-### Setup SSH auto-login
+### Set up SSH auto-login
 
-These steps let you log in via SSH without needing to enter a password. If you use the console from your virtualization software natively, then this step isn't needed.
+These steps let you log in via `ssh` without needing to enter a password. If you use the console from your virtualization software natively, then this step isn't needed.
 
 Check for `~/.ssh/id_rsa` or `~/.ssh/id_dsa`. If you can't find either of these files, then you'll want to generate an SSH key.
 
@@ -108,4 +109,4 @@ Now you should be able to log in without entering a password.
 Mininet Walkthrough
 --------------------
 
-(Highly recommended) Head over to the [Walkthrough](walkthrough), which shows common commands. It'll be really useful, trust us.
+(Highly recommended) Head over to the [Walkthrough](/walkthrough), which shows common commands. It'll be really useful, trust us.
