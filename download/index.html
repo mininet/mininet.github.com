@@ -53,7 +53,7 @@ BL: removed since they make things SLOW
   
   <p>The easiest way to get started is to <strong>download a pre-packaged Mininet/Ubuntu VM</strong>. This VM includes Mininet itself, all OpenFlow binaries and tools pre-installed, and tweaks to the kernel configuration to support larger Mininet networks.</p>
 
-<p><em>(These instructions are for Mininet 2.0.0 - for earlier versions, go <a href="/download/old">here</a>)</em></p>
+<p><em>(These instructions are for Mininet 2.0.0 - for earlier versions, go to the bottom of this page.)</em></p>
 
 <h2>Option 1: Mininet VM Installation (recommended)</h2>
 
@@ -64,15 +64,15 @@ BL: removed since they make things SLOW
 <ol>
 <li><p>Download the <a href="https://github.com/mininet/mininet/downloads/">Mininet VM image</a> . This will take some time. It&#8217;s ~800MB-1GB, compressed.</p></li>
 <li><p>Download and install a virtualization system. We recommend <a href="http://www.virtualbox.org/wiki/Downloads">VirtualBox</a> (free, GPL) because it is <strong>free</strong> and works on OS X, Windows, and Linux (though it&#8217;s slightly slower than VMware in our tests.) You can also use <a href="http://qemu.org">Qemu</a> for any platform, <a href="http://www.vmware.com/products/workstation/">VMware Workstation</a> for Windows or Linux, or <a href="http://www.vmware.com/products/fusion">VMware Fusion</a> for Mac, <a href="http://www.linux-kvm.org">KVM</a> (free, GPL) for Linux.</p></li>
-<li><p>Sign up for the <code>mininet-discuss</code> mailing list at https://mailman.stanford.edu/mailman/listinfo/mininet-discuss. This is the source for Mininet <strong>support</strong> and discussion with the friendly Mininet community. ;-)</p></li>
-<li><p>Run through the <a href="vm-setup-notes">VM Setup Notes</a> to log in to the VM and install Mininet code on it.</p></li>
-<li><p>Follow the <a href="Walkthrough">Walkthrough</a> to get familiar with Mininet commands and typical usage.</p></li>
+<li><p>Sign up for the <a href="https://mailman.stanford.edu/mailman/listinfo/mininet-discuss">mininet-discuss mailing list</a>. This is the source for Mininet <strong>support</strong> and discussion with the friendly Mininet community. ;-)</p></li>
+<li><p>Run through the <a href="/vm-setup-notes">VM Setup Notes</a> to log in to the VM and install Mininet code on it.</p></li>
+<li><p>Follow the <a href="/walkthrough">Walkthrough</a> to get familiar with Mininet commands and typical usage.</p></li>
 </ol>
 
 
-<p>Once you&#8217;ve completed the <a href="Walkthrough">Walkthrough</a>, you should have a clear idea for what Mininet is and what you might use it for. If you are interested in OpenFlow and Software-Defined Networking, you will want to complete the <a href="http://www.openflow.org/wk/index.php/OpenFlow_Tutorial">OpenFlow tutorial</a> as well. Good luck, and have fun!</p>
+<p>Once you&#8217;ve completed the <a href="/walkthrough">Walkthrough</a>, you should have a clear idea for what Mininet is and what you might use it for. If you are interested in OpenFlow and Software-Defined Networking, you will want to complete the <a href="http://www.openflow.org/wk/index.php/OpenFlow_Tutorial">OpenFlow tutorial</a> as well. Good luck, and have fun!</p>
 
-<h2>Option 2 on Ubuntu 12.10 and later: Mininet Package Installation</h2>
+<h2>Option 2 on Ubuntu 12.10 and later: Mininet Package Upgrade</h2>
 
 <p>First, if you have upgraded from an earlier installation of Ubuntu and/or Mininet, make sure you <em>remove all traces of earlier versions of Open vSwitch from <code>/usr/local</code></em>:</p>
 
@@ -92,20 +92,24 @@ sudo rm /usr/local/sbin/ovs*
 
 <p>If that works, continue with steps 3-5, above.</p>
 
-<h2>Option 3 on <em>Ubuntu 11.10 and later</em>: Native Mininet installation</h2>
+<h2>Option 3 on <em>Ubuntu 11.10 and later</em>: Full Mininet installation</h2>
+
+<p>This option works well for local VM, remote EC2, and native installs.  It assumes the starting point of a fresh Ubuntu install.</p>
+
+<p>We strongly recommend more recent Ubuntu versions, such as 12.10, because they support newer version of Open vSwitch.</p>
 
 <p>To find out which version of Ubuntu you are running, run the command</p>
 
 <pre><code>lsb_release -a
 </code></pre>
 
-<p>If you want to install natively on Ubuntu 11.10+ the basic technique is:</p>
+<p>To install natively on Ubuntu 11.10+ the basic technique is:</p>
 
 <pre><code>git clone git://github.com/mininet/mininet
 mininet/util/install.sh -a
 </code></pre>
 
-<p>This takes about 15-20 minutes and will install everything that is included in the Mininet VM, including NOX classic/destiny + tutorial code, the OpenFlow wireshark dissector, etc..</p>
+<p>This takes about 5 minutes and will install everything that is included in the Mininet VM, including dependencies like Open vSwitch as well the additions like the OpenFlow wireshark dissector and POX.</p>
 
 <p>Alternately, it may be possible to install a &#8220;minimal&#8221; configuration using</p>
 
@@ -119,7 +123,22 @@ mininet/util/install.sh -a
 <pre><code>sudo mn --test pingall
 </code></pre>
 
-<p>If that works, continue with steps 3-5, above.</p>
+<p>Then continue with steps 3-5, above, and if you encounter an error during installation, request help on <a href="https://mailman.stanford.edu/mailman/listinfo/mininet-discuss">mininet-discuss</a>.</p>
+
+<h2>(old) Mininet 1.0 Installation</h2>
+
+<p>You can choose to use an old VM from the <a href="https://github.com/mininet/mininet/downloads/">Mininet downloads</a>.</p>
+
+<p>Or, use the archived <code>install-precise</code> branch of Mininet 1.0 for install on Ubuntu 12.04:</p>
+
+<pre><code>git clone git://github.com/mininet/mininet
+cd mininet
+git fetch
+git checkout -b install-precise origin/devel/install-precise
+util/install.sh -a
+</code></pre>
+
+<p>Make sure you are installing from the <em>install-precise</em> branch.</p>
 
   
     <footer>
