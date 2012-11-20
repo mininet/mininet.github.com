@@ -19,7 +19,7 @@ Follow these steps for a VM install:
 
 2. Download and install a virtualization system. We recommend [VirtualBox](http://www.virtualbox.org/wiki/Downloads) (free, GPL) because it is **free** and works on OS X, Windows, and Linux (though it's slightly slower than VMware in our tests.) You can also use [Qemu](http://qemu.org) for any platform, [VMware Workstation](http://www.vmware.com/products/workstation/) for Windows or Linux, or [VMware Fusion](http://www.vmware.com/products/fusion) for Mac, [KVM](http://www.linux-kvm.org) (free, GPL) for Linux.
 
-3. Sign up for the `mininet-discuss` mailing list at https://mailman.stanford.edu/mailman/listinfo/mininet-discuss. This is the source for Mininet **support** and discussion with the friendly Mininet community. ;-)
+3. Sign up for the [mininet-discuss mailing list](https://mailman.stanford.edu/mailman/listinfo/mininet-discuss). This is the source for Mininet **support** and discussion with the friendly Mininet community. ;-)
 
 4. Run through the [VM Setup Notes](/vm-setup-notes) to log in to the VM and install Mininet code on it.
 
