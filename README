@@ -1,0 +1,72 @@
+# Install Mininet webpage source
+cd ~/
+git clone git@github.com:mininet/mininet.github.com mininet-website
+cd mininet-website
+git checkout -b source origin/source
+
+# Example install on U12.10:
+sudo apt-get install curl
+
+# From http://octopress.org/docs/setup/rvm/
+curl -L https://get.rvm.io | bash -s stable --ruby
+source /home/brandonh/.rvm/scripts/rvm
+rvm install 1.9.3
+rvm use 1.9.3
+rvm rubygems latest
+ruby --version
+
+sudo apt-get install doxygen doxypy
+
+gem install bundler
+bundle install
+rake install
+
+# Install Octopress
+# see http://octopress.org/docs/setup/
+
+# Grab Mininet website source.  
+git clone -b source git@github.com:mininet/mininet.github.com.git
+# RVM will may about a script there to use Ruby 1.9.3+.
+cd mininet.github.com
+
+# Preview the site by spawning a lightweight web server on port 4000:
+rake preview
+# To view, open a web browser to localhost:4000.
+
+# In theory, to start up a server to update the blog upon changes:
+rake watch
+# In practice, doesn't seem to update properly when you change CSS or other files - probably not watching all the custom files.  
+
+# Re-generate all website output files when changing anything:
+rake generate
+
+# Some more interesting pages to mod:
+# Index: source/index.markdown
+# Side navbar: source/_includes/custom/asides/sidenav.html
+# Main CSS changes in Sass: sass/custom/_styles.scss
+
+# To add a new page:
+rake new_page[insert_name_here]
+# Then mod the generated markdown page (path will be printed) and run 'rack generate'.
+
+# To add a new post:
+rake new_post[insert_name_here]
+# The top stuff between the three-dash lines in the generated index.markdown file is the YAML front matter.
+# Make sure to add 'author', followed by a colon, space, and your name.
+
+# When you've made changes, push the update/send a pull request to the source directory.
+git commit
+git push origin source
+
+# More notes on Octopress GitHub deployment here:
+# http://octopress.org/docs/deploying/github/ 
+# Setup _deploy dir w/website source repo:
+rake setup_github_pages_additional[git@github.com:mininet/mininet.github.com.git]
+
+# To update the actual GitHub pages site, run this command:
+rake deploy
+# This will generate a commit message with the current date/time apply the changes on top of whatever was there previously.  
+
+# IMPORTANT - make sure to update the source directory!  Otherwise your changes might get overwritten.
+git push origin source
+
