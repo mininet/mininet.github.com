@@ -21,11 +21,11 @@ Follow these steps for a VM install:
 
 3. Sign up for the `mininet-discuss` mailing list at https://mailman.stanford.edu/mailman/listinfo/mininet-discuss. This is the source for Mininet **support** and discussion with the friendly Mininet community. ;-)
 
-4. Run through the [VM Setup Notes](vm-setup-notes) to log in to the VM and install Mininet code on it.
+4. Run through the [VM Setup Notes](/vm-setup-notes) to log in to the VM and install Mininet code on it.
 
-5. Follow the [Walkthrough](Walkthrough) to get familiar with Mininet commands and typical usage.
+5. Follow the [Walkthrough](/walkthrough) to get familiar with Mininet commands and typical usage.
 
-Once you've completed the [Walkthrough](Walkthrough), you should have a clear idea for what Mininet is and what you might use it for. If you are interested in OpenFlow and Software-Defined Networking, you will want to complete the [OpenFlow tutorial](http://www.openflow.org/wk/index.php/OpenFlow_Tutorial) as well. Good luck, and have fun!
+Once you've completed the [Walkthrough](/walkthrough), you should have a clear idea for what Mininet is and what you might use it for. If you are interested in OpenFlow and Software-Defined Networking, you will want to complete the [OpenFlow tutorial](http://www.openflow.org/wk/index.php/OpenFlow_Tutorial) as well. Good luck, and have fun!
 
 
 Option 2 on Ubuntu 12.10 and later: Mininet Package Installation
