@@ -50,6 +50,8 @@ Option 3 on *Ubuntu 11.10 and later*: Full Mininet installation
 ------------------------------------------------------
 This option works well for local VM, remote EC2, and native installs.  It assumes the starting point of a fresh Ubuntu install. 
 
+We strongly recommend more recent Ubuntu versions, such as 12.10, because they support newer version of Open vSwitch.
+
 To find out which version of Ubuntu you are running, run the command
 
     lsb_release -a
