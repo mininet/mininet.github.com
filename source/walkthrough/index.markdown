@@ -192,9 +192,9 @@ When a custom mininet file is provided, it can add new topologies, switch types,
 
 ### ID = MAC
 
-By default, hosts and switches start with randomly assigned MAC addresses. This can make debugging tough, because every time the Mininet is created, the MACs change, so correlating control traffic with specific hosts is tough.
+By default, hosts start with randomly assigned MAC addresses. This can make debugging tough, because every time the Mininet is created, the MACs change, so correlating control traffic with specific hosts is tough.
 
-The `--mac` option is super-useful, and sets the switch MAC and host MAC and IP addrs to small, unique, easy-to-read IDs.
+The `--mac` option is super-useful, and sets the host MAC and IP addrs to small, unique, easy-to-read IDs.
 
 Before:
 
@@ -403,7 +403,7 @@ These are not required, but you might find them useful to skim.
 
 ### Remote Controller
 
-Note: this step is not part of the default walkthrough; only attempt if you have a controller running outside of the VM, such as on the VM host, or a different physical PC.
+Note: this step is not part of the default walkthrough; it is primarily useful if you have a controller running outside of the VM, such as on the VM host, or a different physical PC.
 
 When you start a Mininet, each switch can be connected to a remote controller - which could be outside the VM and on your machine, or anywhere in the world.
 
