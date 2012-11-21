@@ -321,9 +321,9 @@ exit
 
 <h3>ID = MAC</h3>
 
-<p>By default, hosts and switches start with randomly assigned MAC addresses. This can make debugging tough, because every time the Mininet is created, the MACs change, so correlating control traffic with specific hosts is tough.</p>
+<p>By default, hosts start with randomly assigned MAC addresses. This can make debugging tough, because every time the Mininet is created, the MACs change, so correlating control traffic with specific hosts is tough.</p>
 
-<p>The <code>--mac</code> option is super-useful, and sets the switch MAC and host MAC and IP addrs to small, unique, easy-to-read IDs.</p>
+<p>The <code>--mac</code> option is super-useful, and sets the host MAC and IP addrs to small, unique, easy-to-read IDs.</p>
 
 <p>Before:</p>
 
@@ -543,7 +543,7 @@ exit
 
 <h3>Remote Controller</h3>
 
-<p>Note: this step is not part of the default walkthrough; only attempt if you have a controller running outside of the VM, such as on the VM host, or a different physical PC.</p>
+<p>Note: this step is not part of the default walkthrough; it is primarily useful if you have a controller running outside of the VM, such as on the VM host, or a different physical PC.</p>
 
 <p>When you start a Mininet, each switch can be connected to a remote controller - which could be outside the VM and on your machine, or anywhere in the world.</p>
 

@@ -62,9 +62,10 @@ BL: removed since they make things SLOW
 
 <h3>Download the Mininet VM</h3>
 
-<p>Download the Mininet VM at https://github.com/downloads/mininet/mininet/mininet-vm-ubuntu11.10-052312.vmware.zip</p>
+<p>Download the Mininet VM from <a href="https://github.com/mininet/mininet/downloads">https://github.com/mininet/mininet/downloads</a></p>
 
-<p>The VM comes out to ~800MB compressed and ~2GB uncompressed. It includes a disk image in VMware&#8217;s <code>.vmdk</code> (virtual machine disk) format, which can be used by most virtualization systems.</p>
+<p>The VM comes out to 1GB compressed and ~2GB uncompressed. It is an OVF (Open Virtualization Format) virtual machine image
+which can be imported by most virtual machine monitors.</p>
 
 <p>Download and install a virtualization program such as: <a href="http://www.vmware.com/products/workstation/">VMware Workstation</a> for Windows or Linux, <a href="http://www.vmware.com/products/fusion">VMware Fusion</a> for Mac, <a href="http://www.virtualbox.org/wiki/Downloads">VirtualBox</a> ( <strong>free!</strong>, GPL) for any platform, or <code>qemu</code> ( <strong>free!</strong>, GPL) for Linux. If you already have VMware, we find that it runs Mininet somewhat faster than VirtualBox. However, VirtualBox is free to download and distribute, which is a definite advantage!</p>
 
@@ -72,27 +73,34 @@ BL: removed since they make things SLOW
 
 <p>Add the VM and start it up, in the virtualization program of your choice:</p>
 
-<p><strong>VirtualBox</strong>: Create a new VM using the <code>.vmdk</code> as the hard disk image, then start it up.</p>
+<p><strong>VirtualBox</strong>: Import the OVF file, select &#8220;settings,&#8221; and add an additional <em>host-only network adapter</em> so that you can
+log in to the VM image. Start the VM.</p>
 
-<p><strong>VMware</strong>: Just double-click the <code>.vmx</code> file.</p>
+<p><strong>VMware</strong>: Import the OVF file, then start the VM.</p>
 
 <p>VMware may ask you to install VMware tools on the VM - if it asks, decline. Everything graphical in the tutorial is done via X forwarding through SSH (in fact, the VM doesn&#8217;t have a desktop manager installed), so the VMware tools are unnecessary unless you wish to install an X11/Gnome/etc. environment in your VM.</p>
 
 <p><strong>Qemu/KVM</strong>:</p>
 
-<pre><code>qemu-system-i386 -m 512 MininetVM.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
+<p>Something like the following should work:</p>
+
+<pre><code>qemu-system-i386 -m 1024 mininet-vm-disk1.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
 </code></pre>
 
 <p>This will set up <code>ssh</code> forwarding from the VM to host port 8022.</p>
 
-<p><strong>Parallels</strong>: Use Parallels Transporter to convert the <code>.vmdk</code> file to an <code>.hdd</code> image that Parallels can use, and then create a new VM using that <code>.hdd</code> image as its virtual drive.</p>
+<p><strong>Parallels</strong>: Use Parallels Transporter to convert the <code>.vmdk</code> file to an <code>.hdd</code> image that Parallels can use, and then create a new VM using that <code>.hdd</code> image as its virtual drive. Start the VM.</p>
 
-<h3>Login to VM</h3>
+<h3>Log in to VM</h3>
 
-<p>Log in to the VM, using the following params:
-* Username: <strong>openflow</strong>
-* Password: <strong>openflow</strong>
-The root account is not enabled for login; you can use sudo to run a command as superuser.</p>
+<p>Log in to the VM, using the following name and password:</p>
+
+<pre><code>mininet-vm login: mininet
+Password: mininet
+</code></pre>
+
+<p>(some older VM images may use <code>openflow</code>/<code>openflow</code> instead)
+The root account is not enabled for login; you can use <code>sudo</code> to run a command with root privileges.</p>
 
 <h3>SSH into VM</h3>
 
@@ -101,37 +109,32 @@ The root account is not enabled for login; you can use sudo to run a command as 
 <pre><code>/sbin/ifconfig eth0
 </code></pre>
 
+<p>Note: VirtualBox users who have set up a host-only network on <code>eth1</code> should use <code>ifconfig eth1</code> instead</p>
+
 <p>You may want to add the address to your host PC&#8217;s /etc/hosts file to be able to SSH in by name, if it&#8217;s Unix-like. For example, add a line like this for OS X:</p>
 
-<pre><code>192.168.x.y openflow
+<pre><code>192.168.x.y mininet-vm
 </code></pre>
 
 <p>where 192.168.x.y is replaced by the VM&#8217;s IP address.</p>
 
-<p>SSH in to the host. Use -Y to enable trusted X forwarding, for use with Wireshark later - we assume the VM is running locally, and that the additional precautions of -X w/SSH are unnecessary.</p>
+<p>SSH in to the host. We assume the VM is running locally, and that the additional precautions of <code>ssh -X</code> are unnecessary. <code>ssh -Y</code> also has no authentication timeout by default.</p>
 
-<pre><code>ssh -Y openflow@openflow
+<pre><code>ssh -Y mininet@mininet-vm
 </code></pre>
 
 <p>If you&#8217;re running the VM under QEMU/KVM with -net user and the <code>hostfwd</code> option as recommended above, the VM IP address is irrelevant. Instead you tell SSH to connect to port 8022 on the host:</p>
 
-<pre><code>ssh -Y -p 8022 openflow@localhost
-</code></pre>
-
-<h3>Install preferred editor</h3>
-
-<p>Install your preferred editor. For example, to install vim:</p>
-
-<pre><code>sudo apt-get -y install vim
+<pre><code>ssh -Y -p 8022 mininet@localhost
 </code></pre>
 
 <h2>Optional VM Customization</h2>
 
 <p>These commands are optional, and may be useful for your setup:</p>
 
-<h3>Setup SSH auto-login</h3>
+<h3>Set up SSH auto-login</h3>
 
-<p>These steps let you log in via SSH without needing to enter a password. If you use the console from your virtualization software natively, then this step isn&#8217;t needed.</p>
+<p>These steps let you log in via <code>ssh</code> without needing to enter a password. If you use the console from your virtualization software natively, then this step isn&#8217;t needed.</p>
 
 <p>Check for <code>~/.ssh/id_rsa</code> or <code>~/.ssh/id_dsa</code>. If you can&#8217;t find either of these files, then you&#8217;ll want to generate an SSH key.</p>
 
@@ -154,7 +157,7 @@ The root account is not enabled for login; you can use sudo to run a command as 
 
 <h2>Mininet Walkthrough</h2>
 
-<p>(Highly recommended) Head over to the <a href="walkthrough">Walkthrough</a>, which shows common commands. It&#8217;ll be really useful, trust us.</p>
+<p>(Highly recommended) Head over to the <a href="/walkthrough">Walkthrough</a>, which shows common commands. It&#8217;ll be really useful, trust us.</p>
 
   
     <footer>
