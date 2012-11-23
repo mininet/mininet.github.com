@@ -44,7 +44,7 @@ Then you can test it:
 
     sudo mn --test pingall
 
-If that works, continue with steps 3-5, above.
+If you wish to go through the walkthrough, you may need to install additional software, for example installing the OpenFlow WireShark dissector (which can be done using `install.sh -w` from the Mininet source distribution.)
 
 Option 3 on *Ubuntu 11.10 and later*: Full Mininet installation
 ------------------------------------------------------
