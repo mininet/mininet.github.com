@@ -554,6 +554,29 @@ exit
 <pre><code>sudo mn --controller=remote,ip=[controller IP],port=[controller listening port]
 </code></pre>
 
+<p>For example, to run POX&#8217;s sample learning switch, you could do something like</p>
+
+<pre><code>cd ~/pox
+ ./pox.py forwarding.l2_learning
+</code></pre>
+
+<p>in one window, and in another window, start up Mininet to connect to the
+&#8220;remote&#8221; controller (which is actually running locally, but outside of
+Mininet&#8217;s control):</p>
+
+<pre><code># note these are actually the default ip address and port values
+sudo mn --controller=remote,ip=127.0.0.1,port=6633
+</code></pre>
+
+<p>If you generate some traffic (e.g. <code>h1 ping h2</code>) you should be able to observe
+some output in the POX window showing that the switch has connected and that
+some flow table entries have been installed.</p>
+
+<p>A number of OpenFlow controller frameworks are readily available and should
+work readily with Mininet as long as you start them up and specify the
+<code>remote</code> controller option with the correct IP address of the machine where
+your controller is runing and the correct port that it is listening on.</p>
+
 <h3>NOX Classic</h3>
 
 <p>The Mininet default install (using <code>util/install.sh -a</code>) does not install NOX Classic.  If you would like to install it, run <code>sudo ~/mininet/util/install.sh -x</code>.</p>
