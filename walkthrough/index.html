@@ -551,12 +551,12 @@ exit
 
 <p>If you want to try this, fill in the host IP and/or listening port:</p>
 
-<pre><code>sudo mn --controller=remote --ip=[controller IP] --port=[controller listening port]
+<pre><code>sudo mn --controller=remote,ip=[controller IP],port=[controller listening port]
 </code></pre>
 
-<h3>NOX</h3>
+<h3>NOX Classic</h3>
 
-<p>The Mininet default install (using <code>util/install.sh -a</code>) does not install NOX.  If you would like to install it, run <code>sudo ~/mininet/util/install.sh -x</code>.</p>
+<p>The Mininet default install (using <code>util/install.sh -a</code>) does not install NOX Classic.  If you would like to install it, run <code>sudo ~/mininet/util/install.sh -x</code>.</p>
 
 <p>To run a regression test with NOX running the NOX app &#8216;pyswitch&#8217;, the NOX_CORE_DIR env var must be set to the directory containing the NOX executable.</p>
 
