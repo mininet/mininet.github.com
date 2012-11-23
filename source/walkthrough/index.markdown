@@ -411,15 +411,16 @@ This setup may be convenient if you already have a custom version of NOX w/dev t
 
 If you want to try this, fill in the host IP and/or listening port:
 
-    sudo mn --controller=remote --ip=[controller IP] --port=[controller listening port]
+    sudo mn --controller=remote,ip=[controller IP],port=[controller listening port]
 
-### NOX
+### NOX Classic
 
-The Mininet default install (using `util/install.sh -a`) does not install NOX.  If you would like to install it, run `sudo ~/mininet/util/install.sh -x`.
+The Mininet default install (using `util/install.sh -a`) does not install NOX Classic.  If you would like to install it, run `sudo ~/mininet/util/install.sh -x`.
 
 To run a regression test with NOX running the NOX app 'pyswitch', the NOX_CORE_DIR env var must be set to the directory containing the NOX executable.
 
 First verify that NOX runs:
+
     cd $NOX_CORE_DIR
     ./nox_core -v -i ptcp:
 
