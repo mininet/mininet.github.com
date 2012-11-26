@@ -252,6 +252,12 @@ multitask :push do
   puts "\n## copying #{public_dir} to #{deploy_dir}"
   cp_r "#{public_dir}/.", deploy_dir
   cd "#{deploy_dir}" do
+    path="api"
+    if not (File.exists?(path) && File.directory?(path))
+        abort("ERROR: #{path} directory missing from #{deploy_dir}.  Aborted.")
+    else
+        puts "Confirmed that #{path} is in #{deploy_dir}; continuing deploy."
+    end
     system "git add ."
     system "git add -u"
     puts "\n## Commiting: Site updated at #{Time.now.utc}"
