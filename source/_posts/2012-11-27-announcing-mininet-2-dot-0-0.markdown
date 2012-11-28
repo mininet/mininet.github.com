@@ -4,6 +4,7 @@ title: "Announcing Mininet 2.0.0"
 date: 2012-11-27 17:41
 comments: true
 categories: releases
+published: false
 ---
 
 In the last few years, the Mininet community has grown from a few users at Stanford to an active mailing list with over 500 members in academia, startups, and industry.
