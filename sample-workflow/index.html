@@ -53,9 +53,9 @@ BL: removed since they make things SLOW
   
   <p>Mininet enables you to quickly <a href="#create">create</a>, <a href="#interact">interact with</a>, <a href="#customize">customize</a> and <a href="#share">share</a> a software defined network prototype, and provides a smooth path to <a href="#run">running on hardware</a>. This page illustrates the basic Mininet workflow, and many additional details are available in the Mininet <a href="/walkthrough">walkthrough</a>, the OpenFlow <a href="http://www.openflow.org/wk/index.php/OpenFlow_Tutorial">tutorial</a>, and Mininet <a href="https://github.com/mininet/mininet/wiki/Documentation">documentation</a>.</p>
 
-<p><a id=create></a></p>
+<p><a id="create"></a></p>
 
-<h3>Creating a Network</h3>
+<h3 id="creating-a-network">Creating a Network</h3>
 
 <p>You can create a network with a single command. For example,</p>
 
@@ -64,59 +64,58 @@ BL: removed since they make things SLOW
 
 <p>starts a network with a tree topology of depth 2 and fanout 8 (i.e. 9 switches connecting 64 hosts), using Open vSwitch switches under the control of NOX (via its <code>pyswitch</code> module by default), and runs the <code>pingall</code> test to check connectivity between every pair of nodes.</p>
 
-<p><a id=interact></a></p>
+<p><a id="interact"></a></p>
 
-<h3>Interacting with a Network</h3>
+<h3 id="interacting-with-a-network">Interacting with a Network</h3>
 
-<p>Mininet&#8217;s CLI allows you to control and manage your entire virtual network from a single console. For example, the CLI command</p>
+<p>Mininet’s CLI allows you to control and manage your entire virtual network from a single console. For example, the CLI command</p>
 
 <pre><code>mininet&gt; h2 ping h3
 </code></pre>
 
-<p>tells host <code>h2</code> to ping host <code>h3</code>&#8217;s IP address.</p>
+<p>tells host <code>h2</code> to ping host <code>h3</code>’s IP address.</p>
 
-<p><a id=customize></a></p>
+<p><a id="customize"></a></p>
 
-<h3>Customizing a Network</h3>
+<h3 id="customizing-a-network">Customizing a Network</h3>
 
-<p>Mininet&#8217;s API allows you to create custom networks with a few lines of Python. For example, the following script</p>
+<p>Mininet’s API allows you to create custom networks with a few lines of Python. For example, the following script</p>
 
-<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">from</span> <span class="nn">mininet.net</span> <span class="kn">import</span> <span class="n">Mininet</span>
-</span><span class='line'><span class="kn">from</span> <span class="nn">mininet.topolib</span> <span class="kn">import</span> <span class="n">TreeTopo</span>
-</span><span class='line'><span class="n">tree4</span> <span class="o">=</span> <span class="n">TreeTopo</span><span class="p">(</span><span class="n">depth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">fanout</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
-</span><span class='line'><span class="n">net</span> <span class="o">=</span> <span class="n">Mininet</span><span class="p">(</span><span class="n">topo</span><span class="o">=</span><span class="n">tree4</span><span class="p">)</span>
-</span><span class='line'><span class="n">net</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
-</span><span class='line'><span class="n">h1</span><span class="p">,</span> <span class="n">h4</span>  <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">hosts</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">net</span><span class="o">.</span><span class="n">hosts</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
-</span><span class='line'><span class="k">print</span> <span class="n">h1</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s">&#39;ping -c1 </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">h4</span><span class="o">.</span><span class="n">IP</span><span class="p">())</span>
-</span><span class='line'><span class="n">net</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
-</span></code></pre></td></tr></table></div></figure>
-
+<div class="bogus-wrapper"><notextile><figure class="code"> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+</pre></td><td class="code"><pre><code class="python"><span class="line"><span class="kn">from</span> <span class="nn">mininet.net</span> <span class="kn">import</span> <span class="n">Mininet</span>
+</span><span class="line"><span class="kn">from</span> <span class="nn">mininet.topolib</span> <span class="kn">import</span> <span class="n">TreeTopo</span>
+</span><span class="line"><span class="n">tree4</span> <span class="o">=</span> <span class="n">TreeTopo</span><span class="p">(</span><span class="n">depth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span><span class="n">fanout</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</span><span class="line"><span class="n">net</span> <span class="o">=</span> <span class="n">Mininet</span><span class="p">(</span><span class="n">topo</span><span class="o">=</span><span class="n">tree4</span><span class="p">)</span>
+</span><span class="line"><span class="n">net</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span><span class="line"><span class="n">h1</span><span class="p">,</span> <span class="n">h4</span>  <span class="o">=</span> <span class="n">net</span><span class="o">.</span><span class="n">hosts</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">net</span><span class="o">.</span><span class="n">hosts</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+</span><span class="line"><span class="k">print</span> <span class="n">h1</span><span class="o">.</span><span class="n">cmd</span><span class="p">(</span><span class="s">&#39;ping -c1 </span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">h4</span><span class="o">.</span><span class="n">IP</span><span class="p">())</span>
+</span><span class="line"><span class="n">net</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 <p>creates a small network (4 hosts, 3 switches), and pings one host from another (in about 4 seconds with the current version.)</p>
 
 <p>The Mininet distribution includes several text-based and graphical (see above) applications which we hope will be instructive and inspire you to create cool and useful apps for your own network designs.</p>
 
-<p><a id=share></a></p>
+<p><a id="share"></a></p>
 
-<h3>Sharing a Network</h3>
+<h3 id="sharing-a-network">Sharing a Network</h3>
 
-<p>Mininet is distributed as a virtual machine (VM) image with all dependencies pre-installed, runnable on common virtual machine monitors such as VMware, Xen and VirtualBox. This provides a convenient container for distribution; once a prototype has been developed, the VM image may be distributed to others to run, examine and modify. A complete, compressed Mininet VM is about 800 MB. (Mininet can also be installed natively on Linux distributions that ship with <code>CONFIG_NET_NS</code> enabled, such as Ubuntu 10.04+, without replacing the kernel.) If you are reading a great SIGCOMM (or other) paper about a Software-Defined Network, wouldn&#8217;t you like to be able to click, download and run a living, breathing example of the system? If so, consider developing a Mininet version of your own system that you can share with others. (Alternately, if you fear others reproducing - and possibly contradicting - your published results, an easily shared and downloaded version of your system may not be desirable!)</p>
+<p>Mininet is distributed as a virtual machine (VM) image with all dependencies pre-installed, runnable on common virtual machine monitors such as VMware, Xen and VirtualBox. This provides a convenient container for distribution; once a prototype has been developed, the VM image may be distributed to others to run, examine and modify. A complete, compressed Mininet VM is about 800 MB. (Mininet can also be installed natively on Linux distributions that ship with <code>CONFIG_NET_NS</code> enabled, such as Ubuntu 10.04+, without replacing the kernel.) If you are reading a great SIGCOMM (or other) paper about a Software-Defined Network, wouldn’t you like to be able to click, download and run a living, breathing example of the system? If so, consider developing a Mininet version of your own system that you can share with others. (Alternately, if you fear others reproducing - and possibly contradicting - your published results, an easily shared and downloaded version of your system may not be desirable!)</p>
 
-<p><a id=run></a></p>
+<p><a id="run"></a></p>
 
-<h3>Running on Hardware</h3>
+<h3 id="running-on-hardware">Running on Hardware</h3>
 
 <p>Once a design works on Mininet, it can be deployed on hardware for real-world use, testing and measurement.</p>
 
-<p>To successfully port to hardware on the first try, every Mininet-emulated component must act in the same way as its corresponding physical one. The virtual topology should match the physical one; virtual Ethernet pairs must be replaced by link-level Ethernet connectivity. Hosts emulated as processes should be replaced by hosts with their own OS image. In addition, each emulated OpenFlow switch should be replaced by a physical one configured to point to the controller. However, the controller does not need to change. When Mininet is running, the controller &#8220;sees&#8221; a physical network of switches, made possible by an interface with well-defined state semantics.</p>
+<p>To successfully port to hardware on the first try, every Mininet-emulated component must act in the same way as its corresponding physical one. The virtual topology should match the physical one; virtual Ethernet pairs must be replaced by link-level Ethernet connectivity. Hosts emulated as processes should be replaced by hosts with their own OS image. In addition, each emulated OpenFlow switch should be replaced by a physical one configured to point to the controller. However, the controller does not need to change. When Mininet is running, the controller “sees” a physical network of switches, made possible by an interface with well-defined state semantics.</p>
 
   
     <footer>
