@@ -4,7 +4,7 @@
   <title><![CDATA[Mininet]]></title>
   <link href="http://mininet.github.com/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2012-11-22T17:47:07-08:00</updated>
+  <updated>2012-11-28T16:36:16-08:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -18,7 +18,7 @@
     <link href="http://mininet.github.com/blog/2012/08/23/website-updated/"/>
     <updated>2012-08-23T18:08:00-07:00</updated>
     <id>http://mininet.github.com/blog/2012/08/23/website-updated</id>
-    <content type="html"><![CDATA[<p>The old website had an obscure, needed-Google-to-find-it address, and was generated server-side, so it could be a bit slow.  The new page you&#8217;re seeing was built with Octopress and is hosted on GitHub Pages.  Since it&#8217;s all statically generated pages now, it should load super-quick, and it&#8217;ll be easier to add blog entries and do page customization.</p>
+    <content type="html"><![CDATA[<p>The old website had an obscure, needed-Google-to-find-it address, and was generated server-side, so it could be a bit slow.  The new page you’re seeing was built with Octopress and is hosted on GitHub Pages.  Since it’s all statically generated pages now, it should load super-quick, and it’ll be easier to add blog entries and do page customization.  </p>
 
 <p>Try it out, and let us know what you think!</p>
 
