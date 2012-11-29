@@ -31,7 +31,7 @@ as well as the real Linux kernel and network stack (including any kernel
 extensions which you may have available, as long as they are compatible with
 network namespaces.)
 
-Because of this, the code you develop and test on Mininet, for an OpenFlow controller, modified switch, or host, _can move to a real system with no changes_, for real-world testing, performance evaluation, and deployment. Importantly this means that a design that works in Mininet can often move directly to hardware switches for line-rate packet forwarding.
+Because of this, the code you develop and test on Mininet, for an OpenFlow controller, modified switch, or host, _can move to a real system with minimal changes_, for real-world testing, performance evaluation, and deployment. Importantly this means that a design that works in Mininet can usually move directly to hardware switches for line-rate packet forwarding.
 
 How it Works
 ------------
@@ -58,8 +58,7 @@ Compared to full system virtualization based approaches, Mininet:
 Compared to hardware testbeds, Mininet
 
 * is **inexpensive** and **always available** (even before conference deadlines)
-* is *quickly reconfigurable*
-* *boots quickly*
+* is **quickly reconfigurable and restartable**
 
 Compared to simulators, Mininet
 
