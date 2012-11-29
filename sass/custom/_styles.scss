@@ -76,9 +76,13 @@ h1 {
 }
 
 article header {
-  padding-top: 0 !important;
+  padding-top: 0;
 }
 
 // was far too spaced-out
-p { margin-bottom: 1; }
+p, blockquote, ul, ol { 
+    margin-bottom: 1em;
+}
+
+
 
