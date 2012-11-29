@@ -139,8 +139,8 @@ can run any command or application that is available to the underlying Linux
 system (or VM) and its file system. You can also enter any `bash` command,
 including job control (`&`, `jobs`, `kill`, etc..)
 
-Next, try starting a simple HTTP server on h1, making a request from h2, then
-shutting down the web server:
+Next, try starting a simple HTTP server on `h1`, making a request from `h2`,
+then shutting down the web server:
 
 
     h1 python -m SimpleHTTPServer 80 &
@@ -148,6 +148,7 @@ shutting down the web server:
     h1 kill %python
 
 Exit the CLI:
+
     exit
 
 
