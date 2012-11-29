@@ -56,39 +56,41 @@ BL: removed since they make things SLOW
 <p>Mininet:</p>
 
 <ul>
-  <li>Provides a simple and inexpensive <strong>network testbed</strong> for developing OpenFlow applications</li>
-  <li>Enables <strong>multiple concurrent developers</strong> to work independently on the same topology</li>
-  <li>Supports <strong>system-level regression tests</strong>, which are repeatable and easily packaged</li>
-  <li>Enables <strong>complex topology testing</strong>, without the need to wire up a physical network</li>
-  <li>Includes a <strong>CLI</strong> that is topology-aware and OpenFlow-aware, for debugging or running network-wide tests</li>
-  <li>Supports <strong>arbitrary custom topologies</strong>, and includes a basic set of <strong>parametrized topologies</strong></li>
-  <li>is <strong>usable out of the box</strong> without programming</li>
-  <li>also Provides a straightforward and extensible <strong>Python API</strong> for network creation and experimentation</li>
+<li>Provides a simple and inexpensive <strong>network testbed</strong> for developing OpenFlow applications</li>
+<li>Enables <strong>multiple concurrent developers</strong> to work independently on the same topology</li>
+<li>Supports <strong>system-level regression tests</strong>, which are repeatable and easily packaged</li>
+<li>Enables <strong>complex topology testing</strong>, without the need to wire up a physical network</li>
+<li>Includes a <strong>CLI</strong> that is topology-aware and OpenFlow-aware, for debugging or running network-wide tests</li>
+<li>Supports <strong>arbitrary custom topologies</strong>, and includes a basic set of <strong>parametrized topologies</strong></li>
+<li>is <strong>usable out of the box</strong> without programming</li>
+<li>also Provides a straightforward and extensible <strong>Python API</strong> for network creation and experimentation</li>
 </ul>
+
 
 <p>Mininet provides an easy way to get correct system <em>behavior</em> and experiment with topologies.</p>
 
 <p>The code you develop and test on Mininet, for an OpenFlow controller, modified switch, or host, <em>can move to a real system with no changes</em>, for real-world testing, performance evaluation, and deployment.</p>
 
-<h2 id="how-it-works">How it Works</h2>
+<h2>How it Works</h2>
 
-<p>Nearly every operating system virtualizes computing resources using a <em>process</em> abstraction. Mininet uses <em>process-based virtualization</em> to run many (we’ve successfully booted up to 4096) hosts and switches on a single OS kernel. Since version 2.2.26, Linux has supported <em>network namespaces</em>, a lightweight virtualization feature that provides individual processes with separate network interfaces, routing tables, and ARP tables. The full <em>Linux container architecture</em> adds <code>chroot()</code> jails, process and user namespaces, and CPU  and memory limits to provide full OS-level virtualization, but Mininet does not require these additional features. Mininet can create kernel or user-space OpenFlow switches, controllers to control the switches, and hosts to communicate over the simulated network. Mininet connects switches and hosts using virtual ethernet (<code>veth</code>) pairs. While Mininet currently depends on the Linux kernel, in the future it may support other operating systems with process-based virtualization, such Solaris containers or !FreeBSD jails.</p>
+<p>Nearly every operating system virtualizes computing resources using a <em>process</em> abstraction. Mininet uses <em>process-based virtualization</em> to run many (we&#8217;ve successfully booted up to 4096) hosts and switches on a single OS kernel. Since version 2.2.26, Linux has supported <em>network namespaces</em>, a lightweight virtualization feature that provides individual processes with separate network interfaces, routing tables, and ARP tables. The full <em>Linux container architecture</em> adds <code>chroot()</code> jails, process and user namespaces, and CPU  and memory limits to provide full OS-level virtualization, but Mininet does not require these additional features. Mininet can create kernel or user-space OpenFlow switches, controllers to control the switches, and hosts to communicate over the simulated network. Mininet connects switches and hosts using virtual ethernet (<code>veth</code>) pairs. While Mininet currently depends on the Linux kernel, in the future it may support other operating systems with process-based virtualization, such Solaris containers or !FreeBSD jails.</p>
 
-<p>Mininet’s code is almost entirely Python, except for a short C utility.</p>
+<p>Mininet&#8217;s code is almost entirely Python, except for a short C utility.</p>
 
-<h2 id="why-its-better">Why it’s better</h2>
+<h2>Why it&#8217;s better</h2>
 
 <p>Compared to full system virtualization based approaches, such as OpenFlowVMS or the Noxrepo.org VM environment, Mininet:</p>
 
 <ul>
-  <li><strong>Boots faster</strong>: seconds instead of minutes</li>
-  <li><strong>Scales larger</strong>: hundreds of hosts and switches vs. single digits</li>
-  <li><strong>Provides more bandwidth</strong>: typically 2Gbps total bandwidth on modest hardware</li>
-  <li><strong>Installs easily</strong>: a prepackaged VM is available that runs on VMware or VirtualBox for 
+<li><strong>Boots faster</strong>: seconds instead of minutes</li>
+<li><strong>Scales larger</strong>: hundreds of hosts and switches vs. single digits</li>
+<li><strong>Provides more bandwidth</strong>: typically 2Gbps total bandwidth on modest hardware</li>
+<li><strong>Installs easily</strong>: a prepackaged VM is available that runs on VMware or VirtualBox for
   Mac/Win/Linux with OpenFlow v1.0 tools already installed.</li>
 </ul>
 
-<h2 id="limitations">Limitations</h2>
+
+<h2>Limitations</h2>
 
 <p>Mininet-based networks cannot (currently) exceed the CPU or bandwidth available on a single server.</p>
 

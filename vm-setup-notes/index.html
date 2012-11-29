@@ -53,13 +53,14 @@ BL: removed since they make things SLOW
   
   <p>The Mininet VM is meant to speed up Mininet installation, plus make it easy to run on non-Linux platforms. The VM works on Windows, Mac, and Linux, through VMware, VirtualBox, QEMU and KVM.</p>
 
-<p>After downloading the VM, you’ll run a few steps to customize it for your setup. This won’t take long.</p>
+<p>After downloading the VM, you&#8217;ll run a few steps to customize it for your setup. This won&#8217;t take long.</p>
 
 <!-- %TOC% -->
 
-<h2 id="vm-setup">VM Setup</h2>
 
-<h3 id="download-the-mininet-vm">Download the Mininet VM</h3>
+<h2>VM Setup</h2>
+
+<h3>Download the Mininet VM</h3>
 
 <p>Download the Mininet VM from <a href="https://github.com/mininet/mininet/downloads">https://github.com/mininet/mininet/downloads</a></p>
 
@@ -68,16 +69,16 @@ which can be imported by most virtual machine monitors.</p>
 
 <p>Download and install a virtualization program such as: <a href="http://www.vmware.com/products/workstation/">VMware Workstation</a> for Windows or Linux, <a href="http://www.vmware.com/products/fusion">VMware Fusion</a> for Mac, <a href="http://www.virtualbox.org/wiki/Downloads">VirtualBox</a> ( <strong>free!</strong>, GPL) for any platform, or <code>qemu</code> ( <strong>free!</strong>, GPL) for Linux. If you already have VMware, we find that it runs Mininet somewhat faster than VirtualBox. However, VirtualBox is free to download and distribute, which is a definite advantage!</p>
 
-<h3 id="boot-vm">Boot VM</h3>
+<h3>Boot VM</h3>
 
 <p>Add the VM and start it up, in the virtualization program of your choice:</p>
 
-<p><strong>VirtualBox</strong>: Import the OVF file, select “settings,” and add an additional <em>host-only network adapter</em> so that you can
+<p><strong>VirtualBox</strong>: Import the OVF file, select &#8220;settings,&#8221; and add an additional <em>host-only network adapter</em> so that you can
 log in to the VM image. Start the VM.</p>
 
 <p><strong>VMware</strong>: Import the OVF file, then start the VM.</p>
 
-<p>VMware may ask you to install VMware tools on the VM - if it asks, decline. Everything graphical in the tutorial is done via X forwarding through SSH (in fact, the VM doesn’t have a desktop manager installed), so the VMware tools are unnecessary unless you wish to install an X11/Gnome/etc. environment in your VM.</p>
+<p>VMware may ask you to install VMware tools on the VM - if it asks, decline. Everything graphical in the tutorial is done via X forwarding through SSH (in fact, the VM doesn&#8217;t have a desktop manager installed), so the VMware tools are unnecessary unless you wish to install an X11/Gnome/etc. environment in your VM.</p>
 
 <p><strong>Qemu/KVM</strong>:</p>
 
@@ -90,56 +91,59 @@ log in to the VM image. Start the VM.</p>
 
 <p><strong>Parallels</strong>: Use Parallels Transporter to convert the <code>.vmdk</code> file to an <code>.hdd</code> image that Parallels can use, and then create a new VM using that <code>.hdd</code> image as its virtual drive. Start the VM.</p>
 
-<h3 id="log-in-to-vm">Log in to VM</h3>
+<h3>Log in to VM</h3>
 
-<p>Log in to the VM, using the following name and password:
-    mininet-vm login: mininet
-    Password: mininet
-(some older VM images may use <code>openflow</code>/<code>openflow</code> instead)
+<p>Log in to the VM, using the following name and password:</p>
+
+<pre><code>mininet-vm login: mininet
+Password: mininet
+</code></pre>
+
+<p>(some older VM images may use <code>openflow</code>/<code>openflow</code> instead)
 The root account is not enabled for login; you can use <code>sudo</code> to run a command with root privileges.</p>
 
-<h3 id="ssh-into-vm">SSH into VM</h3>
+<h3>SSH into VM</h3>
 
-<p>First, find the VM’s IP address, which for VMware is probably in the range 192.168.x.y. In the VM console:</p>
+<p>First, find the VM&#8217;s IP address, which for VMware is probably in the range 192.168.x.y. In the VM console:</p>
 
 <pre><code>/sbin/ifconfig eth0
 </code></pre>
 
 <p>Note: VirtualBox users who have set up a host-only network on <code>eth1</code> should use <code>ifconfig eth1</code> instead</p>
 
-<p>You may want to add the address to your host PC’s /etc/hosts file to be able to SSH in by name, if it’s Unix-like. For example, add a line like this for OS X:</p>
+<p>You may want to add the address to your host PC&#8217;s /etc/hosts file to be able to SSH in by name, if it&#8217;s Unix-like. For example, add a line like this for OS X:</p>
 
 <pre><code>192.168.x.y mininet-vm
 </code></pre>
 
-<p>where 192.168.x.y is replaced by the VM’s IP address.</p>
+<p>where 192.168.x.y is replaced by the VM&#8217;s IP address.</p>
 
 <p>SSH in to the host. We assume the VM is running locally, and that the additional precautions of <code>ssh -X</code> are unnecessary. <code>ssh -Y</code> also has no authentication timeout by default.</p>
 
 <pre><code>ssh -Y mininet@mininet-vm
 </code></pre>
 
-<p>If you’re running the VM under QEMU/KVM with -net user and the <code>hostfwd</code> option as recommended above, the VM IP address is irrelevant. Instead you tell SSH to connect to port 8022 on the host:</p>
+<p>If you&#8217;re running the VM under QEMU/KVM with -net user and the <code>hostfwd</code> option as recommended above, the VM IP address is irrelevant. Instead you tell SSH to connect to port 8022 on the host:</p>
 
 <pre><code>ssh -Y -p 8022 mininet@localhost
 </code></pre>
 
-<h2 id="optional-vm-customization">Optional VM Customization</h2>
+<h2>Optional VM Customization</h2>
 
 <p>These commands are optional, and may be useful for your setup:</p>
 
-<h3 id="set-up-ssh-auto-login">Set up SSH auto-login</h3>
+<h3>Set up SSH auto-login</h3>
 
-<p>These steps let you log in via <code>ssh</code> without needing to enter a password. If you use the console from your virtualization software natively, then this step isn’t needed.</p>
+<p>These steps let you log in via <code>ssh</code> without needing to enter a password. If you use the console from your virtualization software natively, then this step isn&#8217;t needed.</p>
 
-<p>Check for <code>~/.ssh/id_rsa</code> or <code>~/.ssh/id_dsa</code>. If you can’t find either of these files, then you’ll want to generate an SSH key.</p>
+<p>Check for <code>~/.ssh/id_rsa</code> or <code>~/.ssh/id_dsa</code>. If you can&#8217;t find either of these files, then you&#8217;ll want to generate an SSH key.</p>
 
-<p>On a unix-like system (OS X or Linux - you’ll need other instructions for Windows) - on the host, not the VM:</p>
+<p>On a unix-like system (OS X or Linux - you&#8217;ll need other instructions for Windows) - on the host, not the VM:</p>
 
 <pre><code>ssh-keygen -t rsa
 </code></pre>
 
-<p>To speed up future SSH connections, add your host’s public key to the new VM. Also on the host, not the VM:</p>
+<p>To speed up future SSH connections, add your host&#8217;s public key to the new VM. Also on the host, not the VM:</p>
 
 <pre><code>scp ~/.ssh/id_rsa.pub openflow@openflow:~/
 </code></pre>
@@ -151,9 +155,9 @@ The root account is not enabled for login; you can use <code>sudo</code> to run 
 
 <p>Now you should be able to log in without entering a password.</p>
 
-<h2 id="mininet-walkthrough">Mininet Walkthrough</h2>
+<h2>Mininet Walkthrough</h2>
 
-<p>(Highly recommended) Head over to the <a href="/walkthrough">Walkthrough</a>, which shows common commands. It’ll be really useful, trust us.</p>
+<p>(Highly recommended) Head over to the <a href="/walkthrough">Walkthrough</a>, which shows common commands. It&#8217;ll be really useful, trust us.</p>
 
   
     <footer>

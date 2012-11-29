@@ -57,49 +57,15 @@ BL: removed since they make things SLOW
 
 <p>The entire walkthrough should take under an hour.</p>
 
-<ul id="markdown-toc">
-  <li><a href="#everyday-usage">Everyday Usage</a>    <ul>
-      <li><a href="#display-options">Display Options</a></li>
-      <li><a href="#start-wireshark">Start Wireshark</a></li>
-      <li><a href="#interact-with-hosts-and-switches">Interact with Hosts and Switches</a></li>
-      <li><a href="#verify-ping">Verify Ping</a></li>
-      <li><a href="#cleanup">Cleanup</a></li>
-    </ul>
-  </li>
-  <li><a href="#program-startup-options">Program Startup Options</a>    <ul>
-      <li><a href="#run-a-regression-test">Run a Regression Test</a></li>
-      <li><a href="#topology-variations">Topology Variations</a></li>
-      <li><a href="#adjustable-verbosity">Adjustable Verbosity</a></li>
-      <li><a href="#custom-topologies">Custom Topologies</a></li>
-      <li><a href="#id--mac">ID = MAC</a></li>
-      <li><a href="#xterm-display">XTerm Display</a></li>
-      <li><a href="#other-switch-types">Other Switch Types</a></li>
-      <li><a href="#mininet-benchmark">Mininet Benchmark</a></li>
-      <li><a href="#everything-in-its-own-namespace-user-switch-only">Everything in its own Namespace (user switch only)</a></li>
-    </ul>
-  </li>
-  <li><a href="#command-line-interface-commands">Command-Line Interface Commands</a>    <ul>
-      <li><a href="#display-options-1">Display Options</a></li>
-      <li><a href="#python-interpreter">Python Interpreter</a></li>
-      <li><a href="#link-updown">Link Up/Down</a></li>
-      <li><a href="#xterm-display-1">XTerm Display</a></li>
-    </ul>
-  </li>
-  <li><a href="#examples">Examples</a>    <ul>
-      <li><a href="#ssh-daemon-per-host">SSH daemon per host</a></li>
-    </ul>
-  </li>
-  <li><a href="#walkthrough-complete">Walkthrough Complete</a></li>
-  <li><a href="#optional">Optional</a>    <ul>
-      <li><a href="#remote-controller">Remote Controller</a></li>
-      <li><a href="#nox-classic">NOX Classic</a></li>
-    </ul>
-  </li>
+<ul>
+<li>kramdown will replace the following tag with a table of contents
+{:toc}</li>
 </ul>
 
-<h2 id="everyday-usage">Everyday Usage</h2>
 
-<h3 id="display-options">Display Options</h3>
+<h2>Everyday Usage</h2>
+
+<h3>Display Options</h3>
 
 <p>Display startup options:</p>
 
@@ -108,14 +74,14 @@ BL: removed since they make things SLOW
 
 <p>This walkthrough will cover typical usage of the majority of options listed.</p>
 
-<h3 id="start-wireshark">Start Wireshark</h3>
+<h3>Start Wireshark</h3>
 
 <p>To view control traffic using the OpenFlow Wireshark dissector, first open wireshark in the background:</p>
 
 <pre><code>sudo wireshark &amp;
 </code></pre>
 
-<p>In the Wireshark filter box, enter this filter, then click ‘Apply’:</p>
+<p>In the Wireshark filter box, enter this filter, then click &#8216;Apply&#8217;:</p>
 
 <pre><code>of
 </code></pre>
@@ -124,7 +90,7 @@ BL: removed since they make things SLOW
 
 <p>For now, there should be no OpenFlow packets displayed in the main window.</p>
 
-<h3 id="interact-with-hosts-and-switches">Interact with Hosts and Switches</h3>
+<h3>Interact with Hosts and Switches</h3>
 
 <p>Start a minimal topology and enter the CLI:</p>
 
@@ -154,8 +120,10 @@ BL: removed since they make things SLOW
 <pre><code>net
 </code></pre>
 
-<p>Dump information about all nodes:
-    dump</p>
+<p>Dump information about all nodes:</p>
+
+<pre><code>dump
+</code></pre>
 
 <p>You should see the switch and two hosts listed.</p>
 
@@ -164,18 +132,18 @@ BL: removed since they make things SLOW
 <pre><code>h1 ifconfig -a
 </code></pre>
 
-<p>You should see the host’s <code>h1-eth0</code> and loopback (<code>lo</code>) interfaces. Note that this interface (<code>h1-eth0</code>) is not seen by the primary Linux system when <code>ifconfig</code> is run, because it is specific to the network namespace of the host process.</p>
+<p>You should see the host&#8217;s <code>h1-eth0</code> and loopback (<code>lo</code>) interfaces. Note that this interface (<code>h1-eth0</code>) is not seen by the primary Linux system when <code>ifconfig</code> is run, because it is specific to the network namespace of the host process.</p>
 
-<p>In contrast, the switch by default runs in the root network namespace, so running a command on the “switch” is the same as running it from a regular terminal:</p>
+<p>In contrast, the switch by default runs in the root network namespace, so running a command on the &#8220;switch&#8221; is the same as running it from a regular terminal:</p>
 
 <pre><code>s1 ifconfig -a
 </code></pre>
 
-<p>This will show the switch interfaces, plus the VM’s connection out (eth0).</p>
+<p>This will show the switch interfaces, plus the VM&#8217;s connection out (eth0).</p>
 
 <p>For other examples highlighting that the hosts have isolated network state, run <code>arp</code> and <code>route</code> on both <code>s1</code> and <code>h1</code>.</p>
 
-<p>It would be possible to place every host, switch and controller in its own isolated network namespace, but there’s no real advantage to doing so, unless you want to replicate a complex multiple-controller network. Mininet does support this; see the <code>--innamespace</code> option.</p>
+<p>It would be possible to place every host, switch and controller in its own isolated network namespace, but there&#8217;s no real advantage to doing so, unless you want to replicate a complex multiple-controller network. Mininet does support this; see the <code>--innamespace</code> option.</p>
 
 <p>Note that <em>only</em> the network is virtualized; each host process sees the same set of processes and directories. For example, print the process list from a host process:</p>
 
@@ -187,9 +155,9 @@ BL: removed since they make things SLOW
 <pre><code>s1 ps -a
 </code></pre>
 
-<p>It would be possible to use separate process spaces with Linux containers, but currently Mininet doesn’t do that. Having everything run in the “root” process namespace is convenient for debugging, because it allows you to see all of the processes from the console using ps, kill, etc.</p>
+<p>It would be possible to use separate process spaces with Linux containers, but currently Mininet doesn&#8217;t do that. Having everything run in the &#8220;root&#8221; process namespace is convenient for debugging, because it allows you to see all of the processes from the console using ps, kill, etc.</p>
 
-<h3 id="verify-ping">Verify Ping</h3>
+<h3>Verify Ping</h3>
 
 <p>Now, verify that you can ping from host 0 to host 1:</p>
 
@@ -214,21 +182,23 @@ BL: removed since they make things SLOW
 <pre><code>pingall
 </code></pre>
 
-<p>Exit the CLI:
-    exit</p>
+<p>Exit the CLI:</p>
 
-<h3 id="cleanup">Cleanup</h3>
+<pre><code>exit
+</code></pre>
+
+<h3>Cleanup</h3>
 
 <p>If Mininet crashes for some reason, clean it up:</p>
 
 <pre><code>sudo mn -c
 </code></pre>
 
-<h2 id="program-startup-options">Program Startup Options</h2>
+<h2>Program Startup Options</h2>
 
-<h3 id="run-a-regression-test">Run a Regression Test</h3>
+<h3>Run a Regression Test</h3>
 
-<p>You don’t need to drop into the CLI; Mininet can also be used to run self-contained regression tests.</p>
+<p>You don&#8217;t need to drop into the CLI; Mininet can also be used to run self-contained regression tests.</p>
 
 <p>Run a regression test:</p>
 
@@ -237,14 +207,16 @@ BL: removed since they make things SLOW
 
 <p>This command created a minimal topology, started up the OpenFlow reference controller, ran an all-pairs-ping test, and tore down both the topology and the controller.</p>
 
-<p>Another useful test is iperf (give it about 10 seconds to complete):
-    sudo mn –test iperf</p>
+<p>Another useful test is iperf (give it about 10 seconds to complete):</p>
+
+<pre><code>sudo mn --test iperf
+</code></pre>
 
 <p>This command created the same Mininet, ran an iperf server on one host, ran an iperf client on the second host, and parsed the bandwidth achieved.</p>
 
-<h3 id="topology-variations">Topology Variations</h3>
+<h3>Topology Variations</h3>
 
-<p>The default topology is a single switch connected to two hosts. You could change this to a different topo with <code>--topo</code>, and pass parameters for that topology’s creation. For example, to verify all-pairs ping connectivity with one switch and three hosts:</p>
+<p>The default topology is a single switch connected to two hosts. You could change this to a different topo with <code>--topo</code>, and pass parameters for that topology&#8217;s creation. For example, to verify all-pairs ping connectivity with one switch and three hosts:</p>
 
 <p>Run a regression test:</p>
 
@@ -256,7 +228,7 @@ BL: removed since they make things SLOW
 <pre><code>sudo mn --test pingall --topo linear,4
 </code></pre>
 
-<h3 id="adjustable-verbosity">Adjustable Verbosity</h3>
+<h3>Adjustable Verbosity</h3>
 
 <p>The default verbosity level is info, which prints what Mininet is doing during startup and teardown. Compare this with the full debug output with the -v param:</p>
 
@@ -272,87 +244,88 @@ exit
 
 <p>Outside the CLI, other verbosity levels can be used, such as warning, which is used with the regression tests to hide unneeded function output.</p>
 
-<h3 id="custom-topologies">Custom Topologies</h3>
+<h3>Custom Topologies</h3>
 
 <p>Custom topologies can be easily defined as well, using a simple Python API, and an example is provided in custom/topo-2sw-2host.py. This example connects two switches directly, with a single host off each switch:</p>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>simple topology example  (topo-2sw-2host.py)</span> <a href="/../../mininet/custom/topo-2sw-2host.py">download</a></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-<span class="line-number">4</span>
-<span class="line-number">5</span>
-<span class="line-number">6</span>
-<span class="line-number">7</span>
-<span class="line-number">8</span>
-<span class="line-number">9</span>
-<span class="line-number">10</span>
-<span class="line-number">11</span>
-<span class="line-number">12</span>
-<span class="line-number">13</span>
-<span class="line-number">14</span>
-<span class="line-number">15</span>
-<span class="line-number">16</span>
-<span class="line-number">17</span>
-<span class="line-number">18</span>
-<span class="line-number">19</span>
-<span class="line-number">20</span>
-<span class="line-number">21</span>
-<span class="line-number">22</span>
-<span class="line-number">23</span>
-<span class="line-number">24</span>
-<span class="line-number">25</span>
-<span class="line-number">26</span>
-<span class="line-number">27</span>
-<span class="line-number">28</span>
-<span class="line-number">29</span>
-<span class="line-number">30</span>
-<span class="line-number">31</span>
-<span class="line-number">32</span>
-<span class="line-number">33</span>
-<span class="line-number">34</span>
-</pre></td><td class="code"><pre><code class="python"><span class="line"><span class="sd">&quot;&quot;&quot;Custom topology example</span>
-</span><span class="line">
-</span><span class="line"><span class="sd">Two directly connected switches plus a host for each switch:</span>
-</span><span class="line">
-</span><span class="line"><span class="sd">   host --- switch --- switch --- host</span>
-</span><span class="line">
-</span><span class="line"><span class="sd">Adding the &#39;topos&#39; dict with a key/value pair to generate our newly defined</span>
-</span><span class="line"><span class="sd">topology enables one to pass in &#39;--topo=mytopo&#39; from the command line.</span>
-</span><span class="line"><span class="sd">&quot;&quot;&quot;</span>
-</span><span class="line">
-</span><span class="line"><span class="kn">from</span> <span class="nn">mininet.topo</span> <span class="kn">import</span> <span class="n">Topo</span>
-</span><span class="line">
-</span><span class="line"><span class="k">class</span> <span class="nc">MyTopo</span><span class="p">(</span> <span class="n">Topo</span> <span class="p">):</span>
-</span><span class="line">    <span class="s">&quot;Simple topology example.&quot;</span>
-</span><span class="line">
-</span><span class="line">    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span> <span class="bp">self</span> <span class="p">):</span>
-</span><span class="line">        <span class="s">&quot;Create custom topo.&quot;</span>
-</span><span class="line">
-</span><span class="line">        <span class="c"># Initialize topology</span>
-</span><span class="line">        <span class="n">Topo</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span> <span class="bp">self</span> <span class="p">)</span>
-</span><span class="line">
-</span><span class="line">        <span class="c"># Add hosts and switches</span>
-</span><span class="line">        <span class="n">leftHost</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">addHost</span><span class="p">(</span> <span class="s">&#39;h1&#39;</span> <span class="p">)</span>
-</span><span class="line">        <span class="n">rightHost</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">addHost</span><span class="p">(</span> <span class="s">&#39;h2&#39;</span> <span class="p">)</span>
-</span><span class="line">        <span class="n">leftSwitch</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">addSwitch</span><span class="p">(</span> <span class="s">&#39;s3&#39;</span> <span class="p">)</span>
-</span><span class="line">        <span class="n">rightSwitch</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">addSwitch</span><span class="p">(</span> <span class="s">&#39;s4&#39;</span> <span class="p">)</span>
-</span><span class="line">
-</span><span class="line">        <span class="c"># Add links</span>
-</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">addLink</span><span class="p">(</span> <span class="n">leftHost</span><span class="p">,</span> <span class="n">leftSwitch</span> <span class="p">)</span>
-</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">addLink</span><span class="p">(</span> <span class="n">leftSwitch</span><span class="p">,</span> <span class="n">rightSwitch</span> <span class="p">)</span>
-</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">addLink</span><span class="p">(</span> <span class="n">rightSwitch</span><span class="p">,</span> <span class="n">rightHost</span> <span class="p">)</span>
-</span><span class="line">
-</span><span class="line">
-</span><span class="line"><span class="n">topos</span> <span class="o">=</span> <span class="p">{</span> <span class="s">&#39;mytopo&#39;</span><span class="p">:</span> <span class="p">(</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">MyTopo</span><span class="p">()</span> <span class="p">)</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
+<figure class='code'><figcaption><span>simple topology example  (topo-2sw-2host.py)</span> <a href='/../../mininet/custom/topo-2sw-2host.py'>download</a></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="sd">&quot;&quot;&quot;Custom topology example</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">Two directly connected switches plus a host for each switch:</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">   host --- switch --- switch --- host</span>
+</span><span class='line'>
+</span><span class='line'><span class="sd">Adding the &#39;topos&#39; dict with a key/value pair to generate our newly defined</span>
+</span><span class='line'><span class="sd">topology enables one to pass in &#39;--topo=mytopo&#39; from the command line.</span>
+</span><span class='line'><span class="sd">&quot;&quot;&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="kn">from</span> <span class="nn">mininet.topo</span> <span class="kn">import</span> <span class="n">Topo</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">MyTopo</span><span class="p">(</span> <span class="n">Topo</span> <span class="p">):</span>
+</span><span class='line'>    <span class="s">&quot;Simple topology example.&quot;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span> <span class="bp">self</span> <span class="p">):</span>
+</span><span class='line'>        <span class="s">&quot;Create custom topo.&quot;</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c"># Initialize topology</span>
+</span><span class='line'>        <span class="n">Topo</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span> <span class="bp">self</span> <span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c"># Add hosts and switches</span>
+</span><span class='line'>        <span class="n">leftHost</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">addHost</span><span class="p">(</span> <span class="s">&#39;h1&#39;</span> <span class="p">)</span>
+</span><span class='line'>        <span class="n">rightHost</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">addHost</span><span class="p">(</span> <span class="s">&#39;h2&#39;</span> <span class="p">)</span>
+</span><span class='line'>        <span class="n">leftSwitch</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">addSwitch</span><span class="p">(</span> <span class="s">&#39;s3&#39;</span> <span class="p">)</span>
+</span><span class='line'>        <span class="n">rightSwitch</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">addSwitch</span><span class="p">(</span> <span class="s">&#39;s4&#39;</span> <span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="c"># Add links</span>
+</span><span class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">addLink</span><span class="p">(</span> <span class="n">leftHost</span><span class="p">,</span> <span class="n">leftSwitch</span> <span class="p">)</span>
+</span><span class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">addLink</span><span class="p">(</span> <span class="n">leftSwitch</span><span class="p">,</span> <span class="n">rightSwitch</span> <span class="p">)</span>
+</span><span class='line'>        <span class="bp">self</span><span class="o">.</span><span class="n">addLink</span><span class="p">(</span> <span class="n">rightSwitch</span><span class="p">,</span> <span class="n">rightHost</span> <span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'><span class="n">topos</span> <span class="o">=</span> <span class="p">{</span> <span class="s">&#39;mytopo&#39;</span><span class="p">:</span> <span class="p">(</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">MyTopo</span><span class="p">()</span> <span class="p">)</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
 
 <p>When a custom mininet file is provided, it can add new topologies, switch types, and tests to the command-line. For example:</p>
 
 <pre><code>sudo mn --custom ~/mininet/custom/topo-2sw-2host.py --topo mytopo --test pingall
 </code></pre>
 
-<h3 id="id--mac">ID = MAC</h3>
+<h3>ID = MAC</h3>
 
 <p>By default, hosts start with randomly assigned MAC addresses. This can make debugging tough, because every time the Mininet is created, the MACs change, so correlating control traffic with specific hosts is tough.</p>
 
@@ -388,7 +361,7 @@ h2-eth0  Link encap:Ethernet  HWaddr 00:00:00:00:00:01
 mininet&gt; exit
 </code></pre>
 
-<h3 id="xterm-display">XTerm Display</h3>
+<h3>XTerm Display</h3>
 
 <p>For more complex debugging, you can start Mininet so that it spawns one or more xterms.</p>
 
@@ -403,28 +376,30 @@ mininet&gt; exit
 
 <p>By default, only the hosts are put in a separate namespace; the window for each switch is unnecessary (that is, equivalent to a regular terminal), but can be a convenient place to run and leave up switch debug commands, such as flow counter dumps.</p>
 
-<p>Xterms are also useful for running interactive commands that you may need to cancel, for which you’d like to see the output.</p>
+<p>Xterms are also useful for running interactive commands that you may need to cancel, for which you&#8217;d like to see the output.</p>
 
 <p>For example:</p>
 
-<p>In the xterm labeled “switch: s1 (root)”, run:</p>
+<p>In the xterm labeled &#8220;switch: s1 (root)&#8221;, run:</p>
 
 <pre><code>dpctl dump-flows tcp:127.0.0.1:6634
 </code></pre>
 
-<p>Nothing will print out; the switch has no flows added.  To use dpctl with other switches, start up mininet in verbose mode and look at the passive listening ports for the switches when they’re created.</p>
+<p>Nothing will print out; the switch has no flows added.  To use dpctl with other switches, start up mininet in verbose mode and look at the passive listening ports for the switches when they&#8217;re created.</p>
 
-<p>Now, in the xterm labeled “host: h1”, run:</p>
+<p>Now, in the xterm labeled &#8220;host: h1&#8221;, run:</p>
 
 <pre><code>ping 10.0.0.2
 </code></pre>
 
-<p>Go back to <code>s1</code> and dump the flows:
-    dpctl dump-flows tcp:127.0.0.1:6634</p>
+<p>Go back to <code>s1</code> and dump the flows:</p>
+
+<pre><code>dpctl dump-flows tcp:127.0.0.1:6634
+</code></pre>
 
 <p>You should see multiple flow entries now. Alternately (and generally more convenient), you could use the <code>dpctl</code> command built into the Mininet CLI without needing any xterms or manually specifying the IP and port of the switch.</p>
 
-<p>You can tell whether an xterm is in the root namespace by checking ifconfig; if all interfaces are shown (including eth0), it’s in the root namespace. Additionally, its title should contain “(root)”.</p>
+<p>You can tell whether an xterm is in the root namespace by checking ifconfig; if all interfaces are shown (including eth0), it&#8217;s in the root namespace. Additionally, its title should contain &#8220;(root)&#8221;.</p>
 
 <p>Close the setup, from the Mininet CLI:</p>
 
@@ -433,7 +408,7 @@ mininet&gt; exit
 
 <p>The xterms should automatically close.</p>
 
-<h3 id="other-switch-types">Other Switch Types</h3>
+<h3>Other Switch Types</h3>
 
 <p>Other switch types can be used. For example, to run the user-space switch:</p>
 
@@ -446,17 +421,19 @@ mininet&gt; exit
 
 <p>On the other hand, the user-space switch can be a great starting point for implementing new functionality, especially where software performance is not critical.</p>
 
-<p>Another example switch type is Open vSwitch (OVS), which comes preinstalled on the Mininet VM. The iperf-reported TCP bandwidth should be similar to the OpenFlow kernel module, and possibly faster:
-    sudo mn –switch ovsk –test iperf</p>
+<p>Another example switch type is Open vSwitch (OVS), which comes preinstalled on the Mininet VM. The iperf-reported TCP bandwidth should be similar to the OpenFlow kernel module, and possibly faster:</p>
 
-<h3 id="mininet-benchmark">Mininet Benchmark</h3>
+<pre><code>sudo mn --switch ovsk --test iperf
+</code></pre>
 
-<p>To record the time to setup and teardown a topology, use test ‘none’:</p>
+<h3>Mininet Benchmark</h3>
+
+<p>To record the time to setup and teardown a topology, use test &#8216;none&#8217;:</p>
 
 <pre><code>sudo mn --test none
 </code></pre>
 
-<h3 id="everything-in-its-own-namespace-user-switch-only">Everything in its own Namespace (user switch only)</h3>
+<h3>Everything in its own Namespace (user switch only)</h3>
 
 <p>By default, the hosts are put in their own namespace, while switches and the controller are in the root namespace. To put switches in their own namespace, pass the <code>--innamespace</code> option:</p>
 
@@ -470,9 +447,9 @@ mininet&gt; exit
 <pre><code>exit
 </code></pre>
 
-<h2 id="command-line-interface-commands">Command-Line Interface Commands</h2>
+<h2>Command-Line Interface Commands</h2>
 
-<h3 id="display-options-1">Display Options</h3>
+<h3>Display Options</h3>
 
 <p>To see the list of Command-Line Interface (CLI) options, start up a minimal topology and leave it running. Build the Mininet:</p>
 
@@ -484,7 +461,7 @@ mininet&gt; exit
 <pre><code>help
 </code></pre>
 
-<h3 id="python-interpreter">Python Interpreter</h3>
+<h3>Python Interpreter</h3>
 
 <p>If the first phrase on the Mininiet command line is <code>py</code>, then that command is executed with Python. This might be useful for extending Mininet, as well as probing its inner workings. Each host, switch, and controller has an associated Node object.</p>
 
@@ -505,15 +482,17 @@ mininet&gt; exit
 
 <p>You can read the on-line documentation for methods available on a node by using the help() function:</p>
 
-<pre><code>py help(h1) (Press "q" to quit reading the documentation.)
+<pre><code>py help(h1)
 </code></pre>
+
+<p>(Press &#8220;q&#8221; to quit reading the documentation.)</p>
 
 <p>You can also evaluate methods of variables:</p>
 
 <pre><code>py h1.IP()
 </code></pre>
 
-<h3 id="link-updown">Link Up/Down</h3>
+<h3>Link Up/Down</h3>
 
 <p>For fault tolerance testing, it can be helpful to bring links up and down.</p>
 
@@ -527,18 +506,18 @@ mininet&gt; exit
 <pre><code>link s1 h1 up
 </code></pre>
 
-<h3 id="xterm-display-1">XTerm Display</h3>
+<h3>XTerm Display</h3>
 
 <p>To display an xterm for h1 and h2:</p>
 
 <pre><code>xterm h1 h2
 </code></pre>
 
-<h2 id="examples">Examples</h2>
+<h2>Examples</h2>
 
-<p>The <a href="https://github.com/mininet/mininet/tree/master/examples">examples directory</a> in the Mininet source tree includes examples of how to use Mininet’s Python API, as well as potentially useful code that has not been integrated into the main code base.</p>
+<p>The <a href="https://github.com/mininet/mininet/tree/master/examples">examples directory</a> in the Mininet source tree includes examples of how to use Mininet&#8217;s Python API, as well as potentially useful code that has not been integrated into the main code base.</p>
 
-<h3 id="ssh-daemon-per-host">SSH daemon per host</h3>
+<h3>SSH daemon per host</h3>
 
 <p>One example that may be particularly useful runs an SSH daemon on every host:</p>
 
@@ -558,17 +537,17 @@ exit
 <pre><code>exit
 </code></pre>
 
-<h2 id="walkthrough-complete">Walkthrough Complete</h2>
+<h2>Walkthrough Complete</h2>
 
-<p>Congrats! You’ve completed the Mininet Walkthrough. Feel free to try out new topologies and controllers or check out the source code.</p>
+<p>Congrats! You&#8217;ve completed the Mininet Walkthrough. Feel free to try out new topologies and controllers or check out the source code.</p>
 
 <p>An example on how to use a remote controller is below.</p>
 
-<h2 id="optional">Optional</h2>
+<h2>Optional</h2>
 
 <p>These are not required, but you might find them useful to skim.</p>
 
-<h3 id="remote-controller">Remote Controller</h3>
+<h3>Remote Controller</h3>
 
 <p>Note: this step is not part of the default walkthrough; it is primarily useful if you have a controller running outside of the VM, such as on the VM host, or a different physical PC.</p>
 
@@ -581,15 +560,15 @@ exit
 <pre><code>sudo mn --controller=remote,ip=[controller IP],port=[controller listening port]
 </code></pre>
 
-<p>For example, to run POX’s sample learning switch, you could do something like</p>
+<p>For example, to run POX&#8217;s sample learning switch, you could do something like</p>
 
 <pre><code>cd ~/pox
  ./pox.py forwarding.l2_learning
 </code></pre>
 
-<p>in one window, and in another window, start up Mininet to connect to the 
-“remote” controller (which is actually running locally, but outside of 
-Mininet’s control):</p>
+<p>in one window, and in another window, start up Mininet to connect to the
+&#8220;remote&#8221; controller (which is actually running locally, but outside of
+Mininet&#8217;s control):</p>
 
 <pre><code># note these are actually the default ip address and port values
 sudo mn --controller=remote,ip=127.0.0.1,port=6633
@@ -604,11 +583,11 @@ work readily with Mininet as long as you start them up and specify the
 <code>remote</code> controller option with the correct IP address of the machine where
 your controller is runing and the correct port that it is listening on.</p>
 
-<h3 id="nox-classic">NOX Classic</h3>
+<h3>NOX Classic</h3>
 
 <p>The Mininet default install (using <code>util/install.sh -a</code>) does not install NOX Classic.  If you would like to install it, run <code>sudo ~/mininet/util/install.sh -x</code>.</p>
 
-<p>To run a regression test with NOX running the NOX app ‘pyswitch’, the NOX_CORE_DIR env var must be set to the directory containing the NOX executable.</p>
+<p>To run a regression test with NOX running the NOX app &#8216;pyswitch&#8217;, the NOX_CORE_DIR env var must be set to the directory containing the NOX executable.</p>
 
 <p>First verify that NOX runs:</p>
 
@@ -622,15 +601,14 @@ your controller is runing and the correct port that it is listening on.</p>
 sudo -E mn --controller nox_pysw --test pingpair
 </code></pre>
 
-<p>There’s a hesitation of a few seconds while NOX loads and the switch connects, but then it should complete the ping.</p>
+<p>There&#8217;s a hesitation of a few seconds while NOX loads and the switch connects, but then it should complete the ping.</p>
 
-<p>Note that this time, <code>mn</code> was called via <code>sudo -E</code>, to keep the <code>NOX_CORE_DIR</code> environment variable.  If you’re running nox remotely, using <code>--controller remote</code>, then the <code>-E</code> isn’t necessary.  Alternately, you can change the first line of <code>/etc/sudoers</code>, via <code>sudo visudo</code>, to change the <code>env_reset</code> line to:</p>
+<p>Note that this time, <code>mn</code> was called via <code>sudo -E</code>, to keep the <code>NOX_CORE_DIR</code> environment variable.  If you&#8217;re running nox remotely, using <code>--controller remote</code>, then the <code>-E</code> isn&#8217;t necessary.  Alternately, you can change the first line of <code>/etc/sudoers</code>, via <code>sudo visudo</code>, to change the <code>env_reset</code> line to:</p>
 
 <pre><code>Defaults !env_reset
 </code></pre>
 
-<p>… so that when running sudo the env var setup isn’t changed.</p>
-
+<p>&#8230; so that when running sudo the env var setup isn&#8217;t changed.</p>
 
   
     <footer>
