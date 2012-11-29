@@ -34,7 +34,8 @@ plugins: plugins
 # Assume that the mininet source is located at the same filesystem depth as this website repo.
 code_dir: ../../mininet
 category_dir: blog/categories
-markdown: rdiscount
+# Changed from rdiscount so that {:toc} actually works
+markdown: kramdown
 pygments: false # default python pygments have been replaced by pygments.rb
 
 paginate: 10          # Posts per page on the blog index
