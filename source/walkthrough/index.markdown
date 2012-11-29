@@ -308,6 +308,7 @@ If you do the ping test shown earlier, you should notice a much higher delay, si
 On the other hand, the user-space switch can be a great starting point for implementing new functionality, especially where software performance is not critical.
 
 Another example switch type is Open vSwitch (OVS), which comes preinstalled on the Mininet VM. The iperf-reported TCP bandwidth should be similar to the OpenFlow kernel module, and possibly faster:
+
     sudo mn --switch ovsk --test iperf
 
 
