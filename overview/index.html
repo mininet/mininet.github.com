@@ -9,7 +9,8 @@
   <meta name="author" content="Mininet Team">
 
   
-  <meta name="description" content="Mininet Overview Mininet supports research, development, learning, prototyping, testing, debugging, and any other tasks that could benefit from &hellip;">
+  <meta name="description" content="Mininet Overview Mininet is a network emulator which creates a network of virtual hosts,
+switches, controllers, and links. Mininet hosts run &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -51,7 +52,12 @@ BL: removed since they make things SLOW
     
   </header>
   
-  <p>Mininet supports research, development, learning, prototyping, testing, debugging, and any other tasks that could benefit from having a complete experimental network on a laptop or other PC.</p>
+  <p>Mininet is a <em>network emulator</em> which creates a network of virtual hosts,
+switches, controllers, and links. Mininet hosts run standard Linux network
+software, and its switches support OpenFlow for highly flexible custom
+routing and Software-Defined Networking.</p>
+
+<p>Mininet supports research, development, learning, prototyping, testing, debugging, and any other tasks that could benefit from having a complete experimental network on a laptop or other PC.</p>
 
 <p>Mininet:</p>
 
@@ -62,13 +68,18 @@ BL: removed since they make things SLOW
   <li>Enables <strong>complex topology testing</strong>, without the need to wire up a physical network</li>
   <li>Includes a <strong>CLI</strong> that is topology-aware and OpenFlow-aware, for debugging or running network-wide tests</li>
   <li>Supports <strong>arbitrary custom topologies</strong>, and includes a basic set of <strong>parametrized topologies</strong></li>
-  <li>is <strong>usable out of the box</strong> without programming</li>
+  <li>is <strong>usable out of the box</strong> without programming, but</li>
   <li>also Provides a straightforward and extensible <strong>Python API</strong> for network creation and experimentation</li>
 </ul>
 
-<p>Mininet provides an easy way to get correct system <em>behavior</em> and experiment with topologies.</p>
+<p>Mininet provides an easy way to get correct system <em>behavior</em> (and, to the extent supported by your hardware, performance) and to experiment with topologies.</p>
 
-<p>The code you develop and test on Mininet, for an OpenFlow controller, modified switch, or host, <em>can move to a real system with no changes</em>, for real-world testing, performance evaluation, and deployment.</p>
+<p>Mininet networks run <em>real code</em> including standard Unix/Linux network applications
+as well as the real Linux kernel and network stack (including any kernel
+extensions which you may have available, as long as they are compatible with
+network namespaces.)</p>
+
+<p>Because of this, the code you develop and test on Mininet, for an OpenFlow controller, modified switch, or host, <em>can move to a real system with no changes</em>, for real-world testing, performance evaluation, and deployment. Importantly this means that a design that works in Mininet can often move directly to hardware switches for line-rate packet forwarding.</p>
 
 <h2 id="how-it-works">How it Works</h2>
 
@@ -78,7 +89,10 @@ BL: removed since they make things SLOW
 
 <h2 id="why-its-better">Why it’s better</h2>
 
-<p>Compared to full system virtualization based approaches, such as OpenFlowVMS or the Noxrepo.org VM environment, Mininet:</p>
+<p>Mininet combines many of the best features of emulators, hardware testbeds,
+and simulators.</p>
+
+<p>Compared to full system virtualization based approaches, Mininet:</p>
 
 <ul>
   <li><strong>Boots faster</strong>: seconds instead of minutes</li>
@@ -86,6 +100,23 @@ BL: removed since they make things SLOW
   <li><strong>Provides more bandwidth</strong>: typically 2Gbps total bandwidth on modest hardware</li>
   <li><strong>Installs easily</strong>: a prepackaged VM is available that runs on VMware or VirtualBox for 
   Mac/Win/Linux with OpenFlow v1.0 tools already installed.</li>
+</ul>
+
+<p>Compared to hardware testbeds, Mininet</p>
+
+<ul>
+  <li>is <strong>inexpensive</strong> and <strong>always available</strong> (even before conference deadlines)</li>
+  <li>is <em>quickly reconfigurable</em></li>
+  <li><em>boots quickly</em></li>
+</ul>
+
+<p>Compared to simulators, Mininet</p>
+
+<ul>
+  <li>runs <strong>real, unmodified code</strong> including application code, OS kernel code, and
+control plane code  (both OpenFlow controller code and Open vSwitch code)</li>
+  <li>easily <strong>connects to real networks</strong></li>
+  <li>offers <strong>interactive performance</strong> - you can type at it</li>
 </ul>
 
 <h2 id="limitations">Limitations</h2>
