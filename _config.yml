@@ -35,7 +35,7 @@ plugins: plugins
 code_dir: ../../mininet
 category_dir: blog/categories
 # kramdown works with {:toc} but breaks front page atm
-markdown: rdiscount
+markdown: kramdown
 pygments: false # default python pygments have been replaced by pygments.rb
 
 paginate: 10          # Posts per page on the blog index
