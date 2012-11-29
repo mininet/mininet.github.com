@@ -237,16 +237,18 @@ can run any command or application that is available to the underlying Linux
 system (or VM) and its file system. You can also enter any <code>bash</code> command,
 including job control (<code>&amp;</code>, <code>jobs</code>, <code>kill</code>, etc..)</p>
 
-<p>Next, try starting a simple HTTP server on h1, making a request from h2, then
-shutting down the web server:</p>
+<p>Next, try starting a simple HTTP server on <code>h1</code>, making a request from <code>h2</code>,
+then shutting down the web server:</p>
 
 <pre><code>h1 python -m SimpleHTTPServer 80 &amp;
 h2 wget -O - h1
 h1 kill %python
 </code></pre>
 
-<p>Exit the CLI:
-    exit</p>
+<p>Exit the CLI:</p>
+
+<pre><code>exit
+</code></pre>
 
 <h3 id="cleanup">Cleanup</h3>
 
@@ -598,9 +600,8 @@ exit
 <p>If you haven’t done so yet, you should definitely go through the 
 <a href="http://www.openflow.org/wk/index.php/OpenFlow_Tutorial">OpenFlow tutorial</a>.
 <em>Note: This is still being updated for Mininet 2.0, which has a new (but
-improved) topology API. Consult the
-<a href="https://github.com/mininet/mininet/wiki/Introduction-to-Mininet">Introduction to Mininet</a>
-for details on creating topologies in Mininet 2.0</em>.</p>
+improved) topology API. For Mininet 2.0, you should use the syntax described
+above in <a href="#custom-topologies">Custom Topologies</a></em>.</p>
 
 <p>Although you can get pretty far just using Mininet’s CLI, Mininet becomes much
 more useful and powerful if you master its Python API. The
