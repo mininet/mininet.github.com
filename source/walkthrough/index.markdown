@@ -4,13 +4,16 @@ title: "Mininet Walkthrough"
 comments: false
 sharing: false
 footer: true
-root: /
 ---
+
 This walkthrough demonstrates most Mininet commands, plus its typical usage in concert with the Wireshark dissector.
 
 It assumes that your base system is the Mininet VM, or a native install with all OpenFlow tools and Mininet installed.
 
 The entire walkthrough should take under an hour.
+
+* kramdown will replace the following tag with a table of contents
+{:toc}
 
 Everyday Usage
 ---------------
