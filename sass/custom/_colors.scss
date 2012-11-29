@@ -16,7 +16,8 @@
 
 $page-bg: #fff;
 $main-bg: #fff;
-$header-bg: lighten(#165b94,3);
+$header-bg: rgb(90,150,197);
+$subtitle-color: lighten($header-bg, 30);
 $title-color: #fff;
 $text-color: #000;
 

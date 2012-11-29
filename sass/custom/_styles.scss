@@ -10,7 +10,7 @@
     display: inline-block;
     vertical-align: top;
     text-align: left;
-    background: #ffffff no-repeat 0 -150px;
+    background: #fff no-repeat 0 -150px;
     padding: 2px;
     margin: 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 0 1px 4px;
@@ -19,7 +19,7 @@
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    border: white 0.5em solid;
+    border: lightgray 0.5em solid;
     border-radius: 8px;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -53,6 +53,7 @@
 
 /* Customize sidebar - trying to get the right spacing & size here. */
 .sidebartext p {
+    margin-top: 0.5em;
     font-family: $sans;
     font-weight: bold;
     font-size: medium;
@@ -72,4 +73,8 @@ body {
 h1 {
   font-size: 2em;
   line-height: 1em;
+}
+
+article header {
+  padding-top: 0 !important;
 }
