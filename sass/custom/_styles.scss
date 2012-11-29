@@ -64,7 +64,7 @@
 // Changes to default styles
 
 body {
-    font-size: 11pt;
+    font-size: medium;
     font-family: $sans;
     text-align: justify;
 }
@@ -78,3 +78,7 @@ h1 {
 article header {
   padding-top: 0 !important;
 }
+
+// was far too spaced-out
+p { margin-bottom: 1; }
+
