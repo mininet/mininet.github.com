@@ -42,6 +42,14 @@ In Wireshark, click Capture, then Interfaces, then select Start on the loopback 
 
 For now, there should be no OpenFlow packets displayed in the main window.
 
+*Note: Wireshark is installed by default in the Mininet VM image. If the
+system you are using does not have Wireshark and the OpenFlow plugin installed,
+you may be able to install both of them using Mininet's `install.sh` script
+as follows:*
+
+    cd ~
+    git clone https://github.com/mininet/mininet  # if it's not already there
+    mininet/util/install.sh -w
 
 ### Interact with Hosts and Switches
 
@@ -70,6 +78,7 @@ Display links:
     net
 
 Dump information about all nodes:
+
     dump
 
 You should see the switch and two hosts listed.
@@ -84,7 +93,7 @@ In contrast, the switch by default runs in the root network namespace, so runnin
 
     s1 ifconfig -a
 
-This will show the switch interfaces, plus the VM's connection out (eth0).
+This will show the switch interfaces, plus the VM's connection out (`eth0`).
 
 For other examples highlighting that the hosts have isolated network state, run `arp` and `route` on both `s1` and `h1`.
 
@@ -98,10 +107,10 @@ This should be the exact same as that seen by the root network namespace:
 
     s1 ps -a
 
-It would be possible to use separate process spaces with Linux containers, but currently Mininet doesn't do that. Having everything run in the "root" process namespace is convenient for debugging, because it allows you to see all of the processes from the console using ps, kill, etc.
+It would be possible to use separate process spaces with Linux containers, but currently Mininet doesn't do that. Having everything run in the "root" process namespace is convenient for debugging, because it allows you to see all of the processes from the console using `ps`, `kill`, etc.
 
 
-### Verify Ping
+### Test connectivity between hosts
 
 Now, verify that you can ping from host 0 to host 1:
 
@@ -113,7 +122,7 @@ You should see OpenFlow control traffic. The first host ARPs for the MAC address
 
 Now the first host knows the IP address of the second, and can send its ping via an ICMP Echo Request. This request, along with its corresponding reply from the second host, both go the controller and result in a flow entry pushed down (along with the actual packets getting sent out).
 
-Repeat the last ping:
+Repeat the last `ping`:
 
     h1 ping -c 1 h2
 
@@ -122,6 +131,21 @@ You should see a much lower ping time for the second try (&lt;100us). A flow ent
 An easier way to run this test is to use the Mininet CLI built-in pingall command, which does an all-pairs ping:
 
     pingall
+
+### Run a simple web server and client
+
+Remember that `ping` isn't the only command you can run on a host! Mininet hosts
+can run any command or application that is available to the underlying Linux
+system (or VM) and its file system. You can also enter any `bash` command,
+including job control (`&`, `jobs`, `kill`, etc..)
+
+Next, try starting a simple HTTP server on h1, making a request from h2, then
+shutting down the web server:
+
+
+    h1 python -m SimpleHTTPServer 80 &
+    h2 wget -O - h1
+    h1 kill %python
 
 Exit the CLI:
     exit
@@ -396,7 +420,23 @@ Walkthrough Complete
 
 Congrats! You've completed the Mininet Walkthrough. Feel free to try out new topologies and controllers or check out the source code.
 
-An example on how to use a remote controller is below.
+
+### Next steps
+
+If you haven't done so yet, you should definitely go through the 
+[OpenFlow tutorial](http://www.openflow.org/wk/index.php/OpenFlow_Tutorial).
+*Note: This is still being updated for Mininet 2.0, which has a new (but
+improved) topology API. Consult the
+[Introduction to Mininet](https://github.com/mininet/mininet/wiki/Introduction-to-Mininet)
+for details on creating topologies in Mininet 2.0*.
+
+Although you can get pretty far just using Mininet's CLI, Mininet becomes much
+more useful and powerful if you master its Python API. The
+[Introduction to Mininet](https://github.com/mininet/mininet/wiki/Introduction-to-Mininet)
+provides an introduction to Mininet and its Python API.
+
+If you are wondering how to use a _remote controller_ (e.g. one running outside
+Mininet's control), this is explained below.
 
 
 Optional
@@ -406,11 +446,11 @@ These are not required, but you might find them useful to skim.
 
 ### Remote Controller
 
-Note: this step is not part of the default walkthrough; it is primarily useful if you have a controller running outside of the VM, such as on the VM host, or a different physical PC.
+*Note: this step is not part of the default walkthrough; it is primarily useful if you have a controller running outside of the VM, such as on the VM host, or a different physical PC. The OpenFlow tutorial uses `controller --remote` for starting up a simple learning switch that you create using a controller framework like POX, NOX, Beacon or Floodlight.*
 
-When you start a Mininet, each switch can be connected to a remote controller - which could be outside the VM and on your machine, or anywhere in the world.
+When you start a Mininet network, each switch can be connected to a remote controller - which could be in the VM, outside the VM and on your local machine, or anywhere in the world.
 
-This setup may be convenient if you already have a custom version of NOX w/dev tools (such as Eclipse) installed on the local machine, or you want to test a controller running on a different physical machine (maybe even in the cloud).
+This setup may be convenient if you already have a custom version of a controller framework and development tools (such as Eclipse) installed on the local machine, or you want to test a controller running on a different physical machine (maybe even in the cloud).
 
 If you want to try this, fill in the host IP and/or listening port:
 
@@ -441,7 +481,7 @@ your controller is runing and the correct port that it is listening on.
 
 The Mininet default install (using `util/install.sh -a`) does not install NOX Classic.  If you would like to install it, run `sudo ~/mininet/util/install.sh -x`.
 
-To run a regression test with NOX running the NOX app 'pyswitch', the NOX_CORE_DIR env var must be set to the directory containing the NOX executable.
+To run a regression test with NOX running the NOX app `pyswitch`, the `NOX_CORE_DIR` env var must be set to the directory containing the NOX executable.
 
 First verify that NOX runs:
 
@@ -451,7 +491,11 @@ First verify that NOX runs:
 Ctrl-C to kill NOX, then run a test with NOX pyswitch:
 
     cd
-    sudo -E mn --controller nox_pysw --test pingpair
+    sudo -E mn --controller=nox,pyswitch --test pingpair
+
+
+Note that the `--controller` option has a convenient syntax for specifying
+options to the controller type (in this case, `nox` running `pyswitch`.)
 
 There's a hesitation of a few seconds while NOX loads and the switch connects, but then it should complete the ping.
 
