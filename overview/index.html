@@ -79,7 +79,7 @@ as well as the real Linux kernel and network stack (including any kernel
 extensions which you may have available, as long as they are compatible with
 network namespaces.)</p>
 
-<p>Because of this, the code you develop and test on Mininet, for an OpenFlow controller, modified switch, or host, <em>can move to a real system with no changes</em>, for real-world testing, performance evaluation, and deployment. Importantly this means that a design that works in Mininet can often move directly to hardware switches for line-rate packet forwarding.</p>
+<p>Because of this, the code you develop and test on Mininet, for an OpenFlow controller, modified switch, or host, <em>can move to a real system with minimal changes</em>, for real-world testing, performance evaluation, and deployment. Importantly this means that a design that works in Mininet can usually move directly to hardware switches for line-rate packet forwarding.</p>
 
 <h2 id="how-it-works">How it Works</h2>
 
@@ -106,8 +106,7 @@ and simulators.</p>
 
 <ul>
   <li>is <strong>inexpensive</strong> and <strong>always available</strong> (even before conference deadlines)</li>
-  <li>is <em>quickly reconfigurable</em></li>
-  <li><em>boots quickly</em></li>
+  <li>is <strong>quickly reconfigurable and restartable</strong></li>
 </ul>
 
 <p>Compared to simulators, Mininet</p>
