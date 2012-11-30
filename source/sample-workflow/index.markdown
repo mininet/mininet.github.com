@@ -15,10 +15,10 @@ Mininet enables you to quickly [create](#create), [interact with](#interact), [c
 
 You can create a network with a single command. For example,
 
-    mn --switch ovsk --controller nox --topo tree,depth=2,fanout=8 --test pingall
+    sudo mn --switch ovsk --controller ref --topo tree,depth=2,fanout=8 --test pingall
 
-starts a network with a tree topology of depth 2 and fanout 8 (i.e. 9 switches connecting 64 hosts), using Open vSwitch switches under the control of NOX (via its `pyswitch` module by default), and runs the `pingall` test to check connectivity between every pair of nodes.
-
+starts a network with a tree topology of depth 2 and fanout 8 (i.e. 64 hosts connected to 9 switches), using Open vSwitch switches under the control of the OpenFlow/Stanford reference controller, and runs the `pingall` test to check connectivity between every pair of nodes. (This takes about
+    30 seconds on my laptop.)
 
 <a id="interact"></a>
 
@@ -28,7 +28,7 @@ Mininet's CLI allows you to control and manage your entire virtual network from 
 
     mininet> h2 ping h3
 
-tells host `h2` to ping host `h3`'s IP address.
+tells host `h2` to ping host `h3`'s IP address. Any available Linux command or program can be run on any virtual host.
 
 <a id="customize"></a>
 
