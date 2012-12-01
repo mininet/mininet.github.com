@@ -32,6 +32,18 @@ BL: removed since they make things SLOW
 -->
 
   
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36721297-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
 
 </head>
 
@@ -59,10 +71,11 @@ BL: removed since they make things SLOW
 
 <p>You can create a network with a single command. For example,</p>
 
-<pre><code>mn --switch ovsk --controller nox --topo tree,depth=2,fanout=8 --test pingall
+<pre><code>sudo mn --switch ovsk --controller ref --topo tree,depth=2,fanout=8 --test pingall
 </code></pre>
 
-<p>starts a network with a tree topology of depth 2 and fanout 8 (i.e. 9 switches connecting 64 hosts), using Open vSwitch switches under the control of NOX (via its <code>pyswitch</code> module by default), and runs the <code>pingall</code> test to check connectivity between every pair of nodes.</p>
+<p>starts a network with a tree topology of depth 2 and fanout 8 (i.e. 64 hosts connected to 9 switches), using Open vSwitch switches under the control of the OpenFlow/Stanford reference controller, and runs the <code>pingall</code> test to check connectivity between every pair of nodes. (This takes about
+    30 seconds on my laptop.)</p>
 
 <p><a id="interact"></a></p>
 
@@ -73,7 +86,7 @@ BL: removed since they make things SLOW
 <pre><code>mininet&gt; h2 ping h3
 </code></pre>
 
-<p>tells host <code>h2</code> to ping host <code>h3</code>’s IP address.</p>
+<p>tells host <code>h2</code> to ping host <code>h3</code>’s IP address. Any available Linux command or program can be run on any virtual host.</p>
 
 <p><a id="customize"></a></p>
 
@@ -172,6 +185,10 @@ BL: removed since they make things SLOW
 <section>
   <h1>Recent News</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/11/27/announcing-mininet-2-dot-0-0/">Announcing Mininet 2.0.0</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/08/23/website-updated/">Website Updated</a>

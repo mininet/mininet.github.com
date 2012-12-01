@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Mininet]]></title>
-  <link href="http://mininet.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: releases | Mininet]]></title>
+  <link href="http://mininet.github.com/blog/categories/releases/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
   <updated>2012-11-30T23:54:45-08:00</updated>
   <id>http://mininet.github.com/</id>
@@ -18,7 +18,7 @@
     <link href="http://mininet.github.com/blog/2012/11/27/announcing-mininet-2-dot-0-0/"/>
     <updated>2012-11-27T17:41:00-08:00</updated>
     <id>http://mininet.github.com/blog/2012/11/27/announcing-mininet-2-dot-0-0</id>
-    <content type="html"><![CDATA[<p>We are pleased to announce the availability of <a href="http://mininet.github.com/download">Mininet 2.0.0</a>!</p>
+    <content type="html"><![CDATA[<p>We are pleased to announce the availability of <a href="/download">Mininet 2.0.0</a>!</p>
 
 <p>In the last few years, the Mininet community has grown from a few users at Stanford to an active mailing list with over 500 members in academia, startups, and industry.</p>
 
@@ -27,7 +27,7 @@
 <p>Other new features of Mininet 2.0.0 include:</p>
 
 <ul>
-  <li>An all-new website, <a href="http://mininet.github.com">http://mininet.github.com</a>, with <a href="http://mininet.github.com/api">online doxypy documentation</a> for all classes.</li>
+  <li>An all-new website, <a href="http://mininet.github.com">http://mininet.github.com</a>, with <a href="/api">online doxypy documentation</a> for all classes.</li>
   <li>More flexible mn command line options, including the ability to specify NOX (and, in the future, POX) modules from the <code>mn</code> command line, and the ability to set link and CPU bandwidth limits</li>
   <li>Dynamic link reconnection in OVS (supports migration and mobility emulation)</li>
   <li>First-class abstractions/classes for link (<code>Link</code>) and interface (<code>Intf</code>) objects</li>
@@ -51,19 +51,6 @@
   <li>Nikhil Handigol</li>
   <li>Vimalkumar Jeyakumar</li>
 </ul>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Website Updated]]></title>
-    <link href="http://mininet.github.com/blog/2012/08/23/website-updated/"/>
-    <updated>2012-08-23T18:08:00-07:00</updated>
-    <id>http://mininet.github.com/blog/2012/08/23/website-updated</id>
-    <content type="html"><![CDATA[<p>The old website had an obscure, needed-Google-to-find-it address, and was generated server-side, so it could be a bit slow.  The new page you’re seeing was built with Octopress and is hosted on GitHub Pages.  Since it’s all statically generated pages now, it should load super-quick, and it’ll be easier to add blog entries and do page customization.  </p>
-
-<p>Try it out, and let us know what you think!</p>
-
-<p>-The Mininet Team</p>
 ]]></content>
   </entry>
   
