@@ -4,7 +4,7 @@
   <title><![CDATA[Category: releases | Mininet]]></title>
   <link href="http://mininet.github.com/blog/categories/releases/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2012-11-30T23:54:45-08:00</updated>
+  <updated>2012-12-01T02:54:04-08:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -28,7 +28,7 @@
 
 <ul>
   <li>An all-new website, <a href="http://mininet.github.com">http://mininet.github.com</a>, with <a href="/api">online doxypy documentation</a> for all classes.</li>
-  <li>More flexible mn command line options, including the ability to specify NOX (and, in the future, POX) modules from the <code>mn</code> command line, and the ability to set link and CPU bandwidth limits</li>
+  <li>More flexible <code>mn</code> command line options, including the ability to specify NOX (and, in the future, POX) modules from the <code>mn</code> command line, and the ability to set link and CPU bandwidth limits</li>
   <li>Dynamic link reconnection in OVS (supports migration and mobility emulation)</li>
   <li>First-class abstractions/classes for link (<code>Link</code>) and interface (<code>Intf</code>) objects</li>
   <li>Interface/link bandwidth limiting support using <code>tc</code>, via <code>TCIntf</code> and <code>TCLink</code> classes</li>
