@@ -79,6 +79,11 @@ article header {
   padding-top: 0;
 }
 
+article header p.meta {
+width: 100%;
+text-align: right;
+}
+
 // was far too spaced-out
 p, blockquote, ul, ol { 
     margin-bottom: 1em;
