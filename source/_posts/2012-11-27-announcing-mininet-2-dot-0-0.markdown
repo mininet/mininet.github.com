@@ -4,7 +4,7 @@ title: "Announcing Mininet 2.0.0"
 date: 2012-11-27 17:41
 comments: true
 categories: releases
-published: false
+published: true
 ---
 
 We are pleased to announce the availability of [Mininet 2.0.0](/download)!
