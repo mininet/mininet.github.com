@@ -16,7 +16,7 @@ Version 2 (“HiFi”) is a major upgrade that expands Mininet's scope from func
 Other new features of Mininet 2.0.0 include:
 
 *  An all-new website, <http://mininet.github.com>, with [online doxypy documentation](/api) for all classes.
-*  More flexible mn command line options, including the ability to specify NOX (and, in the future, POX) modules from the `mn` command line, and the ability to set link and CPU bandwidth limits
+*  More flexible `mn` command line options, including the ability to specify NOX (and, in the future, POX) modules from the `mn` command line, and the ability to set link and CPU bandwidth limits
 *  Dynamic link reconnection in OVS (supports migration and mobility emulation)
 *  First-class abstractions/classes for link (`Link`) and interface (`Intf`) objects
 *  Interface/link bandwidth limiting support using `tc`, via `TCIntf` and `TCLink` classes
