@@ -26,7 +26,7 @@ Other new features of Mininet 2.0.0 include:
 
 Note that the `Topo` object has changed somewhat to enable more flexible topology params, and as a result, your old code may need a few changes.
 
-Mininet 2.0.0 is available at http://mininet.github.com/download
+Download and installation instructions are available at <http://mininet.github.com/download> and Mininet source code may be found at <https://github.com/mininet/mininet>. We welcome new feature implementations, bug fixes, bug reports, FAQ additions and other contributions, and we look forward to high-quality discussions on [`mininet-discuss`](https://mailman.stanford.edu/mailman/listinfo/mininet-discuss).
 
 Thanks to all the code contributors, bug reporters, and active users who helped make this release possible!
 
