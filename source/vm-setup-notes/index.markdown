@@ -10,7 +10,7 @@ The Mininet VM is meant to speed up Mininet installation, plus make it easy to r
 
 After downloading the VM, you'll run a few steps to customize it for your setup. This won't take long.
 
-<!-- %TOC% -->
+{:toc}
 
 
 VM Setup
@@ -52,10 +52,12 @@ This will set up `ssh` forwarding from the VM to host port 8022.
 ### Log in to VM
 
 Log in to the VM, using the following name and password:
+
     mininet-vm login: mininet
     Password: mininet
+
 (some older VM images may use `openflow`/`openflow` instead)
-The root account is not enabled for login; you can use `sudo` to run a command with root privileges.
+The `root` account is not enabled for login; you can use `sudo` to run a command with superuser privileges.
 
 ### SSH into VM
 
@@ -71,7 +73,7 @@ You may want to add the address to your host PC's /etc/hosts file to be able to 
 
 where 192.168.x.y is replaced by the VM's IP address.
 
-SSH in to the host. We assume the VM is running locally, and that the additional precautions of `ssh -X` are unnecessary. `ssh -Y` also has no authentication timeout by default.
+SSH into the VM. We assume the VM is running locally, and that the additional precautions of `ssh -X` are unnecessary. `ssh -Y` also has no authentication timeout by default.
 
     ssh -Y mininet@mininet-vm
 

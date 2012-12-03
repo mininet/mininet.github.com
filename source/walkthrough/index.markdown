@@ -15,11 +15,11 @@ The entire walkthrough should take under an hour.
 * kramdown will replace the following tag with a table of contents
 {:toc}
 
-Everyday Usage
----------------
+Part 1: Everyday Mininet Usage
+----------------------
 
 
-### Display Options
+### Display Startup Options
 
 Display startup options:
 
@@ -159,9 +159,8 @@ If Mininet crashes for some reason, clean it up:
     sudo mn -c
 
 
-Program Startup Options
+Part 2: Advanced Startup Options
 ------------------------
-
 
 ### Run a Regression Test
 
@@ -179,7 +178,7 @@ Another useful test is iperf (give it about 10 seconds to complete):
 This command created the same Mininet, ran an iperf server on one host, ran an iperf client on the second host, and parsed the bandwidth achieved.
 
 
-### Topology Variations
+### Changing Topology Size and Type
 
 The default topology is a single switch connected to two hosts. You could change this to a different topo with `--topo`, and pass parameters for that topology's creation. For example, to verify all-pairs ping connectivity with one switch and three hosts:
 
@@ -191,6 +190,14 @@ Another example, with a linear topology (where each switch has one host, and all
 
     sudo mn --test pingall --topo linear,4
 
+Parametrized topologies are one of Mininet's most useful and powerful features.
+
+### Link variations
+
+Mininet 2.0 allows you to set Link parameters, and these can even be set automatially
+from the command line.
+
+     sudo mn --
 
 ### Adjustable Verbosity
 
@@ -229,7 +236,7 @@ Before:
     mininet@mininet:~/mininet$ sudo mn
     ...
     mininet> h1 ifconfig
-    h2-eth0  Link encap:Ethernet  HWaddr f6:9d:5a:7f:41:42  
+    h1-eth0  Link encap:Ethernet  HWaddr f6:9d:5a:7f:41:42  
               inet addr:10.0.0.1  Bcast:10.255.255.255  Mask:255.0.0.0
               UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
               RX packets:6 errors:0 dropped:0 overruns:0 frame:0
@@ -243,7 +250,7 @@ After:
     mininet@mininet:~/mininet$ sudo mn --mac
     ...
     mininet> h1 ifconfig
-    h2-eth0  Link encap:Ethernet  HWaddr 00:00:00:00:00:01
+    h1-eth0  Link encap:Ethernet  HWaddr 00:00:00:00:00:01
               inet addr:10.0.0.1  Bcast:10.255.255.255  Mask:255.0.0.0
               UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
               RX packets:0 errors:0 dropped:0 overruns:0 frame:0
@@ -332,8 +339,8 @@ Note that this option does not (as of 11/19/12) work with Open vSwitch.
 	exit
 
 
-Command-Line Interface Commands
---------------------------------
+Part 3: Mininet Command-Line Interface (CLI) Commands
+---------------------------------------------
 
 
 ### Display Options
@@ -393,11 +400,10 @@ To display an xterm for h1 and h2:
 	xterm h1 h2
 
 
-Examples
----------
+Part 4: Python API Examples
+-------------------
 
 The [examples directory](https://github.com/mininet/mininet/tree/master/examples) in the Mininet source tree includes examples of how to use Mininet's Python API, as well as potentially useful code that has not been integrated into the main code base.
-
 
 ### SSH daemon per host
 
@@ -417,13 +423,16 @@ Exit SSH example mininet:
 	exit
 
 
-Walkthrough Complete
+You will wish to revisit the examples after you've read the
+[Introduction to Mininet](https://github.com/mininet/mininet/wiki/Introduction-to-Mininet),
+which introduces the Python API.
+
+Part 5: Walkthrough Complete!
 ---------------------
 
 Congrats! You've completed the Mininet Walkthrough. Feel free to try out new topologies and controllers or check out the source code.
 
-
-### Next steps
+### Next Steps for mastering Mininet
 
 If you haven't done so yet, you should definitely go through the 
 [OpenFlow tutorial](http://www.openflow.org/wk/index.php/OpenFlow_Tutorial).
@@ -440,8 +449,8 @@ If you are wondering how to use a _remote controller_ (e.g. one running outside
 Mininet's control), this is explained below.
 
 
-Optional
----------
+Appendix: Supplementary Information
+-----------------------------------
 
 These are not required, but you might find them useful to skim.
 
