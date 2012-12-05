@@ -67,8 +67,6 @@ BL: removed since they make things SLOW
 
 <p>After downloading the VM, you’ll run a few steps to customize it for your setup. This won’t take long.</p>
 
-<!-- %TOC% -->
-
 <h2 id="vm-setup">VM Setup</h2>
 
 <h3 id="download-the-mininet-vm">Download the Mininet VM</h3>
@@ -104,11 +102,14 @@ log in to the VM image. Start the VM.</p>
 
 <h3 id="log-in-to-vm">Log in to VM</h3>
 
-<p>Log in to the VM, using the following name and password:
-    mininet-vm login: mininet
-    Password: mininet
-(some older VM images may use <code>openflow</code>/<code>openflow</code> instead)
-The root account is not enabled for login; you can use <code>sudo</code> to run a command with root privileges.</p>
+<p>Log in to the VM, using the following name and password:</p>
+
+<pre><code>mininet-vm login: mininet
+Password: mininet
+</code></pre>
+
+<p>(some older VM images may use <code>openflow</code>/<code>openflow</code> instead)
+The <code>root</code> account is not enabled for login; you can use <code>sudo</code> to run a command with superuser privileges.</p>
 
 <h3 id="ssh-into-vm">SSH into VM</h3>
 
@@ -126,7 +127,7 @@ The root account is not enabled for login; you can use <code>sudo</code> to run 
 
 <p>where 192.168.x.y is replaced by the VM’s IP address.</p>
 
-<p>SSH in to the host. We assume the VM is running locally, and that the additional precautions of <code>ssh -X</code> are unnecessary. <code>ssh -Y</code> also has no authentication timeout by default.</p>
+<p>SSH into the VM. We assume the VM is running locally, and that the additional precautions of <code>ssh -X</code> are unnecessary. <code>ssh -Y</code> also has no authentication timeout by default.</p>
 
 <pre><code>ssh -Y mininet@mininet-vm
 </code></pre>

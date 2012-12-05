@@ -70,8 +70,8 @@ BL: removed since they make things SLOW
 <p>The entire walkthrough should take under an hour.</p>
 
 <ul id="markdown-toc">
-  <li><a href="#everyday-usage">Everyday Usage</a>    <ul>
-      <li><a href="#display-options">Display Options</a></li>
+  <li><a href="#part-1-everyday-mininet-usage">Part 1: Everyday Mininet Usage</a>    <ul>
+      <li><a href="#display-startup-options">Display Startup Options</a></li>
       <li><a href="#start-wireshark">Start Wireshark</a></li>
       <li><a href="#interact-with-hosts-and-switches">Interact with Hosts and Switches</a></li>
       <li><a href="#test-connectivity-between-hosts">Test connectivity between hosts</a></li>
@@ -79,9 +79,10 @@ BL: removed since they make things SLOW
       <li><a href="#cleanup">Cleanup</a></li>
     </ul>
   </li>
-  <li><a href="#program-startup-options">Program Startup Options</a>    <ul>
+  <li><a href="#part-2-advanced-startup-options">Part 2: Advanced Startup Options</a>    <ul>
       <li><a href="#run-a-regression-test">Run a Regression Test</a></li>
-      <li><a href="#topology-variations">Topology Variations</a></li>
+      <li><a href="#changing-topology-size-and-type">Changing Topology Size and Type</a></li>
+      <li><a href="#link-variations">Link variations</a></li>
       <li><a href="#adjustable-verbosity">Adjustable Verbosity</a></li>
       <li><a href="#custom-topologies">Custom Topologies</a></li>
       <li><a href="#id--mac">ID = MAC</a></li>
@@ -91,31 +92,31 @@ BL: removed since they make things SLOW
       <li><a href="#everything-in-its-own-namespace-user-switch-only">Everything in its own Namespace (user switch only)</a></li>
     </ul>
   </li>
-  <li><a href="#command-line-interface-commands">Command-Line Interface Commands</a>    <ul>
-      <li><a href="#display-options-1">Display Options</a></li>
+  <li><a href="#part-3-mininet-command-line-interface-cli-commands">Part 3: Mininet Command-Line Interface (CLI) Commands</a>    <ul>
+      <li><a href="#display-options">Display Options</a></li>
       <li><a href="#python-interpreter">Python Interpreter</a></li>
       <li><a href="#link-updown">Link Up/Down</a></li>
       <li><a href="#xterm-display-1">XTerm Display</a></li>
     </ul>
   </li>
-  <li><a href="#examples">Examples</a>    <ul>
+  <li><a href="#part-4-python-api-examples">Part 4: Python API Examples</a>    <ul>
       <li><a href="#ssh-daemon-per-host">SSH daemon per host</a></li>
     </ul>
   </li>
-  <li><a href="#walkthrough-complete">Walkthrough Complete</a>    <ul>
-      <li><a href="#next-steps">Next steps</a></li>
+  <li><a href="#part-5-walkthrough-complete">Part 5: Walkthrough Complete!</a>    <ul>
+      <li><a href="#next-steps-for-mastering-mininet">Next Steps for mastering Mininet</a></li>
     </ul>
   </li>
-  <li><a href="#optional">Optional</a>    <ul>
+  <li><a href="#appendix-supplementary-information">Appendix: Supplementary Information</a>    <ul>
       <li><a href="#remote-controller">Remote Controller</a></li>
       <li><a href="#nox-classic">NOX Classic</a></li>
     </ul>
   </li>
 </ul>
 
-<h2 id="everyday-usage">Everyday Usage</h2>
+<h2 id="part-1-everyday-mininet-usage">Part 1: Everyday Mininet Usage</h2>
 
-<h3 id="display-options">Display Options</h3>
+<h3 id="display-startup-options">Display Startup Options</h3>
 
 <p>Display startup options:</p>
 
@@ -269,7 +270,7 @@ h1 kill %python
 <pre><code>sudo mn -c
 </code></pre>
 
-<h2 id="program-startup-options">Program Startup Options</h2>
+<h2 id="part-2-advanced-startup-options">Part 2: Advanced Startup Options</h2>
 
 <h3 id="run-a-regression-test">Run a Regression Test</h3>
 
@@ -287,7 +288,7 @@ h1 kill %python
 
 <p>This command created the same Mininet, ran an iperf server on one host, ran an iperf client on the second host, and parsed the bandwidth achieved.</p>
 
-<h3 id="topology-variations">Topology Variations</h3>
+<h3 id="changing-topology-size-and-type">Changing Topology Size and Type</h3>
 
 <p>The default topology is a single switch connected to two hosts. You could change this to a different topo with <code>--topo</code>, and pass parameters for that topology’s creation. For example, to verify all-pairs ping connectivity with one switch and three hosts:</p>
 
@@ -299,6 +300,16 @@ h1 kill %python
 <p>Another example, with a linear topology (where each switch has one host, and all switches connect in a line):</p>
 
 <pre><code>sudo mn --test pingall --topo linear,4
+</code></pre>
+
+<p>Parametrized topologies are one of Mininet’s most useful and powerful features.</p>
+
+<h3 id="link-variations">Link variations</h3>
+
+<p>Mininet 2.0 allows you to set Link parameters, and these can even be set automatially
+from the command line.</p>
+
+<pre><code> sudo mn --
 </code></pre>
 
 <h3 id="adjustable-verbosity">Adjustable Verbosity</h3>
@@ -408,7 +419,7 @@ exit
 <pre><code>mininet@mininet:~/mininet$ sudo mn
 ...
 mininet&gt; h1 ifconfig
-h2-eth0  Link encap:Ethernet  HWaddr f6:9d:5a:7f:41:42  
+h1-eth0  Link encap:Ethernet  HWaddr f6:9d:5a:7f:41:42  
           inet addr:10.0.0.1  Bcast:10.255.255.255  Mask:255.0.0.0
           UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
           RX packets:6 errors:0 dropped:0 overruns:0 frame:0
@@ -423,7 +434,7 @@ mininet&gt; exit
 <pre><code>mininet@mininet:~/mininet$ sudo mn --mac
 ...
 mininet&gt; h1 ifconfig
-h2-eth0  Link encap:Ethernet  HWaddr 00:00:00:00:00:01
+h1-eth0  Link encap:Ethernet  HWaddr 00:00:00:00:00:01
           inet addr:10.0.0.1  Bcast:10.255.255.255  Mask:255.0.0.0
           UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
           RX packets:0 errors:0 dropped:0 overruns:0 frame:0
@@ -517,9 +528,9 @@ mininet&gt; exit
 <pre><code>exit
 </code></pre>
 
-<h2 id="command-line-interface-commands">Command-Line Interface Commands</h2>
+<h2 id="part-3-mininet-command-line-interface-cli-commands">Part 3: Mininet Command-Line Interface (CLI) Commands</h2>
 
-<h3 id="display-options-1">Display Options</h3>
+<h3 id="display-options">Display Options</h3>
 
 <p>To see the list of Command-Line Interface (CLI) options, start up a minimal topology and leave it running. Build the Mininet:</p>
 
@@ -581,7 +592,7 @@ mininet&gt; exit
 <pre><code>xterm h1 h2
 </code></pre>
 
-<h2 id="examples">Examples</h2>
+<h2 id="part-4-python-api-examples">Part 4: Python API Examples</h2>
 
 <p>The <a href="https://github.com/mininet/mininet/tree/master/examples">examples directory</a> in the Mininet source tree includes examples of how to use Mininet’s Python API, as well as potentially useful code that has not been integrated into the main code base.</p>
 
@@ -605,11 +616,15 @@ exit
 <pre><code>exit
 </code></pre>
 
-<h2 id="walkthrough-complete">Walkthrough Complete</h2>
+<p>You will wish to revisit the examples after you’ve read the
+<a href="https://github.com/mininet/mininet/wiki/Introduction-to-Mininet">Introduction to Mininet</a>,
+which introduces the Python API.</p>
+
+<h2 id="part-5-walkthrough-complete">Part 5: Walkthrough Complete!</h2>
 
 <p>Congrats! You’ve completed the Mininet Walkthrough. Feel free to try out new topologies and controllers or check out the source code.</p>
 
-<h3 id="next-steps">Next steps</h3>
+<h3 id="next-steps-for-mastering-mininet">Next Steps for mastering Mininet</h3>
 
 <p>If you haven’t done so yet, you should definitely go through the 
 <a href="http://www.openflow.org/wk/index.php/OpenFlow_Tutorial">OpenFlow tutorial</a>.
@@ -625,7 +640,7 @@ provides an introduction to Mininet and its Python API.</p>
 <p>If you are wondering how to use a <em>remote controller</em> (e.g. one running outside
 Mininet’s control), this is explained below.</p>
 
-<h2 id="optional">Optional</h2>
+<h2 id="appendix-supplementary-information">Appendix: Supplementary Information</h2>
 
 <p>These are not required, but you might find them useful to skim.</p>
 
