@@ -4,7 +4,11 @@ comments: false
 sharing: true
 footer: true
 header: true
+title: "Mininet: Rapid Prototyping for Software-Defined Networks"
 ---
+
+<style>article header { display: none; }</style>
+
 <div class="frontpageparagraph">
 Mininet is the easy way to do cool stuff with OpenFlow and Software-Defined Networks.
 Run a complete network on a single machine (VM, cloud, or native) with a single command:
