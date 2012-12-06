@@ -40,7 +40,7 @@ VMware may ask you to install VMware tools on the VM - if it asks, decline. Ever
 
 **Qemu/KVM**:
 
-Convert the VMDK to QCOW2 format first - directly using VMDK as a qemu input [aappears to be broken](https://mailman.stanford.edu/pipermail/mininet-discuss/2012-December/001447.html):
+Convert the VMDK to QCOW2 format first - directly using VMDK as a qemu input [appears to be broken](https://mailman.stanford.edu/pipermail/mininet-discuss/2012-December/001447.html):
 
     qemu-img convert -O qcow2 mininet-vm-disk1.vmdk mininet-vm-disk1.qcow2
 
