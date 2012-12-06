@@ -4,7 +4,7 @@ title: "Mininet at CoNEXT 2012"
 date: 2012-12-06 15:20
 comments: true
 categories: 
-published: false
+published: true
 ---
 
 We're going to France. No, really!
