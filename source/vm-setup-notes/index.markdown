@@ -40,9 +40,13 @@ VMware may ask you to install VMware tools on the VM - if it asks, decline. Ever
 
 **Qemu/KVM**:
 
-Something like the following should work:
+Convert the VMDK to QCOW2 format first - directly using VMDK as a qemu input [aappears to be broken](https://mailman.stanford.edu/pipermail/mininet-discuss/2012-December/001447.html):
 
-    qemu-system-i386 -m 1024 mininet-vm-disk1.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
+    qemu-img convert -O qcow2 mininet-vm-disk1.vmdk mininet-vm-disk1.qcow2
+
+Then something like the following should work:
+
+    qemu-system-i386 -m 1024 mininet-vm-disk1.qcow2 -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
 
 This will set up `ssh` forwarding from the VM to host port 8022.
 
