@@ -74,10 +74,10 @@ BL: removed since they make things SLOW
 
 <ol>
   <li>
-    <p>Download the <a href="https://github.com/mininet/mininet/downloads/">Mininet VM image</a> . This will take some time. It’s ~800MB-1GB, compressed.</p>
+    <p>Download the <a href="https://github.com/mininet/mininet/downloads/">Mininet VM image</a> . This will take some time. It’s ~1GB, compressed.</p>
   </li>
   <li>
-    <p>Download and install a virtualization system. We recommend <a href="http://www.virtualbox.org/wiki/Downloads">VirtualBox</a> (free, GPL) because it is <strong>free</strong> and works on OS X, Windows, and Linux (though it’s slightly slower than VMware in our tests.) You can also use <a href="http://qemu.org">Qemu</a> for any platform, <a href="http://www.vmware.com/products/workstation/">VMware Workstation</a> for Windows or Linux, or <a href="http://www.vmware.com/products/fusion">VMware Fusion</a> for Mac, <a href="http://www.linux-kvm.org">KVM</a> (free, GPL) for Linux.</p>
+    <p>Download and install a virtualization system. We recommend <a href="http://www.virtualbox.org/wiki/Downloads">VirtualBox</a> (free, GPL) because it is <strong>free</strong> and works on OS X, Windows, and Linux (though it’s slightly slower than VMware in our tests.) You can also use <a href="http://qemu.org">Qemu</a> for any platform, <a href="http://www.vmware.com/products/workstation/">VMware Workstation</a> for Windows or Linux, <a href="http://www.vmware.com/products/fusion">VMware Fusion</a> for Mac, or <a href="http://www.linux-kvm.org">KVM</a> (free, GPL) for Linux.</p>
   </li>
   <li>
     <p>Sign up for the <a href="https://mailman.stanford.edu/mailman/listinfo/mininet-discuss">mininet-discuss mailing list</a>. This is the source for Mininet <strong>support</strong> and discussion with the friendly Mininet community. ;-)</p>
@@ -92,7 +92,7 @@ BL: removed since they make things SLOW
 
 <p>Once you’ve completed the <a href="/walkthrough">Walkthrough</a>, you should have a clear idea for what Mininet is and what you might use it for. If you are interested in OpenFlow and Software-Defined Networking, you will want to complete the <a href="http://www.openflow.org/wk/index.php/OpenFlow_Tutorial">OpenFlow tutorial</a> as well. Good luck, and have fun!</p>
 
-<h2 id="option-2-on-ubuntu-1210-and-later-mininet-package-upgrade">Option 2 on Ubuntu 12.10 and later: Mininet Package Upgrade</h2>
+<h2 id="option-2-on-ubuntu-1210-and-later-mininet-package">Option 2 on Ubuntu 12.10 and later: Mininet Package</h2>
 
 <p>First, if you have upgraded from an earlier installation of Ubuntu and/or Mininet, make sure you <em>remove all traces of earlier versions of Open vSwitch from <code>/usr/local</code></em>:</p>
 
@@ -112,7 +112,7 @@ sudo rm /usr/local/sbin/ovs*
 
 <p>If you wish to go through the walkthrough, you may need to install additional software, for example installing the OpenFlow WireShark dissector (which can be done using <code>install.sh -w</code> from the Mininet source distribution.)</p>
 
-<h2 id="option-3-on-ubuntu-1110-and-later-full-mininet-installation">Option 3 on <em>Ubuntu 11.10 and later</em>: Full Mininet installation</h2>
+<h2 id="option-3-on-ubuntu-1110-and-later-full-mininet-installation-from-source">Option 3 on <em>Ubuntu 11.10 and later</em>: Full Mininet installation from source</h2>
 <p>This option works well for local VM, remote EC2, and native installs.  It assumes the starting point of a fresh Ubuntu install. </p>
 
 <p>We strongly recommend more recent Ubuntu versions, such as 12.10, because they support newer version of Open vSwitch.</p>
@@ -206,6 +206,10 @@ util/install.sh -a
 <section>
   <h1>Recent News</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/12/06/mininet-at-conext/">mininet-at-conext</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/11/27/announcing-mininet-2-dot-0-0/">Announcing Mininet 2.0.0</a>

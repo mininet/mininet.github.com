@@ -81,12 +81,16 @@ BL: removed since they make things SLOW
 
 <h3 id="interacting-with-a-network">Interacting with a Network</h3>
 
-<p>Mininet’s CLI allows you to control and manage your entire virtual network from a single console. For example, the CLI command</p>
+<p>Mininet’s CLI allows you to control, and manage your entire virtual network from a single console. For example, the CLI command</p>
 
 <pre><code>mininet&gt; h2 ping h3
 </code></pre>
 
-<p>tells host <code>h2</code> to ping host <code>h3</code>’s IP address. Any available Linux command or program can be run on any virtual host.</p>
+<p>tells host <code>h2</code> to ping host <code>h2</code>’s IP address. <em>Any available Linux command or program can be run on any virtual host</em>. You can easily start a web server on one host and make an HTTP request from another:</p>
+
+<pre><code>mininet&gt; h2 python -M SimpleHTTPServer 80 &gt;&amp; /tmp/http.log &amp;
+mininet&gt; h3 wget -O - h2
+</code></pre>
 
 <p><a id="customize"></a></p>
 
@@ -120,7 +124,11 @@ BL: removed since they make things SLOW
 
 <h3 id="sharing-a-network">Sharing a Network</h3>
 
-<p>Mininet is distributed as a virtual machine (VM) image with all dependencies pre-installed, runnable on common virtual machine monitors such as VMware, Xen and VirtualBox. This provides a convenient container for distribution; once a prototype has been developed, the VM image may be distributed to others to run, examine and modify. A complete, compressed Mininet VM is about 800 MB. (Mininet can also be installed natively on Linux distributions that ship with <code>CONFIG_NET_NS</code> enabled, such as Ubuntu 10.04+, without replacing the kernel.) If you are reading a great SIGCOMM (or other) paper about a Software-Defined Network, wouldn’t you like to be able to click, download and run a living, breathing example of the system? If so, consider developing a Mininet version of your own system that you can share with others. (Alternately, if you fear others reproducing - and possibly contradicting - your published results, an easily shared and downloaded version of your system may not be desirable!)</p>
+<p>Mininet is distributed as a virtual machine (VM) image with all dependencies pre-installed, runnable on common virtual machine monitors such as VMware, Xen and VirtualBox. This provides a convenient container for distribution; once a prototype has been developed, the VM image may be distributed to others to run, examine and modify. A complete, compressed Mininet VM is about 1GB. (Mininet can also be installed natively - <code>apt-get install mininet</code> on Ubuntu.) If you are reading a great SIGCOMM (or other) paper about a Software-Defined Network, wouldn’t you like to be able to click, download and run a living, breathing example of the system? If so, consider developing a Mininet version of your own system that you can share with others!</p>
+
+<!-- heheheh
+(Alternately, if you fear others reproducing - and possibly contradicting - your published results, an easily shared and downloaded version of your system may not be desirable!)
+-->
 
 <p><a id="run"></a></p>
 
@@ -185,6 +193,10 @@ BL: removed since they make things SLOW
 <section>
   <h1>Recent News</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/12/06/mininet-at-conext/">mininet-at-conext</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/11/27/announcing-mininet-2-dot-0-0/">Announcing Mininet 2.0.0</a>
