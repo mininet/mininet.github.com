@@ -8,7 +8,6 @@ root: /
 ---
 Mininet enables you to quickly [create](#create), [interact with](#interact), [customize](#customize) and [share](#share) a software defined network prototype, and provides a smooth path to [running on hardware](#run). This page illustrates the basic Mininet workflow, and many additional details are available in the Mininet [walkthrough](/walkthrough), the OpenFlow [tutorial](http://www.openflow.org/wk/index.php/OpenFlow_Tutorial), and Mininet [documentation](https://github.com/mininet/mininet/wiki/Documentation).
 
-
 <a id="create"></a>
 
 ### Creating a Network
@@ -24,11 +23,14 @@ starts a network with a tree topology of depth 2 and fanout 8 (i.e. 64 hosts con
 
 ### Interacting with a Network
 
-Mininet's CLI allows you to control and manage your entire virtual network from a single console. For example, the CLI command
+Mininet's CLI allows you to control, and manage your entire virtual network from a single console. For example, the CLI command
 
     mininet> h2 ping h3
 
-tells host `h2` to ping host `h3`'s IP address. Any available Linux command or program can be run on any virtual host.
+tells host `h2` to ping host `h2`'s IP address. *Any available Linux command or program can be run on any virtual host*. You can easily start a web server on one host and make an HTTP request from another:
+
+    mininet> h2 python -M SimpleHTTPServer 80 >& /tmp/http.log &
+    mininet> h3 wget -O - h2
 
 <a id="customize"></a>
 
@@ -57,7 +59,11 @@ The Mininet distribution includes several text-based and graphical (see above) a
 
 ### Sharing a Network
 
-Mininet is distributed as a virtual machine (VM) image with all dependencies pre-installed, runnable on common virtual machine monitors such as VMware, Xen and VirtualBox. This provides a convenient container for distribution; once a prototype has been developed, the VM image may be distributed to others to run, examine and modify. A complete, compressed Mininet VM is about 800 MB. (Mininet can also be installed natively on Linux distributions that ship with `CONFIG_NET_NS` enabled, such as Ubuntu 10.04+, without replacing the kernel.) If you are reading a great SIGCOMM (or other) paper about a Software-Defined Network, wouldn't you like to be able to click, download and run a living, breathing example of the system? If so, consider developing a Mininet version of your own system that you can share with others. (Alternately, if you fear others reproducing - and possibly contradicting - your published results, an easily shared and downloaded version of your system may not be desirable!)
+Mininet is distributed as a virtual machine (VM) image with all dependencies pre-installed, runnable on common virtual machine monitors such as VMware, Xen and VirtualBox. This provides a convenient container for distribution; once a prototype has been developed, the VM image may be distributed to others to run, examine and modify. A complete, compressed Mininet VM is about 1GB. (Mininet can also be installed natively - `apt-get install mininet` on Ubuntu.) If you are reading a great SIGCOMM (or other) paper about a Software-Defined Network, wouldn't you like to be able to click, download and run a living, breathing example of the system? If so, consider developing a Mininet version of your own system that you can share with others!
+
+<!-- heheheh
+(Alternately, if you fear others reproducing - and possibly contradicting - your published results, an easily shared and downloaded version of your system may not be desirable!)
+-->
 
 
 <a id="run"></a>
