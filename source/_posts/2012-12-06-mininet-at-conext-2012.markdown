@@ -16,6 +16,6 @@ where Brandon will be presenting our "runnable" paper on Mininet 2.0 "HiFi":
 [_Reproducible Network Experiments using Container-Based Emulation_](http://conferences.sigcomm.org/co-next/2012/eproceedings/conext/p253.pdf)
 
 We look forward to meeting many current, new, and future Mininet users,
-developers, researchers and contributors.
+developers, researchers and contributors!
 
 
