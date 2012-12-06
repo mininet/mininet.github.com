@@ -15,9 +15,9 @@ VM installation is the easiest and most foolproof way of installing Mininet, so 
 
 Follow these steps for a VM install:
 
-1. Download the [Mininet VM image](https://github.com/mininet/mininet/downloads/) . This will take some time. It's ~800MB-1GB, compressed.
+1. Download the [Mininet VM image](https://github.com/mininet/mininet/downloads/) . This will take some time. It's ~1GB, compressed.
 
-2. Download and install a virtualization system. We recommend [VirtualBox](http://www.virtualbox.org/wiki/Downloads) (free, GPL) because it is **free** and works on OS X, Windows, and Linux (though it's slightly slower than VMware in our tests.) You can also use [Qemu](http://qemu.org) for any platform, [VMware Workstation](http://www.vmware.com/products/workstation/) for Windows or Linux, or [VMware Fusion](http://www.vmware.com/products/fusion) for Mac, [KVM](http://www.linux-kvm.org) (free, GPL) for Linux.
+2. Download and install a virtualization system. We recommend [VirtualBox](http://www.virtualbox.org/wiki/Downloads) (free, GPL) because it is **free** and works on OS X, Windows, and Linux (though it's slightly slower than VMware in our tests.) You can also use [Qemu](http://qemu.org) for any platform, [VMware Workstation](http://www.vmware.com/products/workstation/) for Windows or Linux, [VMware Fusion](http://www.vmware.com/products/fusion) for Mac, or [KVM](http://www.linux-kvm.org) (free, GPL) for Linux.
 
 3. Sign up for the [mininet-discuss mailing list](https://mailman.stanford.edu/mailman/listinfo/mininet-discuss). This is the source for Mininet **support** and discussion with the friendly Mininet community. ;-)
 
@@ -28,8 +28,8 @@ Follow these steps for a VM install:
 Once you've completed the [Walkthrough](/walkthrough), you should have a clear idea for what Mininet is and what you might use it for. If you are interested in OpenFlow and Software-Defined Networking, you will want to complete the [OpenFlow tutorial](http://www.openflow.org/wk/index.php/OpenFlow_Tutorial) as well. Good luck, and have fun!
 
 
-Option 2 on Ubuntu 12.10 and later: Mininet Package Upgrade
-----------------------------------------------------------------
+Option 2 on Ubuntu 12.10 and later: Mininet Package
+---------------------------------------------------
 
 First, if you have upgraded from an earlier installation of Ubuntu and/or Mininet, make sure you *remove all traces of earlier versions of Open vSwitch from `/usr/local`*:
 
@@ -46,8 +46,8 @@ Then you can test it:
 
 If you wish to go through the walkthrough, you may need to install additional software, for example installing the OpenFlow WireShark dissector (which can be done using `install.sh -w` from the Mininet source distribution.)
 
-Option 3 on *Ubuntu 11.10 and later*: Full Mininet installation
-------------------------------------------------------
+Option 3 on *Ubuntu 11.10 and later*: Full Mininet installation from source
+---------------------------------------------------------------------------
 This option works well for local VM, remote EC2, and native installs.  It assumes the starting point of a fresh Ubuntu install. 
 
 We strongly recommend more recent Ubuntu versions, such as 12.10, because they support newer version of Open vSwitch.
