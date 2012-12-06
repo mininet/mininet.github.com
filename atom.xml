@@ -4,7 +4,7 @@
   <title><![CDATA[Mininet]]></title>
   <link href="http://mininet.github.com/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2012-12-06T15:20:15-08:00</updated>
+  <updated>2012-12-06T15:49:55-08:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mininet at CoNEXT 2012]]></title>
+    <link href="http://mininet.github.com/blog/2012/12/06/mininet-at-conext-2012/"/>
+    <updated>2012-12-06T15:20:00-08:00</updated>
+    <id>http://mininet.github.com/blog/2012/12/06/mininet-at-conext-2012</id>
+    <content type="html"><![CDATA[<p>We’re going to France. No, really!</p>
+
+<p>Join us next week, December 10th to 13th at
+the <a href="http://conferences.sigcomm.org/co-next/2012/program.html">ACM Conference on Network EXperiments and Technologies, CoNEXT 2012</a>,
+where Brandon will be presenting our “runnable” paper on Mininet 2.0 “HiFi”:</p>
+
+<p><a href="http://conferences.sigcomm.org/co-next/2012/eproceedings/conext/p253.pdf"><em>Reproducible Network Experiments using Container-Based Emulation</em></a></p>
+
+<p>We look forward to meeting many current, new, and future Mininet users,
+developers, researchers and contributors.</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Announcing Mininet 2.0.0]]></title>
