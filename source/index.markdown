@@ -11,7 +11,8 @@ title: "Mininet: Rapid Prototyping for Software-Defined Networks"
 
 <div class="frontpageparagraph">
 Mininet is the easy way to do cool stuff with OpenFlow and Software-Defined Networks.
-Run a complete network on a single machine (VM, cloud, or native) with a single command:
+Create a complete virtual network on a single machine (VM, cloud, or native) 
+in seconds with a single command:
 </div>
 
 <div class="frontpagediagram">
@@ -21,7 +22,8 @@ Run a complete network on a single machine (VM, cloud, or native) with a single 
 <div class="frontpageparagraph">
 You can <a href="sample-workflow#Interacting_with_a_Network">interact with</a>
 your network using the Mininet
-<a href="/api/hierarchy.html">API</a>,
+<a href="/walkthrough/#interact-with-hosts-and-switches">CLI</a>
+(and <a href="/api/hierarchy.html">API</a>),
 <a href="sample-workflow#customizing-a-network">customize</a> it,
 <a href="sample-workflow#sharing-a-network">share</a> it with others,
 or
