@@ -4,7 +4,7 @@
   <title><![CDATA[Mininet]]></title>
   <link href="http://mininet.github.com/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2012-12-06T15:16:43-08:00</updated>
+  <updated>2012-12-06T15:18:55-08:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[mininet-at-conext]]></title>
-    <link href="http://mininet.github.com/blog/2012/12/06/mininet-at-conext/"/>
-    <updated>2012-12-06T15:14:00-08:00</updated>
-    <id>http://mininet.github.com/blog/2012/12/06/mininet-at-conext</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[Announcing Mininet 2.0.0]]></title>
