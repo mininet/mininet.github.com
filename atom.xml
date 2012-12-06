@@ -4,7 +4,7 @@
   <title><![CDATA[Mininet]]></title>
   <link href="http://mininet.github.com/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2012-12-06T15:49:55-08:00</updated>
+  <updated>2012-12-06T15:51:36-08:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -27,7 +27,7 @@ where Brandon will be presenting our “runnable” paper on Mininet 2.0 “HiFi
 <p><a href="http://conferences.sigcomm.org/co-next/2012/eproceedings/conext/p253.pdf"><em>Reproducible Network Experiments using Container-Based Emulation</em></a></p>
 
 <p>We look forward to meeting many current, new, and future Mininet users,
-developers, researchers and contributors.</p>
+developers, researchers and contributors!</p>
 
 ]]></content>
   </entry>
