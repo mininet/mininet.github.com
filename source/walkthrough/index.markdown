@@ -46,7 +46,7 @@ To view control traffic using the OpenFlow Wireshark dissector, first open wires
 
     $ sudo wireshark &
 
-In the Wireshark filter box, enter this filter, then click 'Apply':
+In the Wireshark filter box, enter this filter, then click `Apply`:
 
     of
 
@@ -193,6 +193,7 @@ Run a regression test:
 This command created a minimal topology, started up the OpenFlow reference controller, ran an all-pairs-`ping` test, and tore down both the topology and the controller.
 
 Another useful test is `iperf` (give it about 10 seconds to complete):
+
     $ sudo mn --test iperf
 
 This command created the same Mininet, ran an iperf server on one host, ran an iperf client on the second host, and parsed the bandwidth achieved.
