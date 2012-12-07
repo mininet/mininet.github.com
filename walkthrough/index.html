@@ -304,8 +304,10 @@ mininet&gt; h1 kill %python
 
 <p>This command created a minimal topology, started up the OpenFlow reference controller, ran an all-pairs-<code>ping</code> test, and tore down both the topology and the controller.</p>
 
-<p>Another useful test is <code>iperf</code> (give it about 10 seconds to complete):
-    $ sudo mn –test iperf</p>
+<p>Another useful test is <code>iperf</code> (give it about 10 seconds to complete):</p>
+
+<pre><code>$ sudo mn --test iperf
+</code></pre>
 
 <p>This command created the same Mininet, ran an iperf server on one host, ran an iperf client on the second host, and parsed the bandwidth achieved.</p>
 
