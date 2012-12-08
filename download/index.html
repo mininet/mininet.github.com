@@ -92,28 +92,9 @@ BL: removed since they make things SLOW
 
 <p>Once you’ve completed the <a href="/walkthrough">Walkthrough</a>, you should have a clear idea for what Mininet is and what you might use it for. If you are interested in OpenFlow and Software-Defined Networking, you will want to complete the <a href="http://www.openflow.org/wk/index.php/OpenFlow_Tutorial">OpenFlow tutorial</a> as well. Good luck, and have fun!</p>
 
-<h2 id="option-2-on-ubuntu-1210-and-later-mininet-200d4-package">Option 2 on Ubuntu 12.10 and later: Mininet (2.0.0d4) Package</h2>
+<h2 id="option-2-on-ubuntu-1110-and-later-native-mininet-200-installation-from-source">Option 2 on <em>Ubuntu 11.10 and later</em>: Native Mininet (2.0.0) installation from source</h2>
 
-<p>First, if you have upgraded from an earlier installation of Ubuntu and/or Mininet, make sure you <em>remove all traces of earlier versions of Open vSwitch from <code>/usr/local</code></em>:</p>
-
-<pre><code>sudo rm /usr/local/bin/ovs*
-sudo rm /usr/local/sbin/ovs*
-</code></pre>
-
-<p>Next, install the Mininet package:</p>
-
-<pre><code>sudo apt-get install mininet
-</code></pre>
-
-<p>Then you can test it:</p>
-
-<pre><code>sudo mn --test pingall
-</code></pre>
-
-<p>Note: If you wish to go through the walkthrough, you may need to install additional software, for example installing the OpenFlow WireShark dissector (which can be done using <code>install.sh -w</code> from the Mininet source distribution.) Additionally the current Ubuntu packages are for Mininet 2.0.0d4, which used a slightly different syntax for <code>Topo()</code> methods (<code>add_switch</code> vs. <code>addSwitch</code>.) We expect that the Ubuntu packages will be updated to 2.0.0 final before too long, certainly by 13.04 </p>
-
-<h2 id="option-3-on-ubuntu-1110-and-later-full-mininet-200-installation-from-source">Option 3 on <em>Ubuntu 11.10 and later</em>: Full Mininet (2.0.0) installation from source</h2>
-<p>This option works well for local VM, remote EC2, and native installs.  It assumes the starting point of a fresh Ubuntu install. (If you are upgrading from an older Mininet and/or OVS, see notes on removing old OVS packages, above.)</p>
+<p>This option works well for local VM, remote EC2, and native installs.  It assumes the starting point of a fresh Ubuntu install. (If you are upgrading from an older Mininet and/or OVS, see notes on removing old OVS packages, below.)</p>
 
 <p>We strongly recommend more recent Ubuntu versions, such as 12.10, because they support newer version of Open vSwitch.</p>
 
@@ -143,6 +124,26 @@ mininet/util/install.sh -a
 </code></pre>
 
 <p>Then continue with steps 3-5, above, and if you encounter an error during installation, request help on <a href="https://mailman.stanford.edu/mailman/listinfo/mininet-discuss">mininet-discuss</a>.</p>
+
+<h2 id="option-3-on-ubuntu-1210-and-later-mininet-200d4-package">Option 3 on Ubuntu 12.10 and later: Mininet (2.0.0d4) Package</h2>
+
+<p>First, if you have upgraded from an earlier installation of Ubuntu and/or Mininet, make sure you <em>remove all traces of earlier versions of Open vSwitch from <code>/usr/local</code></em>:</p>
+
+<pre><code>sudo rm /usr/local/bin/ovs*
+sudo rm /usr/local/sbin/ovs*
+</code></pre>
+
+<p>Next, install the Mininet package:</p>
+
+<pre><code>sudo apt-get install mininet
+</code></pre>
+
+<p>Then you can test it:</p>
+
+<pre><code>sudo mn --test pingall
+</code></pre>
+
+<p>Note: If you wish to go through the walkthrough, you may need to install additional software, for example installing the OpenFlow WireShark dissector (which can be done using <code>install.sh -w</code> from the Mininet source distribution.) Additionally the current Ubuntu packages are for Mininet 2.0.0d4, which used a slightly different syntax for <code>Topo()</code> methods (<code>add_switch</code> vs. <code>addSwitch</code>.) We expect that the Ubuntu packages will be updated to 2.0.0 final before too long, certainly by 13.04 </p>
 
 <h2 id="old-mininet-10-installation">(old) Mininet 1.0 Installation</h2>
 
