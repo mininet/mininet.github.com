@@ -15,7 +15,11 @@ The entire walkthrough should take under an hour.
 * kramdown will replace the following tag with a table of contents
 {:toc}
 
-
+*Note: If you are using the Ubuntu Mininet 2.0.0d4 package, it uses a slightly
+different syntax for `Topo()` - e.g. `add_switch` vs. `addSwitch`, etc.. If
+you check out Mininet from source, you may wish to check out the `2.0.0d4`
+tag to see code (including code in `examples`) which is consistent 
+with the 2.0.04 package.*
 
 Part 1: Everyday Mininet Usage
 ----------------------
