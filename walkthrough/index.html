@@ -403,7 +403,20 @@ mininet&gt; exit
 <span class="line-number">32</span>
 <span class="line-number">33</span>
 <span class="line-number">34</span>
+<span class="line-number">35</span>
+<span class="line-number">36</span>
+<span class="line-number">37</span>
+<span class="line-number">38</span>
+<span class="line-number">39</span>
+<span class="line-number">40</span>
+<span class="line-number">41</span>
+<span class="line-number">42</span>
+<span class="line-number">43</span>
+<span class="line-number">44</span>
+<span class="line-number">45</span>
 </pre></td><td class="code"><pre><code class="python"><span class="line"><span class="sd">&quot;&quot;&quot;Custom topology example</span>
+</span><span class="line">
+</span><span class="line"><span class="sd">author: Brandon Heller (brandonh@stanford.edu)</span>
 </span><span class="line">
 </span><span class="line"><span class="sd">Two directly connected switches plus a host for each switch:</span>
 </span><span class="line">
@@ -413,27 +426,36 @@ mininet&gt; exit
 </span><span class="line"><span class="sd">topology enables one to pass in &#39;--topo=mytopo&#39; from the command line.</span>
 </span><span class="line"><span class="sd">&quot;&quot;&quot;</span>
 </span><span class="line">
-</span><span class="line"><span class="kn">from</span> <span class="nn">mininet.topo</span> <span class="kn">import</span> <span class="n">Topo</span>
+</span><span class="line"><span class="kn">from</span> <span class="nn">mininet.topo</span> <span class="kn">import</span> <span class="n">Topo</span><span class="p">,</span> <span class="n">Node</span>
 </span><span class="line">
 </span><span class="line"><span class="k">class</span> <span class="nc">MyTopo</span><span class="p">(</span> <span class="n">Topo</span> <span class="p">):</span>
 </span><span class="line">    <span class="s">&quot;Simple topology example.&quot;</span>
 </span><span class="line">
-</span><span class="line">    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span> <span class="bp">self</span> <span class="p">):</span>
+</span><span class="line">    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">enable_all</span> <span class="o">=</span> <span class="bp">True</span> <span class="p">):</span>
 </span><span class="line">        <span class="s">&quot;Create custom topo.&quot;</span>
 </span><span class="line">
-</span><span class="line">        <span class="c"># Initialize topology</span>
-</span><span class="line">        <span class="n">Topo</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span> <span class="bp">self</span> <span class="p">)</span>
+</span><span class="line">        <span class="c"># Add default members to class.</span>
+</span><span class="line">        <span class="nb">super</span><span class="p">(</span> <span class="n">MyTopo</span><span class="p">,</span> <span class="bp">self</span> <span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
 </span><span class="line">
-</span><span class="line">        <span class="c"># Add hosts and switches</span>
-</span><span class="line">        <span class="n">leftHost</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">addHost</span><span class="p">(</span> <span class="s">&#39;h1&#39;</span> <span class="p">)</span>
-</span><span class="line">        <span class="n">rightHost</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">addHost</span><span class="p">(</span> <span class="s">&#39;h2&#39;</span> <span class="p">)</span>
-</span><span class="line">        <span class="n">leftSwitch</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">addSwitch</span><span class="p">(</span> <span class="s">&#39;s3&#39;</span> <span class="p">)</span>
-</span><span class="line">        <span class="n">rightSwitch</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">addSwitch</span><span class="p">(</span> <span class="s">&#39;s4&#39;</span> <span class="p">)</span>
+</span><span class="line">        <span class="c"># Set Node IDs for hosts and switches</span>
+</span><span class="line">        <span class="n">leftHost</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span class="line">        <span class="n">leftSwitch</span> <span class="o">=</span> <span class="mi">2</span>
+</span><span class="line">        <span class="n">rightSwitch</span> <span class="o">=</span> <span class="mi">3</span>
+</span><span class="line">        <span class="n">rightHost</span> <span class="o">=</span> <span class="mi">4</span>
 </span><span class="line">
-</span><span class="line">        <span class="c"># Add links</span>
-</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">addLink</span><span class="p">(</span> <span class="n">leftHost</span><span class="p">,</span> <span class="n">leftSwitch</span> <span class="p">)</span>
-</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">addLink</span><span class="p">(</span> <span class="n">leftSwitch</span><span class="p">,</span> <span class="n">rightSwitch</span> <span class="p">)</span>
-</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">addLink</span><span class="p">(</span> <span class="n">rightSwitch</span><span class="p">,</span> <span class="n">rightHost</span> <span class="p">)</span>
+</span><span class="line">        <span class="c"># Add nodes</span>
+</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span> <span class="n">leftSwitch</span><span class="p">,</span> <span class="n">Node</span><span class="p">(</span> <span class="n">is_switch</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span> <span class="p">)</span>
+</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span> <span class="n">rightSwitch</span><span class="p">,</span> <span class="n">Node</span><span class="p">(</span> <span class="n">is_switch</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span> <span class="p">)</span>
+</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span> <span class="n">leftHost</span><span class="p">,</span> <span class="n">Node</span><span class="p">(</span> <span class="n">is_switch</span><span class="o">=</span><span class="bp">False</span> <span class="p">)</span> <span class="p">)</span>
+</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span> <span class="n">rightHost</span><span class="p">,</span> <span class="n">Node</span><span class="p">(</span> <span class="n">is_switch</span><span class="o">=</span><span class="bp">False</span> <span class="p">)</span> <span class="p">)</span>
+</span><span class="line">
+</span><span class="line">        <span class="c"># Add edges</span>
+</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span> <span class="n">leftHost</span><span class="p">,</span> <span class="n">leftSwitch</span> <span class="p">)</span>
+</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span> <span class="n">leftSwitch</span><span class="p">,</span> <span class="n">rightSwitch</span> <span class="p">)</span>
+</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span> <span class="n">rightSwitch</span><span class="p">,</span> <span class="n">rightHost</span> <span class="p">)</span>
+</span><span class="line">
+</span><span class="line">        <span class="c"># Consider all switches and hosts &#39;on&#39;</span>
+</span><span class="line">        <span class="bp">self</span><span class="o">.</span><span class="n">enable_all</span><span class="p">()</span>
 </span><span class="line">
 </span><span class="line">
 </span><span class="line"><span class="n">topos</span> <span class="o">=</span> <span class="p">{</span> <span class="s">&#39;mytopo&#39;</span><span class="p">:</span> <span class="p">(</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">MyTopo</span><span class="p">()</span> <span class="p">)</span> <span class="p">}</span>
