@@ -29,7 +29,7 @@ Mininet's CLI allows you to control, and manage your entire virtual network from
 
 tells host `h2` to ping host `h2`'s IP address. *Any available Linux command or program can be run on any virtual host*. You can easily start a web server on one host and make an HTTP request from another:
 
-    mininet> h2 python -M SimpleHTTPServer 80 >& /tmp/http.log &
+    mininet> h2 python -m SimpleHTTPServer 80 >& /tmp/http.log &
     mininet> h3 wget -O - h2
 
 <a id="customize"></a>
