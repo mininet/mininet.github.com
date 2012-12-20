@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Mininet: mininet.net.Mininet Class Reference</title>
+<title>Mininet Python API Reference Manual: mininet.net.Mininet Class Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -22,7 +22,7 @@
   
   
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Mininet
+   <div id="projectname">Mininet Python API Reference Manual
    
    </div>
    
@@ -126,12 +126,20 @@ def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Monitor a set of hosts (or all hosts by default), and return their output, a line at a time.  <a href="#abadd86a33ad9092fee10ce7333471ad7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1net_1_1Mininet.html#a5a3d13340db0f440717364e17230512d">ping</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ping between all specified hosts.  <a href="#a5a3d13340db0f440717364e17230512d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1net_1_1Mininet.html#a36c48a1fed47018152717acf31df8f0b">pingFull</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ping between all specified hosts and return all data.  <a href="#a36c48a1fed47018152717acf31df8f0b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1net_1_1Mininet.html#a4d979e7bbfbee700abd18b4372884f3c">pingAll</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ping between all hosts.  <a href="#a4d979e7bbfbee700abd18b4372884f3c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1net_1_1Mininet.html#a1abd162ba9a3304dd091a2edda1cc4c1">pingPair</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ping between first two hosts, useful for testing.  <a href="#a1abd162ba9a3304dd091a2edda1cc4c1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1net_1_1Mininet.html#aed5e30dd177b00c57820f6125784b944">pingAllFull</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ping between all hosts.  <a href="#aed5e30dd177b00c57820f6125784b944"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1net_1_1Mininet.html#a2e295ea9501bc4c989b1337ddea05f7c">pingPairFull</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ping between first two hosts, useful for testing.  <a href="#a2e295ea9501bc4c989b1337ddea05f7c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1net_1_1Mininet.html#a803a1ef9b199402f62e77bd0cce085d4">iperf</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Run iperf between two hosts.  <a href="#a803a1ef9b199402f62e77bd0cce085d4"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1net_1_1Mininet.html#ade00be5dd4abcf0605b8a8e5f0489272">runCpuLimitTest</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">run CPU limit test with 'while true' processes.  <a href="#ade00be5dd4abcf0605b8a8e5f0489272"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1net_1_1Mininet.html#a027bfac6f90c3342e6ccd1de63f4591e">configLinkStatus</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Change status of src &lt;-&gt; dst links.  <a href="#a027bfac6f90c3342e6ccd1de63f4591e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1net_1_1Mininet.html#a6604bea98cddc4f8ca5e8bf6fdb2d0ee">interact</a></td></tr>
@@ -793,7 +801,13 @@ Static Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>hosts</em> = <code>None</code>&#160;</td>
+          <td class="paramname"><em>hosts</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -808,6 +822,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">hosts</td><td>list of hosts </td></tr>
+    <tr><td class="paramname">timeout</td><td>time to wait for a response, as string </td></tr>
   </table>
   </dd>
 </dl>
@@ -835,12 +850,95 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aed5e30dd177b00c57820f6125784b944"></a><!-- doxytag: member="mininet::net::Mininet::pingAllFull" ref="aed5e30dd177b00c57820f6125784b944" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def <a class="el" href="classmininet_1_1net_1_1Mininet.html#aed5e30dd177b00c57820f6125784b944">mininet.net.Mininet.pingAllFull</a> </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ping between all hosts. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>ploss packet loss percentage </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a36c48a1fed47018152717acf31df8f0b"></a><!-- doxytag: member="mininet::net::Mininet::pingFull" ref="a36c48a1fed47018152717acf31df8f0b" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def <a class="el" href="classmininet_1_1net_1_1Mininet.html#a36c48a1fed47018152717acf31df8f0b">mininet.net.Mininet.pingFull</a> </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>hosts</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ping between all specified hosts and return all data. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hosts</td><td>list of hosts </td></tr>
+    <tr><td class="paramname">timeout</td><td>time to wait for a response, as string </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>all ping data; see function body. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a1abd162ba9a3304dd091a2edda1cc4c1"></a><!-- doxytag: member="mininet::net::Mininet::pingPair" ref="a1abd162ba9a3304dd091a2edda1cc4c1" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">def <a class="el" href="classmininet_1_1net_1_1Mininet.html#a1abd162ba9a3304dd091a2edda1cc4c1">mininet.net.Mininet.pingPair</a> </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ping between first two hosts, useful for testing. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>ploss packet loss percentage </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a2e295ea9501bc4c989b1337ddea05f7c"></a><!-- doxytag: member="mininet::net::Mininet::pingPairFull" ref="a2e295ea9501bc4c989b1337ddea05f7c" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def <a class="el" href="classmininet_1_1net_1_1Mininet.html#a2e295ea9501bc4c989b1337ddea05f7c">mininet.net.Mininet.pingPairFull</a> </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em></td><td>)</td>
@@ -893,6 +991,48 @@ Static Public Attributes</h2></td></tr>
 <div class="memdoc">
 
 <p>Perform a complete start/test/stop cycle. </p>
+
+</div>
+</div>
+<a class="anchor" id="ade00be5dd4abcf0605b8a8e5f0489272"></a><!-- doxytag: member="mininet::net::Mininet::runCpuLimitTest" ref="ade00be5dd4abcf0605b8a8e5f0489272" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def <a class="el" href="classmininet_1_1net_1_1Mininet.html#ade00be5dd4abcf0605b8a8e5f0489272">mininet.net.Mininet.runCpuLimitTest</a> </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>cpu</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>duration</em> = <code>5</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>run CPU limit test with 'while true' processes. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cpu</td><td>desired CPU fraction of each host </td></tr>
+    <tr><td class="paramname">duration</td><td>test duration in seconds returns a single list of measured CPU fractions as floats. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -979,7 +1119,7 @@ Static Public Attributes</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 9 2012 13:15:46 for Mininet by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 20 2012 14:57:16 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

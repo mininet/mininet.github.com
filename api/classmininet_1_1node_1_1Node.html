@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<title>Mininet: mininet.node.Node Class Reference</title>
+<title>Mininet Python API Reference Manual: mininet.node.Node Class Reference</title>
 
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
@@ -22,7 +22,7 @@
   
   
   <td style="padding-left: 0.5em;">
-   <div id="projectname">Mininet
+   <div id="projectname">Mininet Python API Reference Manual
    
    </div>
    
@@ -136,9 +136,8 @@ def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14c12c0e1152eb84c2d2afde0d0105b7"></a><!-- doxytag: member="mininet::node::Node::defaultIntf" ref="a14c12c0e1152eb84c2d2afde0d0105b7" args="" -->
 def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Node.html#a14c12c0e1152eb84c2d2afde0d0105b7">defaultIntf</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return interface for lowest port. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab24058cbcdc431a39f566a1bbfd2e3de"></a><!-- doxytag: member="mininet::node::Node::intf" ref="ab24058cbcdc431a39f566a1bbfd2e3de" args="" -->
-def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Node.html#ab24058cbcdc431a39f566a1bbfd2e3de">intf</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return our interface object with given name, or default intf if name is empty. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Node.html#ab24058cbcdc431a39f566a1bbfd2e3de">intf</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return our interface object with given string name, default intf if name is falsy (None, empty string, etc).  <a href="#ab24058cbcdc431a39f566a1bbfd2e3de"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Node.html#ac044e7cdccae6362aeebdec85de0880f">connectionsTo</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return [ intf1, intf2...  <a href="#ac044e7cdccae6362aeebdec85de0880f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Node.html#a6689b04e0644eaa8a990d0892e876b75">deleteIntfs</a></td></tr>
@@ -569,6 +568,37 @@ dictionary&#160;</td><td class="memItemRight" valign="bottom"><b>outToNode</b> =
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>node </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab24058cbcdc431a39f566a1bbfd2e3de"></a><!-- doxytag: member="mininet::node::Node::intf" ref="ab24058cbcdc431a39f566a1bbfd2e3de" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def <a class="el" href="classmininet_1_1node_1_1Node.html#ab24058cbcdc431a39f566a1bbfd2e3de">mininet.node.Node.intf</a> </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>intf</em> = <code>''</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return our interface object with given string name, default intf if name is falsy (None, empty string, etc). </p>
+<p>or the input intf arg.</p>
+<p>Having this fcn return its arg for Intf objects makes it easier to construct functions with flexible input args for interfaces (those that accept both string names and Intf objects). </p>
 
 </div>
 </div>
@@ -1083,7 +1113,7 @@ dictionary&#160;</td><td class="memItemRight" valign="bottom"><b>outToNode</b> =
 <p>Set the IP address for an interface. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">intf</td><td>interface name </td></tr>
+    <tr><td class="paramname">intf</td><td>intf or intf name </td></tr>
     <tr><td class="paramname">ip</td><td>IP address as a string </td></tr>
     <tr><td class="paramname">prefixLen</td><td>prefix length, e.g. 8 for /8 or 16M addrs </td></tr>
   </table>
@@ -1337,7 +1367,7 @@ dictionary&#160;</td><td class="memItemRight" valign="bottom"><b>outToNode</b> =
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 9 2012 13:15:46 for Mininet by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Dec 20 2012 14:57:16 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

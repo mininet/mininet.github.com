@@ -91,9 +91,14 @@ log in to the VM image. Start the VM.</p>
 
 <p><strong>Qemu/KVM</strong>:</p>
 
-<p>Something like the following should work:</p>
+<p>Convert the VMDK to QCOW2 format first - directly using VMDK as a qemu input <a href="https://mailman.stanford.edu/pipermail/mininet-discuss/2012-December/001447.html">appears to be broken</a>:</p>
 
-<pre><code>qemu-system-i386 -m 1024 mininet-vm-disk1.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
+<pre><code>qemu-img convert -O qcow2 mininet-vm-disk1.vmdk mininet-vm-disk1.qcow2
+</code></pre>
+
+<p>Then something like the following should work:</p>
+
+<pre><code>qemu-system-i386 -m 1024 mininet-vm-disk1.qcow2 -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
 </code></pre>
 
 <p>This will set up <code>ssh</code> forwarding from the VM to host port 8022.</p>
