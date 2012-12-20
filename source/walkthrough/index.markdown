@@ -8,7 +8,7 @@ footer: true
 
 This walkthrough demonstrates most Mininet commands, as well as its typical usage in concert with the Wireshark dissector.
 
-It assumes that your base system is the Mininet VM, or a native install with all OpenFlow tools and Mininet installed.
+**The walkthrough assumes that your base system is the Mininet VM, or a native Ubuntu installation with all OpenFlow tools and Mininet installed (this is usually done using Mininet's `install.sh`).**
 
 The entire walkthrough should take under an hour.
 
@@ -447,6 +447,13 @@ Part 4: Python API Examples
 -------------------
 
 The [examples directory](https://github.com/mininet/mininet/tree/master/examples) in the Mininet source tree includes examples of how to use Mininet's Python API, as well as potentially useful code that has not been integrated into the main code base.
+
+*Note: As noted at the beginning, this Walkthrough assumes that you are either
+using a Mininet VM, which includes everything you need, or a native 
+installation with all of the associated tools,
+including the reference controller `controller`, which is part of the OpenFlow
+reference implementation and may be installed using `install.sh -f` if it has
+not been installed.*
 
 ### SSH daemon per host
 
