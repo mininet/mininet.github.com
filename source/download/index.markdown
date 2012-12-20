@@ -48,7 +48,7 @@ This takes about 5 minutes and will install everything that is included in the M
 
 Alternately, it may be possible to install a "minimal" configuration using
 
-    mininet/util/install.sh -nv
+    mininet/util/install.sh -fnv
 
 This will install the reference OpenFlow switch and controller, Mininet and its dependencies, and Open vSwitch.
 
@@ -75,7 +75,7 @@ Then you can test it:
 
     sudo mn --test pingall
 
-Note: If you wish to go through the walkthrough, you may need to install additional software, for example installing the OpenFlow WireShark dissector (which can be done using `install.sh -w` from the Mininet source distribution.) Additionally the current Ubuntu packages are for Mininet 2.0.0d4, which used a slightly different syntax for `Topo()` methods (`add_switch` vs. `addSwitch`.) We expect that the Ubuntu packages will be updated to 2.0.0 final before too long, certainly by 13.04 
+Note: If you wish to go through the walkthrough, you may need to install additional software, for example using `install.sh -fw` to install the reference controller `controller` and the OpenFlow Wireshark dissector. Additionally the current Ubuntu packages are for Mininet 2.0.0d4, which used a slightly different syntax for `Topo()` methods (`add_switch` vs. `addSwitch`.) We expect that the Ubuntu packages will be updated to 2.0.0 final before too long, certainly by 13.04 
 
 
 
