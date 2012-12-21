@@ -8,7 +8,7 @@ footer: true
 
 This walkthrough demonstrates most Mininet commands, as well as its typical usage in concert with the Wireshark dissector.
 
-**The walkthrough assumes that your base system is the Mininet VM, or a native Ubuntu installation with all OpenFlow tools and Mininet installed (this is usually done using Mininet's `install.sh`).**
+*The walkthrough assumes that your base system is the Mininet VM, or a native Ubuntu installation with all OpenFlow tools and Mininet installed (this is usually done using Mininet's `install.sh`).*
 
 The entire walkthrough should take under an hour.
 
