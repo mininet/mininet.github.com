@@ -20,8 +20,8 @@ with a single command:
 <img src="images/frontpage_diagram.png">
 </div>
 
-
-Because you can easily <a href="sample-workflow#Interacting_with_a_Network">interact with</a>
+Because you can easily
+<a href="sample-workflow#Interacting_with_a_Network">interact with</a>
 your network using the Mininet
 <a href="/walkthrough/#interact-with-hosts-and-switches">CLI</a>
 (and <a href="/api/hierarchy.html">API</a>),
@@ -33,7 +33,7 @@ or
 Mininet is useful for
 <a href="sample-workflow">development</a>,
 <a href="https://github.com/mininet/mininet/wiki/Documentation">teaching</a>,
-and <a href="https://github.com/mininet/mininet/wiki/Publications">research</a>.
+and <a href="http://reproducingnetworkresearch.wordpress.com">research</a>.
  
 Mininet
 is also a great way to develop, share, and experiment with
