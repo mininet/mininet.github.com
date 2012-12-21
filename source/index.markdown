@@ -4,23 +4,24 @@ comments: false
 sharing: true
 footer: true
 header: true
-title: "Mininet: Rapid Prototyping for Software-Defined Networks"
+title: "Mininet: An Instant Virtual Network on your Laptop (or other PC)"
 ---
 
 <style>article header { display: none; }</style>
 
 <div class="frontpageparagraph">
-Mininet is the easy way to do cool stuff with OpenFlow and Software-Defined Networks.
-Create a complete virtual network on a single machine (VM, cloud, or native) 
-in seconds with a single command:
+Mininet creates a <strong>realistic virtual network</strong>, running
+<strong>real kernel, switch and application code</strong>, on a single
+machine (VM, cloud or native), in seconds,
+with a single command:
 </div>
 
 <div class="frontpagediagram">
 <img src="images/frontpage_diagram.png">
 </div>
 
-<div class="frontpageparagraph">
-You can <a href="sample-workflow#Interacting_with_a_Network">interact with</a>
+
+Because you can easily <a href="sample-workflow#Interacting_with_a_Network">interact with</a>
 your network using the Mininet
 <a href="/walkthrough/#interact-with-hosts-and-switches">CLI</a>
 (and <a href="/api/hierarchy.html">API</a>),
@@ -28,11 +29,20 @@ your network using the Mininet
 <a href="sample-workflow#sharing-a-network">share</a> it with others,
 or
 <a href="sample-workflow#running-on-hardware">deploy</a>
- it on real hardware.
-</div>
+ it on real hardware,
+Mininet is useful for
+<a href="sample-workflow">development</a>,
+<a href="https://github.com/mininet/mininet/wiki/Documentation">teaching</a>,
+and <a href="https://github.com/mininet/mininet/wiki/Publications">research</a>.
+ 
+Mininet
+is also a great way to develop, share, and experiment with
+[OpenFlow](http://openflow.org) and Software-Defined Networking systems.
 
 <div class="frontpageparagraph">
-Actively developed and supported, Mininet is useful for interactive development, testing, and demos, running any OpenFlow controller or virtual switch.  Permissive BSD license.
+Mininet is actively developed and supported, and is released under a
+permissive BSD Open Source license. We encourage contribution of code, bug
+reports/fixes, documentation, and anything else that can improve the system!
 </div>
 
 <div class="frontpagebutton">
