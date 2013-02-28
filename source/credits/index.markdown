@@ -23,8 +23,8 @@ and Vimal Jeyakumar
 Thanks to everyone who submitted bug reports, feature requests, and
 especially code patches/bug fixes/pull requests!
 
-Thanks for ON.lab, Stanford, and our various employers and funding
-organizations.
+Thanks [ON.lab](http://onlab.us), Stanford, and our various employers
+and funding organizations.
 
 Thanks to James Page for helping to make Ubuntu packages a reality,
 and to Big switch and Canonical for supporting that effort.
