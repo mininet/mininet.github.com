@@ -28,10 +28,10 @@ Follow these steps for a VM install:
 Once you've completed the [Walkthrough](/walkthrough), you should have a clear idea for what Mininet is and what you might use it for. If you are interested in OpenFlow and Software-Defined Networking, you will want to complete the [OpenFlow tutorial](http://www.openflow.org/wk/index.php/OpenFlow_Tutorial) as well. Good luck, and have fun!
 
 
-Option 2 on *Ubuntu 11.10 and later*: Native Mininet (2.0.0) installation from source
+Option 2 (on Ubuntu 11.10 and later): Native Installation from Source
 ------------------------------------------------------------------------------------------
 
-This option works well for local VM, remote EC2, and native installs.  It assumes the starting point of a fresh Ubuntu install. (If you are upgrading from an older Mininet and/or OVS, see notes on removing old OVS packages, below.)
+This option works well for local VM, remote EC2, and native installation.  It assumes the starting point of a fresh Ubuntu installation. (*If you are upgrading from an older Mininet and/or OVS, see notes on removing old OVS packages, below*.)
 
 We strongly recommend more recent Ubuntu versions, such as 12.10, because they support newer version of Open vSwitch.
 
@@ -39,7 +39,7 @@ To find out which version of Ubuntu you are running, run the command
 
     lsb_release -a
 
-To install natively on Ubuntu 11.10+ the basic technique is:
+To install natively on Ubuntu from source, the basic technique is:
 
     git clone git://github.com/mininet/mininet
     mininet/util/install.sh -a
@@ -59,24 +59,33 @@ Next, test the basic Mininet functionality:
 Then continue with steps 3-5, above, and if you encounter an error during installation, request help on [mininet-discuss](https://mailman.stanford.edu/mailman/listinfo/mininet-discuss).
 
 
-Option 3 on Ubuntu 12.10 and later: Mininet (2.0.0d4) Package
--------------------------------------------------------------
+Option 3 (on Ubuntu 12.04 and later): Native Installation from Packages
+---------------------------------------------------------------
 
-First, if you have upgraded from an earlier installation of Ubuntu and/or Mininet, make sure you *remove all traces of earlier versions of Open vSwitch from `/usr/local`*:
+If you're running Ubuntu 12.04+, you can install the Mininet packages for Ubuntu.
 
-    sudo rm /usr/local/bin/ovs*
-    sudo rm /usr/local/sbin/ovs*
+First, if you are upgrading or have upgraded from an earlier installation of Ubuntu and/or Mininet, make sure you *remove all traces of earlier versions of Open vSwitch from `/usr/local`*:
 
-Next, install the Mininet package:
+    sudo rm /usr/local/bin/ovs* /usr/local/sbin/ovs*
 
-    sudo apt-get install mininet
+Next, install the base Mininet package by entering **only one** of the following commands, corresponding to the distribution you are running:
+
+    on Ubuntu 13.04: sudo apt-get install mininet
+    on Ubuntu 12.10: sudo apt-get install mininet/quantal-backports
+    on Ubuntu 12.04: sudo apt-get install mininet/precise-backports
+
+(Note: Ubuntu 12.10 also has a Mininet 2.0.0d3 package, but you will want to install the one from quantal-backports, which is Mininet 2.0.0.)
 
 Then you can test it:
 
     sudo mn --test pingall
 
-Note: If you wish to go through the walkthrough, you may need to install additional software, for example using `install.sh -fw` to install the reference controller `controller` and the OpenFlow Wireshark dissector. Additionally the current Ubuntu packages are for Mininet 2.0.0d4, which used a slightly different syntax for `Topo()` methods (`add_switch` vs. `addSwitch`.) We expect that the Ubuntu packages will be updated to 2.0.0 final before too long, certainly by 13.04 
+If you wish to go through the Mininet walkthrough, you will want to install additional software. The following commands
 
+    git clone git://github.com/mininet/mininet
+    mininet/util/install.sh -fw
+
+will install the OpenFlow reference switch, reference controller and Wireshark dissector.
 
 
 (old) Mininet 1.0 Installation
@@ -84,7 +93,7 @@ Note: If you wish to go through the walkthrough, you may need to install additio
 
 You can choose to use an old VM from the [Mininet downloads](https://github.com/mininet/mininet/downloads/).
 
-Or, use the archived `install-precise` branch of Mininet 1.0 for install on Ubuntu 12.04:
+Or, use the archived `install-precise` branch to install Mininet 1.0 on Ubuntu 12.04:
 
     git clone git://github.com/mininet/mininet
     cd mininet
