@@ -76,7 +76,12 @@ Next, install the base Mininet package by entering **only one** of the following
 
 (Note: Ubuntu 12.10 also has a Mininet 2.0.0d3 package, but you will want to install the one from quantal-backports, which is Mininet 2.0.0.)
 
-Then you can test it:
+After this completes, you should deactivate `openvswitch-controller` if it is running:
+
+    sudo openvswitch-controller stop
+    sudo update-rc.d openvswitch-controller disable
+
+Then you can test Mininet:
 
     sudo mn --test pingall
 
