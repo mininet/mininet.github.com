@@ -143,7 +143,13 @@ on Ubuntu 12.04: sudo apt-get install mininet/precise-backports
 
 <p>(Note: Ubuntu 12.10 also has a Mininet 2.0.0d3 package, but you will want to install the one from quantal-backports, which is Mininet 2.0.0.)</p>
 
-<p>Then you can test it:</p>
+<p>After this completes, you should deactivate <code>openvswitch-controller</code> if it is running:</p>
+
+<pre><code>sudo openvswitch-controller stop
+sudo update-rc.d openvswitch-controller disable
+</code></pre>
+
+<p>Then you can test Mininet:</p>
 
 <pre><code>sudo mn --test pingall
 </code></pre>
