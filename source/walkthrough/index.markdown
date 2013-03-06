@@ -486,12 +486,9 @@ Congrats! You've completed the Mininet Walkthrough. Feel free to try out new top
 
 If you haven't done so yet, you should definitely go through the 
 [OpenFlow tutorial](http://www.openflow.org/wk/index.php/OpenFlow_Tutorial).
-*Note: This is still being updated for Mininet 2.0, which has a new (but
-improved) topology API. For Mininet 2.0, you should use the syntax described
-above in [Custom Topologies](#custom-topologies)*.
 
-Although you can get pretty far just using Mininet's CLI, Mininet becomes much
-more useful and powerful if you master its Python API. The
+Although you can get reasonably far using Mininet's CLI, Mininet becomes much
+more useful and powerful when you master its Python API. The
 [Introduction to Mininet](https://github.com/mininet/mininet/wiki/Introduction-to-Mininet)
 provides an introduction to Mininet and its Python API.
 
