@@ -21,7 +21,7 @@ Follow these steps for a VM install:
 
 3. Sign up for the [mininet-discuss mailing list](https://mailman.stanford.edu/mailman/listinfo/mininet-discuss). This is the source for Mininet **support** and discussion with the friendly Mininet community. ;-)
 
-4. Run through the [VM Setup Notes](/vm-setup-notes) to log in to the VM and install Mininet code on it.
+4. Run through the [VM Setup Notes](/vm-setup-notes) to log in to the VM and customize it as desired.
 
 5. Follow the [Walkthrough](/walkthrough) to get familiar with Mininet commands and typical usage.
 
