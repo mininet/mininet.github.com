@@ -92,6 +92,12 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a032701855bcb981ae33e5b584d1526cb"></a><!-- doxytag: member="mininet::link::Link::delete" ref="a032701855bcb981ae33e5b584d1526cb" args="" -->
 def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1link_1_1Link.html#a032701855bcb981ae33e5b584d1526cb">delete</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete this link. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a00831e1fab1e76169a3af3854f6c2a37"></a><!-- doxytag: member="mininet::link::Link::stop" ref="a00831e1fab1e76169a3af3854f6c2a37" args="" -->
+def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1link_1_1Link.html#a00831e1fab1e76169a3af3854f6c2a37">stop</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Override to stop and clean up link as needed. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abbb76b51164c3f279cabc4316e63df34"></a><!-- doxytag: member="mininet::link::Link::status" ref="abbb76b51164c3f279cabc4316e63df34" args="" -->
+def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1link_1_1Link.html#abbb76b51164c3f279cabc4316e63df34">status</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return link status as a string. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad07f0cb915d250ff63cc6d7dc2f8510b"></a><!-- doxytag: member="mininet::link::Link::__str__" ref="ad07f0cb915d250ff63cc6d7dc2f8510b" args="" -->
 def&#160;</td><td class="memItemRight" valign="bottom"><b>__str__</b></td></tr>
 <tr><td colspan="2"><h2><a name="pub-attribs"></a>
@@ -216,7 +222,7 @@ Public Attributes</h2></td></tr>
           <td class="memname">def <a class="el" href="classmininet_1_1link_1_1Link.html#aa3ea9cb1099157f8b8be624a7f2a7bdb">mininet.link.Link.intfName</a> </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>cls</em>, </td>
+          <td class="paramname"><em>_self</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -251,19 +257,19 @@ Public Attributes</h2></td></tr>
           <td class="memname">def <a class="el" href="classmininet_1_1link_1_1Link.html#ade37d7cffeff73830bec0129ac754622">mininet.link.Link.makeIntfPair</a> </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>cls</em>, </td>
+          <td class="paramname"><em>_self</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>intf1</em>, </td>
+          <td class="paramname"><em>intfname1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>intf2</em>&#160;</td>
+          <td class="paramname"><em>intfname2</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -277,8 +283,8 @@ Public Attributes</h2></td></tr>
 <p>Create pair of interfaces. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">intf1</td><td>name of interface 1 </td></tr>
-    <tr><td class="paramname">intf2</td><td>name of interface 2 (override this class method [and possibly <a class="el" href="classmininet_1_1link_1_1Link.html#a032701855bcb981ae33e5b584d1526cb" title="Delete this link.">delete()</a>] to change link type) </td></tr>
+    <tr><td class="paramname">intfname1</td><td>name of interface 1 </td></tr>
+    <tr><td class="paramname">intfname2</td><td>name of interface 2 (override this method [and possibly <a class="el" href="classmininet_1_1link_1_1Link.html#a032701855bcb981ae33e5b584d1526cb" title="Delete this link.">delete()</a>] to change link type) </td></tr>
   </table>
   </dd>
 </dl>
@@ -292,7 +298,7 @@ Public Attributes</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 5 2013 18:33:21 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 10 2013 18:59:06 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

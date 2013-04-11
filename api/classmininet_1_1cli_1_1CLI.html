@@ -92,6 +92,8 @@ def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Run an external shell command. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1cli_1_1CLI.html#abaee39bdb77c8ba35182e27a6e12d0a1">do_py</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate a Python expression.  <a href="#abaee39bdb77c8ba35182e27a6e12d0a1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1cli_1_1CLI.html#ad4f829fe3e8105087a9f8a94b1fa05e9">do_px</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a Python statement.  <a href="#ad4f829fe3e8105087a9f8a94b1fa05e9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1cli_1_1CLI.html#a678d2542cce2e80baedb1bd7cece9a15">do_pingall</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ping between all hosts.  <a href="#a678d2542cce2e80baedb1bd7cece9a15"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1cli_1_1CLI.html#a1585a9578b466b58be93df5c2287de29">do_pingpair</a></td></tr>
@@ -134,6 +136,9 @@ def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Run dpctl command on all switches.  <a href="#a587dbea79c66cd416d3abfabe16af077"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1cli_1_1CLI.html#abde313aec3fceeb8c6bddc19ad6cc528">do_time</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Measure time taken for any command in Mininet.  <a href="#abde313aec3fceeb8c6bddc19ad6cc528"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa9482fa91fac9560897003737b846faf"></a><!-- doxytag: member="mininet::cli::CLI::do_links" ref="aa9482fa91fac9560897003737b846faf" args="" -->
+def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1cli_1_1CLI.html#aa9482fa91fac9560897003737b846faf">do_links</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Report on links. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1cli_1_1CLI.html#abb60fa854de8ad7d98f0cde4c35605d8">default</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called on an input line when the command prefix is not recognized.  <a href="#abb60fa854de8ad7d98f0cde4c35605d8"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1cli_1_1CLI.html#a8d2bb34caf60529b295b8f5c477ee37e">waitForNode</a></td></tr>
@@ -628,6 +633,36 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>prompt</b> = 'minin
 
 </div>
 </div>
+<a class="anchor" id="ad4f829fe3e8105087a9f8a94b1fa05e9"></a><!-- doxytag: member="mininet::cli::CLI::do_px" ref="ad4f829fe3e8105087a9f8a94b1fa05e9" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def <a class="el" href="classmininet_1_1cli_1_1CLI.html#ad4f829fe3e8105087a9f8a94b1fa05e9">mininet.cli.CLI.do_px</a> </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>line</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Execute a Python statement. </p>
+<p>Node names may be used, e.g.: px print h1.cmd('ls') </p>
+
+</div>
+</div>
 <a class="anchor" id="abaee39bdb77c8ba35182e27a6e12d0a1"></a><!-- doxytag: member="mininet::cli::CLI::do_py" ref="abaee39bdb77c8ba35182e27a6e12d0a1" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -654,7 +689,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>prompt</b> = 'minin
 <div class="memdoc">
 
 <p>Evaluate a Python expression. </p>
-<p>Node names may be used, e.g.: h1.cmd('ls') </p>
+<p>Node names may be used, e.g.: py h1.cmd('ls') </p>
 
 </div>
 </div>
@@ -838,7 +873,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>prompt</b> = 'minin
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 5 2013 18:33:20 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 10 2013 18:59:05 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
