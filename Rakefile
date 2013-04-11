@@ -57,6 +57,7 @@ task :generate do
   puts "## Compiling and adding Mininet documentation (ignoring errors)"
   system "make -C ~/mininet doc 1> /dev/null 2> /dev/null"
   system "cp -r ~/mininet/doc/html #{public_dir}/api"
+  system "cp CNAME #{public_dir}"
 end
 
 desc "Watch the site and regenerate when it changes"
