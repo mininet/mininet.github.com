@@ -129,7 +129,7 @@ mininet/util/install.sh -a
 
 <p>If you’re running Ubuntu 12.04+, you can install the Mininet packages for Ubuntu.</p>
 
-<p>First, if you are upgrading or have upgraded from an earlier installation of Ubuntu and/or Mininet, make sure you *remove all traces of earlier versions of Mininet and Open vSwitch from <code>/usr/local/*</code>:</p>
+<p>First, if you are upgrading or have upgraded from an earlier installation of Ubuntu and/or Mininet, make sure you <em>remove all traces of earlier versions of Mininet and Open vSwitch from <code>/usr/local/</code></em>:</p>
 
 <pre><code>sudo rm -rf /usr/local/bin/mn /usr/local/bin/mnexec \
     /usr/local/lib/python*/*/*mininet* \
@@ -147,13 +147,19 @@ on Ubuntu 12.04: sudo apt-get install mininet/precise-backports
 
 <p>After this completes, you should deactivate <code>openvswitch-controller</code> if it is running:</p>
 
-<pre><code>sudo openvswitch-controller stop
+<pre><code>sudo service openvswitch-controller stop
 sudo update-rc.d openvswitch-controller disable
 </code></pre>
 
 <p>Then you can test Mininet:</p>
 
 <pre><code>sudo mn --test pingall
+</code></pre>
+
+<p>If Mininet complains that Open vSwitch isn’t working, you may need to rebuild its kernel module:</p>
+
+<pre><code>sudo dpkg-reconfigure openvswitch-datapath-dkms
+sudo service openflow-switch restart
 </code></pre>
 
 <p>If you wish to go through the Mininet walkthrough, you will want to install additional software. The following commands</p>
