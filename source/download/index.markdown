@@ -31,7 +31,7 @@ Once you've completed the [Walkthrough](/walkthrough), you should have a clear i
 Option 2 (on Ubuntu 11.10 and later): Native Installation from Source
 ------------------------------------------------------------------------------------------
 
-This option works well for local VM, remote EC2, and native installation.  It assumes the starting point of a fresh Ubuntu installation. (*If you are upgrading from an older Mininet and/or OVS, see notes on removing old OVS packages, below*.)
+This option works well for local VM, remote EC2, and native installation.  It assumes the starting point of a fresh Ubuntu installation. (*If you are upgrading from an older Mininet and/or OVS, see notes on removing old versions, below*.)
 
 We strongly recommend more recent Ubuntu versions, such as 12.10, because they support newer version of Open vSwitch.
 
