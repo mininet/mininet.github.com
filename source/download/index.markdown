@@ -64,9 +64,11 @@ Option 3 (on Ubuntu 12.04 and later): Native Installation from Packages
 
 If you're running Ubuntu 12.04+, you can install the Mininet packages for Ubuntu.
 
-First, if you are upgrading or have upgraded from an earlier installation of Ubuntu and/or Mininet, make sure you *remove all traces of earlier versions of Open vSwitch from `/usr/local`*:
+First, if you are upgrading or have upgraded from an earlier installation of Ubuntu and/or Mininet, make sure you *remove all traces of earlier versions of Mininet and Open vSwitch from `/usr/local/*`:
 
-    sudo rm /usr/local/bin/ovs* /usr/local/sbin/ovs*
+    sudo rm -rf /usr/local/bin/mn /usr/local/bin/mnexec \
+        /usr/local/lib/python*/*/*mininet* \
+        /usr/local/bin/ovs-* /usr/local/sbin/ovs-*
 
 Next, install the base Mininet package by entering **only one** of the following commands, corresponding to the distribution you are running:
 
