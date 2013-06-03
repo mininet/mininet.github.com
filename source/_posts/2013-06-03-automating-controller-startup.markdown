@@ -15,7 +15,8 @@ in OpenFlow mode, which requires an OpenFlow controller.
 
 As you probably know, Mininet comes with built-in Controller() classes to
 support several controllers, including the OpenFlow reference controller
-(`controller`),  `ovs-controller`, and the now-deprecated NOX Classic.
+(`controller`), Open vSwitch's  `ovs-controller`,
+and the now-deprecated NOX Classic.
 
 You can easily choose which one you want when you invoke the `mn` command:
 
@@ -41,11 +42,15 @@ window and then use `--controller remote`:
 
 If your controller is running locally, you can just use
 
-    $ sudo mn --controller remote$
+    $ sudo mn --controller remote
+
+You might be asking: is there a way for Mininet to automatically start
+up my controller so that I don't have to do it manually? The answer is,
+of course, yes!
 
 ## The automatic way: using the command line
 
-The latest Mininet master code allows you to change the command and
+The latest Mininet `master` branch allows you to change the command and
 arguments for `--controller ref` to invoke another controller as
 desired. For example, here's how you could invoke POX:
 
@@ -55,11 +60,12 @@ Note the following options:
 
 `cdir`: the directory to change to before invoking the controller
 `command`: the command to start your controller
-`cargs`: the controller's arguments (including %s for wherever the controller's listening port should go)
+`cargs`: the controller's arguments (including `%s` for wherever the controller's listening port should go)
 
 ## The automatic way 2: creating a custom `Controller()` subclass
 
-This is much easier than it sounds!
+This is much easier than it sounds, and it has worked in Mininet since
+version 1.0!
 
 Here is a custom class for POX's l2_learning:
 
