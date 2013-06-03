@@ -59,7 +59,9 @@ desired. For example, here's how you could invoke POX:
 Note the following options:
 
 `cdir`: the directory to change to before invoking the controller
+
 `command`: the command to start your controller
+
 `cargs`: the controller's arguments (including `%s` for wherever the controller's listening port should go)
 
 ## The automatic way 2: creating a custom `Controller()` subclass
