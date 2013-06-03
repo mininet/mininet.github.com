@@ -90,7 +90,7 @@ controllers={ 'pox': POX }
 
 With this class saved into `pox.py`, you can now do the following:
 
-   sudo mn --custom pox.py --controller pox
+    sudo mn --custom pox.py --controller pox
 
 Additionally you can use the custom class in your Mininet scripts
 
