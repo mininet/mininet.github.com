@@ -46,7 +46,7 @@ You might be asking: is there a way for Mininet to automatically start
 up my controller so that I don't have to do it manually? The answer is,
 of course, yes!
 
-## The automatic way: using the command line
+## The automatic way #1: using the command line
 
 The latest Mininet `master` branch allows you to change the command and
 arguments for `--controller ref` to invoke another controller as
@@ -62,7 +62,7 @@ Note the following options:
 
 `cargs`: the controller's arguments (including `%s` for wherever the controller's listening port should go)
 
-## The automatic way 2: creating a custom `Controller()` subclass
+## The super automatic way #2: creating a custom `Controller()` subclass
 
 This is much easier than it sounds, and it has worked in Mininet since
 version 1.0!
