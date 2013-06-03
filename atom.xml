@@ -4,7 +4,7 @@
   <title><![CDATA[Mininet]]></title>
   <link href="http://mininet.github.com/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2013-06-03T16:38:38-07:00</updated>
+  <updated>2013-06-03T16:41:36-07:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -30,9 +30,9 @@ and the now-deprecated NOX Classic.</p>
 
 <p>You can easily choose which one you want when you invoke the <code>mn</code> command:</p>
 
-<pre><code>$ sudo mn --controller ref
-$ sudo mn --controller ovsc
-$ sudo mn --controller NOX,pyswitch
+<pre><code>sudo mn --controller ref
+sudo mn --controller ovsc
+sudo mn --controller NOX,pyswitch
 </code></pre>
 
 <p>Each of the above examples uses a controller which turns your OVS switches
@@ -49,12 +49,12 @@ Classic using <code>install.sh -x</code>.)</p>
 way is to start up POX (or Beacon, Floodlight, etc.) in another terminal
 window and then use <code>--controller remote</code>:</p>
 
-<pre><code>$ sudo mn --controller remote,ip=127.0.0.1
+<pre><code>sudo mn --controller remote,ip=127.0.0.1
 </code></pre>
 
 <p>If your controller is running locally, you can just use</p>
 
-<pre><code>$ sudo mn --controller remote
+<pre><code>sudo mn --controller remote
 </code></pre>
 
 <p>You might be asking: is there a way for Mininet to automatically start
