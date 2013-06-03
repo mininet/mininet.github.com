@@ -4,7 +4,7 @@
   <title><![CDATA[Category: howto | Mininet]]></title>
   <link href="http://mininet.github.com/blog/categories/howto/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2013-06-03T16:34:34-07:00</updated>
+  <updated>2013-06-03T16:35:36-07:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -18,9 +18,7 @@
     <link href="http://mininet.github.com/blog/2013/06/03/automating-controller-startup/"/>
     <updated>2013-06-03T15:50:00-07:00</updated>
     <id>http://mininet.github.com/blog/2013/06/03/automating-controller-startup</id>
-    <content type="html"><![CDATA[<h2 id="automating-controller-startup">Automating Controller Startup</h2>
-
-<p>One of Mininet’s key features is that it makes it very easy to create
+    <content type="html"><![CDATA[<p>One of Mininet’s key features is that it makes it very easy to create
 a complete virtual network including hosts, switches, links and
 OpenFlow controllers. By default, Mininet runs Open vSwitch
 in OpenFlow mode, which requires an OpenFlow controller.</p>
