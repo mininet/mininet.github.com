@@ -6,8 +6,6 @@ comments: false
 categories: howto
 ---
 
-## Automating Controller Startup
-
 One of Mininet's key features is that it makes it very easy to create
 a complete virtual network including hosts, switches, links and
 OpenFlow controllers. By default, Mininet runs Open vSwitch
