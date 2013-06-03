@@ -18,9 +18,9 @@ and the now-deprecated NOX Classic.
 
 You can easily choose which one you want when you invoke the `mn` command:
 
-    $ sudo mn --controller ref
-    $ sudo mn --controller ovsc
-    $ sudo mn --controller NOX,pyswitch
+    sudo mn --controller ref
+    sudo mn --controller ovsc
+    sudo mn --controller NOX,pyswitch
 
 Each of the above examples uses a controller which turns your OVS switches
 into Ethernet bridges (aka learning switches.)
@@ -36,11 +36,11 @@ But what do you do if you want another controller like POX? Well, one
 way is to start up POX (or Beacon, Floodlight, etc.) in another terminal
 window and then use `--controller remote`:
 
-    $ sudo mn --controller remote,ip=127.0.0.1
+    sudo mn --controller remote,ip=127.0.0.1
 
 If your controller is running locally, you can just use
 
-    $ sudo mn --controller remote
+    sudo mn --controller remote
 
 You might be asking: is there a way for Mininet to automatically start
 up my controller so that I don't have to do it manually? The answer is,
