@@ -34,6 +34,11 @@ You may also wish to examine or contribute to the [Mininet Project Ideas](https:
 
 High-quality documentation drastically enhances the usability of any project. Much of Mininet's documentation is directly editable on the wiki at [docs.mininet.org](http://docs.mininet.org) .
 
+### Create Mininet Apps
+
+Mininet is a useful platform for a variety of applications. Creaete your own and add them to 
+[apps.mininet.org](http://apps.mininet.org)
+
 ### Create Useful Tools, Extensions, Topologies, Classes, and other Packages
  
 Please feel free to contribute to the [Mininet Community Extensions and Packages](https://github.com/mininet/mininet/wiki/Mininet-Community-Extensions-and-Packages) page.
