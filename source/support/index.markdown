@@ -21,7 +21,8 @@ Mininet is an Open Source project, so we encourage everyone to work to improve i
 
 If you are working on a new feature, please **create an issue** for the feature you're working on so that we can all avoid duplicating effort. When your new feature (or fix) is ready, submit a pull request and/or attach a patch to your issue.
 
-<!--
-Older bugs are listed at [Bugs](Bugs) and feature requests at [Feature-Requests](Feature-Requests.md).
--->
 
+Community Packages and Extensions
+---------------------------------
+
+In addition to the core Mininet system, several members of the Mininet community have developed useful [Mininet-based packages, extensions, and tools](https://github.com/mininet/mininet/wiki/Mininet-Community-Extensions-and-Packages).
