@@ -11,7 +11,4 @@ I just want to put in a recommendation for Nick Feamster's excellent Software De
 
 The course has already started, but as of today (Thursday July 11th) you can still sign up for it.
 
--Bob
-
-p.s. I have no official connection to Coursera or the course (besides being enrolled in it and occasionally responding to questions from the TA and other students regarding Mininet) - I have just enjoyed the lectures quite a bit so far and particularly liked the explanation of Mininet, which is being used for the programming labs/assignments.
 
