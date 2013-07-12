@@ -11,4 +11,6 @@ I just want to put in a recommendation for Nick Feamster's excellent Software De
 
 The course has already started, but as of today (Thursday July 11th) you can still sign up for it.
 
+-Bob
+
 
