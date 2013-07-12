@@ -92,19 +92,13 @@ def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Make sure Open vSwitch is installed and working. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a70306fa47e76fb9f4d3317dc88bf72ba"></a><!-- doxytag: member="mininet::node::OVSSwitch::dpctl" ref="a70306fa47e76fb9f4d3317dc88bf72ba" args="" -->
 def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1OVSSwitch.html#a70306fa47e76fb9f4d3317dc88bf72ba">dpctl</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Run ovs-ofctl command. <br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Run ovs-dpctl command. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa3e0723a5b433fe03bbb4c39ab09c2c8"></a><!-- doxytag: member="mininet::node::OVSSwitch::attach" ref="aa3e0723a5b433fe03bbb4c39ab09c2c8" args="" -->
 def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1OVSSwitch.html#aa3e0723a5b433fe03bbb4c39ab09c2c8">attach</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect a data port. <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab1cf861fc1db0a14244f650d0bb1aa93"></a><!-- doxytag: member="mininet::node::OVSSwitch::detach" ref="ab1cf861fc1db0a14244f650d0bb1aa93" args="" -->
 def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1OVSSwitch.html#ab1cf861fc1db0a14244f650d0bb1aa93">detach</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect a data port. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14878a75c1db9c5aa4579471d0ece748"></a><!-- doxytag: member="mininet::node::OVSSwitch::controllerUUIDs" ref="a14878a75c1db9c5aa4579471d0ece748" args="" -->
-def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1OVSSwitch.html#a14878a75c1db9c5aa4579471d0ece748">controllerUUIDs</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return ovsdb UUIDs for our controllers. <br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abdc44068e907814e5aae52fef9ea4e3a"></a><!-- doxytag: member="mininet::node::OVSSwitch::connected" ref="abdc44068e907814e5aae52fef9ea4e3a" args="" -->
-def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1OVSSwitch.html#abdc44068e907814e5aae52fef9ea4e3a">connected</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Are we connected to at least one of our controllers? <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64175be004c3bca8217799640b168d41"></a><!-- doxytag: member="mininet::node::OVSSwitch::start" ref="a64175be004c3bca8217799640b168d41" args="" -->
 def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1OVSSwitch.html#a64175be004c3bca8217799640b168d41">start</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Start up a new OVS OpenFlow switch using ovs-vsctl. <br/></td></tr>
@@ -118,8 +112,6 @@ Static Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af8f708bdd80029904b1df1ac54fa5e78"></a><!-- doxytag: member="mininet::node::OVSSwitch::failMode" ref="af8f708bdd80029904b1df1ac54fa5e78" args="" -->
 &#160;</td><td class="memItemRight" valign="bottom"><b>failMode</b></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa97ee506391e530026751799c3581ebe"></a><!-- doxytag: member="mininet::node::OVSSwitch::datapath" ref="aa97ee506391e530026751799c3581ebe" args="" -->
-&#160;</td><td class="memItemRight" valign="bottom"><b>datapath</b></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>Open vSwitch switch. </p>
@@ -151,12 +143,6 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>datapath</em> = <code>'kernel'</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>params</em>&#160;</td>
         </tr>
         <tr>
@@ -173,10 +159,11 @@ Public Attributes</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">name</td><td>name for switch </td></tr>
     <tr><td class="paramname">failMode</td><td>controller loss behavior (secure|open) </td></tr>
-    <tr><td class="paramname">datapath</td><td>userspace or kernel mode (kernel|user) </td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Reimplemented from <a class="el" href="classmininet_1_1node_1_1Node.html#ae565010f2b329ac47a215ff588c483d7">mininet.node.Node</a>.</p>
 
 </div>
 </div>
@@ -229,7 +216,7 @@ Public Attributes</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 26 2013 18:58:54 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 11 2013 18:25:59 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
