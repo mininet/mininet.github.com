@@ -67,7 +67,7 @@
 </div><!--header-->
 <div class="contents">
 <!-- doxytag: class="mininet::topo::LinearTopo" --><!-- doxytag: inherits="mininet::topo::Topo" -->
-<p>Linear topology of k switches, with one host per switch.  
+<p>Linear topology of k switches, with n hosts per switch.  
  <a href="classmininet_1_1topo_1_1LinearTopo.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for mininet.topo.LinearTopo:</div>
@@ -89,9 +89,11 @@ Public Member Functions</h2></td></tr>
 Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a991dfb1aac95702765221f93c37d809c"></a><!-- doxytag: member="mininet::topo::LinearTopo::k" ref="a991dfb1aac95702765221f93c37d809c" args="" -->
 &#160;</td><td class="memItemRight" valign="bottom"><b>k</b></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adc859528c6157b7906cb2e0ec57435a9"></a><!-- doxytag: member="mininet::topo::LinearTopo::n" ref="adc859528c6157b7906cb2e0ec57435a9" args="" -->
+&#160;</td><td class="memItemRight" valign="bottom"><b>n</b></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
-<div class="textblock"><p>Linear topology of k switches, with one host per switch. </p>
+<div class="textblock"><p>Linear topology of k switches, with n hosts per switch. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="adad616c803d6df213b4b779fa86bfd59"></a><!-- doxytag: member="mininet::topo::LinearTopo::__init__" ref="adad616c803d6df213b4b779fa86bfd59" args="" -->
 <div class="memitem">
@@ -113,6 +115,12 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>n</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>opts</em>&#160;</td>
         </tr>
         <tr>
@@ -127,12 +135,15 @@ Public Attributes</h2></td></tr>
 <p>Init. </p>
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramname">k</td><td>number of switches (and hosts) </td></tr>
+    <tr><td class="paramname">k</td><td>number of switches </td></tr>
+    <tr><td class="paramname">n</td><td>number of hosts per switch </td></tr>
     <tr><td class="paramname">hconf</td><td>host configuration options </td></tr>
     <tr><td class="paramname">lconf</td><td>link configuration options </td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Reimplemented from <a class="el" href="classmininet_1_1topo_1_1Topo.html#aa676f9d1a195133f173f73191aa3488b">mininet.topo.Topo</a>.</p>
 
 </div>
 </div>
@@ -143,7 +154,7 @@ Public Attributes</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 15 2013 13:55:14 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 18 2013 16:54:11 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>

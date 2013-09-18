@@ -61,6 +61,8 @@
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a>  </div>
   <div class="headertitle">
 <div class="title">mininet.node.UserSwitch Class Reference</div>  </div>
@@ -91,10 +93,21 @@ Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad33189e5046bd69654a229340a4dacca"></a><!-- doxytag: member="mininet::node::UserSwitch::dpctl" ref="ad33189e5046bd69654a229340a4dacca" args="" -->
 def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1UserSwitch.html#ad33189e5046bd69654a229340a4dacca">dpctl</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Run dpctl command. <br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06ee71c1851b5a6ec63012be4bb64606"></a><!-- doxytag: member="mininet::node::UserSwitch::connected" ref="a06ee71c1851b5a6ec63012be4bb64606" args="" -->
+def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1UserSwitch.html#a06ee71c1851b5a6ec63012be4bb64606">connected</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the switch connected to a controller? <br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1UserSwitch.html#af5651c986ae4c50c04a12138da52b854">start</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Start OpenFlow reference user datapath.  <a href="#af5651c986ae4c50c04a12138da52b854"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1UserSwitch.html#a5e07816289fa23921ab679b3eb019b6b">stop</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop OpenFlow reference user datapath.  <a href="#a5e07816289fa23921ab679b3eb019b6b"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1UserSwitch.html#aa1ff2eb96e96a859fc2824445d7f4a8e">TCReapply</a></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Unfortunately user switch and Mininet are fighting over tc queuing disciplines.  <a href="#aa1ff2eb96e96a859fc2824445d7f4a8e"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50822808e2f8e045d10b7f654bacc1d7"></a><!-- doxytag: member="mininet::node::UserSwitch::dpopts" ref="a50822808e2f8e045d10b7f654bacc1d7" args="" -->
+&#160;</td><td class="memItemRight" valign="bottom"><b>dpopts</b></td></tr>
 <tr><td colspan="2"><h2><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af257f5b8bb93809e73d7764175199095"></a><!-- doxytag: member="mininet::node::UserSwitch::dpidLen" ref="af257f5b8bb93809e73d7764175199095" args="" -->
@@ -123,6 +136,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>dpidLen</b> = 12</td><
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>dpopts</em> = <code>'--no-slicing'</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>kwargs</em>&#160;</td>
         </tr>
         <tr>
@@ -138,9 +157,12 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>dpidLen</b> = 12</td><
 <dl class="params"><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>name for the switch </td></tr>
+    <tr><td class="paramname">dpopts</td><td>additional arguments to ofdatapath (--no-slicing) </td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Reimplemented from <a class="el" href="classmininet_1_1node_1_1Node.html#ae565010f2b329ac47a215ff588c483d7">mininet.node.Node</a>.</p>
 
 </div>
 </div>
@@ -223,6 +245,26 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>dpidLen</b> = 12</td><
 
 </div>
 </div>
+<a class="anchor" id="aa1ff2eb96e96a859fc2824445d7f4a8e"></a><!-- doxytag: member="mininet::node::UserSwitch::TCReapply" ref="aa1ff2eb96e96a859fc2824445d7f4a8e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def <a class="el" href="classmininet_1_1node_1_1UserSwitch.html#aa1ff2eb96e96a859fc2824445d7f4a8e">mininet.node.UserSwitch.TCReapply</a> </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>intf</em></td><td>)</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Unfortunately user switch and Mininet are fighting over tc queuing disciplines. </p>
+<p>To resolve the conflict, we re-create the user switch's configuration, but as a leaf of the TCIntf-created configuration. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>mininet/node.py</li>
 </ul>
@@ -230,7 +272,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>dpidLen</b> = 12</td><
 
 
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 15 2013 13:55:13 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Sep 18 2013 16:54:09 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
