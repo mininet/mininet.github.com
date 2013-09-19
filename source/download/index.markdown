@@ -10,12 +10,13 @@ The easiest way to get started is to **download a pre-packaged Mininet/Ubuntu VM
 *(These instructions are for Mininet 2.0.0 - for earlier versions, go to the bottom of this page.)*
 
 Option 1: Mininet VM Installation (recommended)
-------------------------------------------------
+-----------------------------------------------
+
 VM installation is the easiest and most foolproof way of installing Mininet, so it's what we recommend to start with.
 
 Follow these steps for a VM install:
 
-1. Download the [Mininet VM image](https://github.com/mininet/mininet/downloads/) . This will take some time. It's ~1GB, compressed.
+1. Download the Mininet VM image ([2.1.0rc1](https://bitbucket.org/mininet/mininet-vm-images/downloads) or [2.0.0](https://github.com/mininet/mininet/downloads/). This will take some time (it's 700+MB compressed.)
 
 2. Download and install a virtualization system. We recommend [VirtualBox](http://www.virtualbox.org/wiki/Downloads) (free, GPL) because it is **free** and works on OS X, Windows, and Linux (though it's slightly slower than VMware in our tests.) You can also use [Qemu](http://qemu.org) for any platform, [VMware Workstation](http://www.vmware.com/products/workstation/) for Windows or Linux, [VMware Fusion](http://www.vmware.com/products/fusion) for Mac, or [KVM](http://www.linux-kvm.org) (free, GPL) for Linux.
 
@@ -28,12 +29,12 @@ Follow these steps for a VM install:
 Once you've completed the [Walkthrough](/walkthrough), you should have a clear idea for what Mininet is and what you might use it for. If you are interested in OpenFlow and Software-Defined Networking, you will want to complete the [OpenFlow tutorial](http://www.openflow.org/wk/index.php/OpenFlow_Tutorial) as well. Good luck, and have fun!
 
 
-Option 2 (on Ubuntu 11.10 and later): Native Installation from Source
-------------------------------------------------------------------------------------------
+Option 2: Native Installation from Source (Ubuntu, Fedora[new, experimental!] )
+-------------------------------------------------------------------------------
 
 This option works well for local VM, remote EC2, and native installation.  It assumes the starting point of a fresh Ubuntu installation. (*If you are upgrading from an older Mininet and/or OVS, see notes on removing old versions, below*.)
 
-We strongly recommend more recent Ubuntu versions, such as 12.10, because they support newer version of Open vSwitch.
+We strongly recommend more recent Ubuntu releases, because they support newer versions of Open vSwitch. (Fedora also supports recent OVS releases)
 
 To find out which version of Ubuntu you are running, run the command
 
@@ -59,10 +60,12 @@ Next, test the basic Mininet functionality:
 Then continue with steps 3-5, above, and if you encounter an error during installation, request help on [mininet-discuss](https://mailman.stanford.edu/mailman/listinfo/mininet-discuss).
 
 
-Option 3 (on Ubuntu 12.04 and later): Native Installation from Packages
----------------------------------------------------------------
+Option 3: Installation from Packages (Ubuntu)
+---------------------------------------------
 
-If you're running Ubuntu 12.04+, you can install the Mininet packages for Ubuntu.
+If you're running a recent Ubuntu release, you can install the Mininet packages.
+Note that this may give you an older version of Mininet, but it can be a very
+convenient way to get started.
 
 First, if you are upgrading or have upgraded from an earlier installation of Ubuntu and/or Mininet, make sure you *remove all traces of earlier versions of Mininet and Open vSwitch from `/usr/local/`*:
 
@@ -72,7 +75,7 @@ First, if you are upgrading or have upgraded from an earlier installation of Ubu
 
 Next, install the base Mininet package by entering **only one** of the following commands, corresponding to the distribution you are running:
 
-    on Ubuntu 13.04: sudo apt-get install mininet
+    on Ubuntu 13.04+: sudo apt-get install mininet
     on Ubuntu 12.10: sudo apt-get install mininet/quantal-backports
     on Ubuntu 12.04: sudo apt-get install mininet/precise-backports
 
