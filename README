@@ -63,8 +63,10 @@ git push origin source
 # Setup _deploy dir w/website source repo:
 rake setup_github_pages_additional[git@github.com:mininet/mininet.github.com.git]
 
-# To update the actual GitHub pages site, run this command:
+# To update the actual GitHub pages site, run these commands:
+rake generate
 rake deploy
+
 # This will generate a commit message with the current date/time apply the changes on top of whatever was there previously.  
 
 # IMPORTANT - make sure to update the source directory!  Otherwise your changes might get overwritten.
