@@ -7,7 +7,7 @@ footer: true
 ---
 The easiest way to get started is to **download a pre-packaged Mininet/Ubuntu VM**. This VM includes Mininet itself, all OpenFlow binaries and tools pre-installed, and tweaks to the kernel configuration to support larger Mininet networks.
 
-*(These instructions are for Mininet 2.1.0rc1 - for earlier versions, go to the bottom of this page.)*
+*(These instructions are for Mininet 2.1.0 - for earlier versions, go to the bottom of this page.)*
 
 Option 1: Mininet VM Installation (recommended)
 -----------------------------------------------
@@ -16,7 +16,7 @@ VM installation is the **easiest and most foolproof** way of installing Mininet,
 
 Follow these steps for a VM install:
 
-1. Download the Mininet VM image ([2.1.0rc1](https://bitbucket.org/mininet/mininet-vm-images/downloads) or [2.0.0](https://github.com/mininet/mininet/downloads/). This will take some time (it's 700+MB compressed.)
+1. Download the Mininet VM image ([2.1.0](https://bitbucket.org/mininet/mininet-vm-images/downloads) or [2.0.0](https://github.com/mininet/mininet/downloads/). This will take some time (it's ~800MB compressed.)
 
 2. Download and install a virtualization system. We recommend [VirtualBox](http://www.virtualbox.org/wiki/Downloads) (free, GPL) because it is **free** and works on OS X, Windows, and Linux (though it's slightly slower than VMware in our tests.) You can also use [Qemu](http://qemu.org) for any platform, [VMware Workstation](http://www.vmware.com/products/workstation/) for Windows or Linux, [VMware Fusion](http://www.vmware.com/products/fusion) for Mac, or [KVM](http://www.linux-kvm.org) (free, GPL) for Linux.
 
