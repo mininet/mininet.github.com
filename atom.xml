@@ -4,7 +4,7 @@
   <title><![CDATA[Mininet]]></title>
   <link href="http://mininet.github.com/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2013-09-24T11:48:36-07:00</updated>
+  <updated>2013-09-24T15:18:18-07:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -33,7 +33,7 @@ new features, including:</p>
 
 <ul>
   <li>Convenient access to <code>Mininet()</code> as a <strong>dict of nodes</strong></li>
-  <li><strong>X11 tunneling</strong> (wireshark in Mininet hosts, finally!)</li>
+  <li><strong>X11 tunneling</strong> (<code>wireshark</code> in Mininet hosts, finally!)</li>
   <li>Accurate reflection of the <code>Mininet()</code> object in the CLI</li>
   <li>Automatically detecting and adjusting resource limits</li>
   <li><strong>Automatic cleanup</strong> on failure of the <code>mn</code> command</li>
