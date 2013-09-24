@@ -20,7 +20,7 @@ Mininet 2.1.0 provides a number of bug fixes as well as
 new features, including:
 
 * Convenient access to `Mininet()` as a **dict of nodes**
-* **X11 tunneling** (wireshark in Mininet hosts, finally!)
+* **X11 tunneling** (``wireshark`` in Mininet hosts, finally!)
 * Accurate reflection of the `Mininet()` object in the CLI
 * Automatically detecting and adjusting resource limits
 * **Automatic cleanup** on failure of the `mn` command
