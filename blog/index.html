@@ -9,7 +9,9 @@
   <meta name="author" content="Mininet Team">
 
   
-  <meta name="description" content="I just want to put in a recommendation for Nick Feamster’s excellent Software Defined Networking course. It’s free on Coursera, and not only does he &hellip;">
+  <meta name="description" content="We are pleased to announce the immediate availability of Mininet 2.1.0
+on mininet.org ! Mininet is a network emulation platform that is intended
+to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -57,6 +59,95 @@ BL: removed since they make things SLOW
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/09/20/announcing-mininet-2-1-0/">Announcing Mininet 2.1.0 !</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-09-20T13:59:00-07:00" pubdate data-updated="true">Sep 20<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>We are pleased to announce the immediate availability of Mininet 2.1.0
+on <a href="http://mininet.org">mininet.org</a> !</p>
+
+<p><a href="http://mininet.org">Mininet</a> is a network emulation platform that is intended
+to be the quickest, easiest, and most enjoyable way to create virtual networks
+for research, education, and system development.  By providing an instant
+virtual network on your laptop that can run real application, switch, and
+controller code, Mininet also makes it convenient to get started with SDN and
+OpenFlow without any additional hardware.</p>
+
+<p>Mininet 2.1.0 provides a number of bug fixes as well as
+new features, including:</p>
+
+<ul>
+  <li>Convenient access to <code>Mininet()</code> as a <strong>dict of nodes</strong></li>
+  <li><strong>X11 tunneling</strong> (wireshark in Mininet hosts, finally!)</li>
+  <li>Accurate reflection of the <code>Mininet()</code> object in the CLI</li>
+  <li>Automatically detecting and adjusting resource limits</li>
+  <li><strong>Automatic cleanup</strong> on failure of the <code>mn</code> command</li>
+  <li>Support for installing the <strong>OpenFlow 1.3</strong> versions of the reference
+user switch and NOX from CPqD</li>
+  <li>Preliminary support for running <strong>OVS in user space mode</strong></li>
+  <li>Preliminary support (<code>IVSSwitch()</code>) for the <strong>Indigo Virtual Switch</strong></li>
+  <li>Preliminary support for <strong>Fedora</strong> in <code>install.sh</code></li>
+  <li>A script (<code>util/m</code>) for <strong>easily running new shells or commands in nodes</strong></li>
+  <li>The ability to <strong>import modules from <code>mininet.examples</code></strong></li>
+</ul>
+
+<p>We have provided several new examples (which can easily be
+imported to provide useful functionality) including:</p>
+
+<ul>
+  <li>Modeling <strong>separate control and data networks</strong>: <code>mininet.examples.controlnet</code></li>
+  <li>Connecting <strong>Mininet hosts to the internet</strong> (or a LAN) using NAT: <code>mininet.examples.nat</code></li>
+  <li>Creating <strong>per-host custom directories</strong> using bind mounts: <code>mininet.examples.bind</code></li>
+</ul>
+
+<p>Note that examples contain experimental features which might
+“graduate” into mainline Mininet in the future, but they should 
+not be considered a stable part of the Mininet API!</p>
+
+<p>Additional information may be found in the
+<a href="https://github.com/mininet/mininet/wiki/Mininet-2.1.0-Release-Notes">Release Notes</a>.</p>
+
+<p>Mininet is an open source project, and we are grateful to our many code
+contributors, bug reporters, and active users who continue to help make Mininet
+a useful system with a friendly and helpful community!</p>
+
+<p>Have fun with Mininet!</p>
+
+<p><strong>The Mininet 2.1.0 Team</strong><br />
+Bob Lantz and Brian O’Connor<br />
+Open Networking Laboratory</p>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -487,6 +578,10 @@ developers, researchers and contributors!</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2013/09/20/announcing-mininet-2-1-0/">Announcing Mininet 2.1.0 !</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2013/07/11/sdn-course/">Nick Feamster&#8217;s SDN Course</a>
       </li>
     
@@ -500,10 +595,6 @@ developers, researchers and contributors!</p>
     
       <li class="post">
         <a href="/blog/2012/11/27/announcing-mininet-2-dot-0-0/">Announcing Mininet 2.0.0</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/08/23/website-updated/">Website Updated</a>
       </li>
     
   </ul>
