@@ -20,12 +20,12 @@ Mininet 2.1.0 provides a number of bug fixes as well as
 new features, including:
 
 * Convenient access to `Mininet()` as a **dict of nodes**
-* **X11 tunneling** (``wireshark`` in Mininet hosts, finally!)
+* **X11 tunneling** (`wireshark` in Mininet hosts, finally!)
 * Accurate reflection of the `Mininet()` object in the CLI
 * Automatically detecting and adjusting resource limits
 * **Automatic cleanup** on failure of the `mn` command
 * Support for installing the **OpenFlow 1.3** versions of the reference
-  user switch and NOX from CPqD
+  user switch and NOX from CPqD and Ericsson
 * Preliminary support for running **OVS in user space mode**
 * Preliminary support (`IVSSwitch()`) for the **Indigo Virtual Switch**
 * Preliminary support for **Fedora** in `install.sh`
