@@ -109,24 +109,36 @@ BL: removed since they make things SLOW
 <p>To install natively from source, the basic technique is:</p>
 
 <pre><code>git clone git://github.com/mininet/mininet
-mininet/util/install.sh -a
+mininet/util/install.sh [options]
 </code></pre>
 
-<p>This takes about 5 minutes and will install everything that is included in the Mininet VM, including dependencies like Open vSwitch as well the additions like the OpenFlow wireshark dissector and POX.</p>
+<p>Typical options include:</p>
 
-<p>Alternately, it may be possible to install a “minimal” configuration using</p>
+<ul>
+  <li><code>-a</code>: install everything that is included in the Mininet VM, including dependencies like Open vSwitch as well the additions like the OpenFlow wireshark dissector and POX. By default these tools will be built in directories created in your home directory. <br /></li>
+  <li><code>-nfv</code>: install Mininet, the OpenFlow reference switch, and Open vSwitch <br /></li>
+  <li><code>-s mydir</code>: use this option before other options to place source/build trees in a specified directory rather than in your home directory.</li>
+</ul>
 
-<pre><code>mininet/util/install.sh -fnv
+<p>So, you will probably wish to use one (and only one) of the following commands:</p>
+
+<pre><code>To install everything (using your home directory): install.sh -a
+To install everything (using another directory): install.sh -s mydir -a
+To install Mininet + user switch + OVS (using your home dir): install.sh -nfv
+To install Mininet + user switch + OVS (using another dir:) install.sh -s mydir -nfv
 </code></pre>
 
-<p>This will install the reference OpenFlow switch and controller, Mininet and its dependencies, and Open vSwitch.</p>
+<p>You can find out about other useful options (e.g. installing the wireshark dissector, if it’s not already included in your version of wireshark) using</p>
 
-<p>Next, test the basic Mininet functionality:</p>
+<pre><code>install.sh -h
+</code></pre>
+
+<p>After the installation has completed, test the basic Mininet functionality:</p>
 
 <pre><code>sudo mn --test pingall
 </code></pre>
 
-<p>Then continue with steps 3-5, above, and if you encounter an error during installation that is not covered in the <a href="/faq">FAQ</a> or <a href="/docs">Documentation</a>, and that you cannot solve on your own (or with help from Google :) ), you can request help on the friendly <a href="https://mailman.stanford.edu/mailman/listinfo/mininet-discuss">mininet-discuss</a> mailing list.</p>
+<p>Then continue with steps 3-5, above. If you run into errors, first consult the <a href="/faq">FAQ</a>, <a href="/docs">Documentation</a>, and <a href="https://mailman.stanford.edu/pipermail/mininet-discuss/">mailing list archives</a> to see if anything resembling your problem has been seen before and if there might be a possible solution. If those things don’t help and you still have problems that you cannot solve on your own (or with some help from <a href="http://google.com">Google</a> :) ), you can request help on the friendly <a href="https://mailman.stanford.edu/mailman/listinfo/mininet-discuss">mininet-discuss</a> mailing list.</p>
 
 <h2 id="option-3-installation-from-packages">Option 3: Installation from Packages</h2>
 
@@ -134,7 +146,7 @@ mininet/util/install.sh -a
 Note that this may give you an older version of Mininet, but it can be a very
 convenient way to get started.</p>
 
-<p>First, if you are upgrading or have upgraded from an earlier installation of Ubuntu and/or Mininet, make sure you <em>remove all traces of earlier versions of Mininet and Open vSwitch from <code>/usr/local/</code></em>:</p>
+<p>First, if you are upgrading or have upgraded from an earlier installation of Mininet (like 1.0) or a version of Open vSwitch which might have been compiled and stored in <code>/usr/local</code>, make sure you <em>remove any traces of earlier versions of Mininet and Open vSwitch from <code>/usr/local/</code></em>:</p>
 
 <pre><code>sudo rm -rf /usr/local/bin/mn /usr/local/bin/mnexec \
     /usr/local/lib/python*/*/*mininet* \
