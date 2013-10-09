@@ -9,7 +9,7 @@ The easiest way to get started is to **download a pre-packaged Mininet/Ubuntu VM
 
 *(These instructions are for Mininet 2.1.0 - for earlier versions, go to the bottom of this page.)*
 
-Option 1: Mininet VM Installation (recommended)
+Option 1: Mininet VM Installation (easy, recommended)
 -----------------------------------------------
 
 VM installation is the **easiest and most foolproof** way of installing Mininet, so it's what we recommend to start with.
@@ -50,7 +50,7 @@ Note that the above `git` command will check out the latest and greatest Mininet
 (which we recommend!) If you want to run the last tagged/released version
 of Mininet, use:
 
-    git clone git://github.com/
+    git clone git://github.com/mininet/mininet
     git checkout -b 2.1.0 2.1.0
 
 Once you have the source tree, the command to install Mininet is:
