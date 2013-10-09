@@ -67,7 +67,7 @@ BL: removed since they make things SLOW
 
 <p><em>(These instructions are for Mininet 2.1.0 - for earlier versions, go to the bottom of this page.)</em></p>
 
-<h2 id="option-1-mininet-vm-installation-recommended">Option 1: Mininet VM Installation (recommended)</h2>
+<h2 id="option-1-mininet-vm-installation-easy-recommended">Option 1: Mininet VM Installation (easy, recommended)</h2>
 
 <p>VM installation is the <strong>easiest and most foolproof</strong> way of installing Mininet, so it’s what we recommend to start with.</p>
 
@@ -106,13 +106,25 @@ BL: removed since they make things SLOW
 <pre><code>lsb_release -a
 </code></pre>
 
-<p>To install natively from source, the basic technique is:</p>
+<p>To install natively from source, first you need to get the source code:</p>
 
 <pre><code>git clone git://github.com/mininet/mininet
-mininet/util/install.sh [options]
 </code></pre>
 
-<p>Typical options include:</p>
+<p>Note that the above <code>git</code> command will check out the latest and greatest Mininet
+(which we recommend!) If you want to run the last tagged/released version
+of Mininet, use:</p>
+
+<pre><code>git clone git://github.com/
+git checkout -b 2.1.0 2.1.0
+</code></pre>
+
+<p>Once you have the source tree, the command to install Mininet is:</p>
+
+<pre><code>mininet/util/install.sh [options]
+</code></pre>
+
+<p>Typical <code>install.sh</code> options include:</p>
 
 <ul>
   <li><code>-a</code>: install everything that is included in the Mininet VM, including dependencies like Open vSwitch as well the additions like the OpenFlow wireshark dissector and POX. By default these tools will be built in directories created in your home directory. <br /></li>
