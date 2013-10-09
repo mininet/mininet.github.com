@@ -38,10 +38,6 @@ This option works well for local VM, remote EC2, and native installation.  It as
 
 We strongly recommend more recent Ubuntu releases, because they support newer versions of Open vSwitch. (Fedora also supports recent OVS releases)
 
-To find out which OS version you are running, run the command
-
-    lsb_release -a
-
 To install natively from source, first you need to get the source code:
 
     git clone git://github.com/mininet/mininet
@@ -93,6 +89,10 @@ First, if you are upgrading or have upgraded from an earlier installation of Min
     sudo rm -rf /usr/local/bin/mn /usr/local/bin/mnexec \
         /usr/local/lib/python*/*/*mininet* \
         /usr/local/bin/ovs-* /usr/local/sbin/ovs-*
+
+Then, to confirm which OS version you are running, run the command
+
+    lsb_release -a
 
 Next, install the base Mininet package by entering **only one** of the following commands, corresponding to the distribution you are running:
 
