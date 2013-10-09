@@ -42,12 +42,22 @@ To find out which OS version you are running, run the command
 
     lsb_release -a
 
-To install natively from source, the basic technique is:
+To install natively from source, first you need to get the source code:
 
     git clone git://github.com/mininet/mininet
+
+Note that the above `git` command will check out the latest and greatest Mininet
+(which we recommend!) If you want to run the last tagged/released version
+of Mininet, use:
+
+    git clone git://github.com/
+    git checkout -b 2.1.0 2.1.0
+
+Once you have the source tree, the command to install Mininet is:
+
     mininet/util/install.sh [options]
 
-Typical options include:
+Typical `install.sh` options include:
 
 * `-a`: install everything that is included in the Mininet VM, including dependencies like Open vSwitch as well the additions like the OpenFlow wireshark dissector and POX. By default these tools will be built in directories created in your home directory. <br>
 * `-nfv`: install Mininet, the OpenFlow reference switch, and Open vSwitch <br>
