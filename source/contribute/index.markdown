@@ -45,4 +45,4 @@ Please feel free to contribute to the [Mininet Community Extensions and Packages
 
 ### Participate in Google Summer of Code
 
-Several Google Summer of Code 2013 participants have selected Mininet-based projects. Additional information can be found at [gsoc.mininet.org](gsoc) .
+Several Google Summer of Code 2013 participants have selected Mininet-based projects. Additional information can be found at [gsoc.mininet.org](/gsoc).
