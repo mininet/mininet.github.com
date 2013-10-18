@@ -41,7 +41,8 @@ is also a great way to develop, share, and experiment with
 
 <div class="frontpageparagraph">
 Mininet is actively developed and supported, and is released under a
-permissive BSD Open Source license. We encourage contribution of code, bug
+permissive BSD Open Source license. We encourage you to
+<a href="/contribute">contribute</a>  code, bug
 reports/fixes, documentation, and anything else that can improve the system!
 </div>
 
@@ -63,9 +64,10 @@ and run the <a href="http://www.openflow.org/wk/index.php/OpenFlow_Tutorial" tit
 <div class="buttontitle"><h3><a href="support">Support</a></h3></div>
 <div class="buttontext">
 <p>
-Join the mailing list, <a href="https://mailman.stanford.edu/mailman/alt/members?list=mininet-discuss">mininet-discuss</a>, read the
-<a href="https://github.com/mininet/mininet/wiki/FAQ">FAQ</a>, or read the
-<a href="https://github.com/mininet/mininet/wiki/Documentation">documentation</a>.
+Read the
+<a href="https://github.com/mininet/mininet/wiki/FAQ">FAQ</a>, read the
+<a href="https://github.com/mininet/mininet/wiki/Documentation">documentation</a>,
+and join our mailing list, <a href="https://mailman.stanford.edu/mailman/listinfo/mininet-discuss">mininet-discuss</a>.
 </p>
 </div>
 </div>
