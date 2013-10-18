@@ -17,13 +17,16 @@ patches that fix bugs or add useful features. If you would like to
 create or submit a patch, please open an issue and/or a pull request
 on github. Please also feel free to drop us a line on mininet-discuss.
 
+Mininet 2.1.0 core team: Bob Lantz and Brian O'Connor
+
 Mininet 2.0.0 core team: Bob Lantz, Brandon Heller, Nikhil Handigol,
 and Vimal Jeyakumar
 
 Thanks to everyone who submitted bug reports, feature requests, and
-especially code patches/bug fixes/pull requests!
+especially code patches/bug fixes/pull requests! (See
+[`mininet/CONTRIBUTORS`](https://github.com/mininet/mininet/blob/master/CONTRIBUTORS).)
 
-Thanks [ON.lab](http://onlab.us), Stanford, and our various employers
+Thanks to [ON.lab](http://onlab.us), Stanford, and our various employers
 and funding organizations.
 
 Thanks to James Page for helping to make Ubuntu packages a reality,
