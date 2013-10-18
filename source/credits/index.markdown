@@ -30,7 +30,7 @@ Thanks to [ON.lab](http://onlab.us), Stanford, and our various employers
 and funding organizations.
 
 Thanks to James Page for helping to make Ubuntu packages a reality,
-and to Big switch and Canonical for supporting that effort.
+and to Big Switch and Canonical for supporting that effort.
 
 Mininet 1.0 was created by Bob Lantz and Brandon Heller, based on
 the original Mininet prototype demonstrated by Bob Lantz.
