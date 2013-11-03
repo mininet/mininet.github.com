@@ -47,7 +47,7 @@ Note that the above `git` command will check out the latest and greatest Mininet
 of Mininet, use:
 
     git clone git://github.com/mininet/mininet
-    git checkout -b 2.1.0p1 2.1.0p1
+    git checkout -b 2.1.0 2.1.0
 
 Once you have the source tree, the command to install Mininet is:
 
