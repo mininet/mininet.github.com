@@ -31,7 +31,11 @@ Download and install a virtualization program such as: [VMware Workstation](http
 
 Add the VM and start it up, in the virtualization program of your choice:
 
-**VirtualBox**: Import the OVF file, select "settings," and add an additional *host-only network adapter* so that you can
+**VirtualBox**: 
+
+1. *As of the latest VirtualBox, the `.ovf` file may not import without errors*, so instead of importing it you should create a new VM of the appropriate type (e.g. Linux, Ubuntu 64-bit) and use the `.vmdk` file as the virtual hard disk for the new VM. If you are using an older version of VirtualBox, you may simply be able to import the `.ovf` directly (we intend to fix this in the future to make it easier.)
+
+2. Select "settings," and add an additional *host-only network adapter* so that you can
 log in to the VM image. Start the VM.
 
 **VMware**: Import the OVF file, then start the VM.
