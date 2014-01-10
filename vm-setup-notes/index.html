@@ -82,8 +82,17 @@ which can be imported by most virtual machine monitors.</p>
 
 <p>Add the VM and start it up, in the virtualization program of your choice:</p>
 
-<p><strong>VirtualBox</strong>: Import the OVF file, select “settings,” and add an additional <em>host-only network adapter</em> so that you can
+<p><strong>VirtualBox</strong>: </p>
+
+<ol>
+  <li>
+    <p><em>As of the latest VirtualBox, the <code>.ovf</code> file may not import without errors</em>, so instead of importing it you should create a new VM of the appropriate type (e.g. Linux, Ubuntu 64-bit) and use the <code>.vmdk</code> file as the virtual hard disk for the new VM. If you are using an older version of VirtualBox, you may simply be able to import the <code>.ovf</code> directly (we intend to fix this in the future to make it easier.)</p>
+  </li>
+  <li>
+    <p>Select “settings,” and add an additional <em>host-only network adapter</em> so that you can
 log in to the VM image. Start the VM.</p>
+  </li>
+</ol>
 
 <p><strong>VMware</strong>: Import the OVF file, then start the VM.</p>
 
@@ -257,7 +266,7 @@ The <code>root</code> account is not enabled for login; you can use <code>sudo</
     </div>
   </div>
   <footer role="contentinfo"><p>
-  Copyright &copy; 2013 - Mininet Team -
+  Copyright &copy; 2014 - Mininet Team -
   <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
 </p>
 
