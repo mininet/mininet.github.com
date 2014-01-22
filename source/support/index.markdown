@@ -10,7 +10,9 @@ Mininet is self-supported by the friendly Mininet community via the `mininet-dis
 
 We hope to preserve a high signal-to-noise ratio for the mailing list, so please try to submit only intelligent, well-researched questions or comments regarding Mininet itself (rather than OpenFlow, NOX, networking in general, etc.) and high-quality answers. Your questions are much more likely to be answered (and you're likely to have much more success) if you're using our pre-built virtual machine (VM) image.
 
-We also encourage you to contribute helpful questions and answers to the [FAQ](https://github.com/mininet/mininet/wiki/FAQ).
+You are also encouraged to contribute helpful questions and answers to the [FAQ](https://github.com/mininet/mininet/wiki/FAQ).
+
+Please also feel free to make use of the `#mininet` IRC channel on [FreeNode](http://freenode.net) for Mininet-related discussion.
 
 Bug Reports and Feature Requests
 ---------------------------------
