@@ -12,7 +12,7 @@ We hope to preserve a high signal-to-noise ratio for the mailing list, so please
 
 You are also encouraged to contribute helpful questions and answers to the [FAQ](https://github.com/mininet/mininet/wiki/FAQ).
 
-Please also feel free to make use of the `#mininet` IRC channel on [FreeNode](http://freenode.net) for Mininet-related discussion.
+Please also feel free to make use of the `#mininet` IRC channel on [FreeNode](http://freenode.net) for Mininet-related discussion. For OpenFlow discussion, please feel free to use `#openflow` (and people on `#openflow` might also be able to help with Mininet issues.)
 
 Bug Reports and Feature Requests
 ---------------------------------
