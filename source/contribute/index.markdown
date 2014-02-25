@@ -37,7 +37,7 @@ High-quality documentation drastically enhances the usability of any project. Mu
 ### Create Mininet Apps
 
 Mininet is a useful platform for a variety of applications. Creaete your own and add them to 
-[apps.mininet.org](apps)
+[apps.mininet.org](/apps)
 
 ### Create Useful Tools, Extensions, Topologies, Classes, and other Packages
  
