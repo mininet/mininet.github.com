@@ -32,7 +32,7 @@ or
  it on real hardware,
 Mininet is useful for
 <a href="sample-workflow">development</a>,
-<a href="https://github.com/mininet/mininet/wiki/Documentation">teaching</a>,
+<a href="teaching">teaching</a>,
 and <a href="http://reproducingnetworkresearch.wordpress.com">research</a>.
  
 Mininet
