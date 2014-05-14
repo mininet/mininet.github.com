@@ -1,3 +1,47 @@
+# Setting up the repo
+cd mininet
+util/install.sh -e
+make doc
+cd ~
+git clone -b source git@github.com:mininet/mininet.github.com.git
+cd mininet.github.com
+sudo apt-get install bundler
+bundle install
+rake setup_github_pages_additional[git@github.com:mininet/mininet.github.com.git]
+
+# Preview the site by spawning a lightweight web server on port 4000:
+rake preview
+# To view, open a web browser to localhost:4000.
+
+# In theory, to start up a server to update the blog upon changes:
+rake watch
+# In practice, doesn't seem to update properly when you change CSS or other files - probably not watching all the custom files.  
+
+# Re-generate all website output files when changing anything:
+rake generate
+
+# To add a new page:
+rake new_page[insert_name_here]
+# Then mod the generated markdown page (path will be printed) and run 'rack generate'.
+
+# To add a new post:
+rake new_post[insert_name_here]
+# The top stuff between the three-dash lines in the generated index.markdown file is the YAML front matter.
+# Make sure to add 'author', followed by a colon, space, and your name.
+
+# When you've made changes, push the update/send a pull request to the source directory.
+git commit
+git push origin source
+
+# To update the actual GitHub pages site, run these commands:
+rake generate
+rake deploy
+# This will generate a commit message with the current date/time apply the changes on top of whatever was there previously.  
+# IMPORTANT - make sure to update the source directory!  Otherwise your changes might get overwritten.
+
+
+#---------- notes from Brandon -------------
+
 # Install Mininet webpage source
 cd ~/
 git clone git@github.com:mininet/mininet.github.com mininet-website
