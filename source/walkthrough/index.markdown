@@ -485,7 +485,7 @@ Congrats! You've completed the Mininet Walkthrough. Feel free to try out new top
 ### Next Steps to mastering Mininet
 
 If you haven't done so yet, you should definitely go through the 
-[OpenFlow tutorial](http://www.openflow.org/wk/index.php/OpenFlow_Tutorial).
+[OpenFlow tutorial](https://github.com/mininet/openflow-tutorial/wiki).
 
 Although you can get reasonably far using Mininet's CLI, Mininet becomes much
 more useful and powerful when you master its Python API. The

@@ -6,7 +6,7 @@ sharing: true
 footer: true
 root: /
 ---
-Mininet enables you to quickly [create](#create), [interact with](#interact), [customize](#customize) and [share](#share) a software defined network prototype, and provides a smooth path to [running on hardware](#run). This page illustrates the basic Mininet workflow, and many additional details are available in the Mininet [walkthrough](/walkthrough), the OpenFlow [tutorial](http://www.openflow.org/wk/index.php/OpenFlow_Tutorial), and Mininet [documentation](https://github.com/mininet/mininet/wiki/Documentation).
+Mininet enables you to quickly [create](#create), [interact with](#interact), [customize](#customize) and [share](#share) a software defined network prototype, and provides a smooth path to [running on hardware](#run). This page illustrates the basic Mininet workflow, and many additional details are available in the Mininet [walkthrough](/walkthrough), the OpenFlow [tutorial](https://github.com/mininet/openflow-tutorial/wiki), and Mininet [documentation](https://github.com/mininet/mininet/wiki/Documentation).
 
 <a id="create"></a>
 
