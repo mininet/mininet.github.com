@@ -33,7 +33,9 @@ several new features, including:
   option for topologies built with the default `Host` and `OVSSwitch`
   classes:
 
-  `mn --cluster localhost,server1,server2`
+  `mn --cluster localhost,server1,server2,server3 --topo tree,4,4`
+
+  {% img /images/cluster.png %}
 
 Note that examples contain experimental features which might
 "graduate" into mainline Mininet in the future, but they should
