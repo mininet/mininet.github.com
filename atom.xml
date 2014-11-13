@@ -4,7 +4,7 @@
   <title><![CDATA[Mininet]]></title>
   <link href="http://mininet.github.com/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2014-11-12T19:51:54-08:00</updated>
+  <updated>2014-11-12T20:01:19-08:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -57,7 +57,9 @@ as well as <code>examples/cluster.py</code> and an experimental <code>--cluster<
 option for topologies built with the default <code>Host</code> and <code>OVSSwitch</code>
 classes:</p>
 
-    <p><code>mn --cluster localhost,server1,server2</code></p>
+    <p><code>mn --cluster localhost,server1,server2,server3 --topo tree,4,4</code></p>
+
+    <p><img src="http://mininet.github.com/images/cluster.png" /></p>
   </li>
 </ul>
 
