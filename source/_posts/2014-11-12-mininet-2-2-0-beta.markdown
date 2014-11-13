@@ -13,7 +13,7 @@ several new features, including:
   - `mn --switch ovs,protocols=openflow13` starts OVS in 1.3 mode
   - `install.sh -w` installs 1.3-compatible Wireshark dissector using
     Loxigen
-    - `install.sh -y` installs Ryu 1.3-compatible controller
+    - `install.sh -y` installs the Ryu 1.3-compatible controller
 
 * A new `nodelib.py` node library, and new `Node` types including
   `LinuxBridge`, `OVSBridge`, `LinuxRouter` and `NAT`<br>
