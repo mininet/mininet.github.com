@@ -34,7 +34,7 @@ Mininet is useful for
 <a href="sample-workflow">development</a>,
 <a href="teaching">teaching</a>,
 and <a href="http://reproducingnetworkresearch.wordpress.com">research</a>.
- 
+
 Mininet
 is also a great way to develop, share, and experiment with
 [OpenFlow](http://openflow.org) and Software-Defined Networking systems.
@@ -76,7 +76,7 @@ and join our mailing list, <a href="https://mailman.stanford.edu/mailman/listinf
 <div class="buttontitle"><h3><a href="contribute">Contribute</a></h3></div>
 <div class="buttontext">
 <p>
-File a <a href="https://github.com/mininet/mininet/issues?milestone=1&state=open">bug</a>, download the <a href="https://github.com/mininet/mininet">source</a>, or submit a <a href="https://github.com/mininet/mininet/pulls">pull request</a> - all on GitHub.
+File a <a href="https://github.com/mininet/mininet/issues">bug</a>, download the <a href="https://github.com/mininet/mininet">source</a>, or submit a <a href="https://github.com/mininet/mininet/pulls">pull request</a> - all on GitHub.
 </p>
 </div>
 </div>
