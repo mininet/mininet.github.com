@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mininet | Mininet]]></title>
   <link href="http://mininet.github.com/blog/categories/mininet/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2014-12-09T14:51:41-08:00</updated>
+  <updated>2014-12-09T15:53:02-08:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -76,7 +76,8 @@ VM image. See <a href="http://mininet.org/download">http://mininet.org/download<
 for details.</p>
 
 <p>Additional information on the Mininet 2.2.0 release may be found in the
-release notes on <a href="http://docs.mininet.org">docs.mininet.org</a>.</p>
+<a href="http://wiki.mininet.org/Mininet-2.2.0-Release-Notes">release notes</a>
+and <a href="http://docs.mininet.org">docs.mininet.org</a>.</p>
 ]]></content>
   </entry>
   
