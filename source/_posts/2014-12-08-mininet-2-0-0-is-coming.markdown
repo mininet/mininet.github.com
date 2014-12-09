@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "mininet-2-0-0-is-coming"
+title: "Mininet 2.2.0 is coming!"
 date: 2014-12-08 16:05
 comments: false
-categories:
+categories: mininet releases
 ---
-Mininet 2.2.0 is coming soon! This release will provides a number of bug fixes as well as
-several new features, including:
+Mininet 2.2.0 is coming soon! Mininet 2.2.0 provides a number of
+bug fixes as well as several new features, including:
 
 * Improved OpenFlow 1.3 support
 
@@ -46,7 +46,8 @@ The latest Mininet source code is available on
 [code.mininet.org](http://code.mininet.org).
 
 The easiest way to get started with Mininet is to download a
-VM image. See http://mininet.org/download for details.
+VM image. See [http://mininet.org/download](http://mininet.org/download)
+for details.
 
 Additional information on the Mininet 2.2.0 release may be found in the
 release notes on [docs.mininet.org](http://docs.mininet.org).
