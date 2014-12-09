@@ -4,7 +4,7 @@
   <title><![CDATA[Category: releases | Mininet]]></title>
   <link href="http://mininet.github.com/blog/categories/releases/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2014-12-08T16:52:32-08:00</updated>
+  <updated>2014-12-09T14:51:41-08:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -14,10 +14,10 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Mininet 2.2.0 is coming!]]></title>
-    <link href="http://mininet.github.com/blog/2014/12/08/mininet-2-0-0-is-coming/"/>
-    <updated>2014-12-08T16:05:00-08:00</updated>
-    <id>http://mininet.github.com/blog/2014/12/08/mininet-2-0-0-is-coming</id>
+    <title type="html"><![CDATA[Mininet 2.0.0 is coming]]></title>
+    <link href="http://mininet.github.com/blog/2014/12/09/announcing-mininet-2-0-0/"/>
+    <updated>2014-12-09T14:35:00-08:00</updated>
+    <id>http://mininet.github.com/blog/2014/12/09/announcing-mininet-2-0-0</id>
     <content type="html"><![CDATA[<p>Mininet 2.2.0 is coming soon! Mininet 2.2.0 provides a number of
 bug fixes as well as several new features, including:</p>
 
@@ -38,12 +38,12 @@ Loxigen
   <li>
     <p>A new <code>nodelib.py</code> node library, and new <code>Node</code> types including
 <code>LinuxBridge</code>, <code>OVSBridge</code>, <code>LinuxRouter</code> and <code>NAT</code><br />
-{% img /images/nodelib.png %}</p>
+<img src="/images/nodelib.png"></p>
   </li>
   <li>
     <p>An improved MiniEdit GUI (<code>examples/miniedit.py</code>) - thanks to
 Gregory Gee <br />
-{% img /images/miniedit.png %}</p>
+<img src="/images/miniedit.png"></p>
   </li>
   <li>
     <p>Support for multiple <code>--custom</code> arguments to <code>mn</code></p>
@@ -59,7 +59,7 @@ classes:</p>
 
     <p><code>mn --cluster localhost,server1,server2,server3 --topo tree,4,4</code></p>
 
-    <p>{% img /images/cluster.png %}</p>
+    <p><img src="/images/cluster.png"></p>
   </li>
 </ul>
 
