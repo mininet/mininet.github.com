@@ -55,7 +55,7 @@ Watch the intro video,
 -->
 <a href="download">Download</a> a Mininet VM,
 do the <a href="walkthrough" title="Walkthrough">walkthrough</a>
-and run the <a href="http://www.openflow.org/wk/index.php/OpenFlow_Tutorial" title="Title">OpenFlow tutorial</a>.
+and run the <a href="https://github.com/mininet/openflow-tutorial/wiki" title="Title">OpenFlow tutorial</a>.
 </p>
 </div>
 </div>
