@@ -2,78 +2,82 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://mininet.github.com/blog/2012/08/23/website-updated/</loc>
-        <lastmod>2014-11-13T14:37:42-08:00</lastmod>
+        <lastmod>2014-11-13T14:53:28-08:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/blog/2012/11/27/announcing-mininet-2-dot-0-0/</loc>
-        <lastmod>2014-11-13T14:37:42-08:00</lastmod>
+        <lastmod>2014-11-13T14:53:28-08:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/blog/2012/12/06/mininet-at-conext-2012/</loc>
-        <lastmod>2014-11-13T14:37:42-08:00</lastmod>
+        <lastmod>2014-11-13T14:53:28-08:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/blog/2013/06/03/automating-controller-startup/</loc>
-        <lastmod>2014-11-13T14:37:42-08:00</lastmod>
+        <lastmod>2014-11-13T14:53:28-08:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/blog/2013/07/11/sdn-course/</loc>
-        <lastmod>2014-11-13T14:37:42-08:00</lastmod>
+        <lastmod>2014-11-13T14:53:28-08:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/blog/2013/09/20/announcing-mininet-2-1-0/</loc>
-        <lastmod>2014-11-13T14:37:42-08:00</lastmod>
+        <lastmod>2014-11-13T14:53:28-08:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/blog/2014/11/12/mininet-2-2-0-beta/</loc>
-        <lastmod>2014-11-13T14:50:45-08:00</lastmod>
+        <lastmod>2014-12-05T17:29:26-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://mininet.github.com/blog/2014/12/08/mininet-2-0-0-is-coming/</loc>
+        <lastmod>2014-12-08T16:11:58-08:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/blog/archives/</loc>
-        <lastmod>2014-11-13T14:50:45-08:00</lastmod>
+        <lastmod>2014-12-08T16:11:58-08:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/blog/</loc>
-        <lastmod>2014-11-13T14:50:45-08:00</lastmod>
+        <lastmod>2014-12-08T16:11:58-08:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/contribute/</loc>
-        <lastmod>2014-11-13T14:37:42-08:00</lastmod>
+        <lastmod>2014-11-13T14:53:28-08:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/credits/</loc>
-        <lastmod>2014-11-13T14:37:42-08:00</lastmod>
+        <lastmod>2014-11-13T14:53:28-08:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/download/</loc>
-        <lastmod>2014-11-13T14:37:42-08:00</lastmod>
+        <lastmod>2014-11-13T14:53:28-08:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/</loc>
-        <lastmod>2014-11-13T14:37:42-08:00</lastmod>
+        <lastmod>2014-12-08T16:18:15-08:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/introvideo/</loc>
-        <lastmod>2014-11-13T14:37:42-08:00</lastmod>
+        <lastmod>2014-11-13T14:53:28-08:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/overview/</loc>
-        <lastmod>2014-11-13T14:37:42-08:00</lastmod>
+        <lastmod>2014-11-13T14:53:28-08:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/sample-workflow/</loc>
-        <lastmod>2014-11-13T14:37:42-08:00</lastmod>
+        <lastmod>2014-11-13T14:53:28-08:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/support/</loc>
-        <lastmod>2014-11-13T14:37:42-08:00</lastmod>
+        <lastmod>2014-11-13T14:53:28-08:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/vm-setup-notes/</loc>
-        <lastmod>2014-11-13T14:37:42-08:00</lastmod>
+        <lastmod>2014-11-13T14:53:28-08:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/walkthrough/</loc>
-        <lastmod>2014-11-13T14:37:42-08:00</lastmod>
+        <lastmod>2014-11-13T14:53:28-08:00</lastmod>
     </url>
 </urlset>

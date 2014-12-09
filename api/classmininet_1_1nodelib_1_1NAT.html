@@ -54,6 +54,9 @@
 <div class="title">mininet.nodelib.NAT Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="classmininet_1_1nodelib_1_1NAT.html" title="NAT: Provides connectivity to external network. ">NAT</a>: Provides connectivity to external network.  
+ <a href="classmininet_1_1nodelib_1_1NAT.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for mininet.nodelib.NAT:</div>
 <div class="dyncontent">
@@ -66,12 +69,16 @@ Inheritance diagram for mininet.nodelib.NAT:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a54c64c441f6253d5052cf861eada67c7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a54c64c441f6253d5052cf861eada67c7"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b></td></tr>
+<tr class="memitem:a54c64c441f6253d5052cf861eada67c7"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1nodelib_1_1NAT.html#a54c64c441f6253d5052cf861eada67c7">__init__</a></td></tr>
+<tr class="memdesc:a54c64c441f6253d5052cf861eada67c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start NAT/forwarding between Mininet and external network.  <a href="#a54c64c441f6253d5052cf861eada67c7">More...</a><br/></td></tr>
 <tr class="separator:a54c64c441f6253d5052cf861eada67c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41b8cdfa25ae1333e98de36c9915075c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a41b8cdfa25ae1333e98de36c9915075c"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>config</b></td></tr>
+def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1nodelib_1_1NAT.html#a41b8cdfa25ae1333e98de36c9915075c">config</a></td></tr>
+<tr class="memdesc:a41b8cdfa25ae1333e98de36c9915075c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the <a class="el" href="classmininet_1_1nodelib_1_1NAT.html" title="NAT: Provides connectivity to external network. ">NAT</a> and iptables. <br/></td></tr>
 <tr class="separator:a41b8cdfa25ae1333e98de36c9915075c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13f8384350ff0d73902a5ed5c520a753"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1nodelib_1_1NAT.html#a13f8384350ff0d73902a5ed5c520a753">getGatewayIntf</a></td></tr>
+<tr class="memdesc:a13f8384350ff0d73902a5ed5c520a753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return gateway interface name.  <a href="#a13f8384350ff0d73902a5ed5c520a753">More...</a><br/></td></tr>
+<tr class="separator:a13f8384350ff0d73902a5ed5c520a753"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5c247f368c06be11a87cc2ea8e5db82"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad5c247f368c06be11a87cc2ea8e5db82"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1nodelib_1_1NAT.html#ad5c247f368c06be11a87cc2ea8e5db82">terminate</a></td></tr>
 <tr class="memdesc:ad5c247f368c06be11a87cc2ea8e5db82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop NAT/forwarding between Mininet and external network. <br/></td></tr>
@@ -302,19 +309,109 @@ dictionary&#160;</td><td class="memItemRight" valign="bottom"><b>outToNode</b> =
 <tr class="separator:a336ba69db8fe753e780df804a25f391b inherit pub_static_attribs_classmininet_1_1node_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><dl class="params"><dt>Parameters</dt><dd>
+<div class="textblock"><p><a class="el" href="classmininet_1_1nodelib_1_1NAT.html" title="NAT: Provides connectivity to external network. ">NAT</a>: Provides connectivity to external network. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a54c64c441f6253d5052cf861eada67c7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mininet.nodelib.NAT.__init__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>inetIntf</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>subnet</em> = <code>'10.0/8'</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>localIntf</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start NAT/forwarding between Mininet and external network. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname"><a class="el" href="classmininet_1_1nodelib_1_1NAT.html">NAT</a></td><td>Provides connectivity to external network </td></tr>
+    <tr><td class="paramname">inetIntf</td><td>interface for internet access </td></tr>
+    <tr><td class="paramname">subnet</td><td>Mininet subnet (default 10.0/8)= </td></tr>
   </table>
   </dd>
 </dl>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a13f8384350ff0d73902a5ed5c520a753"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mininet.nodelib.NAT.getGatewayIntf </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>fallback</em> = <code>'eth0'</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Return gateway interface name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fallback</td><td>default device to fall back to </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>mininet/nodelib.py</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 12 2014 20:01:27 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 8 2014 16:19:54 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

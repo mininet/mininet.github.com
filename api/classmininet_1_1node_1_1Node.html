@@ -67,13 +67,13 @@ Inheritance diagram for mininet.node.Node:</div>
 <area href="classmininet_1_1node_1_1Controller.html" title="A Controller is a Node that is running (or has execed?) an OpenFlow controller. " alt="mininet.node.Controller" shape="rect" coords="0,112,230,136"/>
 <area href="classmininet_1_1node_1_1Host.html" title="A host is simply a Node. " alt="mininet.node.Host" shape="rect" coords="480,112,710,136"/>
 <area href="classmininet_1_1node_1_1Switch.html" title="A Switch is a Node that is running (or has execed?) an OpenFlow switch. " alt="mininet.node.Switch" shape="rect" coords="720,112,950,136"/>
-<area href="classmininet_1_1nodelib_1_1NAT.html" alt="mininet.nodelib.NAT" shape="rect" coords="960,112,1190,136"/>
+<area href="classmininet_1_1nodelib_1_1NAT.html" title="NAT: Provides connectivity to external network. " alt="mininet.nodelib.NAT" shape="rect" coords="960,112,1190,136"/>
 <area href="classmininet_1_1node_1_1NOX.html" title="Controller to run a NOX application. " alt="mininet.node.NOX" shape="rect" coords="240,168,470,192"/>
 <area href="classmininet_1_1node_1_1OVSController.html" title="Open vSwitch controller. " alt="mininet.node.OVSController" shape="rect" coords="240,224,470,248"/>
 <area href="classmininet_1_1node_1_1RemoteController.html" title="Controller running outside of Mininet&#39;s control. " alt="mininet.node.RemoteController" shape="rect" coords="240,280,470,304"/>
 <area href="classmininet_1_1node_1_1RYU.html" title="Controller to run Ryu application. " alt="mininet.node.RYU" shape="rect" coords="240,336,470,360"/>
 <area href="classmininet_1_1node_1_1CPULimitedHost.html" title="CPU limited host. " alt="mininet.node.CPULimitedHost" shape="rect" coords="480,168,710,192"/>
-<area href="classmininet_1_1node_1_1IVSSwitch.html" title="IVS virtual switch. " alt="mininet.node.IVSSwitch" shape="rect" coords="960,168,1190,192"/>
+<area href="classmininet_1_1node_1_1IVSSwitch.html" title="Indigo Virtual Switch. " alt="mininet.node.IVSSwitch" shape="rect" coords="960,168,1190,192"/>
 <area href="classmininet_1_1node_1_1OVSLegacyKernelSwitch.html" title="Open VSwitch legacy kernel-space switch using ovs-openflowd. " alt="mininet.node.OVSLegacyKernelSwitch" shape="rect" coords="960,224,1190,248"/>
 <area href="classmininet_1_1node_1_1OVSSwitch.html" title="Open vSwitch switch. " alt="mininet.node.OVSSwitch" shape="rect" coords="960,280,1190,304"/>
 <area href="classmininet_1_1node_1_1UserSwitch.html" title="User-space switch. " alt="mininet.node.UserSwitch" shape="rect" coords="960,336,1190,360"/>
@@ -661,7 +661,7 @@ dictionary&#160;</td><td class="memItemRight" valign="bottom"><b>outToNode</b> =
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>intf</em> = <code>''</code>&#160;</td>
+          <td class="paramname"><em>intf</em> = <code>None</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1281,13 +1281,29 @@ dictionary&#160;</td><td class="memItemRight" valign="bottom"><b>outToNode</b> =
           <td class="memname">def mininet.node.Node.stop </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>deleteIntfs</em> = <code>False</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Stop node. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">deleteIntfs</td><td>delete interfaces? (False) </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1424,7 +1440,7 @@ dictionary&#160;</td><td class="memItemRight" valign="bottom"><b>outToNode</b> =
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 12 2014 20:01:24 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 8 2014 16:19:51 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

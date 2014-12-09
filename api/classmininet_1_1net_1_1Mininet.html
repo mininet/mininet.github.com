@@ -86,8 +86,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aecca42852bcd3f0ef885fa53c07dd2a1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1net_1_1Mininet.html#aecca42852bcd3f0ef885fa53c07dd2a1">addController</a></td></tr>
 <tr class="memdesc:aecca42852bcd3f0ef885fa53c07dd2a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add controller.  <a href="#aecca42852bcd3f0ef885fa53c07dd2a1">More...</a><br/></td></tr>
 <tr class="separator:aecca42852bcd3f0ef885fa53c07dd2a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec5d9c44503b066bf50da7235f622540"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aec5d9c44503b066bf50da7235f622540"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>addNAT</b></td></tr>
+<tr class="memitem:aec5d9c44503b066bf50da7235f622540"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1net_1_1Mininet.html#aec5d9c44503b066bf50da7235f622540">addNAT</a></td></tr>
+<tr class="memdesc:aec5d9c44503b066bf50da7235f622540"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a NAT to the <a class="el" href="classmininet_1_1net_1_1Mininet.html" title="Network emulation with hosts spawned in network namespaces. ">Mininet</a> network.  <a href="#aec5d9c44503b066bf50da7235f622540">More...</a><br/></td></tr>
 <tr class="separator:aec5d9c44503b066bf50da7235f622540"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab92c0b5ef6f8ee38395753bdceb5fbb2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab92c0b5ef6f8ee38395753bdceb5fbb2"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1net_1_1Mininet.html#ab92c0b5ef6f8ee38395753bdceb5fbb2">getNodeByName</a></td></tr>
@@ -320,7 +320,7 @@ Static Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>host</em> = <code><a class="el" href="classmininet_1_1node_1_1Host.html">Host</a></code>, </td>
+          <td class="paramname"><em>host</em> = <code>Host</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -632,6 +632,63 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="aec5d9c44503b066bf50da7235f622540"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mininet.net.Mininet.addNAT </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>name</em> = <code>'nat0'</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>connect</em> = <code>True</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>inNamespace</em> = <code>False</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>params</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add a NAT to the <a class="el" href="classmininet_1_1net_1_1Mininet.html" title="Network emulation with hosts spawned in network namespaces. ">Mininet</a> network. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>name of NAT node </td></tr>
+    <tr><td class="paramname">connect</td><td>switch to connect to | True (s1) | None </td></tr>
+    <tr><td class="paramname">inNamespace</td><td>create in a network namespace </td></tr>
+    <tr><td class="paramname">params</td><td>other NAT node params, </td></tr>
+    <tr><td class="paramname">notably</td><td></td></tr>
+    <tr><td class="paramname">ip</td><td>used as default gateway address </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="ae4dee4ab63ee9d46bbf3d069dbe9ebbb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -848,7 +905,7 @@ Static Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>format</em> = <code>None</code>, </td>
+          <td class="paramname"><em>fmt</em> = <code>None</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -867,10 +924,10 @@ Static Public Attributes</h2></td></tr>
 <p>Run iperf between two hosts. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hosts</td><td>list of hosts; if None, uses opposite hosts </td></tr>
+    <tr><td class="paramname">hosts</td><td>list of hosts; if None, uses first and last hosts </td></tr>
     <tr><td class="paramname">l4Type</td><td>string, one of [ TCP, UDP ] </td></tr>
     <tr><td class="paramname">udpBw</td><td>bandwidth target for UDP test </td></tr>
-    <tr><td class="paramname">format</td><td>iperf format argument if any </td></tr>
+    <tr><td class="paramname">fmt</td><td>iperf format argument if any </td></tr>
     <tr><td class="paramname">seconds</td><td>iperf time to transmit </td></tr>
   </table>
   </dd>
@@ -1171,7 +1228,7 @@ Static Public Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">cpu</td><td>desired CPU fraction of each host </td></tr>
-    <tr><td class="paramname">duration</td><td>test duration in seconds returns a single list of measured CPU fractions as floats. </td></tr>
+    <tr><td class="paramname">duration</td><td>test duration in seconds (integer) returns a single list of measured CPU fractions as floats. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1298,7 +1355,7 @@ Static Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 12 2014 20:01:23 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 8 2014 16:19:51 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
