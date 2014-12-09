@@ -128,9 +128,10 @@ will install the OpenFlow reference switch, reference controller and Wireshark d
 (old) Mininet 1.0 Installation
 ------------------------------
 
-You can choose to use an old VM from the [Mininet downloads](https://github.com/mininet/mininet/downloads/).
+You may be able to find a *very* old VM image on the [Old Mininet downloads](https://github.com/mininet/mininet/downloads/),
+page, though we don't really recommend using it.
 
-Or, use the archived `install-precise` branch to install Mininet 1.0 on Ubuntu 12.04:
+You can also use the archived `install-precise` branch to install Mininet 1.0 on Ubuntu 12.04:
 
     git clone git://github.com/mininet/mininet
     cd mininet
@@ -139,4 +140,3 @@ Or, use the archived `install-precise` branch to install Mininet 1.0 on Ubuntu 1
     util/install.sh -a
 
 Make sure you are installing from the *install-precise* branch.
-
