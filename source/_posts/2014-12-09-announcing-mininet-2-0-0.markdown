@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Mininet 2.2.0 is coming!"
-date: 2014-12-08 16:05
-comments: false
+title: "announcing-mininet-2-0-0"
+date: 2014-12-09 14:35
+comments: true
 categories: mininet releases
 ---
 Mininet 2.2.0 is coming soon! Mininet 2.2.0 provides a number of
