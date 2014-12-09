@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "announcing-mininet-2-0-0"
+title: "Mininet 2.0.0 is coming"
 date: 2014-12-09 14:35
 comments: true
 categories: mininet releases
@@ -50,4 +50,5 @@ VM image. See [http://mininet.org/download](http://mininet.org/download)
 for details.
 
 Additional information on the Mininet 2.2.0 release may be found in the
-release notes on [docs.mininet.org](http://docs.mininet.org).
+[release notes](http://wiki.mininet.org/Mininet-2.2.0-Release-Notes)
+and [docs.mininet.org](http://docs.mininet.org).
