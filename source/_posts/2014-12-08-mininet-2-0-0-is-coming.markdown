@@ -1,0 +1,52 @@
+---
+layout: post
+title: "mininet-2-0-0-is-coming"
+date: 2014-12-08 16:05
+comments: false
+categories:
+---
+Mininet 2.2.0 is coming soon! This release will provides a number of bug fixes as well as
+several new features, including:
+
+* Improved OpenFlow 1.3 support
+
+  - `mn --switch ovs,protocols=openflow13` starts OVS in 1.3 mode
+  - `install.sh -w` installs 1.3-compatible Wireshark dissector using
+    Loxigen
+    - `install.sh -y` installs the Ryu 1.3-compatible controller
+
+* A new `nodelib.py` node library, and new `Node` types including
+  `LinuxBridge`, `OVSBridge`, `LinuxRouter` and `NAT`<br>
+  {% img /images/nodelib.png %}
+
+* An improved MiniEdit GUI (`examples/miniedit.py`) - thanks to
+  Gregory Gee <br>
+  {% img /images/miniedit.png %}
+
+* Support for multiple `--custom` arguments to `mn`
+
+  `mn --custom mytopo.py,myswitch.py --topo mytopo --switch myswitch`
+
+* Experimental cluster support - consult the
+  [documentation](http://docs.mininet.org) for details -
+  as well as `examples/cluster.py` and an experimental `--cluster`
+  option for topologies built with the default `Host` and `OVSSwitch`
+  classes:
+
+  `mn --cluster localhost,server1,server2,server3 --topo tree,4,4`
+
+  {% img /images/cluster.png %}
+
+Note that examples contain experimental features which might
+"graduate" into mainline Mininet in the future, but they should
+not be considered a stable part of the Mininet API!
+
+The latest Mininet source code is available on
+[github]([http://github.com/mininet/mininet) and also via
+[code.mininet.org](http://code.mininet.org).
+
+The easiest way to get started with Mininet is to download a
+VM image. See http://mininet.org/download for details.
+
+Additional information on the Mininet 2.2.0 release may be found in the
+release notes on [docs.mininet.org](http://docs.mininet.org).
