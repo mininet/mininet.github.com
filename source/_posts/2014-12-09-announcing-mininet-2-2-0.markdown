@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Announcing Mininet 2.2.0!"
+title: "Announcing Mininet 2.2.0 !"
 date: 2014-12-09 14:35
 comments: true
 categories: mininet releases
