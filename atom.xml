@@ -4,7 +4,7 @@
   <title><![CDATA[Mininet]]></title>
   <link href="http://mininet.github.com/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2014-12-09T16:46:10-08:00</updated>
+  <updated>2014-12-10T14:31:23-08:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -14,12 +14,12 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Mininet 2.0.0 is coming]]></title>
-    <link href="http://mininet.github.com/blog/2014/12/09/announcing-mininet-2-0-0/"/>
+    <title type="html"><![CDATA[Announcing Mininet 2.2.0!]]></title>
+    <link href="http://mininet.github.com/blog/2014/12/09/announcing-mininet-2-2-0/"/>
     <updated>2014-12-09T14:35:00-08:00</updated>
-    <id>http://mininet.github.com/blog/2014/12/09/announcing-mininet-2-0-0</id>
-    <content type="html"><![CDATA[<p>Mininet 2.2.0 is coming soon! Mininet 2.2.0 provides a number of
-bug fixes as well as several new features, including:</p>
+    <id>http://mininet.github.com/blog/2014/12/09/announcing-mininet-2-2-0</id>
+    <content type="html"><![CDATA[<p>We are pleased to announce Mininet 2.2.0! This release  provides
+a number of bug fixes as well as several new features, including:</p>
 
 <ul>
   <li>
@@ -37,7 +37,7 @@ Loxigen
   </li>
   <li>
     <p>A new <code>nodelib.py</code> node library, and new <code>Node</code> types including
-<code>LinuxBridge</code>, <code>OVSBridge</code>, <code>LinuxRouter</code> and <code>NAT</code><br />
+<code>LinuxBridge</code>, <code>OVSBridge</code>, <code>LinuxRouter</code> (see <code>examples/</code>) and <code>NAT</code><br />
 <img src="http://mininet.github.com/images/nodelib.png" /></p>
   </li>
   <li>
@@ -67,17 +67,30 @@ classes:</p>
 “graduate” into mainline Mininet in the future, but they should
 not be considered a stable part of the Mininet API!</p>
 
-<p>The latest Mininet source code is available on
-<a href="[http://github.com/mininet/mininet">github</a> and also via
-<a href="http://code.mininet.org">code.mininet.org</a>.</p>
+<h3 id="how-to-get-it">How to get it</h3>
 
 <p>The easiest way to get started with Mininet is to download a
 VM image. See <a href="http://mininet.org/download">http://mininet.org/download</a>
 for details.</p>
 
+<p>The latest Mininet source code is available on
+<a href="[http://github.com/mininet/mininet">github</a> and also via
+<a href="http://code.mininet.org">code.mininet.org</a>.</p>
+
 <p>Additional information on the Mininet 2.2.0 release may be found in the
 <a href="http://wiki.mininet.org/Mininet-2.2.0-Release-Notes">release notes</a>
 and on <a href="http://docs.mininet.org">docs.mininet.org</a>.</p>
+
+<p>Mininet is an open source project, and we are grateful to our many
+code contributors, bug reporters, and active users who continue to
+help make Mininet a useful system with a friendly and helpful
+community!</p>
+
+<p>Have fun with Mininet!</p>
+
+<p><strong>Mininet 2.2.0 Core Team:</strong> <br />
+Bob Lantz, Brian O’Connor, Cody Burkard <br />
+Open Networking Laboratory</p>
 ]]></content>
   </entry>
   
