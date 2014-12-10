@@ -16,7 +16,7 @@ a number of bug fixes as well as several new features, including:
     - `install.sh -y` installs the Ryu 1.3-compatible controller
 
 * A new `nodelib.py` node library, and new `Node` types including
-  `LinuxBridge`, `OVSBridge`, `LinuxRouter` and `NAT`<br>
+  `LinuxBridge`, `OVSBridge`, `LinuxRouter` (see `examples/`) and `NAT`<br>
   {% img /images/nodelib.png %}
 
 * An improved MiniEdit GUI (`examples/miniedit.py`) - thanks to
