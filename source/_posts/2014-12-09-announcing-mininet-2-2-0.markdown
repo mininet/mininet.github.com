@@ -5,7 +5,7 @@ date: 2014-12-09 14:35
 comments: true
 categories: mininet releases
 ---
-We are pleased to announce Mininet 2.2.0! This release  provides
+We are pleased to announce Mininet 2.2.0 !  This release  provides
 a number of bug fixes as well as several new features, including:
 
 * Improved OpenFlow 1.3 support
