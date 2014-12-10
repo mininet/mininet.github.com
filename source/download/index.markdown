@@ -7,7 +7,7 @@ footer: true
 ---
 The easiest way to get started is to **download a pre-packaged Mininet/Ubuntu VM**. This VM includes Mininet itself, all OpenFlow binaries and tools pre-installed, and tweaks to the kernel configuration to support larger Mininet networks.
 
-*(These instructions are for Mininet 2.1.0 - for earlier versions, go to the bottom of this page.)*
+*(These instructions are for Mininet 2.2.0 - for earlier versions, go to the bottom of this page.)*
 
 Option 1: Mininet VM Installation (easy, recommended)
 -----------------------------------------------
@@ -47,7 +47,7 @@ Note that the above `git` command will check out the latest and greatest Mininet
 of Mininet, use:
 
     git clone git://github.com/mininet/mininet
-    git checkout -b 2.1.0p1 2.1.0p1
+    git checkout -b 2.2.0 2.2.0
 
 Once you have the source tree, the command to install Mininet is:
 
