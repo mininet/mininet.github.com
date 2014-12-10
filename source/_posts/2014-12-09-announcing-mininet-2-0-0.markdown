@@ -51,4 +51,4 @@ for details.
 
 Additional information on the Mininet 2.2.0 release may be found in the
 [release notes](http://wiki.mininet.org/Mininet-2.2.0-Release-Notes)
-and [docs.mininet.org](http://docs.mininet.org).
+and on [docs.mininet.org](http://docs.mininet.org).
