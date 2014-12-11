@@ -21,14 +21,13 @@ a number of bug fixes as well as several new features, including:
 
 * Easier LAN/internet connectivity from Mininet hosts
 
-  - `mn --nat` will also semi-automatically connect a Mininet network
+  - `mn --nat` will semi-automatically connect a Mininet network
     to your LAN using NAT, solving the "why can't I ping
     [Google](http://google.com)?" problem.
 
     **Warning**: By default this will reroute local
-    traffic originating at your Mininet server or VM and destined to
-    the IP address
-    range of your Mininet network (`10.0.0.0/8` by default) to the
+    traffic originating at your Mininet server or VM and destined for
+    Mininet's IP subnet (`10.0.0.0/8` by default) to the
     Mininet network, which can break connectivity if you are using
     addresses in the same range in your LAN. You can change this range
     using the `--ipbase` option.
