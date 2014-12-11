@@ -4,7 +4,7 @@
   <title><![CDATA[Mininet]]></title>
   <link href="http://mininet.github.com/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2014-12-10T14:43:45-08:00</updated>
+  <updated>2014-12-10T19:05:04-08:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -39,6 +39,22 @@ Loxigen
     <p>A new <code>nodelib.py</code> node library, and new <code>Node</code> types including
 <code>LinuxBridge</code>, <code>OVSBridge</code>, <code>LinuxRouter</code> (see <code>examples/</code>) and <code>NAT</code><br />
 <img src="http://mininet.github.com/images/nodelib.png" /></p>
+
+    <ul>
+      <li>
+        <p><code>mn --nat</code> will also semi-automatically connect a Mininet network
+to your LAN using NAT, solving the “why can’t I ping
+<a href="http://google.com">Google</a>?” problem.</p>
+
+        <p><strong>Warning</strong>: By default this will reroute local
+traffic originating at your Mininet server or VM and destined to
+the IP address
+range of your Mininet network (<code>10.0.0.0/8</code> by default) to the
+Mininet network, which can break connectivity if you are using
+addresses in the same range in your LAN. You can change this range
+using the <code>--ipbase</code> option.</p>
+      </li>
+    </ul>
   </li>
   <li>
     <p>An improved MiniEdit GUI (<code>examples/miniedit.py</code>) - thanks to
