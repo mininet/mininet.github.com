@@ -19,6 +19,18 @@ a number of bug fixes as well as several new features, including:
   `LinuxBridge`, `OVSBridge`, `LinuxRouter` (see `examples/`) and `NAT`<br>
   {% img /images/nodelib.png %}
 
+  - `mn --nat` will also semi-automatically connect a Mininet network
+    to your LAN using NAT, solving the "why can't I ping
+    [Google](http://google.com)?" problem.
+
+    **Warning**: By default this will reroute local
+    traffic originating at your Mininet server or VM and destined to
+    the IP address
+    range of your Mininet network (`10.0.0.0/8` by default) to the
+    Mininet network, which can break connectivity if you are using
+    addresses in the same range in your LAN. You can change this range
+    using the `--ipbase` option.
+
 * An improved MiniEdit GUI (`examples/miniedit.py`) - thanks to
   Gregory Gee <br>
   {% img /images/miniedit.png %}
