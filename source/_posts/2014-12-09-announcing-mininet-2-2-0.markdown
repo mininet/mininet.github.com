@@ -19,6 +19,8 @@ a number of bug fixes as well as several new features, including:
   `LinuxBridge`, `OVSBridge`, `LinuxRouter` (see `examples/`) and `NAT`<br>
   {% img /images/nodelib.png %}
 
+* Easier LAN/internet connectivity from Mininet hosts
+
   - `mn --nat` will also semi-automatically connect a Mininet network
     to your LAN using NAT, solving the "why can't I ping
     [Google](http://google.com)?" problem.
