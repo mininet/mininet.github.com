@@ -7,7 +7,9 @@ footer: true
 ---
 The easiest way to get started is to **download a pre-packaged Mininet/Ubuntu VM**. This VM includes Mininet itself, all OpenFlow binaries and tools pre-installed, and tweaks to the kernel configuration to support larger Mininet networks.
 
+<!--
 *(These instructions are for Mininet 2.2.0 - for earlier versions, go to the bottom of this page.)*
+-->
 
 Option 1: Mininet VM Installation (easy, recommended)
 -----------------------------------------------
@@ -43,11 +45,13 @@ To install natively from source, first you need to get the source code:
     git clone git://github.com/mininet/mininet
 
 Note that the above `git` command will check out the latest and greatest Mininet
-(which we recommend!) If you want to run the last tagged/released version
-of Mininet, use:
+(which we recommend!) If you want to run the last tagged/released version of
+Mininet - or any other version - you may check that version out explicitly:
 
-    git clone git://github.com/mininet/mininet
-    git checkout -b 2.2.0 2.2.0
+    cd mininet
+    git tag  # list available versions
+    git checkout -b 2.2.0 2.2.0  # or whatever version you wish to install
+    cd ..
 
 Once you have the source tree, the command to install Mininet is:
 
@@ -66,7 +70,7 @@ So, you will probably wish to use one (and only one) of the following commands:
     To install Mininet + user switch + OVS (using your home dir): install.sh -nfv
     To install Mininet + user switch + OVS (using another dir:) install.sh -s mydir -nfv
 
-You can find out about other useful options (e.g. installing the wireshark dissector, if it's not already included in your version of wireshark) using
+You can find out about other useful options (e.g. installing the OpenFlow wireshark dissector, if it's not already included in your version of wireshark) using
 
     install.sh -h
 
@@ -100,9 +104,11 @@ Next, install the base Mininet package by entering **only one** of the following
     Mininet 2.1.0 on Ubuntu 14.04: sudo apt-get install mininet
     Mininet 2.0.0 on Ubuntu 12.04: sudo apt-get install mininet/precise-backports
 
+<!--
 (Note: Ubuntu 12.10 also has a Mininet 2.0.0d3 package, but you will want to install the one from quantal-backports, which is Mininet 2.0.0.)
+-->
 
-After this completes, you should deactivate `openvswitch-controller` if it is running:
+After this completes, you should deactivate `openvswitch-controller` if it is installed and/or running:
 
     sudo service openvswitch-controller stop
     sudo update-rc.d openvswitch-controller disable
