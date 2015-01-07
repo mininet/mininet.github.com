@@ -96,9 +96,8 @@ Then, to confirm which OS version you are running, run the command
 
 Next, install the base Mininet package by entering **only one** of the following commands, corresponding to the distribution you are running:
 
-    Mininet 2.1.0 on Ubuntu 13.10: sudo apt-get install mininet
-    Mininet 2.0.0 on Ubuntu 13.04: sudo apt-get install mininet
-    Mininet 2.0.0 on Ubuntu 12.10: sudo apt-get install mininet/quantal-backports
+    Mininet 2.1.0 on Ubuntu 14.10: sudo apt-get install mininet
+    Mininet 2.1.0 on Ubuntu 14.04: sudo apt-get install mininet
     Mininet 2.0.0 on Ubuntu 12.04: sudo apt-get install mininet/precise-backports
 
 (Note: Ubuntu 12.10 also has a Mininet 2.0.0d3 package, but you will want to install the one from quantal-backports, which is Mininet 2.0.0.)
