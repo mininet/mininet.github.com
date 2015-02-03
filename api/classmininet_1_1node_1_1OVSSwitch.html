@@ -73,7 +73,6 @@ Inheritance diagram for mininet.node.OVSSwitch:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab5db2ef0d48302217833ce1538270310"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1OVSSwitch.html#ab5db2ef0d48302217833ce1538270310">__init__</a></td></tr>
-<tr class="memdesc:ab5db2ef0d48302217833ce1538270310"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init.  <a href="#ab5db2ef0d48302217833ce1538270310">More...</a><br/></td></tr>
 <tr class="separator:ab5db2ef0d48302217833ce1538270310"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a429a17cd26b37e4f7a58a1c9162120dc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a429a17cd26b37e4f7a58a1c9162120dc"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1OVSSwitch.html#a429a17cd26b37e4f7a58a1c9162120dc">setup</a></td></tr>
@@ -285,6 +284,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a91f455741115c89f17d428cd8c22f284"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1OVSSwitch.html#a91f455741115c89f17d428cd8c22f284">TCReapply</a></td></tr>
 <tr class="memdesc:a91f455741115c89f17d428cd8c22f284"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unfortunately OVS and Mininet are fighting over tc queuing disciplines.  <a href="#a91f455741115c89f17d428cd8c22f284">More...</a><br/></td></tr>
 <tr class="separator:a91f455741115c89f17d428cd8c22f284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a081d1ca60ccfb40728e814739fee062a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a081d1ca60ccfb40728e814739fee062a"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1OVSSwitch.html#a081d1ca60ccfb40728e814739fee062a">patchOpts</a></td></tr>
+<tr class="memdesc:a081d1ca60ccfb40728e814739fee062a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return OVS patch port options (if any) for intf. <br/></td></tr>
+<tr class="separator:a081d1ca60ccfb40728e814739fee062a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -300,6 +303,12 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a165ea494ac02c26dc67be5e357f41da3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a165ea494ac02c26dc67be5e357f41da3"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>protocols</b></td></tr>
 <tr class="separator:a165ea494ac02c26dc67be5e357f41da3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a675011761bb9860ef2681098139f930c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a675011761bb9860ef2681098139f930c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>reconnectms</b></td></tr>
+<tr class="separator:a675011761bb9860ef2681098139f930c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea9d7656773272b66ae551645be6e1b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aea9d7656773272b66ae551645be6e1b1"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>stp</b></td></tr>
+<tr class="separator:aea9d7656773272b66ae551645be6e1b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classmininet_1_1node_1_1Switch"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classmininet_1_1node_1_1Switch')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classmininet_1_1node_1_1Switch.html">mininet.node.Switch</a></td></tr>
 <tr class="memitem:a7d9ecaa2ae7a2a1894bd3d936d8fbbdc inherit pub_attribs_classmininet_1_1node_1_1Switch"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d9ecaa2ae7a2a1894bd3d936d8fbbdc"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>dpid</b></td></tr>
@@ -437,6 +446,18 @@ dictionary&#160;</td><td class="memItemRight" valign="bottom"><b>outToNode</b> =
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>reconnectms</em> = <code>1000</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>stp</em> = <code>False</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname"><em>params</em>&#160;</td>
         </tr>
         <tr>
@@ -446,14 +467,15 @@ dictionary&#160;</td><td class="memItemRight" valign="bottom"><b>outToNode</b> =
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Init. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>name for switch </td></tr>
     <tr><td class="paramname">failMode</td><td>controller loss behavior (secure|open) </td></tr>
     <tr><td class="paramname">datapath</td><td>userspace or kernel mode (kernel|user) </td></tr>
     <tr><td class="paramname">inband</td><td>use in-band control (False) </td></tr>
+    <tr><td class="paramname">protocols</td><td>use specific OpenFlow version(s) (e.g. OpenFlow13) Unspecified (or old OVS version) uses OVS default </td></tr>
+    <tr><td class="paramname">reconnectms</td><td>max reconnect timeout in ms (0/None for default) </td></tr>
+    <tr><td class="paramname">stp</td><td>enable STP (False, requires failMode=standalone) </td></tr>
   </table>
   </dd>
 </dl>
@@ -562,7 +584,7 @@ dictionary&#160;</td><td class="memItemRight" valign="bottom"><b>outToNode</b> =
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 9 2015 14:56:40 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 3 2015 01:25:56 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

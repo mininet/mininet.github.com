@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Mininet Python API Reference Manual: mininet.link.TCIntf Class Reference</title>
+<title>Mininet Python API Reference Manual: mininet.link.OVSIntf Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -42,45 +42,35 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>mininet</b></li><li class="navelem"><b>link</b></li><li class="navelem"><a class="el" href="classmininet_1_1link_1_1TCIntf.html">TCIntf</a></li>  </ul>
+<li class="navelem"><b>mininet</b></li><li class="navelem"><b>link</b></li><li class="navelem"><a class="el" href="classmininet_1_1link_1_1OVSIntf.html">OVSIntf</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
-<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
-<a href="classmininet_1_1link_1_1TCIntf-members.html">List of all members</a>  </div>
+<a href="classmininet_1_1link_1_1OVSIntf-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">mininet.link.TCIntf Class Reference</div>  </div>
+<div class="title">mininet.link.OVSIntf Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Interface customized by tc (traffic control) utility Allows specification of bandwidth limits (various methods) as well as delay, loss and max queue length.  
- <a href="classmininet_1_1link_1_1TCIntf.html#details">More...</a></p>
+<p>Patch interface on an OVSSwitch.  
+ <a href="classmininet_1_1link_1_1OVSIntf.html#details">More...</a></p>
 <div class="dynheader">
-Inheritance diagram for mininet.link.TCIntf:</div>
+Inheritance diagram for mininet.link.OVSIntf:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classmininet_1_1link_1_1TCIntf.png" usemap="#mininet.link.TCIntf_map" alt=""/>
-  <map id="mininet.link.TCIntf_map" name="mininet.link.TCIntf_map">
-<area href="classmininet_1_1link_1_1Intf.html" title="Basic interface object that can configure itself. " alt="mininet.link.Intf" shape="rect" coords="0,56,111,80"/>
+  <img src="classmininet_1_1link_1_1OVSIntf.png" usemap="#mininet.link.OVSIntf_map" alt=""/>
+  <map id="mininet.link.OVSIntf_map" name="mininet.link.OVSIntf_map">
+<area href="classmininet_1_1link_1_1Intf.html" title="Basic interface object that can configure itself. " alt="mininet.link.Intf" shape="rect" coords="0,56,122,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7e422dc20c9a702d693e9899f709e326"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e422dc20c9a702d693e9899f709e326"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1link_1_1TCIntf.html#a7e422dc20c9a702d693e9899f709e326">bwCmds</a></td></tr>
-<tr class="memdesc:a7e422dc20c9a702d693e9899f709e326"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return tc commands to set bandwidth. <br/></td></tr>
-<tr class="separator:a7e422dc20c9a702d693e9899f709e326"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4371d8bff5144a4f66765084957afe6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4371d8bff5144a4f66765084957afe6"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1link_1_1TCIntf.html#ac4371d8bff5144a4f66765084957afe6">tc</a></td></tr>
-<tr class="memdesc:ac4371d8bff5144a4f66765084957afe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute tc command for our interface. <br/></td></tr>
-<tr class="separator:ac4371d8bff5144a4f66765084957afe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e9cf4cb9e39771a537fa4ec717bd0a4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1link_1_1TCIntf.html#a4e9cf4cb9e39771a537fa4ec717bd0a4">config</a></td></tr>
-<tr class="memdesc:a4e9cf4cb9e39771a537fa4ec717bd0a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure the port and set its properties.  <a href="#a4e9cf4cb9e39771a537fa4ec717bd0a4">More...</a><br/></td></tr>
-<tr class="separator:a4e9cf4cb9e39771a537fa4ec717bd0a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa133f507fede31a167fac6ac1e059563"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa133f507fede31a167fac6ac1e059563"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>ifconfig</b></td></tr>
+<tr class="separator:aa133f507fede31a167fac6ac1e059563"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmininet_1_1link_1_1Intf"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmininet_1_1link_1_1Intf')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmininet_1_1link_1_1Intf.html">mininet.link.Intf</a></td></tr>
 <tr class="memitem:ac3708a345a8200074187a926ab875926 inherit pub_methods_classmininet_1_1link_1_1Intf"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1link_1_1Intf.html#ac3708a345a8200074187a926ab875926">__init__</a></td></tr>
 <tr class="separator:ac3708a345a8200074187a926ab875926 inherit pub_methods_classmininet_1_1link_1_1Intf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,19 +137,6 @@ def&#160;</td><td class="memItemRight" valign="bottom"><b>__repr__</b></td></tr>
 def&#160;</td><td class="memItemRight" valign="bottom"><b>__str__</b></td></tr>
 <tr class="separator:a7aecfa23d31f7e096c4b583e0962ec51 inherit pub_methods_classmininet_1_1link_1_1Intf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:aa75efea716cfdf857742e5a4bc5f94ae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa75efea716cfdf857742e5a4bc5f94ae"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1link_1_1TCIntf.html#aa75efea716cfdf857742e5a4bc5f94ae">delayCmds</a></td></tr>
-<tr class="memdesc:aa75efea716cfdf857742e5a4bc5f94ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Internal method: return tc commands for delay and loss. <br/></td></tr>
-<tr class="separator:aa75efea716cfdf857742e5a4bc5f94ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
-Static Public Attributes</h2></td></tr>
-<tr class="memitem:aefe3cc2d66662f5aeef18a55f1796146"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aefe3cc2d66662f5aeef18a55f1796146"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>bwParamMax</b> = 1000</td></tr>
-<tr class="separator:aefe3cc2d66662f5aeef18a55f1796146"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_attribs_classmininet_1_1link_1_1Intf"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classmininet_1_1link_1_1Intf')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classmininet_1_1link_1_1Intf.html">mininet.link.Intf</a></td></tr>
@@ -186,109 +163,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:ad3f6f4555736b616bb7ddeb66173d3ba inherit pub_attribs_classmininet_1_1link_1_1Intf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Interface customized by tc (traffic control) utility Allows specification of bandwidth limits (various methods) as well as delay, loss and max queue length. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a4e9cf4cb9e39771a537fa4ec717bd0a4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def mininet.link.TCIntf.config </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>bw</em> = <code>None</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>delay</em> = <code>None</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>jitter</em> = <code>None</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>loss</em> = <code>None</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>disable_gro</em> = <code>True</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>speedup</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>use_hfsc</em> = <code>False</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>use_tbf</em> = <code>False</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>latency_ms</em> = <code>None</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>enable_ecn</em> = <code>False</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>enable_red</em> = <code>False</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>max_queue_size</em> = <code>None</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>params</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Configure the port and set its properties. </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<div class="textblock"><p>Patch interface on an OVSSwitch. </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>mininet/link.py</li>
 </ul>
 </div><!-- contents -->
