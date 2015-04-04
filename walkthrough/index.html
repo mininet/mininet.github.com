@@ -241,9 +241,9 @@ the <code>xterm</code> terminal emulator, used later in this walkthrough.</p>
 
 <p>If a string appears later in the command with a node name, that node name is replaced by its IP address; this happened for h2.</p>
 
-<p>You should see OpenFlow control traffic. The first host ARPs for the MAC address of the second, which causes a <code>packet_in</code> message to go to the controller. The controller then sends a <code>packet_out</code> message to flood the broadcast packet to other ports on the switch (in this example, the only other data port). The second host sees the ARP request and sends a broadcast reply. This reply goes to the controller, which sends it to the first host and pushes down a flow entry.</p>
+<p>You should see OpenFlow control traffic. The first host ARPs for the MAC address of the second, which causes a <code>packet_in</code> message to go to the controller. The controller then sends a <code>packet_out</code> message to flood the broadcast packet to other ports on the switch (in this example, the only other data port). The second host sees the ARP request and sends a reply. This reply goes to the controller, which sends it to the first host and pushes down a flow entry.</p>
 
-<p>Now the first host knows the IP address of the second, and can send its ping via an ICMP Echo Request. This request, along with its corresponding reply from the second host, both go the controller and result in a flow entry pushed down (along with the actual packets getting sent out).</p>
+<p>Now the first host knows the MAC address of the second, and can send its ping via an ICMP Echo Request. This request, along with its corresponding reply from the second host, both go the controller and result in a flow entry pushed down (along with the actual packets getting sent out).</p>
 
 <p>Repeat the last <code>ping</code>:</p>
 
