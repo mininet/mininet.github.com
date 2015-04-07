@@ -69,9 +69,17 @@ Inheritance diagram for mininet.cli.CLI:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a8a7159a07a77a05fd9fa083d212f3012"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a7159a07a77a05fd9fa083d212f3012"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b></td></tr>
+<tr class="memitem:a8a7159a07a77a05fd9fa083d212f3012"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1cli_1_1CLI.html#a8a7159a07a77a05fd9fa083d212f3012">__init__</a></td></tr>
+<tr class="memdesc:a8a7159a07a77a05fd9fa083d212f3012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start and run interactive or batch mode <a class="el" href="classmininet_1_1cli_1_1CLI.html" title="Simple command-line interface to talk to nodes. ">CLI</a>.  <a href="#a8a7159a07a77a05fd9fa083d212f3012">More...</a><br/></td></tr>
 <tr class="separator:a8a7159a07a77a05fd9fa083d212f3012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb783f2a3affc84260cce2d5090260e0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb783f2a3affc84260cce2d5090260e0"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1cli_1_1CLI.html#acb783f2a3affc84260cce2d5090260e0">initReadline</a></td></tr>
+<tr class="memdesc:acb783f2a3affc84260cce2d5090260e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up history if readline is available. <br/></td></tr>
+<tr class="separator:acb783f2a3affc84260cce2d5090260e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d7edb1ba3b4635527f07823d2b1bcca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3d7edb1ba3b4635527f07823d2b1bcca"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1cli_1_1CLI.html#a3d7edb1ba3b4635527f07823d2b1bcca">run</a></td></tr>
+<tr class="memdesc:a3d7edb1ba3b4635527f07823d2b1bcca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Run our cmdloop(), catching KeyboardInterrupt. <br/></td></tr>
+<tr class="separator:a3d7edb1ba3b4635527f07823d2b1bcca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c69fb5b0a23d1fdf59ae2a768561be3"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1cli_1_1CLI.html#a3c69fb5b0a23d1fdf59ae2a768561be3">emptyline</a></td></tr>
 <tr class="memdesc:a3c69fb5b0a23d1fdf59ae2a768561be3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Don't repeat last command when you hit return.  <a href="#a3c69fb5b0a23d1fdf59ae2a768561be3">More...</a><br/></td></tr>
 <tr class="separator:a3c69fb5b0a23d1fdf59ae2a768561be3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,12 +215,64 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a343818ddcc27d8942a1316156c1f246c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a343818ddcc27d8942a1316156c1f246c"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><b>prompt</b> = 'mininet&gt; '</td></tr>
 <tr class="separator:a343818ddcc27d8942a1316156c1f246c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7fee306d59e2df221b8e7f7a9c189737"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7fee306d59e2df221b8e7f7a9c189737"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>readlineInited</b> = False</td></tr>
+<tr class="separator:a7fee306d59e2df221b8e7f7a9c189737"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb7cf364f155d2f9a583314441dfd577"><td class="memItemLeft" align="right" valign="top">tuple&#160;</td><td class="memItemRight" valign="bottom"><b>helpStr</b></td></tr>
 <tr class="separator:aeb7cf364f155d2f9a583314441dfd577"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Simple command-line interface to talk to nodes. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a8a7159a07a77a05fd9fa083d212f3012"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def mininet.cli.CLI.__init__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>mininet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>stdin</em> = <code>sys.stdin</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>script</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Start and run interactive or batch mode <a class="el" href="classmininet_1_1cli_1_1CLI.html" title="Simple command-line interface to talk to nodes. ">CLI</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mininet</td><td>Mininet network object </td></tr>
+    <tr><td class="paramname">stdin</td><td>standard input for <a class="el" href="classmininet_1_1cli_1_1CLI.html" title="Simple command-line interface to talk to nodes. ">CLI</a> </td></tr>
+    <tr><td class="paramname">script</td><td>script to run in batch mode </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="abb60fa854de8ad7d98f0cde4c35605d8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1017,7 +1077,7 @@ string&#160;</td><td class="memItemRight" valign="bottom"><b>prompt</b> = 'minin
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 3 2015 01:25:53 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 6 2015 18:10:27 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
