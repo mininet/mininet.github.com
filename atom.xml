@@ -4,7 +4,7 @@
   <title><![CDATA[Mininet]]></title>
   <link href="http://mininet.github.com/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2015-04-06T18:15:46-07:00</updated>
+  <updated>2015-04-15T15:08:19-07:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mininet on Raspberry Pi]]></title>
+    <link href="http://mininet.github.com/blog/2015/04/15/mininet-on-raspberry-pi/"/>
+    <updated>2015-04-15T14:52:00-07:00</updated>
+    <id>http://mininet.github.com/blog/2015/04/15/mininet-on-raspberry-pi</id>
+    <content type="html"><![CDATA[<p>Mininet is now easy to install on the Raspberry Pi running Debian/Raspbian 7 Wheezy!</p>
+
+<p>Mininet’s <code>install.sh</code> has been updated so it should simply work:</p>
+
+<pre><code>install.sh -fnv  ## basic install
+install.sh -a    ## the works
+</code></pre>
+
+<p>Here is an example of <strong>Mininet running on a Raspberry Pi 2 model B</strong>:</p>
+
+<p><img src="http://mininet.github.com/images/mininet-raspberry-pi-2.jpg" /></p>
+
+<p>A Raspberry Pi can be used any time you need a cheap <strong>network-in-a-box</strong>, for example
+for courses, laboratories, demonstrations, or simple experiments.</p>
+
+<p>We look forward to hearing (on <code>mininet-discuss</code> and elsewhere) about interesting,
+fun and clever uses of Mininet running on the Pi !!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Announcing Mininet 2.2.0 !]]></title>
