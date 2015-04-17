@@ -11,7 +11,7 @@ Mininet 2.2.1 is primarily a performance improvement and bug fix release.
 - **Batch startup** has been implemented for Open vSwitch, improving
   startup performance.
 
-- **OVS patch links** have been implemented via OVSLink and --link ovs
+- **OVS patch links** have been implemented via OVSLink and `--link ovs`
 
   Warning! These links have *serious limitations* compared to
   virtual Ethernet pairs: they are not attached to real Linux
