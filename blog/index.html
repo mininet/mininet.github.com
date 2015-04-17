@@ -9,7 +9,8 @@
   <meta name="author" content="Mininet Team">
 
   
-  <meta name="description" content="Mininet is now easy to install on the Raspberry Pi running Debian/Raspbian 7 Wheezy! Mininet’s install.sh has been updated so it should simply work: &hellip;">
+  <meta name="description" content="Mininet 2.2.1 is primarily a performance improvement and bug fix release. Batch startup has been implemented for Open vSwitch, improving
+startup &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -45,6 +46,77 @@ BL: removed since they make things SLOW
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2015/04/16/announcing-mininet-2-2-1/">Announcing Mininet 2.2.1rc1 !</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2015-04-16T18:03:00-07:00" pubdate data-updated="true">Apr 16<span>th</span>, 2015</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Mininet 2.2.1 is primarily a performance improvement and bug fix release.</p>
+
+<ul>
+  <li>
+    <p><strong>Batch startup</strong> has been implemented for Open vSwitch, improving
+startup performance.</p>
+  </li>
+  <li>
+    <p><strong>OVS patch links</strong> have been implemented via OVSLink and –link ovs</p>
+
+    <p>Warning! These links have <em>serious limitations</em> compared to
+virtual Ethernet pairs: they are not attached to real Linux
+interfaces so you cannot use tcpdump or wireshark with them;
+they also cannot be used in long chains - we don’t recommend more
+than 64 OVSLinks, for example <code>--linear,64</code>. However, they can offer
+significantly better performance than veth pairs, for certain
+configurations.</p>
+  </li>
+  <li>
+    <p>You can now easily <strong>install Mininet on a <a href="http://raspberrypi.org">Raspberry Pi</a></strong>
+(simply by using <code>install.sh -fnv</code> or <code>install.sh -a</code>)  ;-)</p>
+  </li>
+  <li>
+    <p>Additional information for this release and previous releases
+may be found in the <strong><a href="https://github.com/mininet/mininet/wiki/Documentation#mininet-release-notes">Release Notes</a></strong>
+on <a href="http://docs.mininet.org">docs.mininet.org</a>.</p>
+  </li>
+</ul>
+
+<p>The easiest way to get started with Mininet is to download a
+<strong>VM image</strong>. See <a href="http://mininet.org/download">http://mininet.org/download</a>
+for details.</p>
+
+<p>The latest Mininet <strong>source code</strong> is available on
+<a href="[http://github.com/mininet/mininet">github</a> and also via
+<a href="http://code.mininet.org">code.mininet.org</a>.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -779,6 +851,10 @@ developers, researchers and contributors!</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2015/04/16/announcing-mininet-2-2-1/">Announcing Mininet 2.2.1rc1 !</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2015/04/15/mininet-on-raspberry-pi/">Mininet on Raspberry Pi</a>
       </li>
     
@@ -792,10 +868,6 @@ developers, researchers and contributors!</p>
     
       <li class="post">
         <a href="/blog/2013/09/20/announcing-mininet-2-1-0/">Announcing Mininet 2.1.0 !</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2013/07/11/sdn-course/">Nick Feamster&#8217;s SDN Course</a>
       </li>
     
   </ul>

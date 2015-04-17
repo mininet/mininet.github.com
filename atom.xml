@@ -4,7 +4,7 @@
   <title><![CDATA[Mininet]]></title>
   <link href="http://mininet.github.com/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2015-04-15T15:20:32-07:00</updated>
+  <updated>2015-04-16T18:17:31-07:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -12,6 +12,50 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Announcing Mininet 2.2.1rc1 !]]></title>
+    <link href="http://mininet.github.com/blog/2015/04/16/announcing-mininet-2-2-1/"/>
+    <updated>2015-04-16T18:03:00-07:00</updated>
+    <id>http://mininet.github.com/blog/2015/04/16/announcing-mininet-2-2-1</id>
+    <content type="html"><![CDATA[<p>Mininet 2.2.1 is primarily a performance improvement and bug fix release.</p>
+
+<ul>
+  <li>
+    <p><strong>Batch startup</strong> has been implemented for Open vSwitch, improving
+startup performance.</p>
+  </li>
+  <li>
+    <p><strong>OVS patch links</strong> have been implemented via OVSLink and –link ovs</p>
+
+    <p>Warning! These links have <em>serious limitations</em> compared to
+virtual Ethernet pairs: they are not attached to real Linux
+interfaces so you cannot use tcpdump or wireshark with them;
+they also cannot be used in long chains - we don’t recommend more
+than 64 OVSLinks, for example <code>--linear,64</code>. However, they can offer
+significantly better performance than veth pairs, for certain
+configurations.</p>
+  </li>
+  <li>
+    <p>You can now easily <strong>install Mininet on a <a href="http://raspberrypi.org">Raspberry Pi</a></strong>
+(simply by using <code>install.sh -fnv</code> or <code>install.sh -a</code>)  ;-)</p>
+  </li>
+  <li>
+    <p>Additional information for this release and previous releases
+may be found in the <strong><a href="https://github.com/mininet/mininet/wiki/Documentation#mininet-release-notes">Release Notes</a></strong>
+on <a href="http://docs.mininet.org">docs.mininet.org</a>.</p>
+  </li>
+</ul>
+
+<p>The easiest way to get started with Mininet is to download a
+<strong>VM image</strong>. See <a href="http://mininet.org/download">http://mininet.org/download</a>
+for details.</p>
+
+<p>The latest Mininet <strong>source code</strong> is available on
+<a href="[http://github.com/mininet/mininet">github</a> and also via
+<a href="http://code.mininet.org">code.mininet.org</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mininet on Raspberry Pi]]></title>

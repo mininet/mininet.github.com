@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Mininet on Raspberry Pi - Mininet</title>
+  <title>Announcing Mininet 2.2.1rc1 ! - Mininet</title>
   <meta name="author" content="Mininet Team">
 
   
-  <meta name="description" content="Mininet is now easy to install on the Raspberry Pi running Debian/Raspbian 7 Wheezy! Mininet’s install.sh has been updated so it should simply work: &hellip;">
+  <meta name="description" content="Mininet 2.2.1 is primarily a performance improvement and bug fix release. Batch startup has been implemented for Open vSwitch, improving
+startup &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mininet.github.com/blog/2015/04/15/mininet-on-raspberry-pi/">
+  <link rel="canonical" href="http://mininet.github.com/blog/2015/04/16/announcing-mininet-2-2-1/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -48,7 +49,7 @@ BL: removed since they make things SLOW
   
   <header>
     
-      <h1 class="entry-title">Mininet on Raspberry Pi</h1>
+      <h1 class="entry-title">Announcing Mininet 2.2.1rc1 !</h1>
     
     
       <p class="meta">
@@ -64,30 +65,49 @@ BL: removed since they make things SLOW
   
 
 
-<time datetime="2015-04-15T14:52:00-07:00" pubdate data-updated="true">Apr 15<span>th</span>, 2015</time>
+<time datetime="2015-04-16T18:03:00-07:00" pubdate data-updated="true">Apr 16<span>th</span>, 2015</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Mininet is now easy to install on the Raspberry Pi running Debian/Raspbian 7 Wheezy!</p>
+<div class="entry-content"><p>Mininet 2.2.1 is primarily a performance improvement and bug fix release.</p>
 
-<p>Mininet’s <code>install.sh</code> has been updated so it should simply work:</p>
+<ul>
+  <li>
+    <p><strong>Batch startup</strong> has been implemented for Open vSwitch, improving
+startup performance.</p>
+  </li>
+  <li>
+    <p><strong>OVS patch links</strong> have been implemented via OVSLink and –link ovs</p>
 
-<pre><code>install.sh -fnv  ## basic install
-install.sh -a    ## the works
-</code></pre>
+    <p>Warning! These links have <em>serious limitations</em> compared to
+virtual Ethernet pairs: they are not attached to real Linux
+interfaces so you cannot use tcpdump or wireshark with them;
+they also cannot be used in long chains - we don’t recommend more
+than 64 OVSLinks, for example <code>--linear,64</code>. However, they can offer
+significantly better performance than veth pairs, for certain
+configurations.</p>
+  </li>
+  <li>
+    <p>You can now easily <strong>install Mininet on a <a href="http://raspberrypi.org">Raspberry Pi</a></strong>
+(simply by using <code>install.sh -fnv</code> or <code>install.sh -a</code>)  ;-)</p>
+  </li>
+  <li>
+    <p>Additional information for this release and previous releases
+may be found in the <strong><a href="https://github.com/mininet/mininet/wiki/Documentation#mininet-release-notes">Release Notes</a></strong>
+on <a href="http://docs.mininet.org">docs.mininet.org</a>.</p>
+  </li>
+</ul>
 
-<p>Here is an example of <strong>Mininet running on a Raspberry Pi 2 model B</strong>:</p>
+<p>The easiest way to get started with Mininet is to download a
+<strong>VM image</strong>. See <a href="http://mininet.org/download">http://mininet.org/download</a>
+for details.</p>
 
-<p><img src="/images/mininet-raspberry-pi-2.jpg" /></p>
-
-<p>A Raspberry Pi can be used any time you need a cheap <strong>network-in-a-box</strong>, for example
-for courses, laboratories, demonstrations, or simple experiments.</p>
-
-<p>We look forward to hearing (on <code>mininet-discuss</code> and elsewhere) about interesting,
-fun and clever uses of Mininet running on the Pi !!</p>
+<p>The latest Mininet <strong>source code</strong> is available on
+<a href="[http://github.com/mininet/mininet">github</a> and also via
+<a href="http://code.mininet.org">code.mininet.org</a>.</p>
 </div>
 
 
@@ -110,7 +130,7 @@ fun and clever uses of Mininet running on the Pi !!</p>
   
 
 
-<time datetime="2015-04-15T14:52:00-07:00" pubdate data-updated="true">Apr 15<span>th</span>, 2015</time>
+<time datetime="2015-04-16T18:03:00-07:00" pubdate data-updated="true">Apr 16<span>th</span>, 2015</time>
       
 
 
@@ -125,10 +145,8 @@ fun and clever uses of Mininet running on the Pi !!</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2014/12/09/announcing-mininet-2-2-0/" title="Previous Post: Announcing Mininet 2.2.0 !">&laquo; Announcing Mininet 2.2.0 !</a>
+        <a class="basic-alignment left" href="/blog/2015/04/15/mininet-on-raspberry-pi/" title="Previous Post: Mininet on Raspberry Pi">&laquo; Mininet on Raspberry Pi</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2015/04/16/announcing-mininet-2-2-1/" title="Next Post: Announcing Mininet 2.2.1rc1 !">Announcing Mininet 2.2.1rc1 ! &raquo;</a>
       
     </p>
   </footer>
