@@ -21,7 +21,6 @@ VM Setup
 
 Download the Mininet VM from <https://github.com/mininet/mininet/downloads>
 
-
 The VM comes out to 1GB compressed and ~2GB uncompressed. It is an OVF (Open Virtualization Format) virtual machine image
 which can be imported by most virtual machine monitors.
 
@@ -33,24 +32,33 @@ Add the VM and start it up, in the virtualization program of your choice:
 
 **VirtualBox**: 
 
-1. *As of the latest VirtualBox, the `.ovf` file may not import without errors*, so instead of importing it you should create a new VM of the appropriate type (e.g. Linux, Ubuntu 64-bit) and use the `.vmdk` file as the virtual hard disk for the new VM. If you are using an older version of VirtualBox, you may simply be able to import the `.ovf` directly (we intend to fix this in the future to make it easier.)
+0. Usually you can just double-click on the `.ovf` file and import it.
 
-2. Select "settings," and add an additional *host-only network adapter* so that you can
-log in to the VM image. Start the VM.
+1. If you get errors importing the `.ovf` file, you can simply create a new VM of the appropriate type (e.g. Linux, Ubuntu 64-bit) and use the `.vmdk` file as the virtual hard disk for the new VM.
+
+2. Select "settings," and add an additional *host-only network adapter* that you can
+use log in to the VM image. Start the VM.
+
+3. For more information on setting up networking in VirtualBox, 
+   you may wish to check out these
+   [VirtualBox specific instructions](https://github.com/mininet/openflow-tutorial/wiki/VirtualBox-specific-Instructions)
 
 **VMware**: Import the OVF file, then start the VM.
 
 VMware may ask you to install VMware tools on the VM - if it asks, decline. Everything graphical in the tutorial is done via X forwarding through SSH (in fact, the VM doesn't have a desktop manager installed), so the VMware tools are unnecessary unless you wish to install an X11/Gnome/etc. environment in your VM.
 
 **Qemu/KVM**:
+<!--
 
 Convert the VMDK to QCOW2 format first - directly using VMDK as a qemu input [appears to be broken](https://mailman.stanford.edu/pipermail/mininet-discuss/2012-December/001447.html):
 
     qemu-img convert -O qcow2 mininet-vm-disk1.vmdk mininet-vm-disk1.qcow2
 
-Then something like the following should work:
+-->
 
-    qemu-system-i386 -m 1024 mininet-vm-disk1.qcow2 -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
+Something like the following should work:
+
+    qemu-system-i386 -m 2048 mininet-vm-disk1.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
 
 This will set up `ssh` forwarding from the VM to host port 8022.
 
@@ -71,9 +79,12 @@ The `root` account is not enabled for login; you can use `sudo` to run a command
 
 First, find the VM's IP address, which for VMware is probably in the range 192.168.x.y. In the VM console:
 
-    /sbin/ifconfig eth0
+    ifconfig eth0
     
-Note: VirtualBox users who have set up a host-only network on `eth1` should use `ifconfig eth1` instead
+Note: VirtualBox users who have set up a host-only network on `eth1` should use
+
+    sudo dhclient eth1   # make sure that eth1 has an IP address
+    ifconfig eth1
 
 You may want to add the address to your host PC's /etc/hosts file to be able to SSH in by name, if it's Unix-like. For example, add a line like this for OS X:
 
