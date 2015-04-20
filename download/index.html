@@ -57,6 +57,13 @@ BL: removed since they make things SLOW
 *(These instructions are for Mininet 2.2.0 - for earlier versions, go to the bottom of this page.)*
 -->
 
+<ul id="markdown-toc">
+  <li><a href="#option-1-mininet-vm-installation-easy-recommended">Option 1: Mininet VM Installation (easy, recommended)</a></li>
+  <li><a href="#option-2-native-installation-from-source">Option 2: Native Installation from Source</a></li>
+  <li><a href="#option-3-installation-from-packages">Option 3: Installation from Packages</a></li>
+  <li><a href="#option-4-upgrading-an-existing-mininet-installation">Option 4. Upgrading an existing Mininet Installation</a></li>
+</ul>
+
 <h2 id="option-1-mininet-vm-installation-easy-recommended">Option 1: Mininet VM Installation (easy, recommended)</h2>
 
 <p>VM installation is the <strong>easiest and most foolproof</strong> way of installing Mininet, so it’s what we recommend to start with.</p>
@@ -102,7 +109,7 @@ Mininet - or any other version - you may check that version out explicitly:</p>
 
 <pre><code>cd mininet
 git tag  # list available versions
-git checkout -b 2.2.0 2.2.0  # or whatever version you wish to install
+git checkout -b 2.2.1 2.2.1  # or whatever version you wish to install
 cd ..
 </code></pre>
 
@@ -122,7 +129,7 @@ cd ..
 <p>So, you will probably wish to use one (and only one) of the following commands:</p>
 
 <pre><code>To install everything (using your home directory): install.sh -a
-To install everything (using another directory): install.sh -s mydir -a
+To install everything (using another directory for build): install.sh -s mydir -a
 To install Mininet + user switch + OVS (using your home dir): install.sh -nfv
 To install Mininet + user switch + OVS (using another dir:) install.sh -s mydir -nfv
 </code></pre>
@@ -193,21 +200,41 @@ mininet/util/install.sh -fw
 
 <p>will install the OpenFlow reference switch, reference controller and Wireshark dissector.</p>
 
-<h2 id="old-mininet-10-installation">(old) Mininet 1.0 Installation</h2>
+<h2 id="option-4-upgrading-an-existing-mininet-installation">Option 4. Upgrading an existing Mininet Installation</h2>
 
-<p>You may be able to find a <em>very</em> old VM image on the <a href="https://github.com/mininet/mininet/downloads/">Old Mininet downloads</a>,
-page, though we don’t really recommend using it.</p>
+<p>There are many ways to do this. If you haven’t made any changes to
+Mininet, you can usually</p>
 
-<p>You can also use the archived <code>install-precise</code> branch to install Mininet 1.0 on Ubuntu 12.04:</p>
-
-<pre><code>git clone git://github.com/mininet/mininet
-cd mininet
+<pre><code>cd mininet
 git fetch
-git checkout -b install-precise origin/devel/install-precise
-util/install.sh -a
+git checkout master
+sudo make install
 </code></pre>
 
-<p>Make sure you are installing from the <em>install-precise</em> branch.</p>
+<p>As an alternative to <code>sudo make install</code> you can also do <code>sudo make develop</code>,
+which will create symbolic links from <code>/usr/python/...</code> to your source tree.</p>
+
+<p>Note that this will only upgrade Mininet itself - any other components such
+as Open vSwitch, etc. can be upgraded separately as desired.</p>
+
+<!--
+
+(old) Mininet 1.0 Installation
+------------------------------
+
+You may be able to find a *very* old VM image on the [Old Mininet downloads](https://github.com/mininet/mininet/downloads/),
+page, though we don't really recommend using it.
+
+You can also use the archived `install-precise` branch to install Mininet 1.0 on Ubuntu 12.04:
+
+    git clone git://github.com/mininet/mininet
+    cd mininet
+    git fetch
+    git checkout -b install-precise origin/devel/install-precise
+    util/install.sh -a
+
+Make sure you are installing from the *install-precise* branch.
+-->
 
   
     <footer>
