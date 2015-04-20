@@ -11,6 +11,9 @@ The easiest way to get started is to **download a pre-packaged Mininet/Ubuntu VM
 *(These instructions are for Mininet 2.2.0 - for earlier versions, go to the bottom of this page.)*
 -->
 
+* kramdown will replace the following tag with a table of contents
+{:toc}
+
 Option 1: Mininet VM Installation (easy, recommended)
 -----------------------------------------------
 
@@ -50,7 +53,7 @@ Mininet - or any other version - you may check that version out explicitly:
 
     cd mininet
     git tag  # list available versions
-    git checkout -b 2.2.0 2.2.0  # or whatever version you wish to install
+    git checkout -b 2.2.1 2.2.1  # or whatever version you wish to install
     cd ..
 
 Once you have the source tree, the command to install Mininet is:
@@ -66,7 +69,7 @@ Typical `install.sh` options include:
 So, you will probably wish to use one (and only one) of the following commands:
 
     To install everything (using your home directory): install.sh -a
-    To install everything (using another directory): install.sh -s mydir -a
+    To install everything (using another directory for build): install.sh -s mydir -a
     To install Mininet + user switch + OVS (using your home dir): install.sh -nfv
     To install Mininet + user switch + OVS (using another dir:) install.sh -s mydir -nfv
 
@@ -130,6 +133,25 @@ If you wish to go through the Mininet walkthrough, you will want to install addi
 will install the OpenFlow reference switch, reference controller and Wireshark dissector.
 
 
+Option 4. Upgrading an existing Mininet Installation
+----------------------------------------------------
+
+There are many ways to do this. If you haven't made any changes to
+Mininet, you can usually
+
+    cd mininet
+    git fetch
+    git checkout master
+    sudo make install
+
+As an alternative to `sudo make install` you can also do `sudo make develop`,
+which will create symbolic links from `/usr/python/...` to your source tree.
+
+Note that this will only upgrade Mininet itself - any other components such
+as Open vSwitch, etc. can be upgraded separately as desired.
+
+<!--
+
 (old) Mininet 1.0 Installation
 ------------------------------
 
@@ -145,3 +167,4 @@ You can also use the archived `install-precise` branch to install Mininet 1.0 on
     util/install.sh -a
 
 Make sure you are installing from the *install-precise* branch.
+-->
