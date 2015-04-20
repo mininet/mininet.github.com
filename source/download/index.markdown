@@ -141,7 +141,7 @@ Mininet, you can usually
 
     cd mininet
     git fetch
-    git checkout master
+    git checkout master   # Or a specific version like 2.2.1
     sudo make install
 
 As an alternative to `sudo make install` you can also do `sudo make develop`,
