@@ -19,7 +19,7 @@ VM Setup
 
 ### Download the Mininet VM
 
-Download the Mininet VM from <https://github.com/mininet/mininet/downloads>
+Download the Mininet VM from <https://github.com/mininet/mininet/wiki/Mininet-VM-Images> .
 
 The VM comes out to 1GB compressed and ~2GB uncompressed. It is an OVF (Open Virtualization Format) virtual machine image
 which can be imported by most virtual machine monitors.
