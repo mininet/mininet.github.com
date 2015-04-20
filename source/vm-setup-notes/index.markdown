@@ -57,11 +57,15 @@ Convert the VMDK to QCOW2 format first - directly using VMDK as a qemu input [ap
 
 -->
 
-Something like the following should work:
+For Qemu, something like the following should work:
 
     qemu-system-i386 -m 2048 mininet-vm-disk1.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
 
-This will set up `ssh` forwarding from the VM to host port 8022.
+For KVM:
+
+    sudo qemu-system-i386 -machine accel=kvm -m 2048 mininet-vm-disk1.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
+
+The above commands will set up `ssh` forwarding from the VM to host port 8022.
 
 **Parallels**: Use Parallels Transporter to convert the `.vmdk` file to an `.hdd` image that Parallels can use, and then create a new VM using that `.hdd` image as its virtual drive. Start the VM.
 
