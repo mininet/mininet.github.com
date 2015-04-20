@@ -48,6 +48,7 @@ use log in to the VM image. Start the VM.
 VMware may ask you to install VMware tools on the VM - if it asks, decline. Everything graphical in the tutorial is done via X forwarding through SSH (in fact, the VM doesn't have a desktop manager installed), so the VMware tools are unnecessary unless you wish to install an X11/Gnome/etc. environment in your VM.
 
 **Qemu/KVM**:
+
 <!--
 
 Convert the VMDK to QCOW2 format first - directly using VMDK as a qemu input [appears to be broken](https://mailman.stanford.edu/pipermail/mininet-discuss/2012-December/001447.html):
