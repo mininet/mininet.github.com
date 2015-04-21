@@ -4,7 +4,7 @@
   <title><![CDATA[Mininet]]></title>
   <link href="http://mininet.github.com/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2015-04-21T14:34:08-07:00</updated>
+  <updated>2015-04-21T14:35:02-07:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -273,7 +273,7 @@ effective by facilitating experiential learning.</p>
     <link href="http://mininet.github.com/blog/2014/11/12/mininet-2-2-0-beta/"/>
     <updated>2014-11-12T17:49:00-08:00</updated>
     <id>http://mininet.github.com/blog/2014/11/12/mininet-2-2-0-beta</id>
-    <content type="html"><![CDATA[<p>Please see the full <a href="http://mininet.github.com/blog/2014/12/09/announcing-mininet-2-0-0/">Mininet 2.2.0 Release Announcement</a> !</p>
+    <content type="html"><![CDATA[<p>Please see the full <a href="http://mininet.github.com/blog/2014/12/09/announcing-mininet-2-2-0/">Mininet 2.2.0 Release Announcement</a> !</p>
 ]]></content>
   </entry>
   
