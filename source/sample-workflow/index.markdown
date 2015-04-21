@@ -14,10 +14,10 @@ Mininet enables you to quickly [create](#create), [interact with](#interact), [c
 
 You can create a network with a single command. For example,
 
-    sudo mn --switch ovsk --controller ref --topo tree,depth=2,fanout=8 --test pingall
+    sudo mn --switch ovs --controller ref --topo tree,depth=2,fanout=8 --test pingall
 
 starts a network with a tree topology of depth 2 and fanout 8 (i.e. 64 hosts connected to 9 switches), using Open vSwitch switches under the control of the OpenFlow/Stanford reference controller, and runs the `pingall` test to check connectivity between every pair of nodes. (This takes about
-    30 seconds on my laptop.)
+    45 seconds on my laptop.)
 
 <a id="interact"></a>
 
