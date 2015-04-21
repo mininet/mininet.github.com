@@ -15,7 +15,7 @@ Mininet 2.2.1 is primarily a performance improvement and bug fix release.
 
   Warning! These links have *serious limitations* compared to
   virtual Ethernet pairs: they are not attached to real Linux
-  interfaces so you cannot use tcpdump or wireshark with them;
+  interfaces so you cannot use `tcpdump` or `wireshark` with them;
   they also cannot be used in long chains - we don't recommend more
   than 64 OVSLinks, for example `--linear,64`. However, they can offer
   significantly better performance than veth pairs, for certain
