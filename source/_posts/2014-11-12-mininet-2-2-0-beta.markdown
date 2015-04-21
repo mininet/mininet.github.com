@@ -6,4 +6,4 @@ comments: true
 categories:
 ---
 
-Please see the full [Mininet 2.2.0 Release Announcement](/blog/2014/12/09/announcing-mininet-2-0-0/) !
+Please see the full [Mininet 2.2.0 Release Announcement](/blog/2014/12/09/announcing-mininet-2-2-0/) !
