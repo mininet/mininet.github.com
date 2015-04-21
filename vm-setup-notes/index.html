@@ -94,22 +94,27 @@ you may wish to check out these
 
 <p>VMware may ask you to install VMware tools on the VM - if it asks, decline. Everything graphical in the tutorial is done via X forwarding through SSH (in fact, the VM doesn’t have a desktop manager installed), so the VMware tools are unnecessary unless you wish to install an X11/Gnome/etc. environment in your VM.</p>
 
-<p><strong>Qemu/KVM</strong>:
-&lt;!–</p>
+<p><strong>Qemu/KVM</strong>:</p>
 
-<p>Convert the VMDK to QCOW2 format first - directly using VMDK as a qemu input <a href="https://mailman.stanford.edu/pipermail/mininet-discuss/2012-December/001447.html">appears to be broken</a>:</p>
+<!--
 
-<pre><code>qemu-img convert -O qcow2 mininet-vm-disk1.vmdk mininet-vm-disk1.qcow2
-</code></pre>
+Convert the VMDK to QCOW2 format first - directly using VMDK as a qemu input [appears to be broken](https://mailman.stanford.edu/pipermail/mininet-discuss/2012-December/001447.html):
 
-<p>–&gt;</p>
+    qemu-img convert -O qcow2 mininet-vm-disk1.vmdk mininet-vm-disk1.qcow2
 
-<p>Something like the following should work:</p>
+-->
+
+<p>For Qemu, something like the following should work:</p>
 
 <pre><code>qemu-system-i386 -m 2048 mininet-vm-disk1.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
 </code></pre>
 
-<p>This will set up <code>ssh</code> forwarding from the VM to host port 8022.</p>
+<p>For KVM:</p>
+
+<pre><code>sudo qemu-system-i386 -machine accel=kvm -m 2048 mininet-vm-disk1.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
+</code></pre>
+
+<p>The above commands will set up <code>ssh</code> forwarding from the VM to host port 8022.</p>
 
 <p><strong>Parallels</strong>: Use Parallels Transporter to convert the <code>.vmdk</code> file to an <code>.hdd</code> image that Parallels can use, and then create a new VM using that <code>.hdd</code> image as its virtual drive. Start the VM.</p>
 
