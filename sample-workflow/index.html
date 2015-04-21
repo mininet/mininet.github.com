@@ -59,11 +59,11 @@ BL: removed since they make things SLOW
 
 <p>You can create a network with a single command. For example,</p>
 
-<pre><code>sudo mn --switch ovsk --controller ref --topo tree,depth=2,fanout=8 --test pingall
+<pre><code>sudo mn --switch ovs --controller ref --topo tree,depth=2,fanout=8 --test pingall
 </code></pre>
 
 <p>starts a network with a tree topology of depth 2 and fanout 8 (i.e. 64 hosts connected to 9 switches), using Open vSwitch switches under the control of the OpenFlow/Stanford reference controller, and runs the <code>pingall</code> test to check connectivity between every pair of nodes. (This takes about
-    30 seconds on my laptop.)</p>
+    45 seconds on my laptop.)</p>
 
 <p><a id="interact"></a></p>
 
