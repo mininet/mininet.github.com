@@ -36,10 +36,10 @@ may be found in the **[Release Notes](https://github.com/mininet/mininet/wiki/Do
 on [docs.mininet.org](http://docs.mininet.org).
 
 The easiest way to get started with Mininet is to download a
-**VM image**. See [http://mininet.org/download](http://mininet.org/download)
+**[VM image](http://mininet.org/download)**. See <http://mininet.org/download>
 for details.
 
-The latest Mininet **source code** is available on
+The latest Mininet **[source code](http://code.mininet.org)** is available on
 [github]([http://github.com/mininet/mininet) and also via
 [code.mininet.org](http://code.mininet.org).
 
