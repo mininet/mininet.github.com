@@ -3,6 +3,7 @@
 .sass-cache
 .gist-cache
 .pygments-cache
+Gemfile.lock
 _deploy
 public
 sass.old

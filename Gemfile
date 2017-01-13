@@ -16,3 +16,4 @@ group :development do
 end
 
 gem 'sinatra', '~> 1.3.2'
+gem 'directory_watcher', '1.4.1'
