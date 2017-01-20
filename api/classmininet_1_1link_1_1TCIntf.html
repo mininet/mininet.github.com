@@ -226,7 +226,19 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>disable_gro</em> = <code>True</code>, </td>
+          <td class="paramname"><em>gro</em> = <code>False</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>txo</em> = <code>True</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>rxo</em> = <code>True</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -285,6 +297,25 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Configure the port and set its properties. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bw</td><td>bandwidth in b/s (e.g. '10m') </td></tr>
+    <tr><td class="paramname">delay</td><td>transmit delay (e.g. '1ms' ) </td></tr>
+    <tr><td class="paramname">jitter</td><td>jitter (e.g. '1ms') </td></tr>
+    <tr><td class="paramname">loss</td><td>loss (e.g. '1' ) </td></tr>
+    <tr><td class="paramname">gro</td><td>enable GRO (False) </td></tr>
+    <tr><td class="paramname">txo</td><td>enable transmit checksum offload (True) </td></tr>
+    <tr><td class="paramname">rxo</td><td>enable receive checksum offload (True) </td></tr>
+    <tr><td class="paramname">speedup</td><td>experimental switch-side bw option </td></tr>
+    <tr><td class="paramname">use_hfsc</td><td>use HFSC scheduling </td></tr>
+    <tr><td class="paramname">use_tbf</td><td>use TBF scheduling </td></tr>
+    <tr><td class="paramname">latency_ms</td><td>TBF latency parameter </td></tr>
+    <tr><td class="paramname">enable_ecn</td><td>enable ECN (False) </td></tr>
+    <tr><td class="paramname">enable_red</td><td>enable RED (False) </td></tr>
+    <tr><td class="paramname">max_queue_size</td><td>queue limit parameter for netem Helper method: bool -&gt; 'on'/'off' </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -294,7 +325,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 19 2016 14:53:10 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 20 2017 13:50:31 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>

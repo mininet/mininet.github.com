@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Mininet Python API Reference Manual: mininet.node.OVSLegacyKernelSwitch Class Reference</title>
+<title>Mininet Python API Reference Manual: mininet.node.Ryu Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -42,68 +42,62 @@
   </div>
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>mininet</b></li><li class="navelem"><b>node</b></li><li class="navelem"><a class="el" href="classmininet_1_1node_1_1OVSLegacyKernelSwitch.html">OVSLegacyKernelSwitch</a></li>  </ul>
+<li class="navelem"><b>mininet</b></li><li class="navelem"><b>node</b></li><li class="navelem"><a class="el" href="classmininet_1_1node_1_1Ryu.html">Ryu</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="classmininet_1_1node_1_1OVSLegacyKernelSwitch-members.html">List of all members</a>  </div>
+<a href="classmininet_1_1node_1_1Ryu-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">mininet.node.OVSLegacyKernelSwitch Class Reference</div>  </div>
+<div class="title">mininet.node.Ryu Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Open VSwitch legacy kernel-space switch using ovs-openflowd.  
- <a href="classmininet_1_1node_1_1OVSLegacyKernelSwitch.html#details">More...</a></p>
+<p><a class="el" href="classmininet_1_1node_1_1Controller.html" title="A Controller is a Node that is running (or has execed?) an OpenFlow controller. ">Controller</a> to run <a class="el" href="classmininet_1_1node_1_1Ryu.html" title="Controller to run Ryu application. ">Ryu</a> application.  
+ <a href="classmininet_1_1node_1_1Ryu.html#details">More...</a></p>
 <div class="dynheader">
-Inheritance diagram for mininet.node.OVSLegacyKernelSwitch:</div>
+Inheritance diagram for mininet.node.Ryu:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classmininet_1_1node_1_1OVSLegacyKernelSwitch.png" usemap="#mininet.node.OVSLegacyKernelSwitch_map" alt=""/>
-  <map id="mininet.node.OVSLegacyKernelSwitch_map" name="mininet.node.OVSLegacyKernelSwitch_map">
-<area href="classmininet_1_1node_1_1Switch.html" title="A Switch is a Node that is running (or has execed?) an OpenFlow switch. " alt="mininet.node.Switch" shape="rect" coords="0,112,230,136"/>
-<area href="classmininet_1_1node_1_1Node.html" title="A virtual network node is simply a shell in a network namespace. " alt="mininet.node.Node" shape="rect" coords="0,56,230,80"/>
+  <img src="classmininet_1_1node_1_1Ryu.png" usemap="#mininet.node.Ryu_map" alt=""/>
+  <map id="mininet.node.Ryu_map" name="mininet.node.Ryu_map">
+<area href="classmininet_1_1node_1_1Controller.html" title="A Controller is a Node that is running (or has execed?) an OpenFlow controller. " alt="mininet.node.Controller" shape="rect" coords="0,112,143,136"/>
+<area href="classmininet_1_1node_1_1Node.html" title="A virtual network node is simply a shell in a network namespace. " alt="mininet.node.Node" shape="rect" coords="0,56,143,80"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aca6f8bf42ff1d6809ef882d076295811"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1OVSLegacyKernelSwitch.html#aca6f8bf42ff1d6809ef882d076295811">__init__</a></td></tr>
-<tr class="memdesc:aca6f8bf42ff1d6809ef882d076295811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init.  <a href="#aca6f8bf42ff1d6809ef882d076295811">More...</a><br/></td></tr>
-<tr class="separator:aca6f8bf42ff1d6809ef882d076295811"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a528a79a2896d7f29c5d061c7daf7f76e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1OVSLegacyKernelSwitch.html#a528a79a2896d7f29c5d061c7daf7f76e">setup</a></td></tr>
-<tr class="memdesc:a528a79a2896d7f29c5d061c7daf7f76e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure any dependencies are loaded; if not, try to load them.  <a href="#a528a79a2896d7f29c5d061c7daf7f76e">More...</a><br/></td></tr>
-<tr class="separator:a528a79a2896d7f29c5d061c7daf7f76e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abab70591b60b93cee6baff9d0cee4b08"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1OVSLegacyKernelSwitch.html#abab70591b60b93cee6baff9d0cee4b08">start</a></td></tr>
-<tr class="memdesc:abab70591b60b93cee6baff9d0cee4b08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start up kernel datapath.  <a href="#abab70591b60b93cee6baff9d0cee4b08">More...</a><br/></td></tr>
-<tr class="separator:abab70591b60b93cee6baff9d0cee4b08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96ff25d79b7ef1ffde630fca05354a8f"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1OVSLegacyKernelSwitch.html#a96ff25d79b7ef1ffde630fca05354a8f">stop</a></td></tr>
-<tr class="memdesc:a96ff25d79b7ef1ffde630fca05354a8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Terminate kernel datapath.  <a href="#a96ff25d79b7ef1ffde630fca05354a8f">More...</a><br/></td></tr>
-<tr class="separator:a96ff25d79b7ef1ffde630fca05354a8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_classmininet_1_1node_1_1Switch"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmininet_1_1node_1_1Switch')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmininet_1_1node_1_1Switch.html">mininet.node.Switch</a></td></tr>
-<tr class="memitem:ad4abb0f4cb72e776d54c8327e262ef81 inherit pub_methods_classmininet_1_1node_1_1Switch"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Switch.html#ad4abb0f4cb72e776d54c8327e262ef81">__init__</a></td></tr>
-<tr class="separator:ad4abb0f4cb72e776d54c8327e262ef81 inherit pub_methods_classmininet_1_1node_1_1Switch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:accc4b88c09e91e7ce7a7ec5fa8a5f22e inherit pub_methods_classmininet_1_1node_1_1Switch"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="accc4b88c09e91e7ce7a7ec5fa8a5f22e"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Switch.html#accc4b88c09e91e7ce7a7ec5fa8a5f22e">defaultDpid</a></td></tr>
-<tr class="memdesc:accc4b88c09e91e7ce7a7ec5fa8a5f22e inherit pub_methods_classmininet_1_1node_1_1Switch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return correctly formatted dpid from dpid or switch name (s1 -&gt; 1) <br/></td></tr>
-<tr class="separator:accc4b88c09e91e7ce7a7ec5fa8a5f22e inherit pub_methods_classmininet_1_1node_1_1Switch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aae622083424ca6cacd7dd478dd7f86b0 inherit pub_methods_classmininet_1_1node_1_1Switch"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aae622083424ca6cacd7dd478dd7f86b0"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Switch.html#aae622083424ca6cacd7dd478dd7f86b0">defaultIntf</a></td></tr>
-<tr class="memdesc:aae622083424ca6cacd7dd478dd7f86b0 inherit pub_methods_classmininet_1_1node_1_1Switch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return control interface. <br/></td></tr>
-<tr class="separator:aae622083424ca6cacd7dd478dd7f86b0 inherit pub_methods_classmininet_1_1node_1_1Switch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abce85860d0521c75d06fd237eec3fc4d inherit pub_methods_classmininet_1_1node_1_1Switch"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Switch.html#abce85860d0521c75d06fd237eec3fc4d">sendCmd</a></td></tr>
-<tr class="memdesc:abce85860d0521c75d06fd237eec3fc4d inherit pub_methods_classmininet_1_1node_1_1Switch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send command to <a class="el" href="classmininet_1_1node_1_1Node.html" title="A virtual network node is simply a shell in a network namespace. ">Node</a>.  <a href="#abce85860d0521c75d06fd237eec3fc4d">More...</a><br/></td></tr>
-<tr class="separator:abce85860d0521c75d06fd237eec3fc4d inherit pub_methods_classmininet_1_1node_1_1Switch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c888cb445b0e89ad07a5d7fbd8c1f1a inherit pub_methods_classmininet_1_1node_1_1Switch"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4c888cb445b0e89ad07a5d7fbd8c1f1a"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Switch.html#a4c888cb445b0e89ad07a5d7fbd8c1f1a">connected</a></td></tr>
-<tr class="memdesc:a4c888cb445b0e89ad07a5d7fbd8c1f1a inherit pub_methods_classmininet_1_1node_1_1Switch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the switch connected to a controller? (override this method) <br/></td></tr>
-<tr class="separator:a4c888cb445b0e89ad07a5d7fbd8c1f1a inherit pub_methods_classmininet_1_1node_1_1Switch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a95ab9bfcd138235fa4697a3782ad0c48 inherit pub_methods_classmininet_1_1node_1_1Switch"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95ab9bfcd138235fa4697a3782ad0c48"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Switch.html#a95ab9bfcd138235fa4697a3782ad0c48">__repr__</a></td></tr>
-<tr class="memdesc:a95ab9bfcd138235fa4697a3782ad0c48 inherit pub_methods_classmininet_1_1node_1_1Switch"><td class="mdescLeft">&#160;</td><td class="mdescRight">More informative string representation. <br/></td></tr>
-<tr class="separator:a95ab9bfcd138235fa4697a3782ad0c48 inherit pub_methods_classmininet_1_1node_1_1Switch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b0c45c79eb6c4d0a886f3e0e8cd52a5"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Ryu.html#a1b0c45c79eb6c4d0a886f3e0e8cd52a5">__init__</a></td></tr>
+<tr class="memdesc:a1b0c45c79eb6c4d0a886f3e0e8cd52a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Init.  <a href="#a1b0c45c79eb6c4d0a886f3e0e8cd52a5">More...</a><br/></td></tr>
+<tr class="separator:a1b0c45c79eb6c4d0a886f3e0e8cd52a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classmininet_1_1node_1_1Controller"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmininet_1_1node_1_1Controller')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmininet_1_1node_1_1Controller.html">mininet.node.Controller</a></td></tr>
+<tr class="memitem:a89e3723e45bedf6ad484a4a82ef73f0a inherit pub_methods_classmininet_1_1node_1_1Controller"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a89e3723e45bedf6ad484a4a82ef73f0a"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>__init__</b></td></tr>
+<tr class="separator:a89e3723e45bedf6ad484a4a82ef73f0a inherit pub_methods_classmininet_1_1node_1_1Controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6f82a1a6056b2894042686cf4cef19f inherit pub_methods_classmininet_1_1node_1_1Controller"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6f82a1a6056b2894042686cf4cef19f"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Controller.html#ad6f82a1a6056b2894042686cf4cef19f">checkListening</a></td></tr>
+<tr class="memdesc:ad6f82a1a6056b2894042686cf4cef19f inherit pub_methods_classmininet_1_1node_1_1Controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make sure no controllers are running on our port. <br/></td></tr>
+<tr class="separator:ad6f82a1a6056b2894042686cf4cef19f inherit pub_methods_classmininet_1_1node_1_1Controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23e3b9dc42d2db34706239a65a997f70 inherit pub_methods_classmininet_1_1node_1_1Controller"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Controller.html#a23e3b9dc42d2db34706239a65a997f70">start</a></td></tr>
+<tr class="memdesc:a23e3b9dc42d2db34706239a65a997f70 inherit pub_methods_classmininet_1_1node_1_1Controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start &lt;controller&gt; &lt;args&gt; on controller.  <a href="#a23e3b9dc42d2db34706239a65a997f70">More...</a><br/></td></tr>
+<tr class="separator:a23e3b9dc42d2db34706239a65a997f70 inherit pub_methods_classmininet_1_1node_1_1Controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab63d40ad0bceef68ad27872bf95f3adb inherit pub_methods_classmininet_1_1node_1_1Controller"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Controller.html#ab63d40ad0bceef68ad27872bf95f3adb">stop</a></td></tr>
+<tr class="memdesc:ab63d40ad0bceef68ad27872bf95f3adb inherit pub_methods_classmininet_1_1node_1_1Controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop controller.  <a href="#ab63d40ad0bceef68ad27872bf95f3adb">More...</a><br/></td></tr>
+<tr class="separator:ab63d40ad0bceef68ad27872bf95f3adb inherit pub_methods_classmininet_1_1node_1_1Controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f78114d7f0a1d6af19cb84f17a7c273 inherit pub_methods_classmininet_1_1node_1_1Controller"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8f78114d7f0a1d6af19cb84f17a7c273"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Controller.html#a8f78114d7f0a1d6af19cb84f17a7c273">IP</a></td></tr>
+<tr class="memdesc:a8f78114d7f0a1d6af19cb84f17a7c273 inherit pub_methods_classmininet_1_1node_1_1Controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return IP address of the <a class="el" href="classmininet_1_1node_1_1Controller.html" title="A Controller is a Node that is running (or has execed?) an OpenFlow controller. ">Controller</a>. <br/></td></tr>
+<tr class="separator:a8f78114d7f0a1d6af19cb84f17a7c273 inherit pub_methods_classmininet_1_1node_1_1Controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa162bac2708a851038a1e7872211d332 inherit pub_methods_classmininet_1_1node_1_1Controller"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa162bac2708a851038a1e7872211d332"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Controller.html#aa162bac2708a851038a1e7872211d332">__repr__</a></td></tr>
+<tr class="memdesc:aa162bac2708a851038a1e7872211d332 inherit pub_methods_classmininet_1_1node_1_1Controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">More informative string representation. <br/></td></tr>
+<tr class="separator:aa162bac2708a851038a1e7872211d332 inherit pub_methods_classmininet_1_1node_1_1Controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebc0b5c063714b974b3fee15069eecc6 inherit pub_methods_classmininet_1_1node_1_1Controller"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aebc0b5c063714b974b3fee15069eecc6"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Controller.html#aebc0b5c063714b974b3fee15069eecc6">isAvailable</a></td></tr>
+<tr class="memdesc:aebc0b5c063714b974b3fee15069eecc6 inherit pub_methods_classmininet_1_1node_1_1Controller"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is controller available? <br/></td></tr>
+<tr class="separator:aebc0b5c063714b974b3fee15069eecc6 inherit pub_methods_classmininet_1_1node_1_1Controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classmininet_1_1node_1_1Node"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classmininet_1_1node_1_1Node')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classmininet_1_1node_1_1Node.html">mininet.node.Node</a></td></tr>
 <tr class="memitem:ae565010f2b329ac47a215ff588c483d7 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Node.html#ae565010f2b329ac47a215ff588c483d7">__init__</a></td></tr>
 <tr class="separator:ae565010f2b329ac47a215ff588c483d7 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -126,10 +120,10 @@ def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="memdesc:a8ffc775712b7723800e2f4af350aa409 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Help python collect its garbage.  <a href="#a8ffc775712b7723800e2f4af350aa409">More...</a><br/></td></tr>
 <tr class="separator:a8ffc775712b7723800e2f4af350aa409 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9942b7c3670e7b719ebd4de61e477cf7 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Node.html#a9942b7c3670e7b719ebd4de61e477cf7">read</a></td></tr>
-<tr class="memdesc:a9942b7c3670e7b719ebd4de61e477cf7 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffered read from node, non-blocking.  <a href="#a9942b7c3670e7b719ebd4de61e477cf7">More...</a><br/></td></tr>
+<tr class="memdesc:a9942b7c3670e7b719ebd4de61e477cf7 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffered read from node, potentially blocking.  <a href="#a9942b7c3670e7b719ebd4de61e477cf7">More...</a><br/></td></tr>
 <tr class="separator:a9942b7c3670e7b719ebd4de61e477cf7 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a716534e3bbc6f3cb02dfd0f5a3595701 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Node.html#a716534e3bbc6f3cb02dfd0f5a3595701">readline</a></td></tr>
-<tr class="memdesc:a716534e3bbc6f3cb02dfd0f5a3595701 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffered readline from node, non-blocking.  <a href="#a716534e3bbc6f3cb02dfd0f5a3595701">More...</a><br/></td></tr>
+<tr class="memdesc:a716534e3bbc6f3cb02dfd0f5a3595701 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Buffered readline from node, potentially blocking.  <a href="#a716534e3bbc6f3cb02dfd0f5a3595701">More...</a><br/></td></tr>
 <tr class="separator:a716534e3bbc6f3cb02dfd0f5a3595701 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12574ef66c3d0c50780e01850e56379c inherit pub_methods_classmininet_1_1node_1_1Node"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Node.html#a12574ef66c3d0c50780e01850e56379c">write</a></td></tr>
 <tr class="memdesc:a12574ef66c3d0c50780e01850e56379c inherit pub_methods_classmininet_1_1node_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to node.  <a href="#a12574ef66c3d0c50780e01850e56379c">More...</a><br/></td></tr>
@@ -173,6 +167,9 @@ def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="memitem:aea2dde5276bd31c54cd8646da8e1b6d2 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Node.html#aea2dde5276bd31c54cd8646da8e1b6d2">addIntf</a></td></tr>
 <tr class="memdesc:aea2dde5276bd31c54cd8646da8e1b6d2 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add an interface.  <a href="#aea2dde5276bd31c54cd8646da8e1b6d2">More...</a><br/></td></tr>
 <tr class="separator:aea2dde5276bd31c54cd8646da8e1b6d2 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2eec013125d7f3bb842f397f659e993 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Node.html#ae2eec013125d7f3bb842f397f659e993">delIntf</a></td></tr>
+<tr class="memdesc:ae2eec013125d7f3bb842f397f659e993 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove interface from <a class="el" href="classmininet_1_1node_1_1Node.html" title="A virtual network node is simply a shell in a network namespace. ">Node</a>'s known interfaces.  <a href="#ae2eec013125d7f3bb842f397f659e993">More...</a><br/></td></tr>
+<tr class="separator:ae2eec013125d7f3bb842f397f659e993 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14c12c0e1152eb84c2d2afde0d0105b7 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a14c12c0e1152eb84c2d2afde0d0105b7"></a>
 def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmininet_1_1node_1_1Node.html#a14c12c0e1152eb84c2d2afde0d0105b7">defaultIntf</a></td></tr>
 <tr class="memdesc:a14c12c0e1152eb84c2d2afde0d0105b7 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return interface for lowest port. <br/></td></tr>
@@ -249,30 +246,30 @@ def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 <tr class="memdesc:a3d2c6a295ce8ad849446e922f34a0676 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make sure our class dependencies are available. <br/></td></tr>
 <tr class="separator:a3d2c6a295ce8ad849446e922f34a0676 inherit pub_methods_classmininet_1_1node_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:ae64d8d7debff94f8ce90d9f2f61ff9d5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae64d8d7debff94f8ce90d9f2f61ff9d5"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>dp</b></td></tr>
-<tr class="separator:ae64d8d7debff94f8ce90d9f2f61ff9d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a798ed885cfd109b50b13787f74a4c43f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a798ed885cfd109b50b13787f74a4c43f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>intf</b></td></tr>
-<tr class="separator:a798ed885cfd109b50b13787f74a4c43f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af49143c397eefdcf6c6a47e5b2b7485e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af49143c397eefdcf6c6a47e5b2b7485e"></a>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_attribs_classmininet_1_1node_1_1Controller"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classmininet_1_1node_1_1Controller')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classmininet_1_1node_1_1Controller.html">mininet.node.Controller</a></td></tr>
+<tr class="memitem:ab3b1decf4ea17602e6f64ccce7f5b7ff inherit pub_attribs_classmininet_1_1node_1_1Controller"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab3b1decf4ea17602e6f64ccce7f5b7ff"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>command</b></td></tr>
+<tr class="separator:ab3b1decf4ea17602e6f64ccce7f5b7ff inherit pub_attribs_classmininet_1_1node_1_1Controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bca25bc759af1a6275870f31d05022a inherit pub_attribs_classmininet_1_1node_1_1Controller"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5bca25bc759af1a6275870f31d05022a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>cargs</b></td></tr>
+<tr class="separator:a5bca25bc759af1a6275870f31d05022a inherit pub_attribs_classmininet_1_1node_1_1Controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a471632985033e1b52232e1550ff8b57e inherit pub_attribs_classmininet_1_1node_1_1Controller"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a471632985033e1b52232e1550ff8b57e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>cdir</b></td></tr>
+<tr class="separator:a471632985033e1b52232e1550ff8b57e inherit pub_attribs_classmininet_1_1node_1_1Controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fc2e5696523f9f821fb01904392cdb3 inherit pub_attribs_classmininet_1_1node_1_1Controller"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8fc2e5696523f9f821fb01904392cdb3"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>ip</b></td></tr>
+<tr class="separator:a8fc2e5696523f9f821fb01904392cdb3 inherit pub_attribs_classmininet_1_1node_1_1Controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb15ce19a07f469ba457b09f5cdee7f7 inherit pub_attribs_classmininet_1_1node_1_1Controller"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acb15ce19a07f469ba457b09f5cdee7f7"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>port</b></td></tr>
+<tr class="separator:acb15ce19a07f469ba457b09f5cdee7f7 inherit pub_attribs_classmininet_1_1node_1_1Controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c5d2f00f45148638b1c2f9646bd6d33 inherit pub_attribs_classmininet_1_1node_1_1Controller"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c5d2f00f45148638b1c2f9646bd6d33"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>protocol</b></td></tr>
+<tr class="separator:a2c5d2f00f45148638b1c2f9646bd6d33 inherit pub_attribs_classmininet_1_1node_1_1Controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afca6829cdf74d74ecc9de9a21330efed inherit pub_attribs_classmininet_1_1node_1_1Controller"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afca6829cdf74d74ecc9de9a21330efed"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>execed</b></td></tr>
-<tr class="separator:af49143c397eefdcf6c6a47e5b2b7485e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_attribs_classmininet_1_1node_1_1Switch"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classmininet_1_1node_1_1Switch')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classmininet_1_1node_1_1Switch.html">mininet.node.Switch</a></td></tr>
-<tr class="memitem:a7d9ecaa2ae7a2a1894bd3d936d8fbbdc inherit pub_attribs_classmininet_1_1node_1_1Switch"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7d9ecaa2ae7a2a1894bd3d936d8fbbdc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>dpid</b></td></tr>
-<tr class="separator:a7d9ecaa2ae7a2a1894bd3d936d8fbbdc inherit pub_attribs_classmininet_1_1node_1_1Switch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a98d55c899be0d4ca8bfb7cd2e53beb inherit pub_attribs_classmininet_1_1node_1_1Switch"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a98d55c899be0d4ca8bfb7cd2e53beb"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>opts</b></td></tr>
-<tr class="separator:a9a98d55c899be0d4ca8bfb7cd2e53beb inherit pub_attribs_classmininet_1_1node_1_1Switch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73a2d105dc1887e10901bcdbc2fa186c inherit pub_attribs_classmininet_1_1node_1_1Switch"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a73a2d105dc1887e10901bcdbc2fa186c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>listenPort</b></td></tr>
-<tr class="separator:a73a2d105dc1887e10901bcdbc2fa186c inherit pub_attribs_classmininet_1_1node_1_1Switch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a783620ed7dc731301a91dc9f58698bbe inherit pub_attribs_classmininet_1_1node_1_1Switch"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a783620ed7dc731301a91dc9f58698bbe"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>controlIntf</b></td></tr>
-<tr class="separator:a783620ed7dc731301a91dc9f58698bbe inherit pub_attribs_classmininet_1_1node_1_1Switch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:afca6829cdf74d74ecc9de9a21330efed inherit pub_attribs_classmininet_1_1node_1_1Controller"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_attribs_classmininet_1_1node_1_1Node"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classmininet_1_1node_1_1Node')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classmininet_1_1node_1_1Node.html">mininet.node.Node</a></td></tr>
 <tr class="memitem:a9bcb08b3e528808c39f84596ccf806c8 inherit pub_attribs_classmininet_1_1node_1_1Node"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9bcb08b3e528808c39f84596ccf806c8"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>name</b></td></tr>
@@ -325,16 +322,6 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a532a23b5539c023cb0dd8f92025fbaa8 inherit pub_attribs_classmininet_1_1node_1_1Node"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a532a23b5539c023cb0dd8f92025fbaa8"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>lastPid</b></td></tr>
 <tr class="separator:a532a23b5539c023cb0dd8f92025fbaa8 inherit pub_attribs_classmininet_1_1node_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pub_static_attribs_classmininet_1_1node_1_1Switch"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classmininet_1_1node_1_1Switch')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classmininet_1_1node_1_1Switch.html">mininet.node.Switch</a></td></tr>
-<tr class="memitem:a56ab4dc0fa30ebfe9df532d6e42e09a9 inherit pub_static_attribs_classmininet_1_1node_1_1Switch"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56ab4dc0fa30ebfe9df532d6e42e09a9"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>portBase</b> = 1</td></tr>
-<tr class="separator:a56ab4dc0fa30ebfe9df532d6e42e09a9 inherit pub_static_attribs_classmininet_1_1node_1_1Switch"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fbabf15d17e87acac0bdde26f69ea6c inherit pub_static_attribs_classmininet_1_1node_1_1Switch"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0fbabf15d17e87acac0bdde26f69ea6c"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>dpidLen</b> = 16</td></tr>
-<tr class="separator:a0fbabf15d17e87acac0bdde26f69ea6c inherit pub_static_attribs_classmininet_1_1node_1_1Switch"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_attribs_classmininet_1_1node_1_1Node"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_classmininet_1_1node_1_1Node')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="classmininet_1_1node_1_1Node.html">mininet.node.Node</a></td></tr>
 <tr class="memitem:ad3ff96047551b59c030fb002e92d9ddc inherit pub_static_attribs_classmininet_1_1node_1_1Node"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad3ff96047551b59c030fb002e92d9ddc"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>portBase</b> = 0</td></tr>
@@ -350,15 +337,14 @@ dictionary&#160;</td><td class="memItemRight" valign="bottom"><b>outToNode</b> =
 <tr class="separator:a336ba69db8fe753e780df804a25f391b inherit pub_static_attribs_classmininet_1_1node_1_1Node"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Open VSwitch legacy kernel-space switch using ovs-openflowd. </p>
-<p>Currently only works in the root namespace. </p>
+<div class="textblock"><p><a class="el" href="classmininet_1_1node_1_1Controller.html" title="A Controller is a Node that is running (or has execed?) an OpenFlow controller. ">Controller</a> to run <a class="el" href="classmininet_1_1node_1_1Ryu.html" title="Controller to run Ryu application. ">Ryu</a> application. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aca6f8bf42ff1d6809ef882d076295811"></a>
+<a class="anchor" id="a1b0c45c79eb6c4d0a886f3e0e8cd52a5"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">def mininet.node.OVSLegacyKernelSwitch.__init__ </td>
+          <td class="memname">def mininet.node.Ryu.__init__ </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname"><em>self</em>, </td>
@@ -373,7 +359,7 @@ dictionary&#160;</td><td class="memItemRight" valign="bottom"><b>outToNode</b> =
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>dp</em> = <code>None</code>, </td>
+          <td class="paramname"><em>ryuArgs</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -392,91 +378,8 @@ dictionary&#160;</td><td class="memItemRight" valign="bottom"><b>outToNode</b> =
 <p>Init. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">name</td><td>name for switch </td></tr>
-    <tr><td class="paramname">dp</td><td>netlink id (0, 1, 2, ...) </td></tr>
-    <tr><td class="paramname">defaultMAC</td><td>default MAC as unsigned int; random value if None </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a528a79a2896d7f29c5d061c7daf7f76e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def mininet.node.OVSLegacyKernelSwitch.setup </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>cls</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Ensure any dependencies are loaded; if not, try to load them. </p>
-
-</div>
-</div>
-<a class="anchor" id="abab70591b60b93cee6baff9d0cee4b08"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def mininet.node.OVSLegacyKernelSwitch.start </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>controllers</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Start up kernel datapath. </p>
-
-</div>
-</div>
-<a class="anchor" id="a96ff25d79b7ef1ffde630fca05354a8f"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">def mininet.node.OVSLegacyKernelSwitch.stop </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>deleteIntfs</em> = <code>True</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Terminate kernel datapath. </p>
-<p>" </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">deleteIntfs</td><td>delete interfaces? (True) </td></tr>
+    <tr><td class="paramname">name</td><td>name to give controller. </td></tr>
+    <tr><td class="paramname">ryuArgs</td><td>arguments and modules to pass to <a class="el" href="classmininet_1_1node_1_1Ryu.html" title="Controller to run Ryu application. ">Ryu</a> </td></tr>
   </table>
   </dd>
 </dl>
@@ -489,7 +392,7 @@ dictionary&#160;</td><td class="memItemRight" valign="bottom"><b>outToNode</b> =
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 3 2015 01:25:56 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Jan 20 2017 13:50:33 for Mininet Python API Reference Manual by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.6
 </small></address>
