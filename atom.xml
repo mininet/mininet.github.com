@@ -4,7 +4,7 @@
   <title><![CDATA[Mininet]]></title>
   <link href="http://mininet.github.com/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2017-01-20T14:05:02-08:00</updated>
+  <updated>2017-03-17T01:00:30-07:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -12,6 +12,146 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Announcing Mininet 2.2.2]]></title>
+    <link href="http://mininet.github.com/blog/2017/03/17/announcing-mininet-2-2-2/"/>
+    <updated>2017-03-17T00:48:00-07:00</updated>
+    <id>http://mininet.github.com/blog/2017/03/17/announcing-mininet-2-2-2</id>
+    <content type="html"><![CDATA[<p>[Pre-release! The 2.2.2 release is not yet final.]</p>
+
+<p>Mininet 2.2.2 is primarily a performance improvement and bug fix release.</p>
+
+<h3 id="security-fixadvisory">Security Fix/Advisory</h3>
+
+<ul>
+  <li>
+    <p>The Mininet VM image no longer includes the same, identical <code>ssh</code>
+key for everyone, and should instead generate new ones the first
+time it is booted(!!) <em>[In my opinion, the <code>.ovf</code> spec should
+include an option (and the OS should include a mechanism) to
+regenerate SSH keys and MAC addresses, since the issue is likely to
+occur in any VM image with SSH installed!]</em></p>
+  </li>
+  <li>
+    <p>We recommend that you use the Mininet 2.2.2 or newer VM images.</p>
+  </li>
+</ul>
+
+<h3 id="ubuntu-1604-lts-xenial-compatibility">Ubuntu 16.04 LTS (Xenial) Compatibility</h3>
+
+<ul>
+  <li>
+    <p><strong>Kernel Bug Returns!</strong> :( Unfortunately, the annoying kernel bug
+  that causes <code>unshare()</code> to hang (and Mininet to stop working until
+  you reboot) has returned. You may see a message like
+  <code>unregister_netdevice: waiting for lo to become free. Usage count
+  = 1</code> in the console or kernel log. Until this is fixed, we don’t
+  recommend using 16.04 (or the Linux 3.16 kernel.)</p>
+  </li>
+  <li>
+    <p>We no longer attempt to delete a nonexistent root <code>qdisc</code> if one is
+not present (thanks to Olivier Tilmans)</p>
+  </li>
+  <li>
+    <p><code>xenial</code> VMs can now be created using <code>build.py</code></p>
+  </li>
+</ul>
+
+<h3 id="ubuntu-15-utopic-compatibility">Ubuntu 15 (Utopic) Compatibility</h3>
+
+<ul>
+  <li>We support <code>openvswitch-testcontroller</code> in Ubuntu 15. Note this
+controller is deprecated and not present in Ubuntu 16.</li>
+</ul>
+
+<h3 id="code-check-and-continuous-integration">Code Check and Continuous Integration</h3>
+
+<ul>
+  <li>We now run <a href="http://mininet.github.com/blog/2017/01/12/testing-using-travis-ci/">public CI builds via Travis</a></li>
+  <li>The builds include a code check using <code>pylint</code> on Ubuntu 14.04 LTS</li>
+</ul>
+
+<h3 id="notable-bug-fixes-or-workarounds">Notable Bug Fixes or Workarounds</h3>
+
+<ul>
+  <li>
+    <p>We’ve been seeing a variety of performance test failures running
+under kvm, so the constraints on some performance tests have been
+relaxed slightly.</p>
+  </li>
+  <li>
+    <p>A race condition that could cause <code>Mininet.iperf()</code> to fail has been
+addressed. (#589)</p>
+  </li>
+  <li>
+    <p>We have forked the Stanford OpenFlow 1.0 reference controller and
+<code>oflops</code> and use our own versions in the Mininet VM image. Note
+these are somewhat obsolete.</p>
+  </li>
+  <li>
+    <p><code>install.sh</code> has basic support for RHEL.</p>
+  </li>
+  <li>
+    <p><code>mnexec</code> explicitly recursively marks mounts as private; this should
+fix compatibility with <code>systemd</code> based systems which inexplicably
+require the default mount namespace behavior to be shared. ;-(
+(#565)</p>
+  </li>
+  <li>
+    <p>The default OpenFlow port is now the official port of 6653 rather
+than the classic port of 6633, which was nastily co-opted by Cisco.</p>
+  </li>
+  <li>
+    <p>NAT can use all interfaces.</p>
+  </li>
+  <li>
+    <p><code>ip_forward</code> is restored to its original state after NAT shuts down</p>
+  </li>
+  <li>
+    <p>An option has been added to the <code>NAT</code> element, and <code>iptables</code> are
+not flushed by default.</p>
+  </li>
+  <li>
+    <p>The NAT element now correctly attaches to the switch that is
+specified in its parameters.</p>
+  </li>
+  <li>
+    <p>A number of tests have been revised to make them more reliable.</p>
+  </li>
+</ul>
+
+<h3 id="bugs-and-gotchas">Bugs and gotchas</h3>
+
+<ul>
+  <li>
+    <p>Ryu installation with <code>install.sh -y</code> is still broken</p>
+  </li>
+  <li>
+    <p>The <code>--tests</code> option is slightly different from mainline, accepting
+multiple test names rather than parameters for the test. Please do
+not depend on this functionality in 2.2.2, or update to mainline if
+you require the new functionality.</p>
+  </li>
+  <li>
+    <p>As noted, Ubuntu 16.04+/Linux 4.4 includes a kernel regression which
+breaks container systems with the <code>waiting for lo to become free</code>
+error. Until this is fixed, we don’t recommend those OS/kernel
+versions.  If you run into the problem, Mininet will stop working
+until you reboot.</p>
+  </li>
+</ul>
+
+<h3 id="acknowledgments">Acknowledgments</h3>
+
+<p>Thanks to all of the contributors of fixes and enhancements for this
+release, including Olivier Tilmans, Jono Hart, Tomasz Buchert, Rahman
+Pujianto, Roan Huang, M S Vishwanath Bhat, Brian O’Connor, and others.</p>
+
+<p>Updated release notes may be found at:
+https://github.com/mininet/mininet/wiki/Mininet-2.2.2-Release-Notes</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Automated Testing Using Travis CI]]></title>

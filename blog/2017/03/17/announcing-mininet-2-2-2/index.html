@@ -1,0 +1,347 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Announcing Mininet 2.2.2 - Mininet</title>
+  <meta name="author" content="Mininet Team">
+
+  
+  <meta name="description" content="[Pre-release! The 2.2.2 release is not yet final.] Mininet 2.2.2 is primarily a performance improvement and bug fix release. Security Fix/Advisory &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://mininet.github.com/blog/2017/03/17/announcing-mininet-2-2-2/">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Mininet" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts 
+BL: removed since they make things SLOW
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+-->
+
+  
+
+</head>
+
+<body   >
+  <header role="banner">
+
+</header>
+  <nav role="navigation">
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Announcing Mininet 2.2.2</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-03-17T00:48:00-07:00" pubdate data-updated="true">Mar 17<span>th</span>, 2017</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>[Pre-release! The 2.2.2 release is not yet final.]</p>
+
+<p>Mininet 2.2.2 is primarily a performance improvement and bug fix release.</p>
+
+<h3 id="security-fixadvisory">Security Fix/Advisory</h3>
+
+<ul>
+  <li>
+    <p>The Mininet VM image no longer includes the same, identical <code>ssh</code>
+key for everyone, and should instead generate new ones the first
+time it is booted(!!) <em>[In my opinion, the <code>.ovf</code> spec should
+include an option (and the OS should include a mechanism) to
+regenerate SSH keys and MAC addresses, since the issue is likely to
+occur in any VM image with SSH installed!]</em></p>
+  </li>
+  <li>
+    <p>We recommend that you use the Mininet 2.2.2 or newer VM images.</p>
+  </li>
+</ul>
+
+<h3 id="ubuntu-1604-lts-xenial-compatibility">Ubuntu 16.04 LTS (Xenial) Compatibility</h3>
+
+<ul>
+  <li>
+    <p><strong>Kernel Bug Returns!</strong> :( Unfortunately, the annoying kernel bug
+  that causes <code>unshare()</code> to hang (and Mininet to stop working until
+  you reboot) has returned. You may see a message like
+  <code>unregister_netdevice: waiting for lo to become free. Usage count
+  = 1</code> in the console or kernel log. Until this is fixed, we don’t
+  recommend using 16.04 (or the Linux 3.16 kernel.)</p>
+  </li>
+  <li>
+    <p>We no longer attempt to delete a nonexistent root <code>qdisc</code> if one is
+not present (thanks to Olivier Tilmans)</p>
+  </li>
+  <li>
+    <p><code>xenial</code> VMs can now be created using <code>build.py</code></p>
+  </li>
+</ul>
+
+<h3 id="ubuntu-15-utopic-compatibility">Ubuntu 15 (Utopic) Compatibility</h3>
+
+<ul>
+  <li>We support <code>openvswitch-testcontroller</code> in Ubuntu 15. Note this
+controller is deprecated and not present in Ubuntu 16.</li>
+</ul>
+
+<h3 id="code-check-and-continuous-integration">Code Check and Continuous Integration</h3>
+
+<ul>
+  <li>We now run <a href="/blog/2017/01/12/testing-using-travis-ci/">public CI builds via Travis</a></li>
+  <li>The builds include a code check using <code>pylint</code> on Ubuntu 14.04 LTS</li>
+</ul>
+
+<h3 id="notable-bug-fixes-or-workarounds">Notable Bug Fixes or Workarounds</h3>
+
+<ul>
+  <li>
+    <p>We’ve been seeing a variety of performance test failures running
+under kvm, so the constraints on some performance tests have been
+relaxed slightly.</p>
+  </li>
+  <li>
+    <p>A race condition that could cause <code>Mininet.iperf()</code> to fail has been
+addressed. (#589)</p>
+  </li>
+  <li>
+    <p>We have forked the Stanford OpenFlow 1.0 reference controller and
+<code>oflops</code> and use our own versions in the Mininet VM image. Note
+these are somewhat obsolete.</p>
+  </li>
+  <li>
+    <p><code>install.sh</code> has basic support for RHEL.</p>
+  </li>
+  <li>
+    <p><code>mnexec</code> explicitly recursively marks mounts as private; this should
+fix compatibility with <code>systemd</code> based systems which inexplicably
+require the default mount namespace behavior to be shared. ;-(
+(#565)</p>
+  </li>
+  <li>
+    <p>The default OpenFlow port is now the official port of 6653 rather
+than the classic port of 6633, which was nastily co-opted by Cisco.</p>
+  </li>
+  <li>
+    <p>NAT can use all interfaces.</p>
+  </li>
+  <li>
+    <p><code>ip_forward</code> is restored to its original state after NAT shuts down</p>
+  </li>
+  <li>
+    <p>An option has been added to the <code>NAT</code> element, and <code>iptables</code> are
+not flushed by default.</p>
+  </li>
+  <li>
+    <p>The NAT element now correctly attaches to the switch that is
+specified in its parameters.</p>
+  </li>
+  <li>
+    <p>A number of tests have been revised to make them more reliable.</p>
+  </li>
+</ul>
+
+<h3 id="bugs-and-gotchas">Bugs and gotchas</h3>
+
+<ul>
+  <li>
+    <p>Ryu installation with <code>install.sh -y</code> is still broken</p>
+  </li>
+  <li>
+    <p>The <code>--tests</code> option is slightly different from mainline, accepting
+multiple test names rather than parameters for the test. Please do
+not depend on this functionality in 2.2.2, or update to mainline if
+you require the new functionality.</p>
+  </li>
+  <li>
+    <p>As noted, Ubuntu 16.04+/Linux 4.4 includes a kernel regression which
+breaks container systems with the <code>waiting for lo to become free</code>
+error. Until this is fixed, we don’t recommend those OS/kernel
+versions.  If you run into the problem, Mininet will stop working
+until you reboot.</p>
+  </li>
+</ul>
+
+<h3 id="acknowledgments">Acknowledgments</h3>
+
+<p>Thanks to all of the contributors of fixes and enhancements for this
+release, including Olivier Tilmans, Jono Hart, Tomasz Buchert, Rahman
+Pujianto, Roan Huang, M S Vishwanath Bhat, Brian O’Connor, and others.</p>
+
+<p>Updated release notes may be found at:
+https://github.com/mininet/mininet/wiki/Mininet-2.2.2-Release-Notes</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Mininet Team</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-03-17T00:48:00-07:00" pubdate data-updated="true">Mar 17<span>th</span>, 2017</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2017/01/12/testing-using-travis-ci/" title="Previous Post: Automated Testing Using Travis CI">&laquo; Automated Testing Using Travis CI</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  
+  <div class = "navigation"><p><a href="/">Mininet</a></p></div>
+  <!--
+  <div class = "navigation"><p><a href="/"></a>Intro Video</p></div>
+  -->
+  <div class = "navigation"><p><a href="/download">Get Started</a></p></div>
+  <div class = "navigation"><p><a href="/sample-workflow">Sample Workflow</a><p></div>
+  <div class = "navigation"><p><a href="/walkthrough">Walkthrough</a><p></div>
+  <div class = "navigation"><p><a href="/overview">Overview</a><p></div>
+  <br>
+  
+  <div class = "navigation"><p><a href="/download">Download</a></p></div>
+  <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/Documentation">Documentation</a></p></div>
+  <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/Publications">Papers</a></p></div>
+  <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/Videos">Videos</a></p></div>
+  <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki">Wiki</a></p></div>
+  <div class = "navigation"><p><a href="https://github.com/mininet/mininet">Source Code</a></p></div>
+  <div class = "navigation"><p><a href="https://travis-ci.org/mininet/mininet">Build Results</a></p></div>
+  <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/Mininet-Apps">Apps</a></p></div>
+  <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/FAQ">FAQ</a></p></div>
+  <!--
+  <div class = "navigation"><p><a href="/"></a>Tutorials</p></div>
+  -->
+  <br>
+  
+  <div class = "navigation"><p><a href="/support">Support</a></p></div>
+  <div class = "navigation"><p><a href="/contribute">Contribute</a></p></div>
+  <div class = "navigation"><p><a href="/blog/archives">News Archives</a></p></div>
+  <div class = "navigation"><p><a href="/credits">Credits</a></p></div>
+</section>
+<section>
+  <a href='/blog'><h1>News</h1></a>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2017/03/17/announcing-mininet-2-2-2/">Announcing Mininet 2.2.2</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2017/01/12/testing-using-travis-ci/">Automated Testing Using Travis CI</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/04/16/announcing-mininet-2-2-1/">Announcing Mininet 2.2.1</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2015/04/15/mininet-on-raspberry-pi/">Mininet on Raspberry Pi</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/12/09/announcing-mininet-2-2-0/">Announcing Mininet 2.2.0 !</a>
+      </li>
+    
+  </ul>
+</section>
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2017 - Mininet Team -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
