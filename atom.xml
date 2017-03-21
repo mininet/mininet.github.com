@@ -4,7 +4,7 @@
   <title><![CDATA[Mininet]]></title>
   <link href="http://mininet.github.com/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2017-03-21T15:32:47-07:00</updated>
+  <updated>2017-03-21T15:34:21-07:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -61,7 +61,7 @@ or an older kernel until this is fixed.</li>
 
 <h3 id="release-notes-and-downloads">Release notes and Downloads</h3>
 
-<p>Additional information for this release and previous releases
+<p>Full release notes for this release and previous releases
 may be found in the <strong><a href="https://github.com/mininet/mininet/wiki/Documentation#mininet-release-notes">Release Notes</a></strong>
 on <a href="http://docs.mininet.org">docs.mininet.org</a>.</p>
 
@@ -80,10 +80,6 @@ on <a href="http://docs.mininet.org">docs.mininet.org</a>.</p>
 <p>Thanks to all of the contributors of fixes and enhancements for this
 release, including Olivier Tilmans, Jono Hart, Tomasz Buchert, Rahman
 Pujianto, Roan Huang, M S Vishwanath Bhat, Brian O’Connor, and others.</p>
-
-<p>Updated release notes may be found at:
-[https://github.com/mininet/mininet/wiki/Mininet-2.2.2-Release-Notes]
-(https://github.com/mininet/mininet/wiki/Mininet-2.2.2-Release-Notes)</p>
 ]]></content>
   </entry>
   
