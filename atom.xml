@@ -4,7 +4,7 @@
   <title><![CDATA[Mininet]]></title>
   <link href="http://mininet.github.com/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2017-03-21T16:37:11-07:00</updated>
+  <updated>2017-03-21T16:39:03-07:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -30,6 +30,8 @@
 </pre></td><td class="code"><pre><code class=""><span class="line">sudo rm -f /etc/ssh/*key*
 </span><span class="line">sudo /usr/sbin/dpkg-reconfigure openssh-server
 </span><span class="line">sudo service ssh restart</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Alternately, you are welcome to download a new Mininet 2.2.2 VM image.</p>
 
 <p>If you’re distributing a VM image for any purpose, we recommend removing any SSH keys before uploading it!</p>
 
