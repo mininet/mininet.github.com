@@ -4,7 +4,7 @@
   <title><![CDATA[Mininet]]></title>
   <link href="http://mininet.github.com/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2017-03-21T15:35:09-07:00</updated>
+  <updated>2017-03-21T16:01:40-07:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -32,7 +32,7 @@ destroy any default <code>ssh</code> keys in existing Mininet VMs if you havenâ€
 <span class="line-number">3</span>
 </pre></td><td class="code"><pre><code class=""><span class="line">sudo rm -f /etc/ssh/*key*
 </span><span class="line">sudo /usr/sbin/dpkg-reconfigure openssh-server
-</span><span class="line">sudo service sshd restart</span></code></pre></td></tr></table></div></figure></notextile></div>
+</span><span class="line">sudo service ssh restart</span></code></pre></td></tr></table></div></figure></notextile></div>
 
 <h3 id="improvements-and-bug-fixes">Improvements and Bug Fixes</h3>
 
