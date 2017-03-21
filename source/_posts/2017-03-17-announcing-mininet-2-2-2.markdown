@@ -10,9 +10,10 @@ Mininet 2.2.2 is primarily a performance improvement and bug fix release.
 
 ### Security Advisory
 
-* Security advisory: We recommend that you use the Mininet 2.2.2
-  or newer VM images, because they no longer include SSH keys that you
-  would have to remove by hand to avoid reusing.
+* The Mininet VM images no longer ship with identical SSH keys. We recommend that you
+  destroy any default SSH keys in existing Mininet VMs if you haven't already:
+
+      sudo rm -f /etc/ssh/*key*                                                                                                                   sudo /usr/sbin/dpkg-reconfigure openssh-server                                                                                              sudo service sshd restart
 
 ### Improvements and Bug Fixes
 
