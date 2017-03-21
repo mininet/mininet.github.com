@@ -8,24 +8,28 @@ categories:
 
 Mininet 2.2.2 is primarily a performance improvement and bug fix release.
 
-### Security Advisory
+### Security Advisory!
 
-* The Mininet VM images no longer ship with identical SSH keys. We recommend that you
-  destroy any default SSH keys in existing Mininet VMs if you haven't already:
+* The Mininet VM images no longer ship with identical `ssh` keys. We recommend that you
+  destroy any default `ssh` keys in existing Mininet VMs if you haven't already:
 
-      sudo rm -f /etc/ssh/*key*                                                                                                                   sudo /usr/sbin/dpkg-reconfigure openssh-server                                                                                              sudo service sshd restart
+```
+sudo rm -f /etc/ssh/*key*
+sudo /usr/sbin/dpkg-reconfigure openssh-server
+sudo service sshd restart
+```
 
 ### Improvements and Bug Fixes
 
 * We now run [public CI builds via Travis](/blog/2017/01/12/testing-using-travis-ci/)
-* Several common test failures have been addressed.
+* Several common test failures have been addressed
 * We use our own forked versions of `oflops` and the Stanford Reference
   Switch/Controller
-* `install.sh` has basic support for RHEL.
+* `install.sh` now has basic support for RHEL
 * `mnexec` now works on systemd systems
 * The default OpenFlow port is now the official port of 6653 rather
   than the classic port of 6633, which was nastily co-opted by Cisco.
-* Various fixses to the NAT element
+* Several issues with the NAT element have been addressed
 
 ### Bugs and Gotchas
 
@@ -38,7 +42,7 @@ Mininet 2.2.2 is primarily a performance improvement and bug fix release.
 
 ### Release notes and Downloads
 
-Additional information for this release and previous releases
+Full release notes for this release and previous releases
 may be found in the **[Release Notes](https://github.com/mininet/mininet/wiki/Documentation#mininet-release-notes)**
 on [docs.mininet.org](http://docs.mininet.org).
 
@@ -57,7 +61,3 @@ The latest Mininet **[source code](http://code.mininet.org)** is available on
 Thanks to all of the contributors of fixes and enhancements for this
 release, including Olivier Tilmans, Jono Hart, Tomasz Buchert, Rahman
 Pujianto, Roan Huang, M S Vishwanath Bhat, Brian O'Connor, and others.
-
-Updated release notes may be found at:
-[https://github.com/mininet/mininet/wiki/Mininet-2.2.2-Release-Notes]
-(https://github.com/mininet/mininet/wiki/Mininet-2.2.2-Release-Notes)
