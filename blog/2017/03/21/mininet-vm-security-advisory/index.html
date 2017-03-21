@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Mininet Support - Mininet</title>
+  <title>Mininet VM Security Advisory - Mininet</title>
   <meta name="author" content="Mininet Team">
 
   
-  <meta name="description" content="Mininet Support Mininet is self-supported by the friendly Mininet community via the mininet-discuss mailing list and the FAQ. To sign up for the &hellip;">
+  <meta name="description" content="Unfortunately, installing the Ubuntu SSH package into a VM image causes default SSH keys to be generated. In the case of the Mininet VM, this means &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mininet.github.com/support/">
+  <link rel="canonical" href="http://mininet.github.com/blog/2017/03/21/mininet-vm-security-advisory/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -44,39 +44,92 @@ BL: removed since they make things SLOW
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Mininet Support</h1>
+    
+      <h1 class="entry-title">Mininet VM Security Advisory</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2017-03-21T16:29:00-07:00" pubdate data-updated="true">Mar 21<span>st</span>, 2017</time>
+        
+      </p>
     
   </header>
+
+
+<div class="entry-content"><p>Unfortunately, installing the Ubuntu SSH package into a VM image causes default SSH keys to be generated. In the case of the Mininet VM, this means that the VM images for Mininet 2.2.1 and earlier included the same set of default SSH keys (which could leave you open to a MITM attack.) This probably isn’t surprising to many of you, but we’re changing it in the Mininet VM at least.</p>
+
+<p>As of Mininet 2.2.2, we no longer ship default SSH keys in the provided Mininet VM; we remove them before upload, and new SSH keys should be generated the first time you boot a Mininet 2.2.2 VM image.</p>
+
+<p>If you are logging into an older Mininet VM over the internet or another non-secure network, we highly recommend regenerating your SSH keys if you haven’t done so already:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">sudo rm -f /etc/ssh/*key*
+</span><span class="line">sudo /usr/sbin/dpkg-reconfigure openssh-server
+</span><span class="line">sudo service ssh restart</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>If you’re distributing a VM image for any purpose, we recommend removing any SSH keys before uploading it!</p>
+
+<p>Additional information on Mininet 2.2.2 may be found at
+<a href="http://mininet.org/blog/2017/03/17/announcing-mininet-2-2-2/">http://mininet.org/blog/2017/03/17/announcing-mininet-2-2-2/</a></p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
   
-  <p>Mininet is self-supported by the friendly Mininet community via the <code>mininet-discuss</code> mailing list and the <a href="https://github.com/mininet/mininet/wiki/FAQ">FAQ</a>. To sign up for the mailing list, go to <a href="https://mailman.stanford.edu/mailman/listinfo/mininet-discuss">https://mailman.stanford.edu/mailman/listinfo/mininet-discuss</a>.</p>
 
-<p>We hope to preserve a high signal-to-noise ratio for the mailing list, so please try to submit only intelligent, well-researched questions or comments regarding Mininet itself (rather than OpenFlow, NOX, networking in general, etc.) and high-quality answers. Your questions are much more likely to be answered (and you’re likely to have much more success) if you’re using our pre-built virtual machine (VM) image.</p>
+<span class="byline author vcard">Posted by <span class="fn">Mininet Team</span></span>
 
-<p>You are also encouraged to contribute helpful questions and answers to the <a href="https://github.com/mininet/mininet/wiki/FAQ">FAQ</a>.</p>
+      
 
-<p>Please also feel free to make use of the <code>#mininet</code> IRC channel on <a href="http://freenode.net">FreeNode</a> for Mininet-related discussion. For OpenFlow discussion, please feel free to use <code>#openflow</code> (and people on <code>#openflow</code> might also be able to help with Mininet issues.)</p>
 
-<h2 id="bug-reports-and-feature-requests">Bug Reports and Feature Requests</h2>
 
-<p>Please file any Mininet <strong>bug reports</strong> and <strong>feature requests</strong> by creating a new issue on <a href="https://github.com/mininet/mininet/issues">github</a>. </p>
 
-<p>Mininet is an Open Source project, so we encourage everyone to work to improve it! Please feel free to submit patches and pull requests along with your issue.</p>
 
-<p>If you are working on a new feature, please <strong>create an issue</strong> for the feature you’re working on so that we can all avoid duplicating effort. When your new feature (or fix) is ready, submit a pull request and/or attach a patch to your issue.</p>
 
-<h2 id="community-packages-and-extensions">Community Packages and Extensions</h2>
 
-<p>In addition to the core Mininet system, several members of the Mininet community have developed useful <a href="https://github.com/mininet/mininet/wiki/Mininet-Community-Extensions-and-Packages">Mininet-based packages, extensions, and tools</a>.</p>
 
   
-    <footer>
+
+
+<time datetime="2017-03-21T16:29:00-07:00" pubdate data-updated="true">Mar 21<span>st</span>, 2017</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2017/03/17/announcing-mininet-2-2-2/" title="Previous Post: Announcing Mininet 2.2.2">&laquo; Announcing Mininet 2.2.2</a>
       
       
-    </footer>
-  
+    </p>
+  </footer>
 </article>
 
 </div>

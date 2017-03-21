@@ -4,7 +4,7 @@
   <title><![CDATA[Mininet]]></title>
   <link href="http://mininet.github.com/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2017-03-21T16:01:40-07:00</updated>
+  <updated>2017-03-21T16:32:07-07:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -12,6 +12,31 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mininet VM Security Advisory]]></title>
+    <link href="http://mininet.github.com/blog/2017/03/21/mininet-vm-security-advisory/"/>
+    <updated>2017-03-21T16:29:00-07:00</updated>
+    <id>http://mininet.github.com/blog/2017/03/21/mininet-vm-security-advisory</id>
+    <content type="html"><![CDATA[<p>Unfortunately, installing the Ubuntu SSH package into a VM image causes default SSH keys to be generated. In the case of the Mininet VM, this means that the VM images for Mininet 2.2.1 and earlier included the same set of default SSH keys (which could leave you open to a MITM attack.) This probably isn’t surprising to many of you, but we’re changing it in the Mininet VM at least.</p>
+
+<p>As of Mininet 2.2.2, we no longer ship default SSH keys in the provided Mininet VM; we remove them before upload, and new SSH keys should be generated the first time you boot a Mininet 2.2.2 VM image.</p>
+
+<p>If you are logging into an older Mininet VM over the internet or another non-secure network, we highly recommend regenerating your SSH keys if you haven’t done so already:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+</pre></td><td class="code"><pre><code class=""><span class="line">sudo rm -f /etc/ssh/*key*
+</span><span class="line">sudo /usr/sbin/dpkg-reconfigure openssh-server
+</span><span class="line">sudo service ssh restart</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>If you’re distributing a VM image for any purpose, we recommend removing any SSH keys before uploading it!</p>
+
+<p>Additional information on Mininet 2.2.2 may be found at
+<a href="http://mininet.org/blog/2017/03/17/announcing-mininet-2-2-2/">http://mininet.org/blog/2017/03/17/announcing-mininet-2-2-2/</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Announcing Mininet 2.2.2]]></title>

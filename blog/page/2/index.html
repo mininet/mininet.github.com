@@ -9,8 +9,9 @@
   <meta name="author" content="Mininet Team">
 
   
-  <meta name="description" content="We’re going to France. No, really! Join us next week, December 10th to 13th at
-the ACM Conference on Network EXperiments and Technologies, CoNEXT &hellip;">
+  <meta name="description" content="One of Mininet’s key features is that it makes it very easy to create
+a complete virtual network including hosts, switches, links and
+OpenFlow &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -46,6 +47,194 @@ BL: removed since they make things SLOW
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/06/03/automating-controller-startup/">Automating Controller Startup</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-06-03T15:50:00-07:00" pubdate data-updated="true">Jun 3<span>rd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>One of Mininet’s key features is that it makes it very easy to create
+a complete virtual network including hosts, switches, links and
+OpenFlow controllers. By default, Mininet runs Open vSwitch
+in OpenFlow mode, which requires an OpenFlow controller.</p>
+
+<p>As you probably know, Mininet comes with built-in Controller() classes to
+support several controllers, including the OpenFlow reference controller
+(<code>controller</code>), Open vSwitch’s  <code>ovs-controller</code>,
+and the now-deprecated NOX Classic.</p>
+
+<p>You can easily choose which one you want when you invoke the <code>mn</code> command:</p>
+
+<pre><code>sudo mn --controller ref
+sudo mn --controller ovsc
+sudo mn --controller NOX,pyswitch
+</code></pre>
+
+<p>Each of the above examples uses a controller which turns your OVS switches
+into Ethernet bridges (aka learning switches.)</p>
+
+<p>Note that <code>ovsc</code> is easy to install but only supports 16 switches.
+You can install the reference controller (patched to support many switches)
+using <code>install.sh -f</code>. (As of this writing, you can also install NOX
+Classic using <code>install.sh -x</code>.)</p>
+
+<h2 id="the-manual-way-using-remote-controllers">The manual way: using remote controllers</h2>
+
+<p>But what do you do if you want another controller like POX? Well, one
+way is to start up POX (or Beacon, Floodlight, etc.) in another terminal
+window and then use <code>--controller remote</code>:</p>
+
+<pre><code>sudo mn --controller remote,ip=127.0.0.1
+</code></pre>
+
+<p>If your controller is running locally, you can just use</p>
+
+<pre><code>sudo mn --controller remote
+</code></pre>
+
+<p>You might be asking: is there a way for Mininet to automatically start
+up my controller so that I don’t have to do it manually? The answer is,
+of course, yes!</p>
+
+<h2 id="the-automatic-way-1-using-the-command-line">The automatic way #1: using the command line</h2>
+
+<p>The latest Mininet <code>master</code> branch allows you to change the command and
+arguments for <code>--controller ref</code> to invoke another controller as
+desired. For example, here’s how you could invoke POX:</p>
+
+<pre><code>sudo mn --controller ref,command='python pox.py',cdir=$HOME/pox,cargs='openflow.of_01 --port=%s forwarding.l2_learning'
+</code></pre>
+
+<p>Note the following options:</p>
+
+<p><code>cdir</code>: the directory to change to before invoking the controller</p>
+
+<p><code>command</code>: the command to start your controller</p>
+
+<p><code>cargs</code>: the controller’s arguments (including <code>%s</code> for wherever the controller’s listening port should go)</p>
+
+<h2 id="the-super-automatic-way-2-creating-a-custom-controller-subclass">The super automatic way #2: creating a custom <code>Controller()</code> subclass</h2>
+
+<p>This is much easier than it sounds, and it has worked in Mininet since
+version 1.0!</p>
+
+<p>Here is a custom class for POX’s l2_learning:</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+</pre></td><td class="code"><pre><code class="python"><span class="line"><span class="kn">from</span> <span class="nn">mininet.node</span> <span class="kn">import</span> <span class="n">Controller</span>
+</span><span class="line"><span class="kn">from</span> <span class="nn">os</span> <span class="kn">import</span> <span class="n">environ</span>
+</span><span class="line">
+</span><span class="line"><span class="n">POXDIR</span> <span class="o">=</span> <span class="n">environ</span><span class="p">[</span> <span class="s">&#39;HOME&#39;</span> <span class="p">]</span> <span class="o">+</span> <span class="s">&#39;/pox&#39;</span>
+</span><span class="line">
+</span><span class="line"><span class="k">class</span> <span class="nc">POX</span><span class="p">(</span> <span class="n">Controller</span> <span class="p">):</span>
+</span><span class="line">    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">cdir</span><span class="o">=</span><span class="n">POXDIR</span><span class="p">,</span>
+</span><span class="line">                  <span class="n">command</span><span class="o">=</span><span class="s">&#39;python pox.py&#39;</span><span class="p">,</span>
+</span><span class="line">                  <span class="n">cargs</span><span class="o">=</span><span class="p">(</span> <span class="s">&#39;openflow.of_01 --port=</span><span class="si">%s</span><span class="s"> &#39;</span>
+</span><span class="line">                          <span class="s">&#39;forwarding.l2_learning&#39;</span> <span class="p">),</span>
+</span><span class="line">                  <span class="o">**</span><span class="n">kwargs</span> <span class="p">):</span>
+</span><span class="line">        <span class="n">Controller</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span> <span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">cdir</span><span class="o">=</span><span class="n">cdir</span><span class="p">,</span>
+</span><span class="line">                             <span class="n">command</span><span class="o">=</span><span class="n">command</span><span class="p">,</span>
+</span><span class="line">                             <span class="n">cargs</span><span class="o">=</span><span class="n">cargs</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span> <span class="p">)</span>
+</span><span class="line">
+</span><span class="line"><span class="n">controllers</span><span class="o">=</span><span class="p">{</span> <span class="s">&#39;pox&#39;</span><span class="p">:</span> <span class="n">POX</span> <span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>With this class saved into <code>pox.py</code>, you can now do the following:</p>
+
+<pre><code>sudo mn --custom pox.py --controller pox
+</code></pre>
+
+<p>Additionally you can use the custom class in your Mininet scripts</p>
+
+<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<span class="line-number">2</span>
+<span class="line-number">3</span>
+<span class="line-number">4</span>
+<span class="line-number">5</span>
+<span class="line-number">6</span>
+<span class="line-number">7</span>
+<span class="line-number">8</span>
+<span class="line-number">9</span>
+<span class="line-number">10</span>
+<span class="line-number">11</span>
+<span class="line-number">12</span>
+<span class="line-number">13</span>
+<span class="line-number">14</span>
+<span class="line-number">15</span>
+<span class="line-number">16</span>
+<span class="line-number">17</span>
+<span class="line-number">18</span>
+<span class="line-number">19</span>
+</pre></td><td class="code"><pre><code class="python"><span class="line"><span class="c">#!/usr/bin/python</span>
+</span><span class="line">
+</span><span class="line"><span class="kn">from</span> <span class="nn">mininet.log</span> <span class="kn">import</span> <span class="n">setLogLevel</span>
+</span><span class="line"><span class="kn">from</span> <span class="nn">mininet.net</span> <span class="kn">import</span> <span class="n">Mininet</span>
+</span><span class="line"><span class="kn">from</span> <span class="nn">mininet.topolib</span> <span class="kn">import</span> <span class="n">TreeTopo</span>
+</span><span class="line"><span class="kn">from</span> <span class="nn">mininet.cli</span> <span class="kn">import</span> <span class="n">CLI</span>
+</span><span class="line">
+</span><span class="line"><span class="c"># We assume you are in the same directory as pox.py</span>
+</span><span class="line"><span class="c"># or that it is loadable via PYTHONPATH</span>
+</span><span class="line"><span class="kn">from</span> <span class="nn">pox</span> <span class="kn">import</span> <span class="n">POX</span>
+</span><span class="line">
+</span><span class="line"><span class="n">setLogLevel</span><span class="p">(</span> <span class="s">&#39;info&#39;</span> <span class="p">)</span>
+</span><span class="line">
+</span><span class="line"><span class="n">net</span> <span class="o">=</span> <span class="n">Mininet</span><span class="p">(</span> <span class="n">topo</span><span class="o">=</span><span class="n">TreeTopo</span><span class="p">(</span> <span class="n">depth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">fanout</span><span class="o">=</span><span class="mi">2</span> <span class="p">),</span>
+</span><span class="line">               <span class="n">controller</span><span class="o">=</span><span class="n">POX</span> <span class="p">)</span>
+</span><span class="line">
+</span><span class="line"><span class="n">net</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</span><span class="line"><span class="n">CLI</span><span class="p">(</span> <span class="n">net</span> <span class="p">)</span>
+</span><span class="line"><span class="n">net</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div>
+
+<p>Note that in this custom class we’ve simply changed
+<code>__init__</code>, but in a more complicated example you might
+wish to change the <code>start()</code> and <code>stop()</code> methods as
+well.</p>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -247,6 +436,10 @@ developers, researchers and contributors!</p>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2017/03/21/mininet-vm-security-advisory/">Mininet VM Security Advisory</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2017/03/17/announcing-mininet-2-2-2/">Announcing Mininet 2.2.2</a>
       </li>
     
@@ -260,10 +453,6 @@ developers, researchers and contributors!</p>
     
       <li class="post">
         <a href="/blog/2015/04/15/mininet-on-raspberry-pi/">Mininet on Raspberry Pi</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2014/12/09/announcing-mininet-2-2-0/">Announcing Mininet 2.2.0 !</a>
       </li>
     
   </ul>
