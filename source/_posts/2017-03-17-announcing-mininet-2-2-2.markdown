@@ -16,7 +16,7 @@ Mininet 2.2.2 is primarily a performance improvement and bug fix release.
 ```
 sudo rm -f /etc/ssh/*key*
 sudo /usr/sbin/dpkg-reconfigure openssh-server
-sudo service sshd restart
+sudo service ssh restart
 ```
 
 ### Improvements and Bug Fixes
