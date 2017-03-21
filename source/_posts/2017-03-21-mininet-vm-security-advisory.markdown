@@ -17,6 +17,8 @@ sudo /usr/sbin/dpkg-reconfigure openssh-server
 sudo service ssh restart
 ```
 
+Alternately, you are welcome to download a new Mininet 2.2.2 VM image.
+
 If you're distributing a VM image for any purpose, we recommend removing any SSH keys before uploading it!
 
 Additional information on Mininet 2.2.2 may be found at
