@@ -4,7 +4,7 @@
   <title><![CDATA[Mininet]]></title>
   <link href="http://mininet.github.com/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2017-03-21T16:39:03-07:00</updated>
+  <updated>2017-04-05T14:23:51-07:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -12,6 +12,38 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mininet wins ACM SIGCOMM SOSR Software Systems Award]]></title>
+    <link href="http://mininet.github.com/blog/2017/04/05/mininet-wins-sosr-systems-award/"/>
+    <updated>2017-04-05T11:04:00-07:00</updated>
+    <id>http://mininet.github.com/blog/2017/04/05/mininet-wins-sosr-systems-award</id>
+    <content type="html"><![CDATA[<p>We are pleased to announce that <strong>Mininet has won the
+<a href="http://conferences.sigcomm.org/sosr/2017/award.html">ACM SIGCOMM SOSR Software Systems Award</a>!</strong></p>
+
+<blockquote>
+  <p>“The ACM SIGCOMM SOSR Software Systems Award is given to an individual
+or an institution to recognize the development of a software system
+that has had a significant impact on SDN research, implementations,
+and tools. The impact may be reflected in the widespread adoption of
+the system, or of its underlying concepts, by the wider SDN community,
+either in research projects, in the open-source community, or
+commercially.”</p>
+</blockquote>
+
+<p>The award also includes an invited talk, and the talk slides may be found
+<a href="https://github.com/mininet/mininet/wiki/Publications#presentations-and-slides">here</a>.</p>
+
+<p>The SOSR 2017 program and proceedings may be found <a href="http://conferences.sigcomm.org/sosr/2017/program.html">here</a>.</p>
+
+<p><strong>Mininet’s ongoing success and impact would not be possible without the
+support and contributions from the Mininet community, so we’d like to
+take this opportunity to thank everyone and to say that we look
+forward to working together to continue to make Mininet a better and
+more useful system!</strong></p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mininet VM Security Advisory]]></title>
