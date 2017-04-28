@@ -10,7 +10,7 @@ a number of bug fixes as well as several new features, including:
 
 * Improved OpenFlow 1.3 support
 
-  - `mn --switch ovs,protocols=openflow13` starts OVS in 1.3 mode
+  - `mn --switch ovs,protocols=OpenFlow13` starts OVS in 1.3 mode
   - `install.sh -w` installs 1.3-compatible Wireshark dissector using
     Loxigen
     - `install.sh -y` installs the Ryu 1.3-compatible controller
