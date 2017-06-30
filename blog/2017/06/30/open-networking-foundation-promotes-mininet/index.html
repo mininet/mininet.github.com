@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Announcing Mininet 2.2.2 - Mininet</title>
+  <title>Open Networking Foundation promotes Mininet - Mininet</title>
   <meta name="author" content="Mininet Team">
 
   
-  <meta name="description" content="Mininet 2.2.2 is primarily a performance improvement and bug fix release. Security Advisory! The Mininet VM images no longer ship with identical ssh &hellip;">
+  <meta name="description" content="In case you missed it, here is the blog post on Mininet on the
+Open Networking Foundation web site: https://www.opennetworking.org/?p=2598&amp;Itemid &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mininet.github.com/blog/2017/03/17/announcing-mininet-2-2-2/">
+  <link rel="canonical" href="http://mininet.github.com/blog/2017/06/30/open-networking-foundation-promotes-mininet/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -48,7 +49,7 @@ BL: removed since they make things SLOW
   
   <header>
     
-      <h1 class="entry-title">Announcing Mininet 2.2.2</h1>
+      <h1 class="entry-title">Open Networking Foundation Promotes Mininet</h1>
     
     
       <p class="meta">
@@ -64,75 +65,20 @@ BL: removed since they make things SLOW
   
 
 
-<time datetime="2017-03-17T00:48:00-07:00" pubdate data-updated="true">Mar 17<span>th</span>, 2017</time>
+<time datetime="2017-06-30T14:26:00-07:00" pubdate data-updated="true">Jun 30<span>th</span>, 2017</time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Mininet 2.2.2 is primarily a performance improvement and bug fix release.</p>
+<div class="entry-content"><p>In case you missed it, here is the <a href="https://www.opennetworking.org/?p=2598&amp;Itemid=316">blog post on Mininet</a> on the
+<a href="https://opennetworking.org">Open Networking Foundation</a> web site:</p>
 
-<h3 id="security-advisory">Security Advisory!</h3>
+<p><a href="https://www.opennetworking.org/?p=2598&amp;Itemid=316">https://www.opennetworking.org/?p=2598&amp;Itemid=316</a></p>
 
-<ul>
-  <li>The Mininet VM images no longer ship with identical <code>ssh</code> keys. We recommend that you
-destroy any default <code>ssh</code> keys in existing Mininet VMs if you haven’t already:</li>
-</ul>
+<p>There is an amusing embedded video as well.</p>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
-<span class="line-number">2</span>
-<span class="line-number">3</span>
-</pre></td><td class="code"><pre><code class=""><span class="line">sudo rm -f /etc/ssh/*key*
-</span><span class="line">sudo /usr/sbin/dpkg-reconfigure openssh-server
-</span><span class="line">sudo service ssh restart</span></code></pre></td></tr></table></div></figure></notextile></div>
-
-<h3 id="improvements-and-bug-fixes">Improvements and Bug Fixes</h3>
-
-<ul>
-  <li>We now run <a href="/blog/2017/01/12/testing-using-travis-ci/">public CI builds via Travis</a></li>
-  <li>Several common test failures have been addressed</li>
-  <li>We use our own forked versions of <code>oflops</code> and the Stanford Reference
-Switch/Controller</li>
-  <li><code>install.sh</code> now has basic support for RHEL</li>
-  <li><code>mnexec</code> now works on systemd systems</li>
-  <li>The default OpenFlow port is now the official port of 6653 rather
-than the classic port of 6633, which was nastily co-opted by Cisco.</li>
-  <li>Several issues with the NAT element have been addressed</li>
-</ul>
-
-<h3 id="bugs-and-gotchas">Bugs and Gotchas</h3>
-
-<ul>
-  <li>Ubuntu 16.04 LTS (Xenial) kernel bug: the problem resulting
-in <code>unregister_netdevice: waiting for lo to become free. Usage count
-= 1</code> in the console or kernel log has returned. We recommend using 14.04
-or an older kernel until this is fixed.</li>
-  <li>Ryu installation with <code>install.sh -y</code> is still broken</li>
-  <li>The <code>--tests</code> option is slightly different from mainline</li>
-</ul>
-
-<h3 id="release-notes-and-downloads">Release notes and Downloads</h3>
-
-<p>Full release notes for this release and previous releases
-may be found in the <strong><a href="https://github.com/mininet/mininet/wiki/Documentation#mininet-release-notes">Release Notes</a></strong>
-on <a href="http://docs.mininet.org">docs.mininet.org</a>.</p>
-
-<p>The easiest way to get started with Mininet is to download a
-<strong><a href="http://mininet.org/download">VM image</a></strong>.</p>
-
-<p>Download, installation, and upgrade instructions may be found at
-<a href="http://mininet.org/download">http://mininet.org/download</a> .</p>
-
-<p>The latest Mininet <strong><a href="http://code.mininet.org">source code</a></strong> is available on
-<a href="[http://github.com/mininet/mininet">github</a> and also via
-<a href="http://code.mininet.org">code.mininet.org</a>.</p>
-
-<h3 id="acknowledgments">Acknowledgments</h3>
-
-<p>Thanks to all of the contributors of fixes and enhancements for this
-release, including Olivier Tilmans, Jono Hart, Tomasz Buchert, Rahman
-Pujianto, Roan Huang, M S Vishwanath Bhat, Brian O’Connor, and others.</p>
 </div>
 
 
@@ -155,7 +101,7 @@ Pujianto, Roan Huang, M S Vishwanath Bhat, Brian O’Connor, and others.</p>
   
 
 
-<time datetime="2017-03-17T00:48:00-07:00" pubdate data-updated="true">Mar 17<span>th</span>, 2017</time>
+<time datetime="2017-06-30T14:26:00-07:00" pubdate data-updated="true">Jun 30<span>th</span>, 2017</time>
       
 
 
@@ -170,10 +116,8 @@ Pujianto, Roan Huang, M S Vishwanath Bhat, Brian O’Connor, and others.</p>
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2017/01/12/testing-using-travis-ci/" title="Previous Post: Automated Testing Using Travis CI">&laquo; Automated Testing Using Travis CI</a>
+        <a class="basic-alignment left" href="/blog/2017/04/05/mininet-wins-sosr-systems-award/" title="Previous Post: Mininet wins ACM SIGCOMM SOSR Software Systems Award !">&laquo; Mininet wins ACM SIGCOMM SOSR Software Systems Award !</a>
       
-      
-        <a class="basic-alignment right" href="/blog/2017/03/21/mininet-vm-security-advisory/" title="Next Post: Mininet VM Security Advisory">Mininet VM Security Advisory &raquo;</a>
       
     </p>
   </footer>

@@ -4,7 +4,7 @@
   <title><![CDATA[Mininet]]></title>
   <link href="http://mininet.github.com/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2017-04-05T14:26:35-07:00</updated>
+  <updated>2017-06-30T14:44:10-07:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Open Networking Foundation promotes Mininet]]></title>
+    <link href="http://mininet.github.com/blog/2017/06/30/open-networking-foundation-promotes-mininet/"/>
+    <updated>2017-06-30T14:26:00-07:00</updated>
+    <id>http://mininet.github.com/blog/2017/06/30/open-networking-foundation-promotes-mininet</id>
+    <content type="html"><![CDATA[<p>In case you missed it, here is the <a href="https://www.opennetworking.org/?p=2598&amp;Itemid=316">blog post on Mininet</a> on the
+<a href="https://opennetworking.org">Open Networking Foundation</a> web site:</p>
+
+<p><a href="https://www.opennetworking.org/?p=2598&amp;Itemid=316">https://www.opennetworking.org/?p=2598&amp;Itemid=316</a></p>
+
+<p>There is an amusing embedded video as well.</p>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Mininet wins ACM SIGCOMM SOSR Software Systems Award !]]></title>
