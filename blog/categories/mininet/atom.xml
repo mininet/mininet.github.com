@@ -4,7 +4,7 @@
   <title><![CDATA[Category: mininet | Mininet]]></title>
   <link href="http://mininet.github.com/blog/categories/mininet/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2017-06-30T14:44:10-07:00</updated>
+  <updated>2018-01-04T13:06:05-08:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -26,7 +26,7 @@ a number of bug fixes as well as several new features, including:</p>
     <p>Improved OpenFlow 1.3 support</p>
 
     <ul>
-      <li><code>mn --switch ovs,protocols=openflow13</code> starts OVS in 1.3 mode</li>
+      <li><code>mn --switch ovs,protocols=OpenFlow13</code> starts OVS in 1.3 mode</li>
       <li><code>install.sh -w</code> installs 1.3-compatible Wireshark dissector using
 Loxigen
         <ul>
