@@ -20,7 +20,7 @@ We encourage you to contribute helpful questions and answers to the [FAQ](https:
 
 ### Submit Bug Reports and Feature Requests
 
-Please file any Mininet **bug reports** and **feature requests** by creating a [new issue](https://github.com/mininet/mininet/issues) on github. 
+Please file any Mininet **bug reports** and **feature requests** by creating a [new issue](https://github.com/mininet/mininet/issues) on github.
 
 Please feel free to submit patches and pull requests along with your issue.
 
@@ -32,15 +32,15 @@ You may also wish to examine or contribute to the [Mininet Project Ideas](https:
 
 ###  Enhance the Mininet Documentation
 
-High-quality documentation drastically enhances the usability of any project. Much of Mininet's documentation is directly editable on the wiki at [docs.mininet.org](docs) .
+High-quality documentation drastically enhances the usability of any project. Much of Mininet's documentation is directly editable on the wiki at [docs.mininet.org](https://github.com/mininet/mininet/wiki/Documentation) .
 
 ### Create Mininet Apps
 
-Mininet is a useful platform for a variety of applications. Creaete your own and add them to 
-[apps.mininet.org](/apps)
+Mininet is a useful platform for a variety of applications. Creaete your own and add them to
+[apps.mininet.org](https://github.com/mininet/mininet/wiki/Mininet-Apps)
 
 ### Create Useful Tools, Extensions, Topologies, Classes, and other Packages
- 
+
 Please feel free to contribute to the [Mininet Community Extensions and Packages](https://github.com/mininet/mininet/wiki/Mininet-Community-Extensions-and-Packages) page.
 
 ### Participate in Google Summer of Code

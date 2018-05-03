@@ -18,7 +18,7 @@ The entire walkthrough should take under an hour.
 *Note: If you are using the Ubuntu Mininet 2.0.0d4 package, it uses a slightly
 different syntax for `Topo()` - e.g. `add_switch` vs. `addSwitch`, etc.. If
 you check out Mininet from source, you may wish to check out the `2.0.0d4`
-tag to see code (including code in `examples`) which is consistent 
+tag to see code (including code in `examples`) which is consistent
 with the 2.0.04 package.*
 
 Part 1: Everyday Mininet Usage
@@ -279,7 +279,7 @@ Before:
               UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
               RX packets:6 errors:0 dropped:0 overruns:0 frame:0
               TX packets:6 errors:0 dropped:0 overruns:0 carrier:0
-              collisions:0 txqueuelen:1000 
+              collisions:0 txqueuelen:1000
               RX bytes:392 (392.0 B)  TX bytes:392 (392.0 B)
     mininet> exit
 
@@ -293,7 +293,7 @@ After:
               UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
               RX packets:0 errors:0 dropped:0 overruns:0 frame:0
               TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
-              collisions:0 txqueuelen:1000 
+              collisions:0 txqueuelen:1000
               RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
     mininet> exit
 
@@ -323,7 +323,7 @@ For example:
 
 In the xterm labeled "switch: s1 (root)", run:
 
-    # dpctl dump-flows tcp:127.0.0.1:6634
+    $ sudo ovs-ofctl dump-flows s1
 
 Nothing will print out; the switch has no flows added.  To use `dpctl` with other switches, start up mininet in verbose mode and look at the passive listening ports for the switches when they're created.
 
@@ -332,7 +332,7 @@ Now, in the xterm labeled "host: h1", run:
     # ping 10.0.0.2
 
 Go back to `s1` and dump the flows:
-    # dpctl dump-flows tcp:127.0.0.1:6634
+    # dpctl dump-flows
 
 You should see multiple flow entries now. Alternately (and generally more convenient), you could use the `dpctl` command built into the Mininet CLI without needing any xterms or manually specifying the IP and port of the switch.
 
@@ -449,7 +449,7 @@ Part 4: Python API Examples
 The [examples directory](https://github.com/mininet/mininet/tree/master/examples) in the Mininet source tree includes examples of how to use Mininet's Python API, as well as potentially useful code that has not been integrated into the main code base.
 
 *Note: As noted at the beginning, this Walkthrough assumes that you are either
-using a Mininet VM, which includes everything you need, or a native 
+using a Mininet VM, which includes everything you need, or a native
 installation with all of the associated tools,
 including the reference controller `controller`, which is part of the OpenFlow
 reference implementation and may be installed using `install.sh -f` if it has
@@ -484,7 +484,7 @@ Congrats! You've completed the Mininet Walkthrough. Feel free to try out new top
 
 ### Next Steps to mastering Mininet
 
-If you haven't done so yet, you should definitely go through the 
+If you haven't done so yet, you should definitely go through the
 [OpenFlow tutorial](https://github.com/mininet/openflow-tutorial/wiki).
 
 Although you can get reasonably far using Mininet's CLI, Mininet becomes much
@@ -518,8 +518,8 @@ For example, to run POX's sample learning switch, you could do something like
     $ cd ~/pox
     $ ./pox.py forwarding.l2_learning
 
-in one window, and in another window, start up Mininet to connect to the 
-"remote" controller (which is actually running locally, but outside of 
+in one window, and in another window, start up Mininet to connect to the
+"remote" controller (which is actually running locally, but outside of
 Mininet's control):
 
     $ sudo mn --controller=remote,ip=127.0.0.1,port=6633
@@ -564,4 +564,3 @@ Note that this time, `mn` was called via `sudo -E`, to keep the `NOX_CORE_DIR` e
 	Defaults !env_reset
 
 ... so that when running `sudo` the env var setup isn't changed.
-
