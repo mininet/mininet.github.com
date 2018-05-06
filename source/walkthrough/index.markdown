@@ -323,7 +323,7 @@ For example:
 
 In the xterm labeled "switch: s1 (root)", run:
 
-    # dpctl dump-flows tcp:127.0.0.1:6634
+    # dpctl dump-flows tcp:127.0.0.1:6654
 
 Nothing will print out; the switch has no flows added.  To use `dpctl` with other switches, start up mininet in verbose mode and look at the passive listening ports for the switches when they're created.
 
@@ -332,7 +332,8 @@ Now, in the xterm labeled "host: h1", run:
     # ping 10.0.0.2
 
 Go back to `s1` and dump the flows:
-    # dpctl dump-flows tcp:127.0.0.1:6634
+
+    # dpctl dump-flows tcp:127.0.0.1:6654
 
 You should see multiple flow entries now. Alternately (and generally more convenient), you could use the `dpctl` command built into the Mininet CLI without needing any xterms or manually specifying the IP and port of the switch.
 
