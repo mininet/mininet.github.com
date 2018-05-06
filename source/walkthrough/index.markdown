@@ -471,7 +471,7 @@ From another terminal, you can ssh into any host and run interactive commands:
 
 Exit SSH example mininet:
 
-	$ exit
+	mininet> exit
 
 
 You will wish to revisit the examples after you've read the
