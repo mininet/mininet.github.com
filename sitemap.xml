@@ -67,6 +67,14 @@
         <lastmod>2018-01-04T12:59:00-08:00</lastmod>
     </url>
     <url>
+        <loc>http://mininet.github.com/blog/2018/08/27/new-post/</loc>
+        <lastmod>2018-08-27T15:39:22-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://mininet.github.com/blog/2018/08/27/sigcomm2018-hackathon-winners/</loc>
+        <lastmod>2018-08-27T15:40:12-07:00</lastmod>
+    </url>
+    <url>
         <loc>http://mininet.github.com/sample-workflow/</loc>
         <lastmod>2017-01-12T18:19:46-08:00</lastmod>
     </url>
@@ -84,11 +92,11 @@
     </url>
     <url>
         <loc>http://mininet.github.com/blog/</loc>
-        <lastmod>2018-01-04T13:05:00-08:00</lastmod>
+        <lastmod>2018-08-27T15:40:12-07:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/blog/archives/</loc>
-        <lastmod>2018-01-04T13:05:00-08:00</lastmod>
+        <lastmod>2018-08-27T15:40:12-07:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/support/</loc>
@@ -101,10 +109,6 @@
     <url>
         <loc>http://mininet.github.com/contribute/</loc>
         <lastmod>2017-03-18T15:36:09-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/sigcomm2018-hackathon-winners/</loc>
-        <lastmod>2018-08-27T15:33:16-07:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/overview/</loc>

@@ -4,7 +4,7 @@
   <title><![CDATA[Mininet]]></title>
   <link href="http://mininet.github.com/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2018-08-27T15:35:51-07:00</updated>
+  <updated>2018-08-27T15:42:10-07:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -12,6 +12,40 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Congrats to Mininet SIGCOMM 2018 Hackathon winners!]]></title>
+    <link href="http://mininet.github.com/blog/2018/08/27/sigcomm2018-hackathon-winners/"/>
+    <updated>2018-08-27T15:39:00-07:00</updated>
+    <id>http://mininet.github.com/blog/2018/08/27/sigcomm2018-hackathon-winners</id>
+    <content type="html"><![CDATA[<p>Congratulations to Alexander Jung, Michał Król and Torsten Runge, who
+prototyped a Mininet node class for launching unikernels - small
+application-specific kernel images, basically an application linked
+with a library OS, ClickOS being one example - and ended up placing in
+the SIGCOMM 2018 Hackathon!</p>
+
+<p>https://conferences.sigcomm.org/sigcomm/2018/hackathon.html</p>
+
+<p>In their case they used Rumprun as the unikernel system and qemu/kvm
+to launch it.</p>
+
+<p>https://github.com/nderjung/mininet Branch: devel/rump
+https://github.com/rumpkernel/rumprun/
+http://unikernel.org</p>
+
+<p>They are planning on continuing to work on it, so I hope we can get something
+simple and useful running and perhaps added to Mininet!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[new-post]]></title>
+    <link href="http://mininet.github.com/blog/2018/08/27/new-post/"/>
+    <updated>2018-08-27T15:39:00-07:00</updated>
+    <id>http://mininet.github.com/blog/2018/08/27/new-post</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Open Networking Foundation promotes Mininet]]></title>
