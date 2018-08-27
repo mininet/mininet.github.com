@@ -1,10 +1,9 @@
 ---
-layout: page
+layout: post
 title: "Congrats to Mininet SIGCOMM 2018 Hackathon winners!"
-date: 2018-08-27 15:30
+date: 2018-08-27 15:39
 comments: true
-sharing: true
-footer: true
+categories:
 ---
 Congratulations to Alexander Jung, Michał Król and Torsten Runge, who
 prototyped a Mininet node class for launching unikernels - small
