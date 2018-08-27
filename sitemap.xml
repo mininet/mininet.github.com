@@ -67,23 +67,7 @@
         <lastmod>2018-01-04T12:59:00-08:00</lastmod>
     </url>
     <url>
-        <loc>http://mininet.github.com/blog/archives/</loc>
-        <lastmod>2018-01-04T13:05:00-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/blog/</loc>
-        <lastmod>2018-01-04T13:05:00-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/contribute/</loc>
-        <lastmod>2017-03-18T15:36:09-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/credits/</loc>
-        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/download/</loc>
+        <loc>http://mininet.github.com/sample-workflow/</loc>
         <lastmod>2017-01-12T18:19:46-08:00</lastmod>
     </url>
     <url>
@@ -95,15 +79,31 @@
         <lastmod>2017-01-12T18:19:46-08:00</lastmod>
     </url>
     <url>
-        <loc>http://mininet.github.com/overview/</loc>
+        <loc>http://mininet.github.com/walkthrough/</loc>
         <lastmod>2017-01-12T18:19:46-08:00</lastmod>
     </url>
     <url>
-        <loc>http://mininet.github.com/sample-workflow/</loc>
-        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
+        <loc>http://mininet.github.com/blog/</loc>
+        <lastmod>2018-01-04T13:05:00-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://mininet.github.com/blog/archives/</loc>
+        <lastmod>2018-01-04T13:05:00-08:00</lastmod>
     </url>
     <url>
         <loc>http://mininet.github.com/support/</loc>
+        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://mininet.github.com/download/</loc>
+        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://mininet.github.com/contribute/</loc>
+        <lastmod>2017-03-18T15:36:09-07:00</lastmod>
+    </url>
+    <url>
+        <loc>http://mininet.github.com/overview/</loc>
         <lastmod>2017-01-12T18:19:46-08:00</lastmod>
     </url>
     <url>
@@ -111,7 +111,7 @@
         <lastmod>2017-01-12T18:19:46-08:00</lastmod>
     </url>
     <url>
-        <loc>http://mininet.github.com/walkthrough/</loc>
+        <loc>http://mininet.github.com/credits/</loc>
         <lastmod>2017-01-12T18:19:46-08:00</lastmod>
     </url>
 </urlset>
