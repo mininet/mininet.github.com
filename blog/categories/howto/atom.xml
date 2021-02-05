@@ -4,7 +4,7 @@
   <title><![CDATA[Category: howto | Mininet]]></title>
   <link href="http://mininet.github.com/blog/categories/howto/atom.xml" rel="self"/>
   <link href="http://mininet.github.com/"/>
-  <updated>2018-08-27T15:42:10-07:00</updated>
+  <updated>2021-02-04T16:40:44-08:00</updated>
   <id>http://mininet.github.com/</id>
   <author>
     <name><![CDATA[Mininet Team]]></name>
@@ -18,127 +18,7 @@
     <link href="http://mininet.github.com/blog/2013/06/03/automating-controller-startup/"/>
     <updated>2013-06-03T15:50:00-07:00</updated>
     <id>http://mininet.github.com/blog/2013/06/03/automating-controller-startup</id>
-    <content type="html"><![CDATA[<p>One of Mininet’s key features is that it makes it very easy to create
-a complete virtual network including hosts, switches, links and
-OpenFlow controllers. By default, Mininet runs Open vSwitch
-in OpenFlow mode, which requires an OpenFlow controller.</p>
-
-<p>As you probably know, Mininet comes with built-in Controller() classes to
-support several controllers, including the OpenFlow reference controller
-(<code>controller</code>), Open vSwitch’s  <code>ovs-controller</code>,
-and the now-deprecated NOX Classic.</p>
-
-<p>You can easily choose which one you want when you invoke the <code>mn</code> command:</p>
-
-<pre><code>sudo mn --controller ref
-sudo mn --controller ovsc
-sudo mn --controller NOX,pyswitch
-</code></pre>
-
-<p>Each of the above examples uses a controller which turns your OVS switches
-into Ethernet bridges (aka learning switches.)</p>
-
-<p>Note that <code>ovsc</code> is easy to install but only supports 16 switches.
-You can install the reference controller (patched to support many switches)
-using <code>install.sh -f</code>. (As of this writing, you can also install NOX
-Classic using <code>install.sh -x</code>.)</p>
-
-<h2 id="the-manual-way-using-remote-controllers">The manual way: using remote controllers</h2>
-
-<p>But what do you do if you want another controller like POX? Well, one
-way is to start up POX (or Beacon, Floodlight, etc.) in another terminal
-window and then use <code>--controller remote</code>:</p>
-
-<pre><code>sudo mn --controller remote,ip=127.0.0.1
-</code></pre>
-
-<p>If your controller is running locally, you can just use</p>
-
-<pre><code>sudo mn --controller remote
-</code></pre>
-
-<p>You might be asking: is there a way for Mininet to automatically start
-up my controller so that I don’t have to do it manually? The answer is,
-of course, yes!</p>
-
-<h2 id="the-automatic-way-1-using-the-command-line">The automatic way #1: using the command line</h2>
-
-<p>The latest Mininet <code>master</code> branch allows you to change the command and
-arguments for <code>--controller ref</code> to invoke another controller as
-desired. For example, here’s how you could invoke POX:</p>
-
-<pre><code>sudo mn --controller ref,command='python pox.py',cdir=$HOME/pox,cargs='openflow.of_01 --port=%s forwarding.l2_learning'
-</code></pre>
-
-<p>Note the following options:</p>
-
-<p><code>cdir</code>: the directory to change to before invoking the controller</p>
-
-<p><code>command</code>: the command to start your controller</p>
-
-<p><code>cargs</code>: the controller’s arguments (including <code>%s</code> for wherever the controller’s listening port should go)</p>
-
-<h2 id="the-super-automatic-way-2-creating-a-custom-controller-subclass">The super automatic way #2: creating a custom <code>Controller()</code> subclass</h2>
-
-<p>This is much easier than it sounds, and it has worked in Mininet since
-version 1.0!</p>
-
-<p>Here is a custom class for POX’s l2_learning:</p>
-
-<p>```python
-from mininet.node import Controller
-from os import environ</p>
-
-<p>POXDIR = environ[ ‘HOME’ ] + ‘/pox’</p>
-
-<p>class POX( Controller ):
-    def <strong>init</strong>( self, name, cdir=POXDIR,
-                  command=’python pox.py’,
-                  cargs=( ‘openflow.of_01 –port=%s ‘
-                          ‘forwarding.l2_learning’ ),
-                  **kwargs ):
-        Controller.<strong>init</strong>( self, name, cdir=cdir,
-                             command=command,
-                             cargs=cargs, **kwargs )</p>
-
-<p>controllers={ ‘pox’: POX }
-```</p>
-
-<p>With this class saved into <code>pox.py</code>, you can now do the following:</p>
-
-<pre><code>sudo mn --custom pox.py --controller pox
-</code></pre>
-
-<p>Additionally you can use the custom class in your Mininet scripts</p>
-
-<p>```python
-#!/usr/bin/python</p>
-
-<p>from mininet.log import setLogLevel
-from mininet.net import Mininet
-from mininet.topolib import TreeTopo
-from mininet.cli import CLI</p>
-
-<h1 id="we-assume-you-are-in-the-same-directory-as-poxpy">We assume you are in the same directory as pox.py</h1>
-<p># or that it is loadable via PYTHONPATH
-from pox import POX</p>
-
-<p>setLogLevel( ‘info’ )</p>
-
-<p>net = Mininet( topo=TreeTopo( depth=2, fanout=2 ),
-               controller=POX )</p>
-
-<p>net.start()
-CLI( net )
-net.stop()
-```</p>
-
-<p>Note that in this custom class we’ve simply changed
-<code>__init__</code>, but in a more complicated example you might
-wish to change the <code>start()</code> and <code>stop()</code> methods as
-well.</p>
-
-]]></content>
+    <content type="html"><![CDATA[Liquid error: can't modify frozen String: ""]]></content>
   </entry>
   
 </feed>
