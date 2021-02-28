@@ -88,13 +88,16 @@ class POX( Controller ):
 controllers={ 'pox': POX }
 ```
 
+
 With this class saved into `pox.py`, you can now do the following:
 
     sudo mn --custom pox.py --controller pox
 
-Additionally you can use the custom class in your Mininet scripts
+
+Additionally you can use the custom class in your Mininet scripts:
 
 ```python
+
 #!/usr/bin/python
 
 from mininet.log import setLogLevel
@@ -114,10 +117,10 @@ net = Mininet( topo=TreeTopo( depth=2, fanout=2 ),
 net.start()
 CLI( net )
 net.stop()
+
 ```
 
 Note that in this custom class we've simply changed
 `__init__`, but in a more complicated example you might
 wish to change the `start()` and `stop()` methods as
 well.
-
