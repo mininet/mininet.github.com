@@ -7,7 +7,9 @@ header: true
 title: "Mininet: An Instant Virtual Network on your Laptop (or other PC)"
 ---
 
-<style>article header { display: none; }</style>
+<style>article header { display: none; }
+nav li, form { display: none; }
+</style>
 
 <div class="frontpageparagraph">
 Mininet creates a <strong>realistic virtual network</strong>, running
