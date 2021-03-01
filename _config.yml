@@ -2,10 +2,10 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: http://mininet.github.com
+url: http://mininet.org
 title: Mininet
 subtitle: An Instant Virtual Network on your Laptop (or other PC)
-author: Mininet Team
+author: Mininet Project Contributors
 simple_search: https://www.google.com/search
 description:
 
