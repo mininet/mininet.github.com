@@ -34,12 +34,14 @@ Mininet is useful for
 and <a href="http://reproducingnetworkresearch.wordpress.com">research</a>.
 
 Mininet
-is also a great way to develop, share, and experiment with
-[OpenFlow](http://openflow.org) and Software-Defined Networking systems.
+is also a great way to develop, share, and experiment with Software-Defined Networking (SDN) systems using
+[OpenFlow](https://opennetworking.org/software-defined-standards/specifications/) and [P4](http://p4.org).
 
 <div class="frontpageparagraph">
 Mininet is actively developed and supported, and is released under a
-permissive BSD Open Source license. We encourage you to
+permissive BSD Open Source
+<a href="https://github.com/mininet/mininet/blob/master/LICENSE">license</a>.
+We encourage you to
 <a href="/contribute">contribute</a>  code, bug
 reports/fixes, documentation, and anything else that can improve the system!
 </div>
