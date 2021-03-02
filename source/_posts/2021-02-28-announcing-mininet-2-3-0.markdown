@@ -5,7 +5,6 @@ date: 2021-02-28 17:50:37 -0800
 comments: false
 categories: mininet releases
 ---
-## Mininet 2.3.0
 
 We are pleased to announce
 **[Mininet 2.3.0](https://github.com/mininet/mininet/releases/tag/2.3.0)** !
