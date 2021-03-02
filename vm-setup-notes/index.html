@@ -116,25 +116,13 @@ Convert the VMDK to QCOW2 format first - directly using VMDK as a qemu input [ap
 
 <p>For Qemu, something like the following should work:</p>
 
-32-bit:
 <pre><code>qemu-system-i386 -m 2048 mininet-vm-disk1.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
 </code></pre>
 
-64-bit:
-<pre><code>qemu-system-x86_64 -m 2048 mininet-vm-disk1.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
-</code></pre>
-
-
 <p>For KVM:</p>
 
-32-bit:
 <pre><code>sudo qemu-system-i386 -machine accel=kvm -m 2048 mininet-vm-disk1.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
 </code></pre>
-
-64-bit:
-<pre><code>sudo qemu-system-x86_64 -machine accel=kvm -m 2048 mininet-vm-disk1.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
-</code></pre>
-
 
 <p>The above commands will set up <code>ssh</code> forwarding from the VM to host port 8022.</p>
 
