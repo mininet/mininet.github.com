@@ -2,31 +2,342 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: releases | Mininet]]></title>
-  <link href="http://mininet.github.com/blog/categories/releases/atom.xml" rel="self"/>
-  <link href="http://mininet.github.com/"/>
-  <updated>2021-02-04T16:40:44-08:00</updated>
-  <id>http://mininet.github.com/</id>
+  <link href="http://mininet.org/blog/categories/releases/atom.xml" rel="self"/>
+  <link href="http://mininet.org/"/>
+  <updated>2021-03-01T17:35:20-08:00</updated>
+  <id>http://mininet.org/</id>
   <author>
-    <name><![CDATA[Mininet Team]]></name>
+    <name><![CDATA[Mininet Project Contributors]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Announcing Mininet 2.2.0 !]]></title>
-    <link href="http://mininet.github.com/blog/2014/12/09/announcing-mininet-2-2-0/"/>
-    <updated>2014-12-09T14:35:00-08:00</updated>
-    <id>http://mininet.github.com/blog/2014/12/09/announcing-mininet-2-2-0</id>
-    <content type="html"><![CDATA[Liquid error: can't modify frozen String: ""]]></content>
+    <title type="html"><![CDATA[Announcing Mininet 2.3.0 !]]></title>
+    <link href="http://mininet.org/blog/2021/02/28/announcing-mininet-2-3-0/"/>
+    <updated>2021-02-28T17:50:37-08:00</updated>
+    <id>http://mininet.org/blog/2021/02/28/announcing-mininet-2-3-0</id>
+    <content type="html"><![CDATA[<h2 id="mininet-230">Mininet 2.3.0</h2>
+
+<p>We are pleased to announce
+<strong><a href="https://github.com/mininet/mininet/releases/tag/2.3.0">Mininet 2.3.0</a></strong> !
+This release provides a
+number of bug fixes as well as new features, including support for
+<strong>Python 3</strong> (as well Python 2.)</p>
+
+<h3 id="how-to-get-it">How to get it</h3>
+
+<p>The easiest way to get started with Mininet is to download a VM
+image. See <strong><a href="/download">Download</a></strong> for details.</p>
+
+<p>The latest Mininet source code is available on
+<a href="[https://github.com/mininet/mininet">GitHub</a> and also via
+<a href="http://code.mininet.org">code.mininet.org</a>.</p>
+
+<p>Please check out additional details on the Mininet 2.3.0 release in the
+<a href="https://github.com/mininet/mininet/wiki/Documentation#mininet-release-notes">release notes</a>
+on <a href="http://docs.mininet.org">docs.mininet.org</a>.</p>
+
+<p>Mininet is an open source project, and we are grateful to our many
+code contributors, bug reporters, and active users who continue to
+help make Mininet a useful system with a friendly and helpful
+community.</p>
+
+<p>We look forward to seeing what you will do to
+transform and improve the networking world.</p>
+
+<p>Have fun with Mininet!</p>
+]]></content>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Announcing Mininet 2.0.0]]></title>
-    <link href="http://mininet.github.com/blog/2012/11/27/announcing-mininet-2-dot-0-0/"/>
-    <updated>2012-11-27T17:41:00-08:00</updated>
-    <id>http://mininet.github.com/blog/2012/11/27/announcing-mininet-2-dot-0-0</id>
-    <content type="html"><![CDATA[Liquid error: can't modify frozen String: ""]]></content>
+    <title type="html"><![CDATA[Announcing Mininet 2.2.2]]></title>
+    <link href="http://mininet.org/blog/2017/03/17/announcing-mininet-2-2-2/"/>
+    <updated>2017-03-17T00:48:00-07:00</updated>
+    <id>http://mininet.org/blog/2017/03/17/announcing-mininet-2-2-2</id>
+    <content type="html"><![CDATA[<p>Mininet 2.2.2 is primarily a performance improvement and bug fix release.</p>
+
+<h3 id="security-advisory">Security Advisory!</h3>
+
+<ul>
+  <li>The Mininet VM images no longer ship with identical <code>ssh</code> keys. We recommend that you
+destroy any default <code>ssh</code> keys in existing Mininet VMs if you haven’t already:</li>
+</ul>
+
+<p><code>
+sudo rm -f /etc/ssh/*key*
+sudo /usr/sbin/dpkg-reconfigure openssh-server
+sudo service ssh restart
+</code></p>
+
+<h3 id="improvements-and-bug-fixes">Improvements and Bug Fixes</h3>
+
+<ul>
+  <li>We now run <a href="/blog/2017/01/12/testing-using-travis-ci/">public CI builds via Travis</a></li>
+  <li>Several common test failures have been addressed</li>
+  <li>We use our own forked versions of <code>oflops</code> and the Stanford Reference
+Switch/Controller</li>
+  <li><code>install.sh</code> now has basic support for RHEL</li>
+  <li><code>mnexec</code> now works on systemd systems</li>
+  <li>The default OpenFlow port is now the official port of 6653 rather
+than the classic port of 6633, which was nastily co-opted by Cisco.</li>
+  <li>Several issues with the NAT element have been addressed</li>
+</ul>
+
+<h3 id="bugs-and-gotchas">Bugs and Gotchas</h3>
+
+<ul>
+  <li>Ubuntu 16.04 LTS (Xenial) kernel bug: the problem resulting
+in <code>unregister_netdevice: waiting for lo to become free. Usage count
+= 1</code> in the console or kernel log has returned. We recommend using 14.04
+or an older kernel until this is fixed.</li>
+  <li>Ryu installation with <code>install.sh -y</code> is still broken</li>
+  <li>The <code>--tests</code> option is slightly different from mainline</li>
+</ul>
+
+<h3 id="release-notes-and-downloads">Release notes and Downloads</h3>
+
+<p>Full release notes for this release and previous releases
+may be found in the <strong><a href="https://github.com/mininet/mininet/wiki/Documentation#mininet-release-notes">Release Notes</a></strong>
+on <a href="http://docs.mininet.org">docs.mininet.org</a>.</p>
+
+<p>The easiest way to get started with Mininet is to download a
+<strong><a href="http://mininet.org/download">VM image</a></strong>.</p>
+
+<p>Download, installation, and upgrade instructions may be found at
+<a href="http://mininet.org/download">http://mininet.org/download</a> .</p>
+
+<p>The latest Mininet <strong><a href="http://code.mininet.org">source code</a></strong> is available on
+<a href="[http://github.com/mininet/mininet">github</a> and also via
+<a href="http://code.mininet.org">code.mininet.org</a>.</p>
+
+<h3 id="acknowledgments">Acknowledgments</h3>
+
+<p>Thanks to all of the contributors of fixes and enhancements for this
+release, including Olivier Tilmans, Jono Hart, Tomasz Buchert, Rahman
+Pujianto, Roan Huang, M S Vishwanath Bhat, Brian O’Connor, and others.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Announcing Mininet 2.2.1]]></title>
+    <link href="http://mininet.org/blog/2015/04/16/announcing-mininet-2-2-1/"/>
+    <updated>2015-04-16T18:03:00-07:00</updated>
+    <id>http://mininet.org/blog/2015/04/16/announcing-mininet-2-2-1</id>
+    <content type="html"><![CDATA[<p>Mininet 2.2.1 is primarily a performance improvement and bug fix release.</p>
+
+<ul>
+  <li>
+    <p><strong>Batch startup</strong> has been implemented for Open vSwitch, improving
+startup performance.</p>
+  </li>
+  <li>
+    <p><strong>OVS patch links</strong> have been implemented via OVSLink and <code>--link ovs</code></p>
+
+    <p>Warning! These links have <em>serious limitations</em> compared to
+virtual Ethernet pairs: they are not attached to real Linux
+interfaces so you cannot use <code>tcpdump</code> or <code>wireshark</code> with them;
+they also cannot be used in long chains - we don’t recommend more
+than 64 OVSLinks, for example <code>--linear,64</code>. However, they can offer
+significantly better performance than veth pairs, for certain
+configurations.</p>
+  </li>
+</ul>
+
+<p>Also:</p>
+
+<ul>
+  <li>
+    <p>You can now easily <strong>install Mininet on a <a href="http://raspberrypi.org">Raspberry Pi</a></strong>
+(simply by using <code>install.sh -fnv</code> or <code>install.sh -a</code>)  ;-)</p>
+  </li>
+  <li>
+    <p><code>mn</code> now accepts multiple <code>--controller</code> arguments</p>
+  </li>
+  <li>
+    <p><code>--controller remote</code> and <code>RemoteController</code> now accept <code>ip</code> arguments
+of the form <code>&lt;IP address&gt;:&lt;port&gt;</code> (in addition to <code>ip=&lt;IP&gt;,port=&lt;port&gt;</code>)</p>
+  </li>
+</ul>
+
+<p>Additional information for this release and previous releases
+may be found in the <strong><a href="https://github.com/mininet/mininet/wiki/Documentation#mininet-release-notes">Release Notes</a></strong>
+on <a href="http://docs.mininet.org">docs.mininet.org</a>.</p>
+
+<p>The easiest way to get started with Mininet is to download a
+<strong><a href="http://mininet.org/download">VM image</a></strong>.</p>
+
+<p>Download, installation, and upgrade instructions may be found at
+<a href="http://mininet.org/download">http://mininet.org/download</a> .</p>
+
+<p>The latest Mininet <strong><a href="http://code.mininet.org">source code</a></strong> is available on
+<a href="[http://github.com/mininet/mininet">github</a> and also via
+<a href="http://code.mininet.org">code.mininet.org</a>.</p>
+
+<p>Thanks to all of the Mininet contributors! A number of interesting features
+and improvements are already in the works for Mininet 2.3.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Announcing Mininet 2.2.0 !]]></title>
+    <link href="http://mininet.org/blog/2014/12/09/announcing-mininet-2-2-0/"/>
+    <updated>2014-12-09T14:35:00-08:00</updated>
+    <id>http://mininet.org/blog/2014/12/09/announcing-mininet-2-2-0</id>
+    <content type="html"><![CDATA[<p>We are pleased to announce Mininet 2.2.0! This release  provides
+a number of bug fixes as well as several new features, including:</p>
+
+<ul>
+  <li>
+    <p>Improved OpenFlow 1.3 support</p>
+
+    <ul>
+      <li><code>mn --switch ovs,protocols=OpenFlow13</code> starts OVS in 1.3 mode</li>
+      <li><code>install.sh -w</code> installs 1.3-compatible Wireshark dissector using
+Loxigen
+        <ul>
+          <li><code>install.sh -y</code> installs the Ryu 1.3-compatible controller</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>A new <code>nodelib.py</code> node library, and new <code>Node</code> types including
+<code>LinuxBridge</code>, <code>OVSBridge</code>, <code>LinuxRouter</code> (see <code>examples/</code>) and <code>NAT</code><br />
+<img src="/images/nodelib.png"></p>
+  </li>
+  <li>
+    <p>Easier LAN/internet connectivity from Mininet hosts</p>
+
+    <ul>
+      <li>
+        <p><code>mn --nat</code> will semi-automatically connect a Mininet network
+to your LAN using NAT, solving the “why can’t I ping
+<a href="http://google.com">Google</a>?” problem.</p>
+
+        <p><strong>Warning</strong>: By default this will reroute local
+traffic originating at your Mininet server or VM and destined for
+Mininet’s IP subnet (<code>10.0.0.0/8</code> by default) to the
+Mininet network, which can break connectivity if you are using
+addresses in the same range in your LAN. You can change this range
+using the <code>--ipbase</code> option.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>An improved MiniEdit GUI (<code>examples/miniedit.py</code>) - thanks to
+Gregory Gee <br />
+<img src="/images/miniedit.png"></p>
+  </li>
+  <li>
+    <p>Support for multiple <code>--custom</code> arguments to <code>mn</code></p>
+
+    <p><code>mn --custom mytopo.py,myswitch.py --topo mytopo --switch myswitch</code></p>
+  </li>
+  <li>
+    <p>Experimental cluster support - consult the
+<a href="http://docs.mininet.org">documentation</a> for details -
+as well as <code>examples/cluster.py</code> and an experimental <code>--cluster</code>
+option for topologies built with the default <code>Host</code> and <code>OVSSwitch</code>
+classes:</p>
+
+    <p><code>mn --cluster localhost,server1,server2,server3 --topo tree,4,4</code></p>
+
+    <p><img src="/images/cluster.png"></p>
+  </li>
+</ul>
+
+<p>Note that examples contain experimental features which might
+“graduate” into mainline Mininet in the future, but they should
+not be considered a stable part of the Mininet API!</p>
+
+<h3 id="how-to-get-it">How to get it</h3>
+
+<p>The easiest way to get started with Mininet is to download a
+VM image. See <a href="http://mininet.org/download">http://mininet.org/download</a>
+for details.</p>
+
+<p>The latest Mininet source code is available on
+<a href="[http://github.com/mininet/mininet">github</a> and also via
+<a href="http://code.mininet.org">code.mininet.org</a>.</p>
+
+<p>Additional information on the Mininet 2.2.0 release may be found in the
+<a href="http://wiki.mininet.org/Mininet-2.2.0-Release-Notes">release notes</a>
+and on <a href="http://docs.mininet.org">docs.mininet.org</a>.</p>
+
+<p>Mininet is an open source project, and we are grateful to our many
+code contributors, bug reporters, and active users who continue to
+help make Mininet a useful system with a friendly and helpful
+community!</p>
+
+<p>Have fun with Mininet!</p>
+
+<p><strong>Mininet 2.2.0 Core Team:</strong> <br />
+Bob Lantz, Brian O’Connor, Cody Burkard <br />
+Open Networking Laboratory</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Announcing Mininet 2.1.0 !]]></title>
+    <link href="http://mininet.org/blog/2013/09/20/announcing-mininet-2-1-0/"/>
+    <updated>2013-09-20T13:59:00-07:00</updated>
+    <id>http://mininet.org/blog/2013/09/20/announcing-mininet-2-1-0</id>
+    <content type="html"><![CDATA[<p>We are pleased to announce the immediate availability of Mininet 2.1.0
+on <a href="http://mininet.org">mininet.org</a> !</p>
+
+<p><a href="http://mininet.org">Mininet</a> is a network emulation platform that is intended
+to be the quickest, easiest, and most enjoyable way to create virtual networks
+for research, education, and system development.  By providing an instant
+virtual network on your laptop that can run real application, switch, and
+controller code, Mininet also makes it convenient to get started with SDN and
+OpenFlow without any additional hardware.</p>
+
+<p>Mininet 2.1.0 provides a number of bug fixes as well as
+new features, including:</p>
+
+<ul>
+  <li>Convenient access to <code>Mininet()</code> as a <strong>dict of nodes</strong></li>
+  <li><strong>X11 tunneling</strong> (<code>wireshark</code> in Mininet hosts, finally!)</li>
+  <li>Accurate reflection of the <code>Mininet()</code> object in the CLI</li>
+  <li>Automatically detecting and adjusting resource limits</li>
+  <li><strong>Automatic cleanup</strong> on failure of the <code>mn</code> command</li>
+  <li>Support for installing the <strong>OpenFlow 1.3</strong> versions of the reference
+user switch and NOX from CPqD and Ericsson</li>
+  <li>Preliminary support for running <strong>OVS in user space mode</strong></li>
+  <li>Preliminary support (<code>IVSSwitch()</code>) for the <strong>Indigo Virtual Switch</strong></li>
+  <li>Preliminary support for <strong>Fedora</strong> in <code>install.sh</code></li>
+  <li>A script (<code>util/m</code>) for <strong>easily running new shells or commands in nodes</strong></li>
+  <li>The ability to <strong>import modules from <code>mininet.examples</code></strong></li>
+</ul>
+
+<p>We have provided several new examples (which can easily be
+imported to provide useful functionality) including:</p>
+
+<ul>
+  <li>Modeling <strong>separate control and data networks</strong>: <code>mininet.examples.controlnet</code></li>
+  <li>Connecting <strong>Mininet hosts to the internet</strong> (or a LAN) using NAT: <code>mininet.examples.nat</code></li>
+  <li>Creating <strong>per-host custom directories</strong> using bind mounts: <code>mininet.examples.bind</code></li>
+</ul>
+
+<p>Note that examples contain experimental features which might
+“graduate” into mainline Mininet in the future, but they should
+not be considered a stable part of the Mininet API!</p>
+
+<p>Additional information may be found in the
+<a href="https://github.com/mininet/mininet/wiki/Mininet-2.1.0-Release-Notes">Release Notes</a>.</p>
+
+<p>Mininet is an open source project, and we are grateful to our many code
+contributors, bug reporters, and active users who continue to help make Mininet
+a useful system with a friendly and helpful community!</p>
+
+<p>Have fun with Mininet!</p>
+
+<p><strong>The Mininet 2.1.0 Team</strong><br />
+Bob Lantz and Brian O’Connor<br />
+Open Networking Laboratory</p>
+]]></content>
   </entry>
   
 </feed>

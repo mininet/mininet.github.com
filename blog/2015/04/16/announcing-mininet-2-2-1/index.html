@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <title>Announcing Mininet 2.2.1 - Mininet</title>
-  <meta name="author" content="Mininet Team">
+  <meta name="author" content="Mininet Project Contributors">
 
   
   <meta name="description" content="Mininet 2.2.1 is primarily a performance improvement and bug fix release. Batch startup has been implemented for Open vSwitch, improving
@@ -19,18 +19,22 @@ startup &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mininet.github.com/blog/2015/04/16/announcing-mininet-2-2-1/">
+  <link rel="canonical" href="http://mininet.org/blog/2015/04/16/announcing-mininet-2-2-1/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Mininet" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts 
-BL: removed since they make things SLOW
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
--->
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <style>
+  nav li, form { display: none; }
+  header time { display: none; }
+  .time { display: none; }
+  .credit { font-size: 75%; }
+</style>
+
+
 
   
 
@@ -40,7 +44,13 @@ BL: removed since they make things SLOW
   <header role="banner">
 
 </header>
-  <nav role="navigation">
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+
+
 </nav>
   <div id="main">
     <div id="content">
@@ -58,14 +68,7 @@ BL: removed since they make things SLOW
 
 
 
-
-
-
-
-  
-
-
-<time datetime="2015-04-16T18:03:00-07:00" pubdate data-updated="true">Apr 16<span>th</span>, 2015</time>
+<time class='entry-date' datetime='2015-04-16T18:03:00-07:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>6:03 pm</span></time>
         
       </p>
     
@@ -113,7 +116,7 @@ may be found in the <strong><a href="https://github.com/mininet/mininet/wiki/Doc
 on <a href="http://docs.mininet.org">docs.mininet.org</a>.</p>
 
 <p>The easiest way to get started with Mininet is to download a
-<strong><a href="http://mininet.org/download">VM image</a></strong>. </p>
+<strong><a href="http://mininet.org/download">VM image</a></strong>.</p>
 
 <p>Download, installation, and upgrade instructions may be found at
 <a href="http://mininet.org/download">http://mininet.org/download</a> .</p>
@@ -124,7 +127,6 @@ on <a href="http://docs.mininet.org">docs.mininet.org</a>.</p>
 
 <p>Thanks to all of the Mininet contributors! A number of interesting features
 and improvements are already in the works for Mininet 2.3.</p>
-
 </div>
 
 
@@ -133,22 +135,21 @@ and improvements are already in the works for Mininet 2.3.</p>
       
   
 
-<span class="byline author vcard">Posted by <span class="fn">Mininet Team</span></span>
+<span class="byline author vcard">Posted by <span class="fn">Mininet Project Contributors</span></span>
 
       
 
 
 
 
+<time class='entry-date' datetime='2015-04-16T18:03:00-07:00'><span class='date'><span class='date-month'>Apr</span> <span class='date-day'>16</span><span class='date-suffix'>th</span>, <span class='date-year'>2015</span></span> <span class='time'>6:03 pm</span></time>
+      
 
-
-
-
+<span class="categories">
   
-
-
-<time datetime="2015-04-16T18:03:00-07:00" pubdate data-updated="true">Apr 16<span>th</span>, 2015</time>
-      
+    <a class='category' href='/blog/categories/mininet/'>mininet</a>, <a class='category' href='/blog/categories/releases/'>releases</a>
+  
+</span>
 
 
     </p>
@@ -193,8 +194,8 @@ and improvements are already in the works for Mininet 2.3.</p>
   <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/Videos">Videos</a></p></div>
   <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki">Wiki</a></p></div>
   <div class = "navigation"><p><a href="https://github.com/mininet/mininet">Source Code</a></p></div>
-  <div class = "navigation"><p><a href="https://travis-ci.org/mininet/mininet">Build Results</a></p></div>
-  <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/Mininet-Apps">Apps</a></p></div>
+  <div class = "navigation"><p><a href="https://github.com/mininet/mininet/actions">CI Testing</a></p></div>
+  <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/Mininet-Apps-and-Tools">Apps</a></p></div>
   <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/FAQ">FAQ</a></p></div>
   <!--
   <div class = "navigation"><p><a href="/"></a>Tutorials</p></div>
@@ -203,31 +204,32 @@ and improvements are already in the works for Mininet 2.3.</p>
   
   <div class = "navigation"><p><a href="/support">Support</a></p></div>
   <div class = "navigation"><p><a href="/contribute">Contribute</a></p></div>
-  <div class = "navigation"><p><a href="/blog/archives">News Archives</a></p></div>
+  <div class = "navigation"><p><a href="/blog/archives">News Archive</a></p>
+  </div>
   <div class = "navigation"><p><a href="/credits">Credits</a></p></div>
 </section>
 <section>
-  <a href='/blog'><h1>News</h1></a>
+  <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2018/08/27/sigcomm2018-hackathon-winners/">Congrats to Mininet SIGCOMM 2018 Hackathon winners!</a>
+        <a href="/blog/2021/02/28/announcing-mininet-2-3-0/">Announcing Mininet 2.3.0 !</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2018/08/27/new-post/">new-post</a>
+        <a href="/blog/2020/06/29/mininet-paper-wins-sigcomm-test-of-time-award/">Mininet Wins ACM SIGCOMM Test of Time Paper Award</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/06/30/open-networking-foundation-promotes-mininet/">Open Networking Foundation promotes Mininet</a>
+        <a href="/blog/2018/08/27/sigcomm2018-hackathon-winners/">Congrats to Mininet SIGCOMM Hackathon Winners!</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/04/05/mininet-wins-sosr-systems-award/">Mininet wins ACM SIGCOMM SOSR Software Systems Award !</a>
+        <a href="/blog/2017/06/30/open-networking-foundation-promotes-mininet/">Open Networking Foundation Promotes Mininet</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/03/21/mininet-vm-security-advisory/">Mininet VM Security Advisory</a>
+        <a href="/blog/2017/04/05/mininet-wins-sosr-systems-award/">Mininet Wins ACM SIGCOMM SOSR Software Systems Award !</a>
       </li>
     
   </ul>
@@ -239,10 +241,8 @@ and improvements are already in the works for Mininet 2.3.</p>
 
     </div>
   </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2018 - Mininet Team -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
+  <footer role="contentinfo">  Copyright &copy; 2021 Mininet Project Contributors -
+  <span class="credit">powered by <a href="http://octopress.org">Octopress</a></span>
 
 </footer>
   
@@ -258,7 +258,7 @@ and improvements are already in the works for Mininet 2.3.</p>
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

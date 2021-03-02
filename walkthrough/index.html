@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <title>Mininet Walkthrough - Mininet</title>
-  <meta name="author" content="Mininet Team">
+  <meta name="author" content="Mininet Project Contributors">
 
   
   <meta name="description" content="Mininet Walkthrough This walkthrough demonstrates most Mininet commands, as well as its typical usage in concert with the Wireshark dissector. The &hellip;">
@@ -18,18 +18,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mininet.github.com/walkthrough/">
+  <link rel="canonical" href="http://mininet.org/walkthrough/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Mininet" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts 
-BL: removed since they make things SLOW
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
--->
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <style>
+  nav li, form { display: none; }
+  header time { display: none; }
+  .time { display: none; }
+  .credit { font-size: 75%; }
+</style>
+
+
 
   
 
@@ -39,7 +43,13 @@ BL: removed since they make things SLOW
   <header role="banner">
 
 </header>
-  <nav role="navigation">
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+
+
 </nav>
   <div id="main">
     <div id="content">
@@ -58,46 +68,46 @@ BL: removed since they make things SLOW
 <p>The entire walkthrough should take under an hour.</p>
 
 <ul id="markdown-toc">
-  <li><a href="#part-1-everyday-mininet-usage">Part 1: Everyday Mininet Usage</a>    <ul>
-      <li><a href="#display-startup-options">Display Startup Options</a></li>
-      <li><a href="#start-wireshark">Start Wireshark</a></li>
-      <li><a href="#interact-with-hosts-and-switches">Interact with Hosts and Switches</a></li>
-      <li><a href="#test-connectivity-between-hosts">Test connectivity between hosts</a></li>
-      <li><a href="#run-a-simple-web-server-and-client">Run a simple web server and client</a></li>
-      <li><a href="#cleanup">Cleanup</a></li>
+  <li><a href="#part-1-everyday-mininet-usage" id="markdown-toc-part-1-everyday-mininet-usage">Part 1: Everyday Mininet Usage</a>    <ul>
+      <li><a href="#display-startup-options" id="markdown-toc-display-startup-options">Display Startup Options</a></li>
+      <li><a href="#start-wireshark" id="markdown-toc-start-wireshark">Start Wireshark</a></li>
+      <li><a href="#interact-with-hosts-and-switches" id="markdown-toc-interact-with-hosts-and-switches">Interact with Hosts and Switches</a></li>
+      <li><a href="#test-connectivity-between-hosts" id="markdown-toc-test-connectivity-between-hosts">Test connectivity between hosts</a></li>
+      <li><a href="#run-a-simple-web-server-and-client" id="markdown-toc-run-a-simple-web-server-and-client">Run a simple web server and client</a></li>
+      <li><a href="#cleanup" id="markdown-toc-cleanup">Cleanup</a></li>
     </ul>
   </li>
-  <li><a href="#part-2-advanced-startup-options">Part 2: Advanced Startup Options</a>    <ul>
-      <li><a href="#run-a-regression-test">Run a Regression Test</a></li>
-      <li><a href="#changing-topology-size-and-type">Changing Topology Size and Type</a></li>
-      <li><a href="#link-variations">Link variations</a></li>
-      <li><a href="#adjustable-verbosity">Adjustable Verbosity</a></li>
-      <li><a href="#custom-topologies">Custom Topologies</a></li>
-      <li><a href="#id--mac">ID = MAC</a></li>
-      <li><a href="#xterm-display">XTerm Display</a></li>
-      <li><a href="#other-switch-types">Other Switch Types</a></li>
-      <li><a href="#mininet-benchmark">Mininet Benchmark</a></li>
-      <li><a href="#everything-in-its-own-namespace-user-switch-only">Everything in its own Namespace (user switch only)</a></li>
+  <li><a href="#part-2-advanced-startup-options" id="markdown-toc-part-2-advanced-startup-options">Part 2: Advanced Startup Options</a>    <ul>
+      <li><a href="#run-a-regression-test" id="markdown-toc-run-a-regression-test">Run a Regression Test</a></li>
+      <li><a href="#changing-topology-size-and-type" id="markdown-toc-changing-topology-size-and-type">Changing Topology Size and Type</a></li>
+      <li><a href="#link-variations" id="markdown-toc-link-variations">Link variations</a></li>
+      <li><a href="#adjustable-verbosity" id="markdown-toc-adjustable-verbosity">Adjustable Verbosity</a></li>
+      <li><a href="#custom-topologies" id="markdown-toc-custom-topologies">Custom Topologies</a></li>
+      <li><a href="#id--mac" id="markdown-toc-id--mac">ID = MAC</a></li>
+      <li><a href="#xterm-display" id="markdown-toc-xterm-display">XTerm Display</a></li>
+      <li><a href="#other-switch-types" id="markdown-toc-other-switch-types">Other Switch Types</a></li>
+      <li><a href="#mininet-benchmark" id="markdown-toc-mininet-benchmark">Mininet Benchmark</a></li>
+      <li><a href="#everything-in-its-own-namespace-user-switch-only" id="markdown-toc-everything-in-its-own-namespace-user-switch-only">Everything in its own Namespace (user switch only)</a></li>
     </ul>
   </li>
-  <li><a href="#part-3-mininet-command-line-interface-cli-commands">Part 3: Mininet Command-Line Interface (CLI) Commands</a>    <ul>
-      <li><a href="#display-options">Display Options</a></li>
-      <li><a href="#python-interpreter">Python Interpreter</a></li>
-      <li><a href="#link-updown">Link Up/Down</a></li>
-      <li><a href="#xterm-display-1">XTerm Display</a></li>
+  <li><a href="#part-3-mininet-command-line-interface-cli-commands" id="markdown-toc-part-3-mininet-command-line-interface-cli-commands">Part 3: Mininet Command-Line Interface (CLI) Commands</a>    <ul>
+      <li><a href="#display-options" id="markdown-toc-display-options">Display Options</a></li>
+      <li><a href="#python-interpreter" id="markdown-toc-python-interpreter">Python Interpreter</a></li>
+      <li><a href="#link-updown" id="markdown-toc-link-updown">Link Up/Down</a></li>
+      <li><a href="#xterm-display-1" id="markdown-toc-xterm-display-1">XTerm Display</a></li>
     </ul>
   </li>
-  <li><a href="#part-4-python-api-examples">Part 4: Python API Examples</a>    <ul>
-      <li><a href="#ssh-daemon-per-host">SSH daemon per host</a></li>
+  <li><a href="#part-4-python-api-examples" id="markdown-toc-part-4-python-api-examples">Part 4: Python API Examples</a>    <ul>
+      <li><a href="#ssh-daemon-per-host" id="markdown-toc-ssh-daemon-per-host">SSH daemon per host</a></li>
     </ul>
   </li>
-  <li><a href="#part-5-walkthrough-complete">Part 5: Walkthrough Complete!</a>    <ul>
-      <li><a href="#next-steps-to-mastering-mininet">Next Steps to mastering Mininet</a></li>
+  <li><a href="#part-5-walkthrough-complete" id="markdown-toc-part-5-walkthrough-complete">Part 5: Walkthrough Complete!</a>    <ul>
+      <li><a href="#next-steps-to-mastering-mininet" id="markdown-toc-next-steps-to-mastering-mininet">Next Steps to mastering Mininet</a></li>
     </ul>
   </li>
-  <li><a href="#appendix-supplementary-information">Appendix: Supplementary Information</a>    <ul>
-      <li><a href="#using-a-remote-controller">Using a Remote Controller</a></li>
-      <li><a href="#nox-classic">NOX Classic</a></li>
+  <li><a href="#appendix-supplementary-information" id="markdown-toc-appendix-supplementary-information">Appendix: Supplementary Information</a>    <ul>
+      <li><a href="#using-a-remote-controller" id="markdown-toc-using-a-remote-controller">Using a Remote Controller</a></li>
+      <li><a href="#nox-classic" id="markdown-toc-nox-classic">NOX Classic</a></li>
     </ul>
   </li>
 </ul>
@@ -362,8 +372,8 @@ mininet&gt; exit
 
 <p>Custom topologies can be easily defined as well, using a simple Python API, and an example is provided in <code>custom/topo-2sw-2host.py</code>. This example connects two switches directly, with a single host off each switch:</p>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span>simple topology example  (topo-2sw-2host.py)</span> <a href="/../../mininet/custom/topo-2sw-2host.py">download</a></figcaption>
- <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<figure class="code"><figcaption><span>simple topology example  (topo-2sw-2host.py)</span> <a href="/../../mininet/custom/topo-2sw-2host.py">download</a></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 <span class="line-number">2</span>
 <span class="line-number">3</span>
 <span class="line-number">4</span>
@@ -394,9 +404,6 @@ mininet&gt; exit
 <span class="line-number">29</span>
 <span class="line-number">30</span>
 <span class="line-number">31</span>
-<span class="line-number">32</span>
-<span class="line-number">33</span>
-<span class="line-number">34</span>
 </pre></td><td class="code"><pre><code class="python"><span class="line"><span class="sd">&quot;&quot;&quot;Custom topology example</span>
 </span><span class="line">
 </span><span class="line"><span class="sd">Two directly connected switches plus a host for each switch:</span>
@@ -412,11 +419,8 @@ mininet&gt; exit
 </span><span class="line"><span class="k">class</span> <span class="nc">MyTopo</span><span class="p">(</span> <span class="n">Topo</span> <span class="p">):</span>
 </span><span class="line">    <span class="s">&quot;Simple topology example.&quot;</span>
 </span><span class="line">
-</span><span class="line">    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span> <span class="bp">self</span> <span class="p">):</span>
+</span><span class="line">    <span class="k">def</span> <span class="nf">build</span><span class="p">(</span> <span class="bp">self</span> <span class="p">):</span>
 </span><span class="line">        <span class="s">&quot;Create custom topo.&quot;</span>
-</span><span class="line">
-</span><span class="line">        <span class="c"># Initialize topology</span>
-</span><span class="line">        <span class="n">Topo</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span> <span class="bp">self</span> <span class="p">)</span>
 </span><span class="line">
 </span><span class="line">        <span class="c"># Add hosts and switches</span>
 </span><span class="line">        <span class="n">leftHost</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">addHost</span><span class="p">(</span> <span class="s">&#39;h1&#39;</span> <span class="p">)</span>
@@ -431,7 +435,7 @@ mininet&gt; exit
 </span><span class="line">
 </span><span class="line">
 </span><span class="line"><span class="n">topos</span> <span class="o">=</span> <span class="p">{</span> <span class="s">&#39;mytopo&#39;</span><span class="p">:</span> <span class="p">(</span> <span class="k">lambda</span><span class="p">:</span> <span class="n">MyTopo</span><span class="p">()</span> <span class="p">)</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
+</span></code></pre></td></tr></table></div></figure>
 
 <p>When a custom mininet file is provided, it can add new topologies, switch types, and tests to the command-line. For example:</p>
 
@@ -783,8 +787,8 @@ options to the controller type (in this case, <code>nox</code> running <code>pys
   <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/Videos">Videos</a></p></div>
   <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki">Wiki</a></p></div>
   <div class = "navigation"><p><a href="https://github.com/mininet/mininet">Source Code</a></p></div>
-  <div class = "navigation"><p><a href="https://travis-ci.org/mininet/mininet">Build Results</a></p></div>
-  <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/Mininet-Apps">Apps</a></p></div>
+  <div class = "navigation"><p><a href="https://github.com/mininet/mininet/actions">CI Testing</a></p></div>
+  <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/Mininet-Apps-and-Tools">Apps</a></p></div>
   <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/FAQ">FAQ</a></p></div>
   <!--
   <div class = "navigation"><p><a href="/"></a>Tutorials</p></div>
@@ -793,31 +797,32 @@ options to the controller type (in this case, <code>nox</code> running <code>pys
   
   <div class = "navigation"><p><a href="/support">Support</a></p></div>
   <div class = "navigation"><p><a href="/contribute">Contribute</a></p></div>
-  <div class = "navigation"><p><a href="/blog/archives">News Archives</a></p></div>
+  <div class = "navigation"><p><a href="/blog/archives">News Archive</a></p>
+  </div>
   <div class = "navigation"><p><a href="/credits">Credits</a></p></div>
 </section>
 <section>
-  <a href='/blog'><h1>News</h1></a>
+  <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2018/08/27/sigcomm2018-hackathon-winners/">Congrats to Mininet SIGCOMM 2018 Hackathon winners!</a>
+        <a href="/blog/2021/02/28/announcing-mininet-2-3-0/">Announcing Mininet 2.3.0 !</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2018/08/27/new-post/">new-post</a>
+        <a href="/blog/2020/06/29/mininet-paper-wins-sigcomm-test-of-time-award/">Mininet Wins ACM SIGCOMM Test of Time Paper Award</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/06/30/open-networking-foundation-promotes-mininet/">Open Networking Foundation promotes Mininet</a>
+        <a href="/blog/2018/08/27/sigcomm2018-hackathon-winners/">Congrats to Mininet SIGCOMM Hackathon Winners!</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/04/05/mininet-wins-sosr-systems-award/">Mininet wins ACM SIGCOMM SOSR Software Systems Award !</a>
+        <a href="/blog/2017/06/30/open-networking-foundation-promotes-mininet/">Open Networking Foundation Promotes Mininet</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/03/21/mininet-vm-security-advisory/">Mininet VM Security Advisory</a>
+        <a href="/blog/2017/04/05/mininet-wins-sosr-systems-award/">Mininet Wins ACM SIGCOMM SOSR Software Systems Award !</a>
       </li>
     
   </ul>
@@ -829,10 +834,8 @@ options to the controller type (in this case, <code>nox</code> running <code>pys
 
     </div>
   </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2018 - Mininet Team -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
+  <footer role="contentinfo">  Copyright &copy; 2021 Mininet Project Contributors -
+  <span class="credit">powered by <a href="http://octopress.org">Octopress</a></span>
 
 </footer>
   
@@ -848,7 +851,7 @@ options to the controller type (in this case, <code>nox</code> running <code>pys
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

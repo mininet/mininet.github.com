@@ -5,8 +5,8 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Download/Get Started with Mininet - Mininet</title>
-  <meta name="author" content="Mininet Team">
+  <title>Download/Get Started With Mininet - Mininet</title>
+  <meta name="author" content="Mininet Project Contributors">
 
   
   <meta name="description" content="Download/Get Started With Mininet The easiest way to get started is to download a pre-packaged Mininet/Ubuntu VM. This VM includes Mininet itself, &hellip;">
@@ -18,18 +18,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mininet.github.com/download/">
+  <link rel="canonical" href="http://mininet.org/download/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Mininet" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts 
-BL: removed since they make things SLOW
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
--->
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <style>
+  nav li, form { display: none; }
+  header time { display: none; }
+  .time { display: none; }
+  .credit { font-size: 75%; }
+</style>
+
+
 
   
 
@@ -39,7 +43,13 @@ BL: removed since they make things SLOW
   <header role="banner">
 
 </header>
-  <nav role="navigation">
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+
+
 </nav>
   <div id="main">
     <div id="content">
@@ -58,10 +68,11 @@ BL: removed since they make things SLOW
 -->
 
 <ul id="markdown-toc">
-  <li><a href="#option-1-mininet-vm-installation-easy-recommended">Option 1: Mininet VM Installation (easy, recommended)</a></li>
-  <li><a href="#option-2-native-installation-from-source">Option 2: Native Installation from Source</a></li>
-  <li><a href="#option-3-installation-from-packages">Option 3: Installation from Packages</a></li>
-  <li><a href="#option-4-upgrading-an-existing-mininet-installation">Option 4. Upgrading an existing Mininet Installation</a></li>
+  <li><a href="#option-1-mininet-vm-installation-easy-recommended" id="markdown-toc-option-1-mininet-vm-installation-easy-recommended">Option 1: Mininet VM Installation (easy, recommended)</a></li>
+  <li><a href="#option-2-native-installation-from-source" id="markdown-toc-option-2-native-installation-from-source">Option 2: Native Installation from Source</a></li>
+  <li><a href="#option-3-installation-from-packages" id="markdown-toc-option-3-installation-from-packages">Option 3: Installation from Packages</a></li>
+  <li><a href="#option-4-upgrading-an-existing-mininet-installation" id="markdown-toc-option-4-upgrading-an-existing-mininet-installation">Option 4. Upgrading an existing Mininet Installation</a></li>
+  <li><a href="#important-note-python-2-and-python-3-mininet" id="markdown-toc-important-note-python-2-and-python-3-mininet"><strong>Important Note</strong>: Python 2 and Python 3 Mininet</a></li>
 </ul>
 
 <h2 id="option-1-mininet-vm-installation-easy-recommended">Option 1: Mininet VM Installation (easy, recommended)</h2>
@@ -72,10 +83,28 @@ BL: removed since they make things SLOW
 
 <ol>
   <li>
-    <p>Download the <a href="https://github.com/mininet/mininet/wiki/Mininet-VM-Images">Mininet VM image</a>.</p>
+    <p>Download a <strong>Mininet VM Image</strong> from <a href="https://github.com/mininet/mininet/releases/">Mininet Releases</a>.</p>
   </li>
   <li>
-    <p>Download and install a virtualization system. We recommend <a href="http://www.virtualbox.org/wiki/Downloads">VirtualBox</a> (free, GPL) because it is <strong>free</strong> and works on OS X, Windows, and Linux (though it’s slightly slower than VMware in our tests.) You can also use <a href="http://qemu.org">Qemu</a> for any platform, <a href="http://www.vmware.com/products/workstation/">VMware Workstation</a> for Windows or Linux, <a href="http://www.vmware.com/products/fusion">VMware Fusion</a> for Mac, or <a href="http://www.linux-kvm.org">KVM</a> (free, GPL) for Linux.</p>
+    <p>Download and install a <strong>virtualization system</strong>. We recommend one of the following free options:</p>
+
+    <ul>
+      <li><a href="http://www.virtualbox.org/wiki/Downloads">VirtualBox</a> (GPL, macOS/Windows/Linux)</li>
+      <li><a href="http://www.vmware.com/products/fusion">VMware Fusion</a> (macOS)</li>
+      <li><a href="http://www.vmware.com/products/workstation-player">VMware Workstation Player</a> (Windows/Linux)</li>
+    </ul>
+
+    <p><br />
+You can also use any of:</p>
+
+    <ul>
+      <li><a href="http://qemu.org">Qemu</a> (free, GPL) for any platform</li>
+      <li>Microsoft <a href="https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/">Hyper-V</a> (Windows)</li>
+      <li><a href="http://www.linux-kvm.org">KVM</a> (free, GPL, Linux)</li>
+    </ul>
+    <p>
+
+</p>
   </li>
   <li>
     <p>Sign up for the <a href="https://mailman.stanford.edu/mailman/listinfo/mininet-discuss">mininet-discuss mailing list</a>. This is the source for Mininet <strong>support</strong> and discussion with the friendly Mininet community. ;-)</p>
@@ -88,15 +117,15 @@ BL: removed since they make things SLOW
   </li>
 </ol>
 
-<p>(In addition to the above resources, we’ve prepared a helpful Mininet <a href="/faq">FAQ</a> as well as <a href="/docs">Documentation</a> which you can refer to at any time!)</p>
+<p>(In addition to the above resources, we’ve prepared a helpful Mininet <a href="/faq">FAQ</a> as well as <a href="/docs">Documentation</a> which you can refer to at any time! We recommend consulting them first if you have any questions.)</p>
 
 <p>Once you’ve completed the <a href="/walkthrough">Walkthrough</a>, you should have a clear idea for what Mininet is and what you might use it for. If you are interested in OpenFlow and Software-Defined Networking, you will want to complete the <a href="https://github.com/mininet/openflow-tutorial/wiki">OpenFlow tutorial</a> as well. Good luck, and have fun!</p>
 
 <h2 id="option-2-native-installation-from-source">Option 2: Native Installation from Source</h2>
 
-<p>This option works well for local VM, remote EC2, and native installation.  It assumes the starting point of a fresh Ubuntu (or, experimentally, Fedora) installation. (<em>If you are upgrading from an older Mininet and/or OVS, see notes on removing old versions, below</em>.)</p>
+<p>This option works well for local VM, remote EC2, and native installation.  It assumes the starting point of a fresh Ubuntu, Debian,  or (experimentally) Fedora installation. (<em>If you are upgrading from an older Mininet and/or OvS, see notes on removing old versions, below</em>.)</p>
 
-<p>We strongly recommend more recent Ubuntu releases, because they support newer versions of Open vSwitch. (Fedora also supports recent OVS releases)</p>
+<p>We strongly recommend more recent Ubuntu or Debian releases, because they include newer versions of Open vSwitch. (Fedora also includes recent OvS releases.)</p>
 
 <p>To install natively from source, first you need to get the source code:</p>
 
@@ -109,7 +138,7 @@ Mininet - or any other version - you may check that version out explicitly:</p>
 
 <pre><code>cd mininet
 git tag  # list available versions
-git checkout -b 2.2.1 2.2.1  # or whatever version you wish to install
+git checkout -b mininet-2.3.0 2.3.0  # or whatever version you wish to install
 cd ..
 </code></pre>
 
@@ -130,8 +159,8 @@ cd ..
 
 <pre><code>To install everything (using your home directory): install.sh -a
 To install everything (using another directory for build): install.sh -s mydir -a
-To install Mininet + user switch + OVS (using your home dir): install.sh -nfv
-To install Mininet + user switch + OVS (using another dir:) install.sh -s mydir -nfv
+To install Mininet + user switch + OvS (using your home dir): install.sh -nfv
+To install Mininet + user switch + OvS (using another dir:) install.sh -s mydir -nfv
 </code></pre>
 
 <p>You can find out about other useful options (e.g. installing the OpenFlow wireshark dissector, if it’s not already included in your version of wireshark) using</p>
@@ -141,55 +170,68 @@ To install Mininet + user switch + OVS (using another dir:) install.sh -s mydir 
 
 <p>After the installation has completed, test the basic Mininet functionality:</p>
 
-<pre><code>sudo mn --test pingall
+<pre><code>sudo mn --switch ovsbr --test pingall
 </code></pre>
 
 <p>Then continue with steps 3-5, above. If you run into errors, first consult the <a href="/faq">FAQ</a>, <a href="/docs">Documentation</a>, and <a href="https://mailman.stanford.edu/pipermail/mininet-discuss/">mailing list archives</a> to see if anything resembling your problem has been seen before and if there might be a possible solution. If those things don’t help and you still have problems that you cannot solve on your own (or with some help from <a href="http://google.com">Google</a> :) ), you can request help on the friendly <a href="https://mailman.stanford.edu/mailman/listinfo/mininet-discuss">mininet-discuss</a> mailing list.</p>
 
 <h2 id="option-3-installation-from-packages">Option 3: Installation from Packages</h2>
 
-<p>If you’re running a recent Ubuntu release, you can install the Mininet packages.
+<p>If you’re running a recent Ubuntu release, or Debian 11+, you can install the Mininet packages.
 Note that this may give you an older version of Mininet, but it can be a very
 convenient way to get started.</p>
 
-<p>First, if you are upgrading or have upgraded from an earlier installation of Mininet (like 1.0) or a version of Open vSwitch which might have been compiled and stored in <code>/usr/local</code>, make sure you <em>remove any traces of earlier versions of Mininet and Open vSwitch from <code>/usr/local/</code></em>:</p>
+<!--
+First, if you are upgrading or have upgraded from an earlier installation of Mininet (like 1.0) or a version of Open vSwitch which might have been compiled and stored in `/usr/local`, make sure you *remove any traces of earlier versions of Mininet and Open vSwitch from `/usr/local/`*:
 
-<pre><code>sudo rm -rf /usr/local/bin/mn /usr/local/bin/mnexec \
-    /usr/local/lib/python*/*/*mininet* \
-    /usr/local/bin/ovs-* /usr/local/sbin/ovs-*
-</code></pre>
+    sudo rm -rf /usr/local/bin/mn /usr/local/bin/mnexec \
+        /usr/local/lib/python*/*/*mininet* \
+        /usr/local/bin/ovs-* /usr/local/sbin/ovs-*
 
-<p>Then, to confirm which OS version you are running, run the command</p>
+-->
+
+<p>To confirm which OS version you are running, run the command</p>
 
 <pre><code>lsb_release -a
 </code></pre>
 
 <p>Next, install the base Mininet package by entering <strong>only one</strong> of the following commands, corresponding to the distribution you are running:</p>
 
-<pre><code>Mininet 2.1.0 on Ubuntu 14.10: sudo apt-get install mininet
-Mininet 2.1.0 on Ubuntu 14.04: sudo apt-get install mininet
-Mininet 2.0.0 on Ubuntu 12.04: sudo apt-get install mininet/precise-backports
+<pre><code>Mininet 2.3.0 on Debian 11: sudo apt-get install mininet
+Mininet 2.2.2 on Ubuntu 20.04 LTS: sudo apt-get install mininet
+Mininet 2.2.2 on Ubuntu 18.04 LTS: sudo apt-get install mininet
 </code></pre>
 
 <!--
+    Mininet 2.2.1 on Ubuntu 16.04 LTS: sudo apt-get install mininet
+    Mininet 2.1.0 on Ubuntu 14.10: sudo apt-get install mininet
+    Mininet 2.1.0 on Ubuntu 14.04: sudo apt-get install mininet
+    Mininet 2.0.0 on Ubuntu 12.04: sudo apt-get install mininet/precise-backports
 (Note: Ubuntu 12.10 also has a Mininet 2.0.0d3 package, but you will want to install the one from quantal-backports, which is Mininet 2.0.0.)
+
+After this completes, you should deactivate `openvswitch-controller` if it is installed and/or running:
+
+    sudo service openvswitch-controller stop
+    sudo update-rc.d openvswitch-controller disable
+
 -->
 
-<p>After this completes, you should deactivate <code>openvswitch-controller</code> if it is installed and/or running:</p>
+<p>If it’s not obvious which Mininet version you have, you can try:</p>
 
-<pre><code>sudo service openvswitch-controller stop
-sudo update-rc.d openvswitch-controller disable
+<pre><code>mn --version
 </code></pre>
 
-<p>Then you can test Mininet:</p>
+<p>Mininet supports multiple switches and OpenFlow controllers. For this test, we will use Open vSwitch in bridge/standalone mode.</p>
 
-<pre><code>sudo mn --test pingall
+<p>To test this, try:</p>
+
+<pre><code>sudo mn --switch ovsbr --test pingall
 </code></pre>
 
-<p>If Mininet complains that Open vSwitch isn’t working, you may need to rebuild its kernel module:</p>
+<p>If Mininet complains that Open vSwitch isn’t working, make sure it is installed and running:</p>
 
-<pre><code>sudo dpkg-reconfigure openvswitch-datapath-dkms
-sudo service openflow-switch restart
+<pre><code>sudo apt-get install openvswitch-switch
+sudo service openvswitch-switch start
 </code></pre>
 
 <p>If you wish to go through the Mininet walkthrough, you will want to install additional software. The following commands</p>
@@ -207,19 +249,53 @@ Mininet, you can usually</p>
 
 <pre><code>cd mininet
 git fetch
-git checkout master   # Or a specific version like 2.2.1
+git checkout master   # Or a specific version like 2.3.0
 git pull
 sudo make install
 </code></pre>
 
+<p>If you wish to specify a specific Python version, you can do so:</p>
+
+<pre><code>sudo PYTHON=python3 make install
+</code></pre>
+
 <p>As an alternative to <code>sudo make install</code> you can also do <code>sudo make develop</code>,
-which will create symbolic links from <code>/usr/python/...</code> to your source tree.</p>
+which will create symbolic links from <code>/usr/lib/python...</code> to your source tree.</p>
 
 <p>Note that this will only upgrade Mininet itself - any other components such
 as Open vSwitch, etc. can be upgraded separately as desired.</p>
 
-<!--
+<h2 id="important-note-python-2-and-python-3-mininet"><strong>Important Note</strong>: Python 2 and Python 3 Mininet</h2>
 
+<p>Mininet 2.3.0 and greater support Python 3 as well as Python 2.</p>
+
+<p>The official Mininet VM images include Python 2 and Python 3 Mininet.</p>
+
+<p>When you install from source, you can choose which version to install. For example:</p>
+
+<pre><code>sudo PYTHON=python2 mininet/util/install.sh -n   # install Python 2 Mininet
+sudo PYTHON=python3 mininet/util/install.sh -n   # install Python 3 Mininet
+</code></pre>
+
+<p>You can install both versions side by side (as is done in the Mininet VM images) and pick which Python version to use for <code>mn</code>:</p>
+
+<pre><code>sudo python2 `which mn` ...
+sudo python3 `which mn` ...
+</code></pre>
+
+<p>To find out what Python version that <code>mn</code> uses by default:</p>
+
+<pre><code>echo py sys.version | sudo mn -v output
+</code></pre>
+
+<p>Note that Python 3 is (unfortunately!) not generally backward compatible with legacy Python 2 code,
+so older Python 2 Mininet scripts may require some changes to work with Python 3. Since Python 2
+is no longer officially supported by the CPython project and most OS releases, we recommend
+migrating to Python 3 (however painful that may be.)</p>
+
+<p>If you run into Python 3 incompatibilities in Mininet, please file an issue on GitHub.</p>
+
+<!--
 (old) Mininet 1.0 Installation
 ------------------------------
 
@@ -267,8 +343,8 @@ Make sure you are installing from the *install-precise* branch.
   <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/Videos">Videos</a></p></div>
   <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki">Wiki</a></p></div>
   <div class = "navigation"><p><a href="https://github.com/mininet/mininet">Source Code</a></p></div>
-  <div class = "navigation"><p><a href="https://travis-ci.org/mininet/mininet">Build Results</a></p></div>
-  <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/Mininet-Apps">Apps</a></p></div>
+  <div class = "navigation"><p><a href="https://github.com/mininet/mininet/actions">CI Testing</a></p></div>
+  <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/Mininet-Apps-and-Tools">Apps</a></p></div>
   <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/FAQ">FAQ</a></p></div>
   <!--
   <div class = "navigation"><p><a href="/"></a>Tutorials</p></div>
@@ -277,31 +353,32 @@ Make sure you are installing from the *install-precise* branch.
   
   <div class = "navigation"><p><a href="/support">Support</a></p></div>
   <div class = "navigation"><p><a href="/contribute">Contribute</a></p></div>
-  <div class = "navigation"><p><a href="/blog/archives">News Archives</a></p></div>
+  <div class = "navigation"><p><a href="/blog/archives">News Archive</a></p>
+  </div>
   <div class = "navigation"><p><a href="/credits">Credits</a></p></div>
 </section>
 <section>
-  <a href='/blog'><h1>News</h1></a>
+  <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2018/08/27/sigcomm2018-hackathon-winners/">Congrats to Mininet SIGCOMM 2018 Hackathon winners!</a>
+        <a href="/blog/2021/02/28/announcing-mininet-2-3-0/">Announcing Mininet 2.3.0 !</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2018/08/27/new-post/">new-post</a>
+        <a href="/blog/2020/06/29/mininet-paper-wins-sigcomm-test-of-time-award/">Mininet Wins ACM SIGCOMM Test of Time Paper Award</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/06/30/open-networking-foundation-promotes-mininet/">Open Networking Foundation promotes Mininet</a>
+        <a href="/blog/2018/08/27/sigcomm2018-hackathon-winners/">Congrats to Mininet SIGCOMM Hackathon Winners!</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/04/05/mininet-wins-sosr-systems-award/">Mininet wins ACM SIGCOMM SOSR Software Systems Award !</a>
+        <a href="/blog/2017/06/30/open-networking-foundation-promotes-mininet/">Open Networking Foundation Promotes Mininet</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/03/21/mininet-vm-security-advisory/">Mininet VM Security Advisory</a>
+        <a href="/blog/2017/04/05/mininet-wins-sosr-systems-award/">Mininet Wins ACM SIGCOMM SOSR Software Systems Award !</a>
       </li>
     
   </ul>
@@ -313,10 +390,8 @@ Make sure you are installing from the *install-precise* branch.
 
     </div>
   </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2018 - Mininet Team -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
+  <footer role="contentinfo">  Copyright &copy; 2021 Mininet Project Contributors -
+  <span class="credit">powered by <a href="http://octopress.org">Octopress</a></span>
 
 </footer>
   
@@ -332,7 +407,7 @@ Make sure you are installing from the *install-precise* branch.
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

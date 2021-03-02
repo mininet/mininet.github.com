@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: testing | Mininet]]></title>
+  <link href="http://mininet.org/blog/categories/testing/atom.xml" rel="self"/>
+  <link href="http://mininet.org/"/>
+  <updated>2021-03-01T17:35:20-08:00</updated>
+  <id>http://mininet.org/</id>
+  <author>
+    <name><![CDATA[Mininet Project Contributors]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Automated Testing Using Travis CI]]></title>
+    <link href="http://mininet.org/blog/2017/01/12/testing-using-travis-ci/"/>
+    <updated>2017-01-12T17:40:00-08:00</updated>
+    <id>http://mininet.org/blog/2017/01/12/testing-using-travis-ci</id>
+    <content type="html"><![CDATA[<p>Mininet is now using Travis CI for automated testing!</p>
+
+<p>Whenever code is pushed to Mininet, Travis CI starts a test job
+that installs Mininet, runs a simple sanity test, and the “quick”
+tests for HiFi, the walkthrough, and the example code.</p>
+
+<p>The full results are available on
+<a href="https://travis-ci.org/mininet/mininet">Travis CI’s Mininet page</a>,
+and the status of the most recent master build is part of the README
+on Github:</p>
+
+<p><img src="/images/travis-ci-readme.png"></p>
+
+<p>Travis CI also verifies all new pull requests and displays their
+build status in the pull request discussion.</p>
+
+<p>Mininet will continue to be tested in several ways on private servers,
+but our hope is that having a public-facing CI will give members
+of the community a better sense of how Mininet is tested and the quality
+of the codebase.
+Furthermore, we hope that by automatically testing pull requests, we
+will reduce the likelihood of merging broken code and reduce the
+testing burden on maintainers.</p>
+]]></content>
+  </entry>
+  
+</feed>

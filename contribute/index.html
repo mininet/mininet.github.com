@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <title>Contribute to Mininet - Mininet</title>
-  <meta name="author" content="Mininet Team">
+  <meta name="author" content="Mininet Project Contributors">
 
   
   <meta name="description" content="Contribute to Mininet Mininet is an open source project created and maintained for and by a community of networking and SDN enthusiasts. You are &hellip;">
@@ -18,18 +18,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mininet.github.com/contribute/">
+  <link rel="canonical" href="http://mininet.org/contribute/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Mininet" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts 
-BL: removed since they make things SLOW
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
--->
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <style>
+  nav li, form { display: none; }
+  header time { display: none; }
+  .time { display: none; }
+  .credit { font-size: 75%; }
+</style>
+
+
 
   
 
@@ -39,7 +43,13 @@ BL: removed since they make things SLOW
   <header role="banner">
 
 </header>
-  <nav role="navigation">
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+
+
 </nav>
   <div id="main">
     <div id="content">
@@ -64,7 +74,7 @@ BL: removed since they make things SLOW
 
 <h3 id="submit-bug-reports-and-feature-requests">Submit Bug Reports and Feature Requests</h3>
 
-<p>Please file any Mininet <strong>bug reports</strong> and <strong>feature requests</strong> by creating a <a href="https://github.com/mininet/mininet/issues">new issue</a> on github. </p>
+<p>Please file any Mininet <strong>bug reports</strong> and <strong>feature requests</strong> by creating a <a href="https://github.com/mininet/mininet/issues">new issue</a> on github.</p>
 
 <p>Please feel free to submit patches and pull requests along with your issue.</p>
 
@@ -121,8 +131,8 @@ BL: removed since they make things SLOW
   <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/Videos">Videos</a></p></div>
   <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki">Wiki</a></p></div>
   <div class = "navigation"><p><a href="https://github.com/mininet/mininet">Source Code</a></p></div>
-  <div class = "navigation"><p><a href="https://travis-ci.org/mininet/mininet">Build Results</a></p></div>
-  <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/Mininet-Apps">Apps</a></p></div>
+  <div class = "navigation"><p><a href="https://github.com/mininet/mininet/actions">CI Testing</a></p></div>
+  <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/Mininet-Apps-and-Tools">Apps</a></p></div>
   <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/FAQ">FAQ</a></p></div>
   <!--
   <div class = "navigation"><p><a href="/"></a>Tutorials</p></div>
@@ -131,31 +141,32 @@ BL: removed since they make things SLOW
   
   <div class = "navigation"><p><a href="/support">Support</a></p></div>
   <div class = "navigation"><p><a href="/contribute">Contribute</a></p></div>
-  <div class = "navigation"><p><a href="/blog/archives">News Archives</a></p></div>
+  <div class = "navigation"><p><a href="/blog/archives">News Archive</a></p>
+  </div>
   <div class = "navigation"><p><a href="/credits">Credits</a></p></div>
 </section>
 <section>
-  <a href='/blog'><h1>News</h1></a>
+  <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2018/08/27/sigcomm2018-hackathon-winners/">Congrats to Mininet SIGCOMM 2018 Hackathon winners!</a>
+        <a href="/blog/2021/02/28/announcing-mininet-2-3-0/">Announcing Mininet 2.3.0 !</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2018/08/27/new-post/">new-post</a>
+        <a href="/blog/2020/06/29/mininet-paper-wins-sigcomm-test-of-time-award/">Mininet Wins ACM SIGCOMM Test of Time Paper Award</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/06/30/open-networking-foundation-promotes-mininet/">Open Networking Foundation promotes Mininet</a>
+        <a href="/blog/2018/08/27/sigcomm2018-hackathon-winners/">Congrats to Mininet SIGCOMM Hackathon Winners!</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/04/05/mininet-wins-sosr-systems-award/">Mininet wins ACM SIGCOMM SOSR Software Systems Award !</a>
+        <a href="/blog/2017/06/30/open-networking-foundation-promotes-mininet/">Open Networking Foundation Promotes Mininet</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/03/21/mininet-vm-security-advisory/">Mininet VM Security Advisory</a>
+        <a href="/blog/2017/04/05/mininet-wins-sosr-systems-award/">Mininet Wins ACM SIGCOMM SOSR Software Systems Award !</a>
       </li>
     
   </ul>
@@ -167,10 +178,8 @@ BL: removed since they make things SLOW
 
     </div>
   </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2018 - Mininet Team -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
+  <footer role="contentinfo">  Copyright &copy; 2021 Mininet Project Contributors -
+  <span class="credit">powered by <a href="http://octopress.org">Octopress</a></span>
 
 </footer>
   
@@ -186,7 +195,7 @@ BL: removed since they make things SLOW
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

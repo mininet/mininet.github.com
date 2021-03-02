@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: security | Mininet]]></title>
+  <link href="http://mininet.org/blog/categories/security/atom.xml" rel="self"/>
+  <link href="http://mininet.org/"/>
+  <updated>2021-03-01T17:35:20-08:00</updated>
+  <id>http://mininet.org/</id>
+  <author>
+    <name><![CDATA[Mininet Project Contributors]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mininet VM Security Advisory]]></title>
+    <link href="http://mininet.org/blog/2017/03/21/mininet-vm-security-advisory/"/>
+    <updated>2017-03-21T16:29:00-07:00</updated>
+    <id>http://mininet.org/blog/2017/03/21/mininet-vm-security-advisory</id>
+    <content type="html"><![CDATA[<p>Unfortunately, installing the Ubuntu SSH package into a VM image causes default SSH keys to be generated. In the case of the Mininet VM, this means that the VM images for Mininet 2.2.1 and earlier included the same set of default SSH keys (which could leave you open to a MITM attack.) This probably isn’t surprising to many of you, but we’re changing it in the Mininet VM images to avoid this issue.</p>
+
+<p>As of Mininet 2.2.2, we no longer ship default SSH keys in the provided Mininet VM; we remove them before upload, and new SSH keys should be generated the first time you boot a Mininet 2.2.2 VM image.</p>
+
+<p>If you are logging into an older Mininet VM over the internet or another non-secure network, we highly recommend regenerating your SSH keys if you haven’t done so already:</p>
+
+<p><code>
+sudo rm -f /etc/ssh/*key*
+sudo /usr/sbin/dpkg-reconfigure openssh-server
+sudo service ssh restart
+</code></p>
+
+<p>Alternately, you are welcome to download a new Mininet 2.2.2 VM image.</p>
+
+<p>If you’re distributing a VM image for any purpose, we recommend removing any SSH keys before uploading it!</p>
+
+<p>Additional information on Mininet 2.2.2 may be found at
+<a href="http://mininet.org/blog/2017/03/17/announcing-mininet-2-2-2/">http://mininet.org/blog/2017/03/17/announcing-mininet-2-2-2/</a></p>
+]]></content>
+  </entry>
+  
+</feed>

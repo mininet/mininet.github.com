@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: sigcomm | Mininet]]></title>
+  <link href="http://mininet.org/blog/categories/sigcomm/atom.xml" rel="self"/>
+  <link href="http://mininet.org/"/>
+  <updated>2021-03-01T17:35:20-08:00</updated>
+  <id>http://mininet.org/</id>
+  <author>
+    <name><![CDATA[Mininet Project Contributors]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Mininet wins ACM SIGCOMM Test of Time Paper Award]]></title>
+    <link href="http://mininet.org/blog/2020/06/29/mininet-paper-wins-sigcomm-test-of-time-award/"/>
+    <updated>2020-06-29T17:23:04-08:00</updated>
+    <id>http://mininet.org/blog/2020/06/29/mininet-paper-wins-sigcomm-test-of-time-award</id>
+    <content type="html"><![CDATA[<p>We are pleased to announce that our original HotNets paper,
+<a href="http://conferences.sigcomm.org/hotnets/2010/papers/a19-lantz.pdf">A Network in a Laptop: Rapid Prototyping for Software-Defined Networks</a>, has won the
+<a href="http://www.sigcomm.org/awards/test-of-time-paper-award">ACM SIGCOMM Test of Time Paper Award</a>.</p>
+
+<p>Congratulations to the authors, Bob Lantz, Brandon Heller, and Nick
+McKeown, and congratulations and thanks to the many researchers,
+teachers, students, users, collaborators, and project contributors who
+have used and continue to use Mininet to help usher in the SDN
+revolution and improve the practice of computer networking!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Congrats to Mininet SIGCOMM Hackathon winners!]]></title>
+    <link href="http://mininet.org/blog/2018/08/27/sigcomm2018-hackathon-winners/"/>
+    <updated>2018-08-27T15:39:00-07:00</updated>
+    <id>http://mininet.org/blog/2018/08/27/sigcomm2018-hackathon-winners</id>
+    <content type="html"><![CDATA[<p>Congratulations to Alexander Jung, Michał Król and Torsten Runge, who
+prototyped a Mininet node class for launching unikernels - small
+application-specific kernel images, basically an application linked
+with a library OS, ClickOS being one example - and ended up placing in
+the SIGCOMM 2018 Hackathon!</p>
+
+<p><a href="http://conferences.sigcomm.org/sigcomm/2018/hackathon.html">http://conferences.sigcomm.org/sigcomm/2018/hackathon.html</a></p>
+
+<p>In their case they used Rumprun as the unikernel system and qemu/kvm
+to launch it:</p>
+
+<ul>
+  <li><a href="http://github.com/nderjung/mininet">http://github.com/nderjung/mininet</a> (Branch: <code>devel/rump</code>)</li>
+  <li><a href="http://github.com/rumpkernel/rumprun/">http://github.com/rumpkernel/rumprun/</a></li>
+  <li><a href="http://unikernel.org">http://unikernel.org</a></li>
+</ul>
+
+<p>They are planning on continuing to work on it, so I hope we can get something
+simple and useful running and perhaps added to Mininet!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mininet wins ACM SIGCOMM SOSR Software Systems Award !]]></title>
+    <link href="http://mininet.org/blog/2017/04/05/mininet-wins-sosr-systems-award/"/>
+    <updated>2017-04-05T11:04:00-07:00</updated>
+    <id>http://mininet.org/blog/2017/04/05/mininet-wins-sosr-systems-award</id>
+    <content type="html"><![CDATA[<p>We are pleased to announce that <strong>Mininet has won the
+<a href="http://conferences.sigcomm.org/sosr/2017/award.html">ACM SIGCOMM SOSR Software Systems Award</a>!</strong></p>
+
+<blockquote>
+  <p>“The ACM SIGCOMM SOSR Software Systems Award is given to an individual
+or an institution to recognize the development of a software system
+that has had a significant impact on SDN research, implementations,
+and tools. The impact may be reflected in the widespread adoption of
+the system, or of its underlying concepts, by the wider SDN community,
+either in research projects, in the open-source community, or
+commercially.”</p>
+</blockquote>
+
+<p>The award also includes an invited talk, and the talk slides may be found
+<a href="https://github.com/mininet/mininet/wiki/Publications#presentations-and-slides">here</a>.</p>
+
+<p>The SOSR 2017 program and proceedings may be found <a href="http://conferences.sigcomm.org/sosr/2017/program.html">here</a>.</p>
+
+<p><strong>Mininet’s ongoing success and impact would not be possible without the
+support and contributions from the Mininet community, so we’d like to
+take this opportunity to thank everyone and to say that we look
+forward to working together to continue to make Mininet a better and
+more useful system!</strong></p>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Minininet Tutorial at SIGCOMM]]></title>
+    <link href="http://mininet.org/blog/2014/12/08/mininet-tutorial-at-sigcomm/"/>
+    <updated>2014-12-08T12:00:00-08:00</updated>
+    <id>http://mininet.org/blog/2014/12/08/mininet-tutorial-at-sigcomm</id>
+    <content type="html"><![CDATA[<p>Materials from our tutorial at SIGCOMM 2014,
+<a href="http://conferences.sigcomm.org/sigcomm/2014/tutorial-mininet.php">“Teaching Computer Networking with Mininet”</a>, are available on
+<a href="http://teaching.mininet.org">teaching.mininet.org</a>.
+The original announcement follows.</p>
+
+<hr />
+
+<p><strong>Call for Participation:</strong></p>
+
+<h3 id="mininet-tutorial---teaching-computer-networking-with-mininet">Mininet Tutorial - Teaching Computer Networking with Mininet</h3>
+
+<p><a href="http://conferences.sigcomm.org/sigcomm/2014/tutorial-mininet.php">http://conferences.sigcomm.org/sigcomm/2014/tutorial-mininet.php</a></p>
+
+<p><strong>August 18th, Chicago, USA (in conjunction with SIGCOMM)</strong></p>
+
+<hr />
+
+<h3 id="important-dates">Important Dates</h3>
+
+<ul>
+  <li>Early Registration Deadline: July 11th, 11:59pm CDT</li>
+  <li>Late Registration: July 12th - August 18th</li>
+  <li>Tutorial Date: August 18th 8:30am - 12:00pm</li>
+</ul>
+
+<hr />
+
+<h3 id="objective">Objective</h3>
+
+<p>Sharing our experiences using the Mininet network
+emulation platform to teach computer networking in a variety of
+contexts ranging from small on-campus courses (Stanford, Georgia Tech,
+MIT) to massive online courses. We believe that the Mininet platform
+can make teaching and learning computer networking more fun and
+effective by facilitating experiential learning.</p>
+
+<hr />
+
+<h3 id="program">Program</h3>
+
+<ul>
+  <li>Introduce <a href="http://mininet.org">Mininet</a> to the broader network community, including its capabilities and limitations and some example use cases.</li>
+  <li>Familiarize attendees with Mininet through hands-on exercises.</li>
+  <li>Share our experiences using Mininet since 2011 for on-campus and massive online courses at Stanford, Georgia Tech and MIT.</li>
+  <li>Disseminate assignments that we used at our universities and help to develop and expand an online repository of Mininet courseware.</li>
+</ul>
+
+<hr />
+
+<h3 id="speakers-and-panelists">Speakers and Panelists</h3>
+
+<ul>
+  <li>Bob Lantz - ON.Lab</li>
+  <li>Te-Yuan (TY) Huang - Stanford</li>
+  <li>Vimalkumar Jeyakumar - Stanford</li>
+  <li>Brian O’Connor - ON.Lab</li>
+  <li>Nick Feamster - Georgia Tech</li>
+  <li>Keith Winstein - MIT</li>
+  <li>Anirudh Sivaraman - MIT</li>
+</ul>
+
+<hr />
+]]></content>
+  </entry>
+  
+</feed>

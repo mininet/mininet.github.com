@@ -2,36 +2,93 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Mininet]]></title>
-  <link href="http://mininet.github.com/atom.xml" rel="self"/>
-  <link href="http://mininet.github.com/"/>
-  <updated>2018-08-27T15:42:10-07:00</updated>
-  <id>http://mininet.github.com/</id>
+  <link href="http://mininet.org/atom.xml" rel="self"/>
+  <link href="http://mininet.org/"/>
+  <updated>2021-03-01T17:35:20-08:00</updated>
+  <id>http://mininet.org/</id>
   <author>
-    <name><![CDATA[Mininet Team]]></name>
+    <name><![CDATA[Mininet Project Contributors]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
   
   <entry>
-    <title type="html"><![CDATA[Congrats to Mininet SIGCOMM 2018 Hackathon winners!]]></title>
-    <link href="http://mininet.github.com/blog/2018/08/27/sigcomm2018-hackathon-winners/"/>
+    <title type="html"><![CDATA[Announcing Mininet 2.3.0 !]]></title>
+    <link href="http://mininet.org/blog/2021/02/28/announcing-mininet-2-3-0/"/>
+    <updated>2021-02-28T17:50:37-08:00</updated>
+    <id>http://mininet.org/blog/2021/02/28/announcing-mininet-2-3-0</id>
+    <content type="html"><![CDATA[<h2 id="mininet-230">Mininet 2.3.0</h2>
+
+<p>We are pleased to announce
+<strong><a href="https://github.com/mininet/mininet/releases/tag/2.3.0">Mininet 2.3.0</a></strong> !
+This release provides a
+number of bug fixes as well as new features, including support for
+<strong>Python 3</strong> (as well Python 2.)</p>
+
+<h3 id="how-to-get-it">How to get it</h3>
+
+<p>The easiest way to get started with Mininet is to download a VM
+image. See <strong><a href="http://mininet.org/download">Download</a></strong> for details.</p>
+
+<p>The latest Mininet source code is available on
+<a href="[https://github.com/mininet/mininet">GitHub</a> and also via
+<a href="http://code.mininet.org">code.mininet.org</a>.</p>
+
+<p>Please check out additional details on the Mininet 2.3.0 release in the
+<a href="https://github.com/mininet/mininet/wiki/Documentation#mininet-release-notes">release notes</a>
+on <a href="http://docs.mininet.org">docs.mininet.org</a>.</p>
+
+<p>Mininet is an open source project, and we are grateful to our many
+code contributors, bug reporters, and active users who continue to
+help make Mininet a useful system with a friendly and helpful
+community.</p>
+
+<p>We look forward to seeing what you will do to
+transform and improve the networking world.</p>
+
+<p>Have fun with Mininet!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Mininet Wins ACM SIGCOMM Test of Time Paper Award]]></title>
+    <link href="http://mininet.org/blog/2020/06/29/mininet-paper-wins-sigcomm-test-of-time-award/"/>
+    <updated>2020-06-29T17:23:04-08:00</updated>
+    <id>http://mininet.org/blog/2020/06/29/mininet-paper-wins-sigcomm-test-of-time-award</id>
+    <content type="html"><![CDATA[<p>We are pleased to announce that our original HotNets paper,
+<a href="http://conferences.sigcomm.org/hotnets/2010/papers/a19-lantz.pdf">A Network in a Laptop: Rapid Prototyping for Software-Defined Networks</a>, has won the
+<a href="http://www.sigcomm.org/awards/test-of-time-paper-award">ACM SIGCOMM Test of Time Paper Award</a>.</p>
+
+<p>Congratulations to the authors, Bob Lantz, Brandon Heller, and Nick
+McKeown, and congratulations and thanks to the many researchers,
+teachers, students, users, collaborators, and project contributors who
+have used and continue to use Mininet to help usher in the SDN
+revolution and improve the practice of computer networking!</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Congrats to Mininet SIGCOMM Hackathon Winners!]]></title>
+    <link href="http://mininet.org/blog/2018/08/27/sigcomm2018-hackathon-winners/"/>
     <updated>2018-08-27T15:39:00-07:00</updated>
-    <id>http://mininet.github.com/blog/2018/08/27/sigcomm2018-hackathon-winners</id>
+    <id>http://mininet.org/blog/2018/08/27/sigcomm2018-hackathon-winners</id>
     <content type="html"><![CDATA[<p>Congratulations to Alexander Jung, Michał Król and Torsten Runge, who
 prototyped a Mininet node class for launching unikernels - small
 application-specific kernel images, basically an application linked
 with a library OS, ClickOS being one example - and ended up placing in
 the SIGCOMM 2018 Hackathon!</p>
 
-<p>https://conferences.sigcomm.org/sigcomm/2018/hackathon.html</p>
+<p><a href="http://conferences.sigcomm.org/sigcomm/2018/hackathon.html">http://conferences.sigcomm.org/sigcomm/2018/hackathon.html</a></p>
 
 <p>In their case they used Rumprun as the unikernel system and qemu/kvm
-to launch it.</p>
+to launch it:</p>
 
-<p>https://github.com/nderjung/mininet Branch: devel/rump
-https://github.com/rumpkernel/rumprun/
-http://unikernel.org</p>
+<ul>
+  <li><a href="http://github.com/nderjung/mininet">http://github.com/nderjung/mininet</a> (Branch: <code>devel/rump</code>)</li>
+  <li><a href="http://github.com/rumpkernel/rumprun/">http://github.com/rumpkernel/rumprun/</a></li>
+  <li><a href="http://unikernel.org">http://unikernel.org</a></li>
+</ul>
 
 <p>They are planning on continuing to work on it, so I hope we can get something
 simple and useful running and perhaps added to Mininet!</p>
@@ -39,19 +96,10 @@ simple and useful running and perhaps added to Mininet!</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[new-post]]></title>
-    <link href="http://mininet.github.com/blog/2018/08/27/new-post/"/>
-    <updated>2018-08-27T15:39:00-07:00</updated>
-    <id>http://mininet.github.com/blog/2018/08/27/new-post</id>
-    <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Open Networking Foundation promotes Mininet]]></title>
-    <link href="http://mininet.github.com/blog/2017/06/30/open-networking-foundation-promotes-mininet/"/>
+    <title type="html"><![CDATA[Open Networking Foundation Promotes Mininet]]></title>
+    <link href="http://mininet.org/blog/2017/06/30/open-networking-foundation-promotes-mininet/"/>
     <updated>2017-06-30T14:26:00-07:00</updated>
-    <id>http://mininet.github.com/blog/2017/06/30/open-networking-foundation-promotes-mininet</id>
+    <id>http://mininet.org/blog/2017/06/30/open-networking-foundation-promotes-mininet</id>
     <content type="html"><![CDATA[<p>In case you missed it, here is the <a href="https://www.opennetworking.org/news-and-events/blog/project-mininet-winner-of-inaugural-acm-sigcomm-sosr-software-systems-award/">blog post on Mininet</a> on the
 <a href="https://opennetworking.org">Open Networking Foundation</a> web site:</p>
 
@@ -63,10 +111,10 @@ simple and useful running and perhaps added to Mininet!</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Mininet wins ACM SIGCOMM SOSR Software Systems Award !]]></title>
-    <link href="http://mininet.github.com/blog/2017/04/05/mininet-wins-sosr-systems-award/"/>
+    <title type="html"><![CDATA[Mininet Wins ACM SIGCOMM SOSR Software Systems Award !]]></title>
+    <link href="http://mininet.org/blog/2017/04/05/mininet-wins-sosr-systems-award/"/>
     <updated>2017-04-05T11:04:00-07:00</updated>
-    <id>http://mininet.github.com/blog/2017/04/05/mininet-wins-sosr-systems-award</id>
+    <id>http://mininet.org/blog/2017/04/05/mininet-wins-sosr-systems-award</id>
     <content type="html"><![CDATA[<p>We are pleased to announce that <strong>Mininet has won the
 <a href="http://conferences.sigcomm.org/sosr/2017/award.html">ACM SIGCOMM SOSR Software Systems Award</a>!</strong></p>
 
@@ -96,21 +144,21 @@ more useful system!</strong></p>
   
   <entry>
     <title type="html"><![CDATA[Mininet VM Security Advisory]]></title>
-    <link href="http://mininet.github.com/blog/2017/03/21/mininet-vm-security-advisory/"/>
+    <link href="http://mininet.org/blog/2017/03/21/mininet-vm-security-advisory/"/>
     <updated>2017-03-21T16:29:00-07:00</updated>
-    <id>http://mininet.github.com/blog/2017/03/21/mininet-vm-security-advisory</id>
+    <id>http://mininet.org/blog/2017/03/21/mininet-vm-security-advisory</id>
     <content type="html"><![CDATA[<p>Unfortunately, installing the Ubuntu SSH package into a VM image causes default SSH keys to be generated. In the case of the Mininet VM, this means that the VM images for Mininet 2.2.1 and earlier included the same set of default SSH keys (which could leave you open to a MITM attack.) This probably isn’t surprising to many of you, but we’re changing it in the Mininet VM images to avoid this issue.</p>
 
 <p>As of Mininet 2.2.2, we no longer ship default SSH keys in the provided Mininet VM; we remove them before upload, and new SSH keys should be generated the first time you boot a Mininet 2.2.2 VM image.</p>
 
 <p>If you are logging into an older Mininet VM over the internet or another non-secure network, we highly recommend regenerating your SSH keys if you haven’t done so already:</p>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 <span class="line-number">2</span>
 <span class="line-number">3</span>
 </pre></td><td class="code"><pre><code class=""><span class="line">sudo rm -f /etc/ssh/*key*
 </span><span class="line">sudo /usr/sbin/dpkg-reconfigure openssh-server
-</span><span class="line">sudo service ssh restart</span></code></pre></td></tr></table></div></figure></notextile></div>
+</span><span class="line">sudo service ssh restart</span></code></pre></td></tr></table></div></figure>
 
 <p>Alternately, you are welcome to download a new Mininet 2.2.2 VM image.</p>
 
@@ -123,9 +171,9 @@ more useful system!</strong></p>
   
   <entry>
     <title type="html"><![CDATA[Announcing Mininet 2.2.2]]></title>
-    <link href="http://mininet.github.com/blog/2017/03/17/announcing-mininet-2-2-2/"/>
+    <link href="http://mininet.org/blog/2017/03/17/announcing-mininet-2-2-2/"/>
     <updated>2017-03-17T00:48:00-07:00</updated>
-    <id>http://mininet.github.com/blog/2017/03/17/announcing-mininet-2-2-2</id>
+    <id>http://mininet.org/blog/2017/03/17/announcing-mininet-2-2-2</id>
     <content type="html"><![CDATA[<p>Mininet 2.2.2 is primarily a performance improvement and bug fix release.</p>
 
 <h3 id="security-advisory">Security Advisory!</h3>
@@ -135,17 +183,17 @@ more useful system!</strong></p>
 destroy any default <code>ssh</code> keys in existing Mininet VMs if you haven’t already:</li>
 </ul>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<figure class="code"><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 <span class="line-number">2</span>
 <span class="line-number">3</span>
 </pre></td><td class="code"><pre><code class=""><span class="line">sudo rm -f /etc/ssh/*key*
 </span><span class="line">sudo /usr/sbin/dpkg-reconfigure openssh-server
-</span><span class="line">sudo service ssh restart</span></code></pre></td></tr></table></div></figure></notextile></div>
+</span><span class="line">sudo service ssh restart</span></code></pre></td></tr></table></div></figure>
 
 <h3 id="improvements-and-bug-fixes">Improvements and Bug Fixes</h3>
 
 <ul>
-  <li>We now run <a href="http://mininet.github.com/blog/2017/01/12/testing-using-travis-ci/">public CI builds via Travis</a></li>
+  <li>We now run <a href="http://mininet.org/blog/2017/01/12/testing-using-travis-ci/">public CI builds via Travis</a></li>
   <li>Several common test failures have been addressed</li>
   <li>We use our own forked versions of <code>oflops</code> and the Stanford Reference
 Switch/Controller</li>
@@ -193,10 +241,10 @@ Pujianto, Roan Huang, M S Vishwanath Bhat, Brian O’Connor, and others.</p>
   
   <entry>
     <title type="html"><![CDATA[Automated Testing Using Travis CI]]></title>
-    <link href="http://mininet.github.com/blog/2017/01/12/testing-using-travis-ci/"/>
+    <link href="http://mininet.org/blog/2017/01/12/testing-using-travis-ci/"/>
     <updated>2017-01-12T17:40:00-08:00</updated>
-    <id>http://mininet.github.com/blog/2017/01/12/testing-using-travis-ci</id>
-    <content type="html"><![CDATA[<p>Mininet is now using Travis CI for automated testing! </p>
+    <id>http://mininet.org/blog/2017/01/12/testing-using-travis-ci</id>
+    <content type="html"><![CDATA[<p>Mininet is now using Travis CI for automated testing!</p>
 
 <p>Whenever code is pushed to Mininet, Travis CI starts a test job
 that installs Mininet, runs a simple sanity test, and the “quick”
@@ -207,7 +255,7 @@ tests for HiFi, the walkthrough, and the example code.</p>
 and the status of the most recent master build is part of the README
 on Github:</p>
 
-<p><img src="http://mininet.github.com/images/travis-ci-readme.png" /></p>
+<p><img src="http://mininet.org/images/travis-ci-readme.png" /></p>
 
 <p>Travis CI also verifies all new pull requests and displays their
 build status in the pull request discussion.</p>
@@ -224,9 +272,9 @@ testing burden on maintainers.</p>
   
   <entry>
     <title type="html"><![CDATA[Announcing Mininet 2.2.1]]></title>
-    <link href="http://mininet.github.com/blog/2015/04/16/announcing-mininet-2-2-1/"/>
+    <link href="http://mininet.org/blog/2015/04/16/announcing-mininet-2-2-1/"/>
     <updated>2015-04-16T18:03:00-07:00</updated>
-    <id>http://mininet.github.com/blog/2015/04/16/announcing-mininet-2-2-1</id>
+    <id>http://mininet.org/blog/2015/04/16/announcing-mininet-2-2-1</id>
     <content type="html"><![CDATA[<p>Mininet 2.2.1 is primarily a performance improvement and bug fix release.</p>
 
 <ul>
@@ -268,7 +316,7 @@ may be found in the <strong><a href="https://github.com/mininet/mininet/wiki/Doc
 on <a href="http://docs.mininet.org">docs.mininet.org</a>.</p>
 
 <p>The easiest way to get started with Mininet is to download a
-<strong><a href="http://mininet.org/download">VM image</a></strong>. </p>
+<strong><a href="http://mininet.org/download">VM image</a></strong>.</p>
 
 <p>Download, installation, and upgrade instructions may be found at
 <a href="http://mininet.org/download">http://mininet.org/download</a> .</p>
@@ -279,15 +327,14 @@ on <a href="http://docs.mininet.org">docs.mininet.org</a>.</p>
 
 <p>Thanks to all of the Mininet contributors! A number of interesting features
 and improvements are already in the works for Mininet 2.3.</p>
-
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Mininet on Raspberry Pi]]></title>
-    <link href="http://mininet.github.com/blog/2015/04/15/mininet-on-raspberry-pi/"/>
+    <link href="http://mininet.org/blog/2015/04/15/mininet-on-raspberry-pi/"/>
     <updated>2015-04-15T14:52:00-07:00</updated>
-    <id>http://mininet.github.com/blog/2015/04/15/mininet-on-raspberry-pi</id>
+    <id>http://mininet.org/blog/2015/04/15/mininet-on-raspberry-pi</id>
     <content type="html"><![CDATA[<p>Mininet is now easy to install on the Raspberry Pi running Debian/Raspbian 7 Wheezy!</p>
 
 <p>Mininet’s <code>install.sh</code> has been updated so it should simply work:</p>
@@ -298,7 +345,7 @@ install.sh -a    ## the works
 
 <p>Here is an example of <strong>Mininet running on a Raspberry Pi 2 model B</strong>:</p>
 
-<p><img src="http://mininet.github.com/images/mininet-raspberry-pi-2.jpg" /></p>
+<p><img src="http://mininet.org/images/mininet-raspberry-pi-2.jpg" /></p>
 
 <p>A Raspberry Pi can be used any time you need a cheap <strong>network-in-a-box</strong>, for example
 for courses, laboratories, demonstrations, or simple experiments.</p>
@@ -310,9 +357,9 @@ fun and clever uses of Mininet running on the Pi !!</p>
   
   <entry>
     <title type="html"><![CDATA[Announcing Mininet 2.2.0 !]]></title>
-    <link href="http://mininet.github.com/blog/2014/12/09/announcing-mininet-2-2-0/"/>
+    <link href="http://mininet.org/blog/2014/12/09/announcing-mininet-2-2-0/"/>
     <updated>2014-12-09T14:35:00-08:00</updated>
-    <id>http://mininet.github.com/blog/2014/12/09/announcing-mininet-2-2-0</id>
+    <id>http://mininet.org/blog/2014/12/09/announcing-mininet-2-2-0</id>
     <content type="html"><![CDATA[<p>We are pleased to announce Mininet 2.2.0! This release  provides
 a number of bug fixes as well as several new features, including:</p>
 
@@ -333,7 +380,7 @@ Loxigen
   <li>
     <p>A new <code>nodelib.py</code> node library, and new <code>Node</code> types including
 <code>LinuxBridge</code>, <code>OVSBridge</code>, <code>LinuxRouter</code> (see <code>examples/</code>) and <code>NAT</code><br />
-<img src="http://mininet.github.com/images/nodelib.png" /></p>
+<img src="http://mininet.org/images/nodelib.png" /></p>
   </li>
   <li>
     <p>Easier LAN/internet connectivity from Mininet hosts</p>
@@ -356,7 +403,7 @@ using the <code>--ipbase</code> option.</p>
   <li>
     <p>An improved MiniEdit GUI (<code>examples/miniedit.py</code>) - thanks to
 Gregory Gee <br />
-<img src="http://mininet.github.com/images/miniedit.png" /></p>
+<img src="http://mininet.org/images/miniedit.png" /></p>
   </li>
   <li>
     <p>Support for multiple <code>--custom</code> arguments to <code>mn</code></p>
@@ -372,7 +419,7 @@ classes:</p>
 
     <p><code>mn --cluster localhost,server1,server2,server3 --topo tree,4,4</code></p>
 
-    <p><img src="http://mininet.github.com/images/cluster.png" /></p>
+    <p><img src="http://mininet.org/images/cluster.png" /></p>
   </li>
 </ul>
 
@@ -409,9 +456,9 @@ Open Networking Laboratory</p>
   
   <entry>
     <title type="html"><![CDATA[Minininet Tutorial at SIGCOMM]]></title>
-    <link href="http://mininet.github.com/blog/2014/12/08/mininet-tutorial-at-sigcomm/"/>
+    <link href="http://mininet.org/blog/2014/12/08/mininet-tutorial-at-sigcomm/"/>
     <updated>2014-12-08T12:00:00-08:00</updated>
-    <id>http://mininet.github.com/blog/2014/12/08/mininet-tutorial-at-sigcomm</id>
+    <id>http://mininet.org/blog/2014/12/08/mininet-tutorial-at-sigcomm</id>
     <content type="html"><![CDATA[<p>Materials from our tutorial at SIGCOMM 2014,
 <a href="http://conferences.sigcomm.org/sigcomm/2014/tutorial-mininet.php">“Teaching Computer Networking with Mininet”</a>, are available on
 <a href="http://teaching.mininet.org">teaching.mininet.org</a>.
@@ -478,19 +525,19 @@ effective by facilitating experiential learning.</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Mininet 2.2.0 beta]]></title>
-    <link href="http://mininet.github.com/blog/2014/11/12/mininet-2-2-0-beta/"/>
+    <title type="html"><![CDATA[Mininet 2.2.0 Beta]]></title>
+    <link href="http://mininet.org/blog/2014/11/12/mininet-2-2-0-beta/"/>
     <updated>2014-11-12T17:49:00-08:00</updated>
-    <id>http://mininet.github.com/blog/2014/11/12/mininet-2-2-0-beta</id>
-    <content type="html"><![CDATA[<p>Please see the full <a href="http://mininet.github.com/blog/2014/12/09/announcing-mininet-2-2-0/">Mininet 2.2.0 Release Announcement</a> !</p>
+    <id>http://mininet.org/blog/2014/11/12/mininet-2-2-0-beta</id>
+    <content type="html"><![CDATA[<p>Please see the full <a href="http://mininet.org/blog/2014/12/09/announcing-mininet-2-2-0/">Mininet 2.2.0 Release Announcement</a> !</p>
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Announcing Mininet 2.1.0 !]]></title>
-    <link href="http://mininet.github.com/blog/2013/09/20/announcing-mininet-2-1-0/"/>
+    <link href="http://mininet.org/blog/2013/09/20/announcing-mininet-2-1-0/"/>
     <updated>2013-09-20T13:59:00-07:00</updated>
-    <id>http://mininet.github.com/blog/2013/09/20/announcing-mininet-2-1-0</id>
+    <id>http://mininet.org/blog/2013/09/20/announcing-mininet-2-1-0</id>
     <content type="html"><![CDATA[<p>We are pleased to announce the immediate availability of Mininet 2.1.0
 on <a href="http://mininet.org">mininet.org</a> !</p>
 
@@ -529,7 +576,7 @@ imported to provide useful functionality) including:</p>
 </ul>
 
 <p>Note that examples contain experimental features which might
-“graduate” into mainline Mininet in the future, but they should 
+“graduate” into mainline Mininet in the future, but they should
 not be considered a stable part of the Mininet API!</p>
 
 <p>Additional information may be found in the
@@ -544,16 +591,15 @@ a useful system with a friendly and helpful community!</p>
 <p><strong>The Mininet 2.1.0 Team</strong><br />
 Bob Lantz and Brian O’Connor<br />
 Open Networking Laboratory</p>
-
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Nick Feamster's SDN Course]]></title>
-    <link href="http://mininet.github.com/blog/2013/07/11/sdn-course/"/>
+    <link href="http://mininet.org/blog/2013/07/11/sdn-course/"/>
     <updated>2013-07-11T17:53:00-07:00</updated>
-    <id>http://mininet.github.com/blog/2013/07/11/sdn-course</id>
-    <content type="html"><![CDATA[<p>I just want to put in a recommendation for Nick Feamster’s excellent Software Defined Networking course. It’s free on Coursera, and not only does he do a great job of clearly explaining SDN, network virtualization, and related topics, he has also created some excellent videos explaining the usage, design, and rationale for the Mininet system, which is also being used for programming assignments and labs in the course. </p>
+    <id>http://mininet.org/blog/2013/07/11/sdn-course</id>
+    <content type="html"><![CDATA[<p>I just want to put in a recommendation for Nick Feamster’s excellent Software Defined Networking course. It’s free on Coursera, and not only does he do a great job of clearly explaining SDN, network virtualization, and related topics, he has also created some excellent videos explaining the usage, design, and rationale for the Mininet system, which is also being used for programming assignments and labs in the course.</p>
 
 <p>There are also interesting interviews with notable people like Martin Casado, David Clark, and Teemu Koponen. It’s quite excellent, very approachable for anyone who has a basic networking background, and highly recommended:</p>
 
@@ -562,15 +608,14 @@ Open Networking Laboratory</p>
 <p>The course has already started, but as of today (Thursday July 11th) you can still sign up for it.</p>
 
 <p>-Bob</p>
-
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Automating Controller Startup]]></title>
-    <link href="http://mininet.github.com/blog/2013/06/03/automating-controller-startup/"/>
+    <link href="http://mininet.org/blog/2013/06/03/automating-controller-startup/"/>
     <updated>2013-06-03T15:50:00-07:00</updated>
-    <id>http://mininet.github.com/blog/2013/06/03/automating-controller-startup</id>
+    <id>http://mininet.org/blog/2013/06/03/automating-controller-startup</id>
     <content type="html"><![CDATA[<p>One of Mininet’s key features is that it makes it very easy to create
 a complete virtual network including hosts, switches, links and
 OpenFlow controllers. By default, Mininet runs Open vSwitch
@@ -638,7 +683,7 @@ version 1.0!</p>
 
 <p>Here is a custom class for POX’s l2_learning:</p>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 <span class="line-number">2</span>
 <span class="line-number">3</span>
 <span class="line-number">4</span>
@@ -670,16 +715,16 @@ version 1.0!</p>
 </span><span class="line">                             <span class="n">cargs</span><span class="o">=</span><span class="n">cargs</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span> <span class="p">)</span>
 </span><span class="line">
 </span><span class="line"><span class="n">controllers</span><span class="o">=</span><span class="p">{</span> <span class="s">&#39;pox&#39;</span><span class="p">:</span> <span class="n">POX</span> <span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
+</span></code></pre></td></tr></table></div></figure>
 
 <p>With this class saved into <code>pox.py</code>, you can now do the following:</p>
 
 <pre><code>sudo mn --custom pox.py --controller pox
 </code></pre>
 
-<p>Additionally you can use the custom class in your Mininet scripts</p>
+<p>Additionally you can use the custom class in your Mininet scripts:</p>
 
-<div class="bogus-wrapper"><notextile><figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
+<figure class="code"><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class="line-number">1</span>
 <span class="line-number">2</span>
 <span class="line-number">3</span>
 <span class="line-number">4</span>
@@ -717,21 +762,20 @@ version 1.0!</p>
 </span><span class="line"><span class="n">net</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
 </span><span class="line"><span class="n">CLI</span><span class="p">(</span> <span class="n">net</span> <span class="p">)</span>
 </span><span class="line"><span class="n">net</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
-</span></code></pre></td></tr></table></div></figure></notextile></div>
+</span></code></pre></td></tr></table></div></figure>
 
 <p>Note that in this custom class we’ve simply changed
 <code>__init__</code>, but in a more complicated example you might
 wish to change the <code>start()</code> and <code>stop()</code> methods as
 well.</p>
-
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Mininet at CoNEXT 2012]]></title>
-    <link href="http://mininet.github.com/blog/2012/12/06/mininet-at-conext-2012/"/>
+    <link href="http://mininet.org/blog/2012/12/06/mininet-at-conext-2012/"/>
     <updated>2012-12-06T15:20:00-08:00</updated>
-    <id>http://mininet.github.com/blog/2012/12/06/mininet-at-conext-2012</id>
+    <id>http://mininet.org/blog/2012/12/06/mininet-at-conext-2012</id>
     <content type="html"><![CDATA[<p>We’re going to France. No, really!</p>
 
 <p>Join us next week, December 10th to 13th at
@@ -742,16 +786,15 @@ where Brandon will be presenting our “runnable” paper on Mininet 2.0 “HiFi
 
 <p>We look forward to meeting many current, new, and future Mininet users,
 developers, researchers and contributors!</p>
-
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Announcing Mininet 2.0.0]]></title>
-    <link href="http://mininet.github.com/blog/2012/11/27/announcing-mininet-2-dot-0-0/"/>
+    <link href="http://mininet.org/blog/2012/11/27/announcing-mininet-2-dot-0-0/"/>
     <updated>2012-11-27T17:41:00-08:00</updated>
-    <id>http://mininet.github.com/blog/2012/11/27/announcing-mininet-2-dot-0-0</id>
-    <content type="html"><![CDATA[<p>We are pleased to announce the availability of <a href="http://mininet.github.com/download">Mininet 2.0.0</a>!</p>
+    <id>http://mininet.org/blog/2012/11/27/announcing-mininet-2-dot-0-0</id>
+    <content type="html"><![CDATA[<p>We are pleased to announce the availability of <a href="http://mininet.org/download">Mininet 2.0.0</a>!</p>
 
 <p>In the last few years, the Mininet community has grown from a few users at Stanford to an active mailing list with over 500 members in academia, startups, and industry.</p>
 
@@ -760,7 +803,7 @@ developers, researchers and contributors!</p>
 <p>Other new features of Mininet 2.0.0 include:</p>
 
 <ul>
-  <li>An all-new website, <a href="http://mininet.github.com">http://mininet.github.com</a>, with <a href="http://mininet.github.com/api">online doxypy documentation</a> for all classes.</li>
+  <li>An all-new website, <a href="http://mininet.github.com">http://mininet.github.com</a>, with <a href="http://mininet.org/api">online doxypy documentation</a> for all classes.</li>
   <li>More flexible <code>mn</code> command line options, including the ability to specify NOX (and, in the future, POX) modules from the <code>mn</code> command line, and the ability to set link and CPU bandwidth limits</li>
   <li>Dynamic link reconnection in OVS (supports migration and mobility emulation)</li>
   <li>First-class abstractions/classes for link (<code>Link</code>) and interface (<code>Intf</code>) objects</li>
@@ -789,14 +832,17 @@ developers, researchers and contributors!</p>
   
   <entry>
     <title type="html"><![CDATA[Website Updated]]></title>
-    <link href="http://mininet.github.com/blog/2012/08/23/website-updated/"/>
+    <link href="http://mininet.org/blog/2012/08/23/website-updated/"/>
     <updated>2012-08-23T18:08:00-07:00</updated>
-    <id>http://mininet.github.com/blog/2012/08/23/website-updated</id>
-    <content type="html"><![CDATA[<p>The old website had an obscure, needed-Google-to-find-it address, and was generated server-side, so it could be a bit slow.  The new page you’re seeing was built with Octopress and is hosted on GitHub Pages.  Since it’s all statically generated pages now, it should load super-quick, and it’ll be easier to add blog entries and do page customization.  </p>
+    <id>http://mininet.org/blog/2012/08/23/website-updated</id>
+    <content type="html"><![CDATA[<p>The old website had an obscure, needed-Google-to-find-it address, and was generated server-side, so it could be a bit slow.  The new page you’re seeing was built with Octopress and is hosted on GitHub Pages.  Since it’s all statically generated pages now, it should load super-quick, and it’ll be easier to add blog entries and do page customization.</p>
 
 <p>Try it out, and let us know what you think!</p>
 
 <p>-The Mininet Team</p>
+
+<p><em>[Ed.: Apologies for use of the dubious term “website,” rather than the perfectly adequate “web site.”
+  Perhaps you found us via Google or your favorite “searchsite.”]</em></p>
 ]]></content>
   </entry>
   

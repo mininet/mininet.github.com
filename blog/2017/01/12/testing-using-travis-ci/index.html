@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <title>Automated Testing Using Travis CI - Mininet</title>
-  <meta name="author" content="Mininet Team">
+  <meta name="author" content="Mininet Project Contributors">
 
   
   <meta name="description" content="Mininet is now using Travis CI for automated testing! Whenever code is pushed to Mininet, Travis CI starts a test job
@@ -19,18 +19,22 @@ that installs Mininet, runs a &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://mininet.github.com/blog/2017/01/12/testing-using-travis-ci/">
+  <link rel="canonical" href="http://mininet.org/blog/2017/01/12/testing-using-travis-ci/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="/javascripts/ender.js"></script>
-  <script src="/javascripts/octopress.js" type="text/javascript"></script>
   <link href="/atom.xml" rel="alternate" title="Mininet" type="application/atom+xml">
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts 
-BL: removed since they make things SLOW
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
--->
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="/javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <style>
+  nav li, form { display: none; }
+  header time { display: none; }
+  .time { display: none; }
+  .credit { font-size: 75%; }
+</style>
+
+
 
   
 
@@ -40,7 +44,13 @@ BL: removed since they make things SLOW
   <header role="banner">
 
 </header>
-  <nav role="navigation">
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+
+
 </nav>
   <div id="main">
     <div id="content">
@@ -58,21 +68,14 @@ BL: removed since they make things SLOW
 
 
 
-
-
-
-
-  
-
-
-<time datetime="2017-01-12T17:40:00-08:00" pubdate data-updated="true">Jan 12<span>th</span>, 2017</time>
+<time class='entry-date' datetime='2017-01-12T17:40:00-08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>5:40 pm</span></time>
         
       </p>
     
   </header>
 
 
-<div class="entry-content"><p>Mininet is now using Travis CI for automated testing! </p>
+<div class="entry-content"><p>Mininet is now using Travis CI for automated testing!</p>
 
 <p>Whenever code is pushed to Mininet, Travis CI starts a test job
 that installs Mininet, runs a simple sanity test, and the “quick”
@@ -110,15 +113,14 @@ testing burden on maintainers.</p>
 
 
 
-
-
-
-
-  
-
-
-<time datetime="2017-01-12T17:40:00-08:00" pubdate data-updated="true">Jan 12<span>th</span>, 2017</time>
+<time class='entry-date' datetime='2017-01-12T17:40:00-08:00'><span class='date'><span class='date-month'>Jan</span> <span class='date-day'>12</span><span class='date-suffix'>th</span>, <span class='date-year'>2017</span></span> <span class='time'>5:40 pm</span></time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ci/'>ci</a>, <a class='category' href='/blog/categories/mininet/'>mininet</a>, <a class='category' href='/blog/categories/testing/'>testing</a>
+  
+</span>
 
 
     </p>
@@ -163,8 +165,8 @@ testing burden on maintainers.</p>
   <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/Videos">Videos</a></p></div>
   <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki">Wiki</a></p></div>
   <div class = "navigation"><p><a href="https://github.com/mininet/mininet">Source Code</a></p></div>
-  <div class = "navigation"><p><a href="https://travis-ci.org/mininet/mininet">Build Results</a></p></div>
-  <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/Mininet-Apps">Apps</a></p></div>
+  <div class = "navigation"><p><a href="https://github.com/mininet/mininet/actions">CI Testing</a></p></div>
+  <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/Mininet-Apps-and-Tools">Apps</a></p></div>
   <div class = "navigation"><p><a href="https://github.com/mininet/mininet/wiki/FAQ">FAQ</a></p></div>
   <!--
   <div class = "navigation"><p><a href="/"></a>Tutorials</p></div>
@@ -173,31 +175,32 @@ testing burden on maintainers.</p>
   
   <div class = "navigation"><p><a href="/support">Support</a></p></div>
   <div class = "navigation"><p><a href="/contribute">Contribute</a></p></div>
-  <div class = "navigation"><p><a href="/blog/archives">News Archives</a></p></div>
+  <div class = "navigation"><p><a href="/blog/archives">News Archive</a></p>
+  </div>
   <div class = "navigation"><p><a href="/credits">Credits</a></p></div>
 </section>
 <section>
-  <a href='/blog'><h1>News</h1></a>
+  <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2018/08/27/sigcomm2018-hackathon-winners/">Congrats to Mininet SIGCOMM 2018 Hackathon winners!</a>
+        <a href="/blog/2021/02/28/announcing-mininet-2-3-0/">Announcing Mininet 2.3.0 !</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2018/08/27/new-post/">new-post</a>
+        <a href="/blog/2020/06/29/mininet-paper-wins-sigcomm-test-of-time-award/">Mininet Wins ACM SIGCOMM Test of Time Paper Award</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/06/30/open-networking-foundation-promotes-mininet/">Open Networking Foundation promotes Mininet</a>
+        <a href="/blog/2018/08/27/sigcomm2018-hackathon-winners/">Congrats to Mininet SIGCOMM Hackathon Winners!</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/04/05/mininet-wins-sosr-systems-award/">Mininet wins ACM SIGCOMM SOSR Software Systems Award !</a>
+        <a href="/blog/2017/06/30/open-networking-foundation-promotes-mininet/">Open Networking Foundation Promotes Mininet</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2017/03/21/mininet-vm-security-advisory/">Mininet VM Security Advisory</a>
+        <a href="/blog/2017/04/05/mininet-wins-sosr-systems-award/">Mininet Wins ACM SIGCOMM SOSR Software Systems Award !</a>
       </li>
     
   </ul>
@@ -209,10 +212,8 @@ testing burden on maintainers.</p>
 
     </div>
   </div>
-  <footer role="contentinfo"><p>
-  Copyright &copy; 2018 - Mininet Team -
-  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
-</p>
+  <footer role="contentinfo">  Copyright &copy; 2021 Mininet Project Contributors -
+  <span class="credit">powered by <a href="http://octopress.org">Octopress</a></span>
 
 </footer>
   
@@ -228,7 +229,7 @@ testing burden on maintainers.</p>
       var twitterWidgets = document.createElement('script');
       twitterWidgets.type = 'text/javascript';
       twitterWidgets.async = true;
-      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
   </script>

@@ -1,125 +1,192 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
-    <url>
-        <loc>http://mininet.github.com/blog/2012/08/23/website-updated/</loc>
-        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/blog/2012/11/27/announcing-mininet-2-dot-0-0/</loc>
-        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/blog/2012/12/06/mininet-at-conext-2012/</loc>
-        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/blog/2013/06/03/automating-controller-startup/</loc>
-        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/blog/2013/07/11/sdn-course/</loc>
-        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/blog/2013/09/20/announcing-mininet-2-1-0/</loc>
-        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/blog/2014/11/12/mininet-2-2-0-beta/</loc>
-        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/blog/2014/12/08/mininet-tutorial-at-sigcomm/</loc>
-        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/blog/2014/12/09/announcing-mininet-2-2-0/</loc>
-        <lastmod>2018-01-04T13:05:00-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/blog/2015/04/15/mininet-on-raspberry-pi/</loc>
-        <lastmod>2017-01-12T18:47:26-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/blog/2015/04/16/announcing-mininet-2-2-1/</loc>
-        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/blog/2017/01/12/testing-using-travis-ci/</loc>
-        <lastmod>2017-01-12T18:47:26-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/blog/2017/03/17/announcing-mininet-2-2-2/</loc>
-        <lastmod>2017-03-21T16:01:25-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/blog/2017/03/21/mininet-vm-security-advisory/</loc>
-        <lastmod>2017-03-21T16:38:52-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/blog/2017/04/05/mininet-wins-sosr-systems-award/</loc>
-        <lastmod>2018-01-04T13:05:00-08:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://mininet.github.com/blog/2017/06/30/open-networking-foundation-promotes-mininet/
-        </loc>
-        <lastmod>2018-01-04T12:59:00-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/blog/2018/08/27/new-post/</loc>
-        <lastmod>2018-08-27T15:39:22-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/blog/2018/08/27/sigcomm2018-hackathon-winners/</loc>
-        <lastmod>2018-08-27T15:40:12-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/sample-workflow/</loc>
-        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/</loc>
-        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/introvideo/</loc>
-        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/walkthrough/</loc>
-        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/blog/</loc>
-        <lastmod>2018-08-27T15:40:12-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/blog/archives/</loc>
-        <lastmod>2018-08-27T15:40:12-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/support/</loc>
-        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/download/</loc>
-        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/contribute/</loc>
-        <lastmod>2017-03-18T15:36:09-07:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/overview/</loc>
-        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/vm-setup-notes/</loc>
-        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://mininet.github.com/credits/</loc>
-        <lastmod>2017-01-12T18:19:46-08:00</lastmod>
-    </url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://mininet.org/blog/2021/02/28/announcing-mininet-2-3-0/</loc>
+<lastmod>2021-02-28T17:50:37-08:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/blog/2020/06/29/mininet-paper-wins-sigcomm-test-of-time-award/</loc>
+<lastmod>2020-06-29T17:23:04-08:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/blog/2018/08/27/sigcomm2018-hackathon-winners/</loc>
+<lastmod>2018-08-27T15:39:00-07:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/blog/2017/06/30/open-networking-foundation-promotes-mininet/</loc>
+<lastmod>2017-06-30T14:26:00-07:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/blog/2017/04/05/mininet-wins-sosr-systems-award/</loc>
+<lastmod>2017-04-05T11:04:00-07:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/blog/2017/03/21/mininet-vm-security-advisory/</loc>
+<lastmod>2017-03-21T16:29:00-07:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/blog/2017/03/17/announcing-mininet-2-2-2/</loc>
+<lastmod>2017-03-17T00:48:00-07:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/blog/2017/01/12/testing-using-travis-ci/</loc>
+<lastmod>2017-01-12T17:40:00-08:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/blog/2015/04/16/announcing-mininet-2-2-1/</loc>
+<lastmod>2015-04-16T18:03:00-07:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/blog/2015/04/15/mininet-on-raspberry-pi/</loc>
+<lastmod>2015-04-15T14:52:00-07:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/blog/2014/12/09/announcing-mininet-2-2-0/</loc>
+<lastmod>2014-12-09T14:35:00-08:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/blog/2014/12/08/mininet-tutorial-at-sigcomm/</loc>
+<lastmod>2014-12-08T12:00:00-08:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/blog/2014/11/12/mininet-2-2-0-beta/</loc>
+<lastmod>2014-11-12T17:49:00-08:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/blog/2013/09/20/announcing-mininet-2-1-0/</loc>
+<lastmod>2013-09-20T13:59:00-07:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/blog/2013/07/11/sdn-course/</loc>
+<lastmod>2013-07-11T17:53:00-07:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/blog/2013/06/03/automating-controller-startup/</loc>
+<lastmod>2013-06-03T15:50:00-07:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/blog/2012/12/06/mininet-at-conext-2012/</loc>
+<lastmod>2012-12-06T15:20:00-08:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/blog/2012/11/27/announcing-mininet-2-dot-0-0/</loc>
+<lastmod>2012-11-27T17:41:00-08:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/blog/2012/08/23/website-updated/</loc>
+<lastmod>2012-08-23T18:08:00-07:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/blog/</loc>
+</url>
+<url>
+<loc>http://mininet.org/blog/archives/</loc>
+</url>
+<url>
+<loc>http://mininet.org/sample-workflow/</loc>
+</url>
+<url>
+<loc>http://mininet.org/</loc>
+</url>
+<url>
+<loc>http://mininet.org/introvideo/</loc>
+</url>
+<url>
+<loc>http://mininet.org/walkthrough/</loc>
+</url>
+<url>
+<loc>http://mininet.org/support/</loc>
+</url>
+<url>
+<loc>http://mininet.org/download/</loc>
+</url>
+<url>
+<loc>http://mininet.org/contribute/</loc>
+</url>
+<url>
+<loc>http://mininet.org/overview/</loc>
+</url>
+<url>
+<loc>http://mininet.org/vm-setup-notes/</loc>
+</url>
+<url>
+<loc>http://mininet.org/credits/</loc>
+</url>
+<url>
+<loc>http://mininet.org/blog/categories/releases/</loc>
+</url>
+<url>
+<loc>http://mininet.org/blog/categories/mininet/</loc>
+</url>
+<url>
+<loc>http://mininet.org/blog/categories/conext/</loc>
+</url>
+<url>
+<loc>http://mininet.org/blog/categories/howto/</loc>
+</url>
+<url>
+<loc>http://mininet.org/blog/categories/tutorial/</loc>
+</url>
+<url>
+<loc>http://mininet.org/blog/categories/sdn/</loc>
+</url>
+<url>
+<loc>http://mininet.org/blog/categories/course/</loc>
+</url>
+<url>
+<loc>http://mininet.org/blog/categories/beta/</loc>
+</url>
+<url>
+<loc>http://mininet.org/blog/categories/sigcomm/</loc>
+</url>
+<url>
+<loc>http://mininet.org/blog/categories/raspberry-pi/</loc>
+</url>
+<url>
+<loc>http://mininet.org/blog/categories/testing/</loc>
+</url>
+<url>
+<loc>http://mininet.org/blog/categories/ci/</loc>
+</url>
+<url>
+<loc>http://mininet.org/blog/categories/security/</loc>
+</url>
+<url>
+<loc>http://mininet.org/blog/categories/awards/</loc>
+</url>
+<url>
+<loc>http://mininet.org/blog/categories/onf/</loc>
+</url>
+<url>
+<loc>http://mininet.org/faq/index.html</loc>
+<lastmod>2017-01-12T18:19:46-08:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/bugs/index.html</loc>
+<lastmod>2017-01-12T18:19:46-08:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/code/index.html</loc>
+<lastmod>2017-01-12T18:19:46-08:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/wiki/index.html</loc>
+<lastmod>2017-01-12T18:19:46-08:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/docs/index.html</loc>
+<lastmod>2017-01-12T18:19:46-08:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/teaching/index.html</loc>
+<lastmod>2017-01-12T18:19:46-08:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/gsoc/index.html</loc>
+<lastmod>2017-01-12T18:19:46-08:00</lastmod>
+</url>
+<url>
+<loc>http://mininet.org/apps/index.html</loc>
+<lastmod>2018-08-27T15:34:55-07:00</lastmod>
+</url>
 </urlset>

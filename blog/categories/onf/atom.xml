@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: onf | Mininet]]></title>
+  <link href="http://mininet.org/blog/categories/onf/atom.xml" rel="self"/>
+  <link href="http://mininet.org/"/>
+  <updated>2021-03-01T17:35:20-08:00</updated>
+  <id>http://mininet.org/</id>
+  <author>
+    <name><![CDATA[Mininet Project Contributors]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Open Networking Foundation promotes Mininet]]></title>
+    <link href="http://mininet.org/blog/2017/06/30/open-networking-foundation-promotes-mininet/"/>
+    <updated>2017-06-30T14:26:00-07:00</updated>
+    <id>http://mininet.org/blog/2017/06/30/open-networking-foundation-promotes-mininet</id>
+    <content type="html"><![CDATA[<p>In case you missed it, here is the <a href="https://www.opennetworking.org/news-and-events/blog/project-mininet-winner-of-inaugural-acm-sigcomm-sosr-software-systems-award/">blog post on Mininet</a> on the
+<a href="https://opennetworking.org">Open Networking Foundation</a> web site:</p>
+
+<p><a href="https://www.opennetworking.org/news-and-events/blog/project-mininet-winner-of-inaugural-acm-sigcomm-sosr-software-systems-award/">https://www.opennetworking.org/news-and-events/blog/project-mininet-winner-of-inaugural-acm-sigcomm-sosr-software-systems-award/</a></p>
+
+<p>There is an amusing embedded video as well.</p>
+
+]]></content>
+  </entry>
+  
+</feed>
