@@ -4,7 +4,7 @@
   <title><![CDATA[Mininet]]></title>
   <link href="http://mininet.org/atom.xml" rel="self"/>
   <link href="http://mininet.org/"/>
-  <updated>2021-03-02T09:58:46-08:00</updated>
+  <updated>2021-03-02T10:02:23-08:00</updated>
   <id>http://mininet.org/</id>
   <author>
     <name><![CDATA[Mininet Project Contributors]]></name>
@@ -18,9 +18,7 @@
     <link href="http://mininet.org/blog/2021/02/28/announcing-mininet-2-3-0/"/>
     <updated>2021-02-28T17:50:37-08:00</updated>
     <id>http://mininet.org/blog/2021/02/28/announcing-mininet-2-3-0</id>
-    <content type="html"><![CDATA[<h2 id="mininet-230">Mininet 2.3.0</h2>
-
-<p>We are pleased to announce
+    <content type="html"><![CDATA[<p>We are pleased to announce
 <strong><a href="https://github.com/mininet/mininet/releases/tag/2.3.0">Mininet 2.3.0</a></strong> !
 This release provides a
 number of bug fixes as well as new features, including support for
