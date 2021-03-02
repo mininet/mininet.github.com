@@ -3,7 +3,7 @@ layout: post
 title: "Announcing Mininet 2.2.2"
 date: 2017-03-17 00:48
 comments: true
-categories:
+categories: mininet releases
 ---
 
 Mininet 2.2.2 is primarily a performance improvement and bug fix release.

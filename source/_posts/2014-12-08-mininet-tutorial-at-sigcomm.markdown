@@ -3,7 +3,7 @@ layout: post
 title: "Minininet Tutorial at SIGCOMM"
 date: 2014-12-08 12:00
 comments: false
-categories:
+categories: mininet tutorial sigcomm
 ---
 Materials from our tutorial at SIGCOMM 2014,
 ["Teaching Computer Networking with Mininet"](http://conferences.sigcomm.org/sigcomm/2014/tutorial-mininet.php), are available on

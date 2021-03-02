@@ -3,7 +3,7 @@ layout: post
 title: "Mininet wins ACM SIGCOMM Test of Time Paper Award"
 date: 2020-06-29 17:23:04 -0800
 comments: false
-categories:
+categories: sigcomm awards mininet
 ---
 We are pleased to announce that our original HotNets paper,
 [A Network in a Laptop: Rapid Prototyping for Software-Defined Networks](http://conferences.sigcomm.org/hotnets/2010/papers/a19-lantz.pdf), has won the

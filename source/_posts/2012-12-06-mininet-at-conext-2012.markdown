@@ -3,7 +3,7 @@ layout: post
 title: "Mininet at CoNEXT 2012"
 date: 2012-12-06 15:20
 comments: true
-categories: 
+categories: mininet conext
 published: true
 ---
 
@@ -17,5 +17,3 @@ where Brandon will be presenting our "runnable" paper on Mininet 2.0 "HiFi":
 
 We look forward to meeting many current, new, and future Mininet users,
 developers, researchers and contributors!
-
-

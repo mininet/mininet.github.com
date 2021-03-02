@@ -3,7 +3,7 @@ layout: post
 title: "Automating Controller Startup"
 date: 2013-06-03 15:50
 comments: false
-categories: howto
+categories: howto tutorial mininet sdn
 ---
 
 One of Mininet's key features is that it makes it very easy to create

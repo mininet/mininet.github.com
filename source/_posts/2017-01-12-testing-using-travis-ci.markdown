@@ -4,10 +4,10 @@ title: "Automated Testing Using Travis CI"
 date: 2017-01-12 17:40
 comments: true
 author: Brian O'Connor
-categories: 
+categories: mininet testing ci
 ---
 
-Mininet is now using Travis CI for automated testing! 
+Mininet is now using Travis CI for automated testing!
 
 Whenever code is pushed to Mininet, Travis CI starts a test job
 that installs Mininet, runs a simple sanity test, and the "quick"

@@ -3,7 +3,7 @@ layout: post
 title: "Mininet wins ACM SIGCOMM SOSR Software Systems Award !"
 date: 2017-04-05 11:04
 comments: true
-categories:
+categories: sigcomm awards
 author: Bob Lantz
 ---
 We are pleased to announce that **Mininet has won the

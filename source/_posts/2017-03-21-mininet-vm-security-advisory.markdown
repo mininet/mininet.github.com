@@ -3,7 +3,7 @@ layout: post
 title: "Mininet VM Security Advisory"
 date: 2017-03-21 16:29
 comments: true
-categories:
+categories: security mininet
 ---
 Unfortunately, installing the Ubuntu SSH package into a VM image causes default SSH keys to be generated. In the case of the Mininet VM, this means that the VM images for Mininet 2.2.1 and earlier included the same set of default SSH keys (which could leave you open to a MITM attack.) This probably isn't surprising to many of you, but we're changing it in the Mininet VM images to avoid this issue.
 

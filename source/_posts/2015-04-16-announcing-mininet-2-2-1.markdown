@@ -3,7 +3,7 @@ layout: post
 title: "Announcing Mininet 2.2.1"
 date: 2015-04-16 18:03
 comments: true
-categories:
+categories: mininet releases
 ---
 
 Mininet 2.2.1 is primarily a performance improvement and bug fix release.
@@ -36,7 +36,7 @@ may be found in the **[Release Notes](https://github.com/mininet/mininet/wiki/Do
 on [docs.mininet.org](http://docs.mininet.org).
 
 The easiest way to get started with Mininet is to download a
-**[VM image](http://mininet.org/download)**. 
+**[VM image](http://mininet.org/download)**.
 
 Download, installation, and upgrade instructions may be found at
 <http://mininet.org/download> .
@@ -47,4 +47,3 @@ The latest Mininet **[source code](http://code.mininet.org)** is available on
 
 Thanks to all of the Mininet contributors! A number of interesting features
 and improvements are already in the works for Mininet 2.3.
-

@@ -3,7 +3,7 @@ layout: post
 title: "Open Networking Foundation promotes Mininet"
 date: 2017-06-30 14:26
 comments: true
-categories:
+categories: mininet ONF
 ---
 In case you missed it, here is the [blog post on Mininet][1] on the
 [Open Networking Foundation](https://opennetworking.org) web site:

@@ -3,7 +3,7 @@ layout: post
 title: "Announcing Mininet 2.3.0 !"
 date: 2021-02-28 17:50:37 -0800
 comments: false
-categories: mininet release
+categories: mininet releases
 ---
 ## Mininet 2.3.0
 

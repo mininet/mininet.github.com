@@ -3,7 +3,7 @@ layout: post
 title: "Announcing Mininet 2.1.0 !"
 date: 2013-09-20 13:59
 comments: true
-categories: 
+categories: mininet releases
 ---
 
 We are pleased to announce the immediate availability of Mininet 2.1.0
@@ -40,7 +40,7 @@ imported to provide useful functionality) including:
 * Creating **per-host custom directories** using bind mounts: `mininet.examples.bind`
 
 Note that examples contain experimental features which might
-"graduate" into mainline Mininet in the future, but they should 
+"graduate" into mainline Mininet in the future, but they should
 not be considered a stable part of the Mininet API!
 
 Additional information may be found in the
@@ -55,5 +55,3 @@ Have fun with Mininet!
 **The Mininet 2.1.0 Team**<br>
 Bob Lantz and Brian O'Connor<br>
 Open Networking Laboratory
-
-
