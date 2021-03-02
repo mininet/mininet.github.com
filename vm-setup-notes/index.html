@@ -94,7 +94,7 @@ which can be imported by most virtual machine monitors.</p>
 use log in to the VM image. Start the VM.</p>
   </li>
   <li>
-    <p>For more information on setting up networking in VirtualBox, 
+    <p>For more information on setting up networking in VirtualBox,
 you may wish to check out these
 <a href="https://github.com/mininet/openflow-tutorial/wiki/VirtualBox-specific-Instructions">VirtualBox specific instructions</a></p>
   </li>
@@ -116,15 +116,17 @@ Convert the VMDK to QCOW2 format first - directly using VMDK as a qemu input [ap
 
 <p>For Qemu, something like the following should work:</p>
 
-<pre><code>qemu-system-i386 -m 2048 mininet-vm-disk1.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
+<pre><code>qemu-system-x86_64 -m 2048 mininet-vm-disk1.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
 </code></pre>
 
 <p>For KVM:</p>
 
-<pre><code>sudo qemu-system-i386 -machine accel=kvm -m 2048 mininet-vm-disk1.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
+<pre><code>sudo qemu-system-x86_64 -machine accel=kvm -m 2048 mininet-vm-disk1.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
 </code></pre>
 
 <p>The above commands will set up <code>ssh</code> forwarding from the VM to host port 8022.</p>
+
+<p>For a 32-bit VM image, use <code>qemu-system-i386</code>.</p>
 
 <p><strong>Parallels</strong>: Use Parallels Transporter to convert the <code>.vmdk</code> file to an <code>.hdd</code> image that Parallels can use, and then create a new VM using that <code>.hdd</code> image as its virtual drive. Start the VM.</p>
 
