@@ -70,7 +70,13 @@
 <ul id="markdown-toc">
   <li><a href="#part-1-everyday-mininet-usage" id="markdown-toc-part-1-everyday-mininet-usage">Part 1: Everyday Mininet Usage</a>    <ul>
       <li><a href="#display-startup-options" id="markdown-toc-display-startup-options">Display Startup Options</a></li>
-      <li><a href="#start-wireshark" id="markdown-toc-start-wireshark">Start Wireshark</a></li>
+      <li><a href="#start-wireshark" id="markdown-toc-start-wireshark">Start Wireshark</a>        <ul>
+          <li><a href="#if-wireshark-is-not-installed-command-not-found-error" id="markdown-toc-if-wireshark-is-not-installed-command-not-found-error">If Wireshark is not installed (command not found error)</a></li>
+          <li><a href="#if-you-get-a-display-not-set-error" id="markdown-toc-if-you-get-a-display-not-set-error">If you get a “<code>$DISPLAY not set</code>” error</a></li>
+          <li><a href="#running-wireshark-with-x11-tunneling-and-ssh" id="markdown-toc-running-wireshark-with-x11-tunneling-and-ssh">Running Wireshark with X11 tunneling and <code>ssh</code></a></li>
+          <li><a href="#fixing-error-could-not-load-the-qt-platform-plugin-xcb" id="markdown-toc-fixing-error-could-not-load-the-qt-platform-plugin-xcb">Fixing error: “<code>Could not load the Qt platform plugin "xcb"</code>”</a></li>
+        </ul>
+      </li>
       <li><a href="#interact-with-hosts-and-switches" id="markdown-toc-interact-with-hosts-and-switches">Interact with Hosts and Switches</a></li>
       <li><a href="#test-connectivity-between-hosts" id="markdown-toc-test-connectivity-between-hosts">Test connectivity between hosts</a></li>
       <li><a href="#run-a-simple-web-server-and-client" id="markdown-toc-run-a-simple-web-server-and-client">Run a simple web server and client</a></li>
@@ -107,7 +113,7 @@
   </li>
   <li><a href="#appendix-supplementary-information" id="markdown-toc-appendix-supplementary-information">Appendix: Supplementary Information</a>    <ul>
       <li><a href="#using-a-remote-controller" id="markdown-toc-using-a-remote-controller">Using a Remote Controller</a></li>
-      <li><a href="#nox-classic" id="markdown-toc-nox-classic">NOX Classic</a></li>
+      <li><a href="#ryu" id="markdown-toc-ryu">Ryu</a></li>
     </ul>
   </li>
 </ul>
@@ -115,7 +121,7 @@
 <p><em>Note: If you are using the Ubuntu Mininet 2.0.0d4 package, it uses a slightly
 different syntax for <code>Topo()</code> - e.g. <code>add_switch</code> vs. <code>addSwitch</code>, etc.. If
 you check out Mininet from source, you may wish to check out the <code>2.0.0d4</code>
-tag to see code (including code in <code>examples</code>) which is consistent 
+tag to see code (including code in <code>examples</code>) which is consistent
 with the 2.0.04 package.</em></p>
 
 <h2 id="part-1-everyday-mininet-usage">Part 1: Everyday Mininet Usage</h2>
@@ -149,24 +155,21 @@ with the 2.0.04 package.</em></p>
 <pre><code>$ sudo wireshark &amp;
 </code></pre>
 
-<p>In the Wireshark filter box, enter this filter, then click <code>Apply</code>:</p>
+<p>It is likely that this will not work immediately, so please read the following sections.</p>
 
-<pre><code>of
-</code></pre>
+<h4 id="if-wireshark-is-not-installed-command-not-found-error">If Wireshark is not installed (command not found error)</h4>
 
-<p>In Wireshark, click Capture, then Interfaces, then select Start on the loopback interface (<code>lo</code>).</p>
-
-<p>For now, there should be no OpenFlow packets displayed in the main window.</p>
-
-<p><em>Note: Wireshark is installed by default in the Mininet VM image. If the
+<p>Wireshark is installed by default in the Mininet VM images. If the
 system you are using does not have Wireshark and the OpenFlow plugin installed,
 you may be able to install both of them using Mininet’s <code>install.sh</code> script
-as follows:</em></p>
+as follows:*</p>
 
 <pre><code>$ cd ~
 $ git clone https://github.com/mininet/mininet  # if it's not already there
 $ mininet/util/install.sh -w
 </code></pre>
+
+<h4 id="if-you-get-a-display-not-set-error">If you get a “<code>$DISPLAY not set</code>” error</h4>
 
 <p>If Wireshark is installed but you cannot run it (e.g. you get an error like
 <code>$DISPLAY not set</code>, please consult the FAQ:
@@ -174,6 +177,46 @@ $ mininet/util/install.sh -w
 
 <p>Setting X11 up correctly will enable you to run other GUI programs and
 the <code>xterm</code> terminal emulator, used later in this walkthrough.</p>
+
+<h4 id="running-wireshark-with-x11-tunneling-and-ssh">Running Wireshark with X11 tunneling and <code>ssh</code></h4>
+
+<p>If you are using X11 tunneling with <code>ssh</code>, you may need to pass an additional option to <code>sudo</code>
+in order to get it to work with (any) X11 clients such as <code>wireshark</code>:</p>
+
+<pre><code>  $ sudo HOME=~ wireshark &amp;
+</code></pre>
+
+<p>or</p>
+
+<pre><code>  $ sudo -E wireshark &amp;
+</code></pre>
+
+<p>Remember to do this when you are running X11 clients or running <code>mn -x</code>!</p>
+
+<h4 id="fixing-error-could-not-load-the-qt-platform-plugin-xcb">Fixing error: “<code>Could not load the Qt platform plugin "xcb"</code>”</h4>
+
+<p>If you get the an error like
+<code>Could not load the Qt platform plugin "xcb"</code> it may be because
+Wireshark (or specifcally <code>libdouble-conversion</code>) is broken on certain versions of Ubuntu.
+On Ubuntu 20.04, the following may fix it:</p>
+
+<pre><code>  $ dpkg -l | grep libdouble-conversion  # to see which version you have
+  $ sudo apt remove libdouble-conversion3  # be sure to specify the right version
+  $ sudo apt autoremove
+  $ sudo apt install wireshark
+</code></pre>
+
+<p>Next, in the Wireshark filter box near the top of its window, enter this filter, then click <code>Apply</code>:</p>
+
+<pre><code>openflow_1
+</code></pre>
+
+<p><em>NOTE: In older versions of <code>wireshark</code>, the filter name is <code>of</code>. If you are using other OpenFlow
+protocol names, you may have to use a different version number for the filter.</em></p>
+
+<p>In Wireshark, click Capture, then Interfaces, then select Start on the loopback interface (<code>lo</code>).</p>
+
+<p>For now, there should be no OpenFlow packets displayed in the main window.</p>
 
 <h3 id="interact-with-hosts-and-switches">Interact with Hosts and Switches</h3>
 
@@ -277,10 +320,19 @@ including job control (<code>&amp;</code>, <code>jobs</code>, <code>kill</code>,
 <p>Next, try starting a simple HTTP server on <code>h1</code>, making a request from <code>h2</code>,
 then shutting down the web server:</p>
 
-<pre><code>mininet&gt; h1 python -m SimpleHTTPServer 80 &amp;
+<pre><code>mininet&gt; h1 python -m http.server 80 &amp;
 mininet&gt; h2 wget -O - h1
 ...
 mininet&gt; h1 kill %python
+</code></pre>
+
+<p>NOTE: For Python 3, the HTTP server is called <code>http.server</code>; for Python 2,
+it is called <code>SimpleHTTPServer</code>. Make sure you are using the right one for
+the version of Mininet you are running. To find out which Python version
+Mininet is using, you can type</p>
+
+<pre><code>mininet&gt; py sys.version
+3.8.5 (default, Jan 27 2021, 15:41:15)
 </code></pre>
 
 <p>Exit the CLI:</p>
@@ -453,12 +505,12 @@ mininet&gt; exit
 <pre><code>$ sudo mn
 ...
 mininet&gt; h1 ifconfig
-h1-eth0  Link encap:Ethernet  HWaddr f6:9d:5a:7f:41:42  
+h1-eth0  Link encap:Ethernet  HWaddr f6:9d:5a:7f:41:42
           inet addr:10.0.0.1  Bcast:10.255.255.255  Mask:255.0.0.0
           UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
           RX packets:6 errors:0 dropped:0 overruns:0 frame:0
           TX packets:6 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:1000 
+          collisions:0 txqueuelen:1000
           RX bytes:392 (392.0 B)  TX bytes:392 (392.0 B)
 mininet&gt; exit
 </code></pre>
@@ -473,7 +525,7 @@ h1-eth0  Link encap:Ethernet  HWaddr 00:00:00:00:00:01
           UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
           RX packets:0 errors:0 dropped:0 overruns:0 frame:0
           TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
-          collisions:0 txqueuelen:1000 
+          collisions:0 txqueuelen:1000
           RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
 mininet&gt; exit
 </code></pre>
@@ -504,10 +556,10 @@ for now.</em></p>
 
 <p>In the xterm labeled “switch: s1 (root)”, run:</p>
 
-<pre><code># dpctl dump-flows tcp:127.0.0.1:6634
+<pre><code># ovs-ofctl dump-flows tcp:127.0.0.1:6654
 </code></pre>
 
-<p>Nothing will print out; the switch has no flows added.  To use <code>dpctl</code> with other switches, start up mininet in verbose mode and look at the passive listening ports for the switches when they’re created.</p>
+<p>Nothing will print out; the switch has no flows added.  To use <code>ovs-ofctl</code> with other switches, start up mininet in verbose mode and look at the passive listening ports for the switches when they’re created.</p>
 
 <p>Now, in the xterm labeled “host: h1”, run:</p>
 
@@ -515,7 +567,7 @@ for now.</em></p>
 </code></pre>
 
 <p>Go back to <code>s1</code> and dump the flows:
-    # dpctl dump-flows tcp:127.0.0.1:6634</p>
+    # ovs-ofctl dump-flows tcp:127.0.0.1:6654</p>
 
 <p>You should see multiple flow entries now. Alternately (and generally more convenient), you could use the <code>dpctl</code> command built into the Mininet CLI without needing any xterms or manually specifying the IP and port of the switch.</p>
 
@@ -636,7 +688,7 @@ for now.</em></p>
 <p>The <a href="https://github.com/mininet/mininet/tree/master/examples">examples directory</a> in the Mininet source tree includes examples of how to use Mininet’s Python API, as well as potentially useful code that has not been integrated into the main code base.</p>
 
 <p><em>Note: As noted at the beginning, this Walkthrough assumes that you are either
-using a Mininet VM, which includes everything you need, or a native 
+using a Mininet VM, which includes everything you need, or a native
 installation with all of the associated tools,
 including the reference controller <code>controller</code>, which is part of the OpenFlow
 reference implementation and may be installed using <code>install.sh -f</code> if it has
@@ -672,7 +724,7 @@ which introduces the Python API.</p>
 
 <h3 id="next-steps-to-mastering-mininet">Next Steps to mastering Mininet</h3>
 
-<p>If you haven’t done so yet, you should definitely go through the 
+<p>If you haven’t done so yet, you should definitely go through the
 <a href="https://github.com/mininet/openflow-tutorial/wiki">OpenFlow tutorial</a>.</p>
 
 <p>Although you can get reasonably far using Mininet’s CLI, Mininet becomes much
@@ -706,14 +758,18 @@ Mininet’s control), this is explained below.</p>
 $ ./pox.py forwarding.l2_learning
 </code></pre>
 
-<p>in one window, and in another window, start up Mininet to connect to the 
-“remote” controller (which is actually running locally, but outside of 
+<p>in one window, and in another window, start up Mininet to connect to the
+“remote” controller (which is actually running locally, but outside of
 Mininet’s control):</p>
 
 <pre><code>$ sudo mn --controller=remote,ip=127.0.0.1,port=6633
 </code></pre>
 
-<p>Note these are actually the default IP address and port values.</p>
+<p>Note that POX uses the old OpenFlow port 6633 which wasn’t registered and
+was later taken by Cisco. The current, registered/canonical port for OpenFlow
+is port 6653. Please use the appropriate port number for your controller.</p>
+
+<p>By default, <code>--controller=remote</code> will use <code>127.0.0.1</code> and will try ports <code>6653</code> and 6633`.</p>
 
 <p>If you generate some traffic (e.g. <code>h1 ping h2</code>) you should be able to observe
 some output in the POX window showing that the switch has connected and that
@@ -724,38 +780,81 @@ work readily with Mininet as long as you start them up and specify the
 <code>remote</code> controller option with the correct IP address of the machine where
 your controller is runing and the correct port that it is listening on.</p>
 
-<h3 id="nox-classic">NOX Classic</h3>
+<p>There are many OpenFlow controllers available, and you can find more of them
+easily using Google or your favorite search engine. Some of the popular ones
+include (in approximate order of code size, features and complexity):</p>
 
-<p>The Mininet default install (using <code>util/install.sh -a</code>) does not install NOX Classic.  If you would like to install it, run <code>sudo ~/mininet/util/install.sh -x</code>.</p>
+<ul>
+  <li><a href="https://ryu-sdn.org">Ryu</a>, a basic (and somewhat POX-like) OpenFlow controller framework written in Python</li>
+  <li><a href="https://faucet.nz">FAUCET</a>, a controller (also written in Python, and based on the Ryu framework)
+that supports Ethernet switching and IP routing, as well as other features, via a simple YML config file</li>
+  <li><a href="https://onosproject.org">ONOS</a>, a full-featured Network OS, written in Java</li>
+  <li><a href="https://www.opendaylight.org">OpenDaylight</a>, the “largest open source SDN controller”</li>
+</ul>
 
-<p>Note that NOX Classic is deprecated and may not be supported in the future.</p>
+<p>All of these controllers can be used with Mininet or a hardware network.</p>
 
-<p>To run a regression test with NOX running the NOX app <code>pyswitch</code>, the <code>NOX_CORE_DIR</code> env var must be set to the directory containing the NOX executable.</p>
+<h3 id="ryu">Ryu</h3>
 
-<p>First verify that NOX runs:</p>
+<p><a href="https://ryu-sdn.org">Ryu</a> is a basic OpenFlow controller framework written in Python. It is supported
+out of the box in Mininet:</p>
 
-<pre><code>$ cd $NOX_CORE_DIR
-$ ./nox_core -v -i ptcp:
+<pre><code>$ sudo pip3 install ryu  # install ryu if it's not already installed
+$ sudo mn --controller ryu
 </code></pre>
 
-<p>Ctrl-C to kill NOX, then run a test with NOX pyswitch:</p>
+<p>This will run <code>ryu.app.simple_switch</code>.</p>
 
-<pre><code>$ cd
-$ sudo -E mn --controller=nox,pyswitch --test pingpair
+<p>You can also specify the Ryu application on the <code>mn</code> command line:</p>
+
+<pre><code>$ sudo mn --controller,ryu.app.simple_switch_13
 </code></pre>
 
-<p>Note that the <code>--controller</code> option has a convenient syntax for specifying
-options to the controller type (in this case, <code>nox</code> running <code>pyswitch</code>.)</p>
+<p>You can also run Ryu as a remote controller.</p>
 
-<p>There’s a hesitation of a few seconds while NOX loads and the switch connects, but then it should complete the <code>ping</code>.</p>
+<p>In one window:</p>
 
-<p>Note that this time, <code>mn</code> was called via <code>sudo -E</code>, to keep the <code>NOX_CORE_DIR</code> environment variable.  If you’re running nox remotely, using <code>--controller remote</code>, then the <code>-E</code> isn’t necessary.  Alternately, you can change the first line of <code>/etc/sudoers</code>, via <code>sudo visudo</code>, to change the <code>env_reset</code> line to:</p>
-
-<pre><code>Defaults !env_reset
+<pre><code>$ ryu run ryu.app.simple_switch
 </code></pre>
 
-<p>… so that when running <code>sudo</code> the env var setup isn’t changed.</p>
+<p>Then in another window:</p>
 
+<pre><code>$ sudo mn --controller remote
+</code></pre>
+
+<!--
+
+### NOX Classic (deprecated)
+
+The Mininet default install (using `util/install.sh -a`) does not install NOX Classic.  If you would like to install it, run `sudo ~/mininet/util/install.sh -x`.
+
+Note that NOX Classic is deprecated and may not be supported in the future.
+
+To run a regression test with NOX running the NOX app `pyswitch`, the `NOX_CORE_DIR` env var must be set to the directory containing the NOX executable.
+
+First verify that NOX runs:
+
+    $ cd $NOX_CORE_DIR
+    $ ./nox_core -v -i ptcp:
+
+Ctrl-C to kill NOX, then run a test with NOX pyswitch:
+
+    $ cd
+    $ sudo -E mn --controller=nox,pyswitch --test pingpair
+
+
+Note that the `--controller` option has a convenient syntax for specifying
+options to the controller type (in this case, `nox` running `pyswitch`.)
+
+There's a hesitation of a few seconds while NOX loads and the switch connects, but then it should complete the `ping`.
+
+Note that this time, `mn` was called via `sudo -E`, to keep the `NOX_CORE_DIR` environment variable.  If you're running nox remotely, using `--controller remote`, then the `-E` isn't necessary.  Alternately, you can change the first line of `/etc/sudoers`, via `sudo visudo`, to change the `env_reset` line to:
+
+	Defaults !env_reset
+
+... so that when running `sudo` the env var setup isn't changed.
+
+-->
 
   
     <footer>
