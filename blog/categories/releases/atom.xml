@@ -4,7 +4,7 @@
   <title><![CDATA[Category: releases | Mininet]]></title>
   <link href="http://mininet.org/blog/categories/releases/atom.xml" rel="self"/>
   <link href="http://mininet.org/"/>
-  <updated>2021-03-01T18:07:54-08:00</updated>
+  <updated>2021-03-01T18:14:14-08:00</updated>
   <id>http://mininet.org/</id>
   <author>
     <name><![CDATA[Mininet Project Contributors]]></name>
@@ -36,8 +36,8 @@ image. See <strong><a href="/download">Download</a></strong> for details.</p>
 <a href="http://code.mininet.org">code.mininet.org</a>.</p>
 
 <p>Please check out additional details on the Mininet 2.3.0 release in the
-<a href="https://github.com/mininet/mininet/wiki/Documentation#mininet-release-notes">release notes</a>
-on <a href="http://docs.mininet.org">docs.mininet.org</a>.</p>
+<a href="https://github.com/mininet/mininet/wiki/Mininet-2.3.0-Release-Notes">release notes</a>
+on <a href="http://docs.mininet.org#mininet-release-notes">docs.mininet.org</a>.</p>
 
 <p>Mininet is an open source project, and we are grateful to our many
 code contributors, bug reporters, and active users who continue to
