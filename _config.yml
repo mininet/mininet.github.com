@@ -16,7 +16,8 @@ description: An Instant Virtual Network on your Laptop (or other PC)
 date_format: "ordinal"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
-subscribe_rss: /atom.xml
+# was subscribe_rss: /atom.xml
+subscribe_rss:
 subscribe_email:
 # RSS feeds can list your email address if you like
 email:
