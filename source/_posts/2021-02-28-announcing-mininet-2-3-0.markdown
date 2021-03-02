@@ -23,8 +23,8 @@ The latest Mininet source code is available on
 [code.mininet.org](http://code.mininet.org).
 
 Please check out additional details on the Mininet 2.3.0 release in the
-[release notes](https://github.com/mininet/mininet/wiki/Documentation#mininet-release-notes)
-on [docs.mininet.org](http://docs.mininet.org).
+[release notes](https://github.com/mininet/mininet/wiki/Mininet-2.3.0-Release-Notes)
+on [docs.mininet.org](http://docs.mininet.org#mininet-release-notes).
 
 Mininet is an open source project, and we are grateful to our many
 code contributors, bug reporters, and active users who continue to
