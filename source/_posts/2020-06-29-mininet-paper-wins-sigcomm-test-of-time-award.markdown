@@ -6,7 +6,7 @@ comments: false
 categories:
 ---
 We are pleased to announce that our original HotNets paper,
-[A Network in a Laptop: Rapid Prototyping for Software-Defined Networks](http://conferences.sigcomm.org/hotnets/2010/papers/a19-lantz.pdf), won the
+[A Network in a Laptop: Rapid Prototyping for Software-Defined Networks](http://conferences.sigcomm.org/hotnets/2010/papers/a19-lantz.pdf), has won the
 [ACM SIGCOMM Test of Time Paper Award](http://www.sigcomm.org/awards/test-of-time-paper-award).
 
 Congratulations to the authors, Bob Lantz, Brandon Heller, and Nick

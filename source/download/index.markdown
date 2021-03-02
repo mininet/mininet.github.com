@@ -117,9 +117,11 @@ To confirm which OS version you are running, run the command
     lsb_release -a
 
 Next, install the base Mininet package by entering **only one** of the following commands, corresponding to the distribution you are running:
+
     Mininet 2.3.0 on Debian 11: sudo apt-get install mininet
     Mininet 2.2.2 on Ubuntu 20.04 LTS: sudo apt-get install mininet
     Mininet 2.2.2 on Ubuntu 18.04 LTS: sudo apt-get install mininet
+
 <!--
     Mininet 2.2.1 on Ubuntu 16.04 LTS: sudo apt-get install mininet
     Mininet 2.1.0 on Ubuntu 14.10: sudo apt-get install mininet

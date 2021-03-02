@@ -6,7 +6,8 @@ url: http://mininet.org
 title: Mininet
 subtitle: An Instant Virtual Network on your Laptop (or other PC)
 author: Mininet Project Contributors
-simple_search: https://www.google.com/search
+simple_search:
+# was: simple_search: https://www.google.com/search
 description:
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
