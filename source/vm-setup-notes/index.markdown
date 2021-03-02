@@ -30,7 +30,7 @@ Download and install a virtualization program such as: [VMware Workstation](http
 
 Add the VM and start it up, in the virtualization program of your choice:
 
-**VirtualBox**: 
+**VirtualBox**:
 
 0. Usually you can just double-click on the `.ovf` file and import it.
 
@@ -39,7 +39,7 @@ Add the VM and start it up, in the virtualization program of your choice:
 2. Select "settings," and add an additional *host-only network adapter* that you can
 use log in to the VM image. Start the VM.
 
-3. For more information on setting up networking in VirtualBox, 
+3. For more information on setting up networking in VirtualBox,
    you may wish to check out these
    [VirtualBox specific instructions](https://github.com/mininet/openflow-tutorial/wiki/VirtualBox-specific-Instructions)
 
@@ -59,13 +59,15 @@ Convert the VMDK to QCOW2 format first - directly using VMDK as a qemu input [ap
 
 For Qemu, something like the following should work:
 
-    qemu-system-i386 -m 2048 mininet-vm-disk1.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
+    qemu-system-x86_64 -m 2048 mininet-vm-disk1.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
 
 For KVM:
 
-    sudo qemu-system-i386 -machine accel=kvm -m 2048 mininet-vm-disk1.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
+    sudo qemu-system-x86_64 -machine accel=kvm -m 2048 mininet-vm-disk1.vmdk -net nic,model=virtio -net user,net=192.168.101.0/24,hostfwd=tcp::8022-:22
 
 The above commands will set up `ssh` forwarding from the VM to host port 8022.
+
+For a 32-bit VM image, use `qemu-system-i386`.
 
 **Parallels**: Use Parallels Transporter to convert the `.vmdk` file to an `.hdd` image that Parallels can use, and then create a new VM using that `.hdd` image as its virtual drive. Start the VM.
 
@@ -85,7 +87,7 @@ The `root` account is not enabled for login; you can use `sudo` to run a command
 First, find the VM's IP address, which for VMware is probably in the range 192.168.x.y. In the VM console:
 
     ifconfig eth0
-    
+
 Note: VirtualBox users who have set up a host-only network on `eth1` should use
 
     sudo dhclient eth1   # make sure that eth1 has an IP address
