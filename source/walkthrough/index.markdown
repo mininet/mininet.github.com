@@ -572,7 +572,7 @@ Note that POX uses the old OpenFlow port 6633 which wasn't registered and
 was later taken by Cisco. The current, registered/canonical port for OpenFlow
 is port 6653. Please use the appropriate port number for your controller.
 
-By default, `--controller=remote` will use `127.0.0.1` and will try ports `6653` and 6633`.
+By default, `--controller=remote` will use `127.0.0.1` and will try ports `6653` and `6633`.
 
 If you generate some traffic (e.g. `h1 ping h2`) you should be able to observe
 some output in the POX window showing that the switch has connected and that
