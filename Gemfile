@@ -5,6 +5,7 @@ group :development do
   gem 'jekyll', '~> 2.0'
   gem 'octopress-hooks', '~> 2.2'
   gem 'octopress-date-format', '~> 2.0'
+  gem 'octopress-paginate'
   gem 'jekyll-sitemap'
   gem 'rdiscount', '~> 2.0'
   gem 'RedCloth', '~> 4.2.9'

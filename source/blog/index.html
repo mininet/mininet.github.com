@@ -2,9 +2,16 @@
 layout: default
 ---
 
+{% comment %} This doesn't work atm:
+{% for post in paginator.posts %}
+<li><a href="{{post.url | prepend: site.baseurl}}"><h3>{{post.title}}</h3></a></li>
+{% endfor %}
+{% endcomment %}
+
 <div class="blog-index">
   {% assign index = true %}
-  {% for post in paginator.posts %}
+  {% comment %} was: paginator.posts, but that seems to be broken atm {% endcomment %}
+  {% for post in site.posts reverse %}
   {% assign content = post.content %}
     <article>
       {% include article.html %}
