@@ -37,7 +37,7 @@ Follow these steps for a VM install:
    - [KVM](http://www.linux-kvm.org) (free, GPL, Linux)
    <p>
 
-3. Sign up for the [mininet-discuss mailing list](https://mailman.stanford.edu/mailman/listinfo/mininet-discuss). This is the source for Mininet **support** and discussion with the friendly Mininet community. ;-)
+3. *Optional, but recommended!* Sign up for the [mininet-discuss mailing list](https://mailman.stanford.edu/mailman/listinfo/mininet-discuss). This is the source for Mininet **support** and discussion with the friendly Mininet community. ;-) (And don't forget the [FAQ](http://faq.mininet.org) and [documentation](http://docs.mininet.org).)
 
 4. Run through the [VM Setup Notes](/vm-setup-notes) to log in to the VM and customize it as desired.
 
@@ -51,7 +51,9 @@ Once you've completed the [Walkthrough](/walkthrough), you should have a clear i
 Option 2: Native Installation from Source
 -----------------------------------------
 
-This option works well for local VM, remote EC2, and native installation.  It assumes the starting point of a fresh Ubuntu, Debian,  or (experimentally) Fedora installation. (*If you are upgrading from an older Mininet and/or OvS, see notes on removing old versions, below*.)
+This option works well for local VM, remote EC2, and native installation.  It assumes the starting point of a fresh Ubuntu, Debian,  or (experimentally) Fedora installation.
+
+<!-- (*If you are upgrading from an older Mininet and/or OvS, see notes on removing old versions, below*.) -->
 
 We strongly recommend more recent Ubuntu or Debian releases, because they include newer versions of Open vSwitch. (Fedora also includes recent OvS releases.)
 
