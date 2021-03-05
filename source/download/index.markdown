@@ -45,7 +45,12 @@ Follow these steps for a VM install:
 
 (In addition to the above resources, we've prepared a helpful Mininet [FAQ](/faq) as well as [Documentation](/docs) which you can refer to at any time! We recommend consulting them first if you have any questions.)
 
-Once you've completed the [Walkthrough](/walkthrough), you should have a clear idea for what Mininet is and what you might use it for. If you are interested in OpenFlow and Software-Defined Networking, you will want to complete the [OpenFlow tutorial](https://github.com/mininet/openflow-tutorial/wiki) as well. Good luck, and have fun!
+Once you've completed the [Walkthrough](/walkthrough), you should have a clear idea for what Mininet is and what you might use it for.
+The [Introduction to Mininet](https://github.com/mininet/mininet/wiki/Introduction-to-Mininet) explains the basics of Mininet's
+Python API.
+
+If you are interested in OpenFlow and Software-Defined Networking, you may wish to
+complete the [OpenFlow tutorial](https://github.com/mininet/openflow-tutorial/wiki) as well. Good luck, and have fun!
 
 
 Option 2: Native Installation from Source
