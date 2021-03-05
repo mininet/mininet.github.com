@@ -24,7 +24,7 @@ Because you can easily
 <a href="/sample-workflow/#interacting-with-a-network">interact with</a>
 your network using the Mininet
 <a href="/walkthrough/#interact-with-hosts-and-switches">CLI</a>
-(and <a href="/api/hierarchy.html">API</a>),
+(and <a href="/api/annotated.html">API</a>),
 <a href="/sample-workflow/#customizing-a-network">customize</a> it,
 <a href="/sample-workflow/#sharing-a-network">share</a> it with others,
 or
