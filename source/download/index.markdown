@@ -174,8 +174,14 @@ Mininet, you can usually
 
     cd mininet
     git fetch
-    git checkout master   # Or a specific version like 2.3.0
-    git pull
+    git tag  # to see what versions are available
+
+    git checkout mininet-2.3.0 2.3.0  # or whatever version/branch you want, or
+                                      # master if you want the latest
+
+    sudo pip uninstall mininet        # if you are upgrading an older Mininet VM
+                                      # where Mininet was installed with setuptools
+
     sudo make install
 
 If you wish to specify a specific Python version, you can do so:
