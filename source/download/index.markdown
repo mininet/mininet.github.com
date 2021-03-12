@@ -172,44 +172,44 @@ Option 4. Upgrading an *existing* Mininet Installation
 There are many ways to do this. If you haven't made any changes to
 Mininet, you can usually:
 
-#### 0. Check out the Mininet code, if you don't have it already:
+0. Check out the Mininet code, if you don't have it already:
 
-    git clone https://github.com/mininet/mininet
+       git clone https://github.com/mininet/mininet
 
-#### 1. Remove old Mininet packages, if any:
+1. Remove old Mininet packages, if any:
 
-    sudo apt-get uninstall mininet       # if you have installed a Mininet apt package
+       sudo apt-get uninstall mininet       # if you have installed a Mininet apt package
 
-    sudo pip uninstall mininet           # if you are upgrading an older Mininet VM
-                                         # where Mininet was installed with setuptools
+       sudo pip uninstall mininet           # if you are upgrading an older Mininet VM
+                                            # where Mininet was installed with setuptools
 
-#### 2. Install the new Mininet version:
+2. Install the new Mininet version:
 
-    cd mininet
-    git fetch  # to fetch the latest and greatest branches and tags
-    git tag    # to see what versions are available
+       cd mininet
+       git fetch  # to fetch the latest and greatest branches and tags
+       git tag    # to see what versions are available
 
-    git checkout -b mininet-2.3.0 2.3.0  # or whatever version/branch you want, or
-                                         # master if you want the latest
+       git checkout -b mininet-2.3.0 2.3.0  # or whatever version/branch you want, or
+                                            # master if you want the latest
 
-    sudo make install   # only install new mnexec and mininet packages
+       sudo make install   # only install new mnexec and mininet packages
 
-Note that `sudo make install` only installs `mnexec` and the Mininet packages.
-If you wish to install Mininet and its dependencies, do this:
+    Note that `sudo make install` only installs `mnexec` and the Mininet packages.
+    If you wish to install Mininet and its dependencies, do this:
 
-    sudo apt-get update   # make sure apt works
-    util/install.sh -n    # install mininet and dependencies
+          sudo apt-get update   # make sure apt works
+          util/install.sh -n    # install mininet and dependencies
 
-If you wish to specify a specific Python version, you can do so:
+   If you wish to specify a specific Python version, you can do so:
 
-    sudo PYTHON=python3 make install
+          sudo PYTHON=python3 make install
 
-or
+   or
 
-    PYTHON=python3 util/install.sh -a
+          PYTHON=python3 util/install.sh -a
 
-As an alternative to `sudo make install` you can also do `sudo make develop`,
-which will create symbolic links from `/usr/lib/python...` to your source tree.
+   As an alternative to `sudo make install` you can also do `sudo make develop`,
+   which will create symbolic links from `/usr/lib/python...` to your source tree.
 
 Note that this will only upgrade Mininet itself - any other components such
 as Open vSwitch, etc. can be upgraded separately as desired.
