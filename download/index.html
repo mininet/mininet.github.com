@@ -71,7 +71,12 @@
   <li><a href="#option-1-mininet-vm-installation-easy-recommended" id="markdown-toc-option-1-mininet-vm-installation-easy-recommended">Option 1: Mininet VM Installation (easy, recommended)</a></li>
   <li><a href="#option-2-native-installation-from-source" id="markdown-toc-option-2-native-installation-from-source">Option 2: Native Installation from Source</a></li>
   <li><a href="#option-3-installation-from-packages" id="markdown-toc-option-3-installation-from-packages">Option 3: Installation from Packages</a></li>
-  <li><a href="#option-4-upgrading-an-existing-mininet-installation" id="markdown-toc-option-4-upgrading-an-existing-mininet-installation">Option 4. Upgrading an existing Mininet Installation</a></li>
+  <li><a href="#option-4-upgrading-an-existing-mininet-installation" id="markdown-toc-option-4-upgrading-an-existing-mininet-installation">Option 4. Upgrading an <em>existing</em> Mininet Installation</a>    <ul>
+      <li><a href="#check-out-the-mininet-code-if-you-dont-have-it-already" id="markdown-toc-check-out-the-mininet-code-if-you-dont-have-it-already">0. Check out the Mininet code, if you don’t have it already:</a></li>
+      <li><a href="#remove-old-mininet-packages-if-any" id="markdown-toc-remove-old-mininet-packages-if-any">1. Remove old Mininet packages, if any:</a></li>
+      <li><a href="#install-the-new-mininet-version" id="markdown-toc-install-the-new-mininet-version">2. Install the new Mininet version:</a></li>
+    </ul>
+  </li>
   <li><a href="#important-note-python-2-and-python-3-mininet" id="markdown-toc-important-note-python-2-and-python-3-mininet"><strong>Important Note</strong>: Python 2 and Python 3 Mininet</a></li>
 </ul>
 
@@ -249,27 +254,51 @@ mininet/util/install.sh -fw
 
 <p>will install the OpenFlow reference switch, reference controller and Wireshark dissector.</p>
 
-<h2 id="option-4-upgrading-an-existing-mininet-installation">Option 4. Upgrading an existing Mininet Installation</h2>
+<h2 id="option-4-upgrading-an-existing-mininet-installation">Option 4. Upgrading an <em>existing</em> Mininet Installation</h2>
 
 <p>There are many ways to do this. If you haven’t made any changes to
-Mininet, you can usually</p>
+Mininet, you can usually:</p>
+
+<h4 id="check-out-the-mininet-code-if-you-dont-have-it-already">0. Check out the Mininet code, if you don’t have it already:</h4>
+
+<pre><code>git clone https://github.com/mininet/mininet
+</code></pre>
+
+<h4 id="remove-old-mininet-packages-if-any">1. Remove old Mininet packages, if any:</h4>
+
+<pre><code>sudo apt-get uninstall mininet       # if you have installed a Mininet apt package
+
+sudo pip uninstall mininet           # if you are upgrading an older Mininet VM
+                                      # where Mininet was installed with setuptools
+</code></pre>
+
+<h4 id="install-the-new-mininet-version">2. Install the new Mininet version:</h4>
 
 <pre><code>cd mininet
-git fetch
-git tag  # to see what versions are available
+git fetch  # to fetch the latest and greatest branches and tags
+git tag    # to see what versions are available
 
 git checkout -b mininet-2.3.0 2.3.0  # or whatever version/branch you want, or
                                      # master if you want the latest
 
-sudo pip uninstall mininet           # if you are upgrading an older Mininet VM
-                                     # where Mininet was installed with setuptools
+sudo make install   # only install new mnexec and mininet packages
+</code></pre>
 
-sudo make install
+<p>Note that <code>sudo make install</code> only installs <code>mnexec</code> and the Mininet packages.
+If you wish to install Mininet and its dependencies, do this:</p>
+
+<pre><code>sudo apt-get update   # make sure apt works
+util/install.sh -n    # install mininet and dependencies
 </code></pre>
 
 <p>If you wish to specify a specific Python version, you can do so:</p>
 
 <pre><code>sudo PYTHON=python3 make install
+</code></pre>
+
+<p>or</p>
+
+<pre><code>PYTHON=python3 util/install.sh -a
 </code></pre>
 
 <p>As an alternative to <code>sudo make install</code> you can also do <code>sudo make develop</code>,
