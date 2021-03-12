@@ -181,7 +181,7 @@ Mininet, you can usually:
     sudo apt-get uninstall mininet       # if you have installed a Mininet apt package
 
     sudo pip uninstall mininet           # if you are upgrading an older Mininet VM
-                                          # where Mininet was installed with setuptools
+                                         # where Mininet was installed with setuptools
 
 #### 2. Install the new Mininet version:
 
