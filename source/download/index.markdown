@@ -64,7 +64,7 @@ We strongly recommend more recent Ubuntu or Debian releases, because they includ
 
 To install natively from source, first you need to get the source code:
 
-    git clone git://github.com/mininet/mininet
+    git clone https://github.com/mininet/mininet
 
 Note that the above `git` command will check out the latest and greatest Mininet
 (which we recommend!) If you want to run the last tagged/released version of
@@ -160,7 +160,7 @@ If Mininet complains that Open vSwitch isn't working, make sure it is installed 
 
 If you wish to go through the Mininet walkthrough, you will want to install additional software. The following commands
 
-    git clone git://github.com/mininet/mininet
+    git clone https://github.com/mininet/mininet
     mininet/util/install.sh -fw
 
 will install the OpenFlow reference switch, reference controller and Wireshark dissector.
@@ -252,7 +252,7 @@ page, though we don't really recommend using it.
 
 You can also use the archived `install-precise` branch to install Mininet 1.0 on Ubuntu 12.04:
 
-    git clone git://github.com/mininet/mininet
+    git clone https://github.com/mininet/mininet
     cd mininet
     git fetch
     git checkout -b install-precise origin/devel/install-precise
