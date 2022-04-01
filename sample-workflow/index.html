@@ -85,7 +85,7 @@
 <pre><code>mininet&gt; h2 ping h3
 </code></pre>
 
-<p>tells host <code>h2</code> to ping host <code>h2</code>’s IP address. <em>Any available Linux command or program can be run on any virtual host</em>. You can easily start a web server on one host and make an HTTP request from another:</p>
+<p>tells host <code>h2</code> to ping host <code>h3</code>’s IP address. <em>Any available Linux command or program can be run on any virtual host</em>. You can easily start a web server on one host and make an HTTP request from another:</p>
 
 <pre><code>mininet&gt; h2 python -m SimpleHTTPServer 80 &gt;&amp; /tmp/http.log &amp;
 mininet&gt; h3 wget -O - h2
